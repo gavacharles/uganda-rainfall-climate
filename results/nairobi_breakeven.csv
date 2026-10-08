@@ -1,0 +1,55 @@
+catchment,T,P_stationary_mm,land_effect_pct,rain_increase_needed_pct
+Ngong River,2,87.35,16.75,11.42
+Ngong River,10,149.29,13.15,10.24
+Ngong River,50,210.61,11.61,9.63
+Mathare River,2,87.35,10.6,6.82
+Mathare River,10,149.29,8.23,6.14
+Mathare River,50,210.61,7.21,5.78
+Nairobi River,2,87.35,35.02,24.89
+Nairobi River,10,149.29,27.11,21.79
+Nairobi River,50,210.61,23.83,20.28
+Nairobi river,2,87.35,29.81,17.03
+Nairobi river,10,149.29,22.48,15.44
+Nairobi river,50,210.61,19.4,14.58
+Catchment 35,2,87.35,10.1,5.76
+Catchment 35,10,149.29,7.71,5.27
+Catchment 35,50,210.61,6.69,4.99
+Kirichwa Kubwa,2,87.35,17.91,12.04
+Kirichwa Kubwa,10,149.29,13.89,10.71
+Kirichwa Kubwa,50,210.61,12.17,10.02
+Nairobi River (2),2,87.35,2.7,2.04
+Nairobi River (2),10,149.29,2.15,1.8
+Nairobi River (2),50,210.61,1.92,1.68
+Catchment 42,2,87.35,28.53,15.82
+Catchment 42,10,149.29,21.41,14.39
+Catchment 42,50,210.61,18.43,13.6
+swamp,2,87.35,28.14,16.3
+swamp,10,149.29,21.27,14.76
+swamp,50,210.61,18.37,13.92
+Gatharaini River,2,87.35,32.81,19.52
+Gatharaini River,10,149.29,24.84,17.59
+Gatharaini River,50,210.61,21.5,16.56
+Catchment 68,2,87.35,17.61,10.77
+Catchment 68,10,149.29,13.41,9.66
+Catchment 68,50,210.61,11.61,9.06
+Catchment 69,2,87.35,13.85,7.89
+Catchment 69,10,149.29,10.5,7.17
+Catchment 69,50,210.61,9.06,6.77
+Catchment 78,2,87.35,19.42,11.61
+Catchment 78,10,149.29,14.66,10.39
+Catchment 78,50,210.61,12.63,9.73
+Catchment 80,2,87.35,45.62,25.54
+Catchment 80,10,149.29,33.78,22.95
+Catchment 80,50,210.61,28.9,21.55
+Ruiruaka River,2,87.35,10.68,6.8
+Ruiruaka River,10,149.29,8.15,6.04
+Ruiruaka River,50,210.61,7.06,5.63
+Mathare River (2),2,87.35,4.75,3.62
+Mathare River (2),10,149.29,3.74,3.14
+Mathare River (2),50,210.61,3.3,2.9
+Mathare River (3),2,87.35,8.5,4.92
+Mathare River (3),10,149.29,6.43,4.44
+Mathare River (3),50,210.61,5.54,4.18
+Catchment 93,2,87.35,20.96,11.33
+Catchment 93,10,149.29,15.63,10.29
+Catchment 93,50,210.61,13.38,9.71

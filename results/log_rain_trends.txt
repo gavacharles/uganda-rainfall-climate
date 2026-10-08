@@ -1,0 +1,24 @@
+figure fig02_rain_trend_maps.png
+figure fig03_rain_zone_series.png
+                season    zone  ...  mean_1981_2003  mean_2004_2025
+6               Annual  Uganda  ...     1184.561176     1217.762340
+13   MAM (first rains)  Uganda  ...      388.535527      389.860865
+20                 JJA  Uganda  ...      309.031064      309.309958
+27  SON (second rains)  Uganda  ...      367.665010      387.879476
+34                 DJF  Uganda  ...      122.366837      130.712037
+
+[5 rows x 9 columns]
+figure fig04_rain_extremes_trends.png
+                index    zone  ...  pct_per_decade   p_value
+6         Rx1day (mm)  Uganda  ...       -2.680011  0.112090
+13        Rx5day (mm)  Uganda  ...        0.511988  0.736422
+20       R20mm (days)  Uganda  ...       -3.058912  0.206704
+27       R95pTOT (mm)  Uganda  ...       -3.639644  0.094535
+34     Wet days >=1mm  Uganda  ...        2.024097  0.000023
+41  SDII (mm/wet day)  Uganda  ...       -0.641916  0.104738
+48         CDD (days)  Uganda  ...        1.629808  0.550693
+
+[7 rows x 6 columns]
+figure fig05_annual_cycle_epochs.png
+figure fig06_rain_month_year_anomaly.png
+EXIT 0

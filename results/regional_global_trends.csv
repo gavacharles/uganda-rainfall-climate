@@ -1,0 +1,12 @@
+variable,region,trend_per_decade,units,p_value,change_1981_95_to_2011_25,pct_per_decade
+Temperature (GHCN-CAMS),Uganda,0.506,°C,0.0,1.52,
+Temperature (GHCN-CAMS),East Africa,0.371,°C,0.0,1.091,
+Temperature (GHCN-CAMS),Africa,0.356,°C,0.0,1.037,
+Temperature (GHCN-CAMS),Global land,0.367,°C,0.0,1.076,
+Annual rainfall,Uganda,13.074,mm,0.207,77.169,1.065
+Annual rainfall,East Africa,15.322,mm,0.035,64.426,1.56
+Annual rainfall,Africa,7.431,mm,0.001,23.243,1.107
+Annual rainfall,Global land (GPCP),-2.117,mm,0.423,-4.032,-0.247
+Annual rainfall (CHIRPS),East Africa box mean of % trends,,%,,,2.1
+MAM long rains rainfall (CHIRPS),East Africa box mean of % trends,,%,,,1.957
+OND short rains rainfall (CHIRPS),East Africa box mean of % trends,,%,,,3.582

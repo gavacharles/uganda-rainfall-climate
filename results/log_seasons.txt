@@ -1,0 +1,41 @@
+figure fig09_regime_map.png
+figure fig07_season_timing_maps.png
+figure fig08_season_bars_zone.png
+   season     metric    zone  mean_1991_2020  sen_per_decade   p_value          sd
+4      S1      onset  Uganda       71.699876       -2.371165  0.047054    9.940087
+9      S1  cessation  Uganda      145.801141       -0.600512  0.537706    7.748164
+14     S1     length  Uganda       75.101265        1.681795  0.214106   11.477760
+19     S1      total  Uganda      422.521870        9.895596  0.221409   63.550852
+24     S1     maxdry  Uganda        4.735146       -0.129953  0.180188    1.131174
+29     S1   raindays  Uganda       50.024751        1.094284  0.332820    9.022605
+34     S2      onset  Uganda      237.572452       -0.907002  0.394735   11.605081
+39     S2  cessation  Uganda      332.444362        2.563211  0.047054   12.991022
+44     S2     length  Uganda       95.871910        2.596270  0.053965   12.579419
+49     S2      total  Uganda      485.910408       13.365409  0.156063   83.685163
+54     S2     maxdry  Uganda        4.882482       -0.077278  0.205353    0.813506
+59     S2   raindays  Uganda       64.318071        2.432460  0.026379    9.738170
+63      U      onset  Uganda       94.651952        0.172104  0.960225   15.606916
+67      U  cessation  Uganda      304.012143        4.916377  0.009340   15.966804
+71      U     length  Uganda      210.360191        5.367760  0.099225   21.959924
+75      U      total  Uganda     1060.355752       17.786901  0.357365  137.363801
+79      U     maxdry  Uganda       10.911343        0.189164  0.578016    2.979785
+83      U   raindays  Uganda      121.670529        4.992254  0.000913   18.177373
+   season     metric                                     zone  mean_1991_2020  sen_per_decade   p_value          sd
+3      S1      onset               South-west (Ankole-Kigezi)       67.785649       -2.531093  0.032719   11.357390
+4      S1      onset                                   Uganda       71.699876       -2.371165  0.047054    9.940087
+12     S1     length  Lake Victoria crescent (Central-Busoga)       80.781050        4.217604  0.004208   14.199977
+17     S1      total  Lake Victoria crescent (Central-Busoga)      526.947320       25.001141  0.029150   86.367926
+27     S1   raindays  Lake Victoria crescent (Central-Busoga)       57.579108        2.833307  0.012679   10.407278
+39     S2  cessation                                   Uganda      332.444362        2.563211  0.047054   12.991022
+42     S2     length  Lake Victoria crescent (Central-Busoga)       83.956643        5.169796  0.000424   19.071887
+47     S2      total  Lake Victoria crescent (Central-Busoga)      489.075425       34.802536  0.000000  151.205157
+55     S2   raindays          West Nile-Lango-Teso-Elgon belt       58.862717        2.907626  0.017680   11.094586
+57     S2   raindays  Lake Victoria crescent (Central-Busoga)       57.496428        4.213235  0.014074   14.752486
+59     S2   raindays                                   Uganda       64.318071        2.432460  0.026379    9.738170
+64      U  cessation                 Karamoja (NE, semi-arid)      269.608394        9.469375  0.030044   41.560654
+67      U  cessation                                   Uganda      304.012143        4.916377  0.009340   15.966804
+68      U     length                 Karamoja (NE, semi-arid)      174.619146       11.649698  0.027458   45.885552
+72      U      total                 Karamoja (NE, semi-arid)      654.826853       54.038682  0.011207  188.380452
+80      U   raindays                 Karamoja (NE, semi-arid)       64.194346        5.984448  0.004318   18.045013
+81      U   raindays                    North (Acholi-Kitgum)      129.071841        5.970035  0.024103   18.234949
+83      U   raindays                                   Uganda      121.670529        4.992254  0.000913   18.177373

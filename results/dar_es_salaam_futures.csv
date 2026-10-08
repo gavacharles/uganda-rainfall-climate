@@ -1,0 +1,601 @@
+catchment,T,scenario,change_vs_1992_pct
+Mbezi River,2,"2014 land, 1981-2025 rain",27.42
+Mbezi River,2,"2030 land (GHSL), 1981-2025 rain",30.68
+Mbezi River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",44.7
+Mbezi River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",50.82
+Mbezi River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",47.21
+Mbezi River,10,"2014 land, 1981-2025 rain",21.68
+Mbezi River,10,"2030 land (GHSL), 1981-2025 rain",24.22
+Mbezi River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",36.21
+Mbezi River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",41.43
+Mbezi River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",38.63
+Mbezi River,50,"2014 land, 1981-2025 rain",19.62
+Mbezi River,50,"2030 land (GHSL), 1981-2025 rain",21.91
+Mbezi River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",33.19
+Mbezi River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",38.1
+Mbezi River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",35.57
+Catchment 10,2,"2014 land, 1981-2025 rain",19.29
+Catchment 10,2,"2030 land (GHSL), 1981-2025 rain",23.49
+Catchment 10,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",37.04
+Catchment 10,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",42.97
+Catchment 10,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",38.31
+Catchment 10,10,"2014 land, 1981-2025 rain",15.29
+Catchment 10,10,"2030 land (GHSL), 1981-2025 rain",18.58
+Catchment 10,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.2
+Catchment 10,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",35.26
+Catchment 10,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",31.63
+Catchment 10,50,"2014 land, 1981-2025 rain",13.84
+Catchment 10,50,"2030 land (GHSL), 1981-2025 rain",16.8
+Catchment 10,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",27.74
+Catchment 10,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",32.51
+Catchment 10,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.23
+Catchment 12,2,"2014 land, 1981-2025 rain",26.93
+Catchment 12,2,"2030 land (GHSL), 1981-2025 rain",30.95
+Catchment 12,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",45.07
+Catchment 12,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",51.25
+Catchment 12,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",46.8
+Catchment 12,10,"2014 land, 1981-2025 rain",21.23
+Catchment 12,10,"2030 land (GHSL), 1981-2025 rain",24.34
+Catchment 12,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",36.39
+Catchment 12,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",41.64
+Catchment 12,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",38.19
+Catchment 12,50,"2014 land, 1981-2025 rain",19.17
+Catchment 12,50,"2030 land (GHSL), 1981-2025 rain",21.97
+Catchment 12,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",33.29
+Catchment 12,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",38.22
+Catchment 12,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",35.13
+Mzinga River,2,"2014 land, 1981-2025 rain",19.02
+Mzinga River,2,"2030 land (GHSL), 1981-2025 rain",24.74
+Mzinga River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",38.83
+Mzinga River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",45.01
+Mzinga River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",38.64
+Mzinga River,10,"2014 land, 1981-2025 rain",14.92
+Mzinga River,10,"2030 land (GHSL), 1981-2025 rain",19.35
+Mzinga River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",31.28
+Mzinga River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.48
+Mzinga River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",31.58
+Mzinga River,50,"2014 land, 1981-2025 rain",13.43
+Mzinga River,50,"2030 land (GHSL), 1981-2025 rain",17.4
+Mzinga River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",28.56
+Mzinga River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.43
+Mzinga River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.04
+Mzinga River (2),2,"2014 land, 1981-2025 rain",17.9
+Mzinga River (2),2,"2030 land (GHSL), 1981-2025 rain",22.68
+Mzinga River (2),2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",36.49
+Mzinga River (2),2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",42.54
+Mzinga River (2),2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",37.24
+Mzinga River (2),10,"2014 land, 1981-2025 rain",14.07
+Mzinga River (2),10,"2030 land (GHSL), 1981-2025 rain",17.77
+Mzinga River (2),10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",29.52
+Mzinga River (2),10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",34.64
+Mzinga River (2),10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.54
+Mzinga River (2),50,"2014 land, 1981-2025 rain",12.67
+Mzinga River (2),50,"2030 land (GHSL), 1981-2025 rain",16.0
+Mzinga River (2),50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",27.01
+Mzinga River (2),50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",31.81
+Mzinga River (2),50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",28.13
+Catchment 18,2,"2014 land, 1981-2025 rain",8.17
+Catchment 18,2,"2030 land (GHSL), 1981-2025 rain",10.37
+Catchment 18,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.19
+Catchment 18,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.81
+Catchment 18,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",26.35
+Catchment 18,10,"2014 land, 1981-2025 rain",6.48
+Catchment 18,10,"2030 land (GHSL), 1981-2025 rain",8.22
+Catchment 18,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",19.24
+Catchment 18,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",24.05
+Catchment 18,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",22.12
+Catchment 18,50,"2014 land, 1981-2025 rain",5.86
+Catchment 18,50,"2030 land (GHSL), 1981-2025 rain",7.43
+Catchment 18,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",17.8
+Catchment 18,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",22.32
+Catchment 18,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",20.58
+Msimbazi River,2,"2014 land, 1981-2025 rain",15.7
+Msimbazi River,2,"2030 land (GHSL), 1981-2025 rain",17.19
+Msimbazi River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",27.6
+Msimbazi River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",32.14
+Msimbazi River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.52
+Msimbazi River,10,"2014 land, 1981-2025 rain",13.16
+Msimbazi River,10,"2030 land (GHSL), 1981-2025 rain",14.39
+Msimbazi River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.2
+Msimbazi River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.46
+Msimbazi River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",27.11
+Msimbazi River,50,"2014 land, 1981-2025 rain",12.26
+Msimbazi River,50,"2030 land (GHSL), 1981-2025 rain",13.41
+Msimbazi River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.0
+Msimbazi River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",27.17
+Msimbazi River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",25.91
+Catchment 24,2,"2014 land, 1981-2025 rain",15.21
+Catchment 24,2,"2030 land (GHSL), 1981-2025 rain",17.25
+Catchment 24,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",29.22
+Catchment 24,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",34.44
+Catchment 24,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",32.2
+Catchment 24,10,"2014 land, 1981-2025 rain",12.29
+Catchment 24,10,"2030 land (GHSL), 1981-2025 rain",13.92
+Catchment 24,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.57
+Catchment 24,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.2
+Catchment 24,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",27.41
+Catchment 24,50,"2014 land, 1981-2025 rain",11.24
+Catchment 24,50,"2030 land (GHSL), 1981-2025 rain",12.73
+Catchment 24,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",22.9
+Catchment 24,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",27.33
+Catchment 24,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",25.69
+Kwa Mpemba Bridge,2,"2014 land, 1981-2025 rain",17.07
+Kwa Mpemba Bridge,2,"2030 land (GHSL), 1981-2025 rain",20.67
+Kwa Mpemba Bridge,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",34.54
+Kwa Mpemba Bridge,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",40.61
+Kwa Mpemba Bridge,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",36.61
+Kwa Mpemba Bridge,10,"2014 land, 1981-2025 rain",13.36
+Kwa Mpemba Bridge,10,"2030 land (GHSL), 1981-2025 rain",16.14
+Kwa Mpemba Bridge,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",27.88
+Kwa Mpemba Bridge,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.0
+Kwa Mpemba Bridge,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.93
+Kwa Mpemba Bridge,50,"2014 land, 1981-2025 rain",12.0
+Kwa Mpemba Bridge,50,"2030 land (GHSL), 1981-2025 rain",14.49
+Kwa Mpemba Bridge,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",25.48
+Kwa Mpemba Bridge,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",30.27
+Kwa Mpemba Bridge,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",27.52
+Kizinga River,2,"2014 land, 1981-2025 rain",6.14
+Kizinga River,2,"2030 land (GHSL), 1981-2025 rain",8.61
+Kizinga River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",18.87
+Kizinga River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",23.34
+Kizinga River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",20.63
+Kizinga River,10,"2014 land, 1981-2025 rain",5.11
+Kizinga River,10,"2030 land (GHSL), 1981-2025 rain",7.16
+Kizinga River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",16.69
+Kizinga River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",20.83
+Kizinga River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",18.58
+Kizinga River,50,"2014 land, 1981-2025 rain",4.74
+Kizinga River,50,"2030 land (GHSL), 1981-2025 rain",6.64
+Kizinga River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",15.91
+Kizinga River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",19.94
+Kizinga River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",17.85
+Catchment 32,2,"2014 land, 1981-2025 rain",20.39
+Catchment 32,2,"2030 land (GHSL), 1981-2025 rain",24.93
+Catchment 32,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",38.75
+Catchment 32,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",44.8
+Catchment 32,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",39.76
+Catchment 32,10,"2014 land, 1981-2025 rain",16.12
+Catchment 32,10,"2030 land (GHSL), 1981-2025 rain",19.66
+Catchment 32,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",31.45
+Catchment 32,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.59
+Catchment 32,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",32.67
+Catchment 32,50,"2014 land, 1981-2025 rain",14.56
+Catchment 32,50,"2030 land (GHSL), 1981-2025 rain",17.75
+Catchment 32,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",28.83
+Catchment 32,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.65
+Catchment 32,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.13
+Catchment 35,2,"2014 land, 1981-2025 rain",11.46
+Catchment 35,2,"2030 land (GHSL), 1981-2025 rain",14.98
+Catchment 35,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",28.07
+Catchment 35,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.81
+Catchment 35,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.89
+Catchment 35,10,"2014 land, 1981-2025 rain",9.09
+Catchment 35,10,"2030 land (GHSL), 1981-2025 rain",11.86
+Catchment 35,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.1
+Catchment 35,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.0
+Catchment 35,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.94
+Catchment 35,50,"2014 land, 1981-2025 rain",8.23
+Catchment 35,50,"2030 land (GHSL), 1981-2025 rain",10.72
+Catchment 35,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",21.3
+Catchment 35,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",25.91
+Catchment 35,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",23.14
+Kibangu River,2,"2014 land, 1981-2025 rain",42.19
+Kibangu River,2,"2030 land (GHSL), 1981-2025 rain",44.97
+Kibangu River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",59.45
+Kibangu River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",65.76
+Kibangu River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",62.72
+Kibangu River,10,"2014 land, 1981-2025 rain",33.32
+Kibangu River,10,"2030 land (GHSL), 1981-2025 rain",35.47
+Kibangu River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",47.95
+Kibangu River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",53.38
+Kibangu River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",51.01
+Kibangu River,50,"2014 land, 1981-2025 rain",30.19
+Kibangu River,50,"2030 land (GHSL), 1981-2025 rain",32.12
+Kibangu River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",43.92
+Kibangu River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",49.06
+Kibangu River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",46.92
+Ng'ombe,2,"2014 land, 1981-2025 rain",11.72
+Ng'ombe,2,"2030 land (GHSL), 1981-2025 rain",13.52
+Ng'ombe,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.31
+Ng'ombe,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.02
+Ng'ombe,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",27.05
+Ng'ombe,10,"2014 land, 1981-2025 rain",9.71
+Ng'ombe,10,"2030 land (GHSL), 1981-2025 rain",11.18
+Ng'ombe,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",21.11
+Ng'ombe,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",25.44
+Ng'ombe,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",23.81
+Ng'ombe,50,"2014 land, 1981-2025 rain",8.98
+Ng'ombe,50,"2030 land (GHSL), 1981-2025 rain",10.35
+Ng'ombe,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",19.97
+Ng'ombe,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",24.16
+Ng'ombe,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",22.66
+Catchment 40,2,"2014 land, 1981-2025 rain",12.49
+Catchment 40,2,"2030 land (GHSL), 1981-2025 rain",15.45
+Catchment 40,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",27.97
+Catchment 40,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.45
+Catchment 40,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.17
+Catchment 40,10,"2014 land, 1981-2025 rain",10.01
+Catchment 40,10,"2030 land (GHSL), 1981-2025 rain",12.37
+Catchment 40,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.29
+Catchment 40,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.05
+Catchment 40,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",25.45
+Catchment 40,50,"2014 land, 1981-2025 rain",9.1
+Catchment 40,50,"2030 land (GHSL), 1981-2025 rain",11.24
+Catchment 40,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",21.59
+Catchment 40,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",26.1
+Catchment 40,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",23.74
+Catchment 41,2,"2014 land, 1981-2025 rain",19.19
+Catchment 41,2,"2030 land (GHSL), 1981-2025 rain",24.26
+Catchment 41,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",38.0
+Catchment 41,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",44.01
+Catchment 41,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",38.39
+Catchment 41,10,"2014 land, 1981-2025 rain",15.19
+Catchment 41,10,"2030 land (GHSL), 1981-2025 rain",19.15
+Catchment 41,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.89
+Catchment 41,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.0
+Catchment 41,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",31.63
+Catchment 41,50,"2014 land, 1981-2025 rain",13.74
+Catchment 41,50,"2030 land (GHSL), 1981-2025 rain",17.3
+Catchment 41,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",28.33
+Catchment 41,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.14
+Catchment 41,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.2
+Catchment 44,2,"2014 land, 1981-2025 rain",12.83
+Catchment 44,2,"2030 land (GHSL), 1981-2025 rain",16.27
+Catchment 44,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",29.77
+Catchment 44,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",35.69
+Catchment 44,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",31.86
+Catchment 44,10,"2014 land, 1981-2025 rain",10.1
+Catchment 44,10,"2030 land (GHSL), 1981-2025 rain",12.77
+Catchment 44,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.25
+Catchment 44,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.26
+Catchment 44,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",26.3
+Catchment 44,50,"2014 land, 1981-2025 rain",9.09
+Catchment 44,50,"2030 land (GHSL), 1981-2025 rain",11.49
+Catchment 44,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",22.25
+Catchment 44,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",26.94
+Catchment 44,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.29
+Catchment 49,2,"2014 land, 1981-2025 rain",38.02
+Catchment 49,2,"2030 land (GHSL), 1981-2025 rain",44.35
+Catchment 49,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",59.49
+Catchment 49,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",66.1
+Catchment 49,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",59.12
+Catchment 49,10,"2014 land, 1981-2025 rain",29.73
+Catchment 49,10,"2030 land (GHSL), 1981-2025 rain",34.57
+Catchment 49,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",47.36
+Catchment 49,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",52.94
+Catchment 49,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",47.6
+Catchment 49,50,"2014 land, 1981-2025 rain",26.77
+Catchment 49,50,"2030 land (GHSL), 1981-2025 rain",31.11
+Catchment 49,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",43.11
+Catchment 49,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",48.33
+Catchment 49,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",43.54
+Relini River,2,"2014 land, 1981-2025 rain",42.32
+Relini River,2,"2030 land (GHSL), 1981-2025 rain",45.47
+Relini River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",60.5
+Relini River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",67.07
+Relini River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",63.59
+Relini River,10,"2014 land, 1981-2025 rain",32.87
+Relini River,10,"2030 land (GHSL), 1981-2025 rain",35.26
+Relini River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",48.0
+Relini River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",53.54
+Relini River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",50.91
+Relini River,50,"2014 land, 1981-2025 rain",29.52
+Relini River,50,"2030 land (GHSL), 1981-2025 rain",31.66
+Relini River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",43.62
+Relini River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",48.82
+Relini River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",46.46
+Catchment 51,2,"2014 land, 1981-2025 rain",38.34
+Catchment 51,2,"2030 land (GHSL), 1981-2025 rain",45.34
+Catchment 51,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",61.02
+Catchment 51,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",67.87
+Catchment 51,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",60.13
+Catchment 51,10,"2014 land, 1981-2025 rain",29.69
+Catchment 51,10,"2030 land (GHSL), 1981-2025 rain",34.99
+Catchment 51,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",48.06
+Catchment 51,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",53.76
+Catchment 51,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",47.92
+Catchment 51,50,"2014 land, 1981-2025 rain",26.61
+Catchment 51,50,"2030 land (GHSL), 1981-2025 rain",31.32
+Catchment 51,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",43.51
+Catchment 51,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",48.81
+Catchment 51,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",43.62
+Catchment 54,2,"2014 land, 1981-2025 rain",13.82
+Catchment 54,2,"2030 land (GHSL), 1981-2025 rain",16.98
+Catchment 54,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.37
+Catchment 54,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.23
+Catchment 54,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",32.71
+Catchment 54,10,"2014 land, 1981-2025 rain",10.88
+Catchment 54,10,"2030 land (GHSL), 1981-2025 rain",13.34
+Catchment 54,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.76
+Catchment 54,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.75
+Catchment 54,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",27.02
+Catchment 54,50,"2014 land, 1981-2025 rain",9.8
+Catchment 54,50,"2030 land (GHSL), 1981-2025 rain",12.01
+Catchment 54,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",22.74
+Catchment 54,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",27.41
+Catchment 54,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.96
+Msimbazi River (2),2,"2014 land, 1981-2025 rain",14.43
+Msimbazi River (2),2,"2030 land (GHSL), 1981-2025 rain",17.18
+Msimbazi River (2),2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.58
+Msimbazi River (2),2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.46
+Msimbazi River (2),2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",33.4
+Msimbazi River (2),10,"2014 land, 1981-2025 rain",11.28
+Msimbazi River (2),10,"2030 land (GHSL), 1981-2025 rain",13.41
+Msimbazi River (2),10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.84
+Msimbazi River (2),10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.82
+Msimbazi River (2),10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",27.48
+Msimbazi River (2),50,"2014 land, 1981-2025 rain",10.13
+Msimbazi River (2),50,"2030 land (GHSL), 1981-2025 rain",12.03
+Msimbazi River (2),50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",22.76
+Msimbazi River (2),50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",27.43
+Msimbazi River (2),50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",25.33
+Catchment 57,2,"2014 land, 1981-2025 rain",17.97
+Catchment 57,2,"2030 land (GHSL), 1981-2025 rain",24.57
+Catchment 57,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",38.77
+Catchment 57,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",45.0
+Catchment 57,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",37.66
+Catchment 57,10,"2014 land, 1981-2025 rain",14.03
+Catchment 57,10,"2030 land (GHSL), 1981-2025 rain",19.1
+Catchment 57,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",31.08
+Catchment 57,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.3
+Catchment 57,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.69
+Catchment 57,50,"2014 land, 1981-2025 rain",12.59
+Catchment 57,50,"2030 land (GHSL), 1981-2025 rain",17.13
+Catchment 57,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",28.32
+Catchment 57,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.2
+Catchment 57,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",28.19
+Msimbazi River (3),2,"2014 land, 1981-2025 rain",30.5
+Msimbazi River (3),2,"2030 land (GHSL), 1981-2025 rain",36.12
+Msimbazi River (3),2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",50.27
+Msimbazi River (3),2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",56.45
+Msimbazi River (3),2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",50.27
+Msimbazi River (3),10,"2014 land, 1981-2025 rain",23.88
+Msimbazi River (3),10,"2030 land (GHSL), 1981-2025 rain",28.2
+Msimbazi River (3),10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",40.32
+Msimbazi River (3),10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",45.6
+Msimbazi River (3),10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",40.85
+Msimbazi River (3),50,"2014 land, 1981-2025 rain",21.52
+Msimbazi River (3),50,"2030 land (GHSL), 1981-2025 rain",25.38
+Msimbazi River (3),50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",36.8
+Msimbazi River (3),50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",41.78
+Msimbazi River (3),50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",37.52
+Malapa Drain,2,"2014 land, 1981-2025 rain",0.83
+Malapa Drain,2,"2030 land (GHSL), 1981-2025 rain",2.5
+Malapa Drain,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",11.6
+Malapa Drain,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",15.56
+Malapa Drain,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",13.74
+Malapa Drain,10,"2014 land, 1981-2025 rain",0.7
+Malapa Drain,10,"2030 land (GHSL), 1981-2025 rain",2.1
+Malapa Drain,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",10.84
+Malapa Drain,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",14.64
+Malapa Drain,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",13.11
+Malapa Drain,50,"2014 land, 1981-2025 rain",0.65
+Malapa Drain,50,"2030 land (GHSL), 1981-2025 rain",1.96
+Malapa Drain,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",10.57
+Malapa Drain,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",14.32
+Malapa Drain,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",12.88
+Catchment 64,2,"2014 land, 1981-2025 rain",12.29
+Catchment 64,2,"2030 land (GHSL), 1981-2025 rain",18.46
+Catchment 64,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",32.44
+Catchment 64,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",38.57
+Catchment 64,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",31.69
+Catchment 64,10,"2014 land, 1981-2025 rain",9.57
+Catchment 64,10,"2030 land (GHSL), 1981-2025 rain",14.32
+Catchment 64,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",26.09
+Catchment 64,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",31.22
+Catchment 64,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",25.97
+Catchment 64,50,"2014 land, 1981-2025 rain",8.57
+Catchment 64,50,"2030 land (GHSL), 1981-2025 rain",12.81
+Catchment 64,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.79
+Catchment 64,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.58
+Catchment 64,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",23.9
+Kizinga River (2),2,"2014 land, 1981-2025 rain",24.36
+Kizinga River (2),2,"2030 land (GHSL), 1981-2025 rain",27.62
+Kizinga River (2),2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",39.43
+Kizinga River (2),2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",44.57
+Kizinga River (2),2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",41.03
+Kizinga River (2),10,"2014 land, 1981-2025 rain",19.71
+Kizinga River (2),10,"2030 land (GHSL), 1981-2025 rain",22.31
+Kizinga River (2),10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",33.05
+Kizinga River (2),10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",37.72
+Kizinga River (2),10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",34.88
+Kizinga River (2),50,"2014 land, 1981-2025 rain",18.06
+Kizinga River (2),50,"2030 land (GHSL), 1981-2025 rain",20.44
+Kizinga River (2),50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.81
+Kizinga River (2),50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",35.32
+Kizinga River (2),50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",32.72
+Manyema,2,"2014 land, 1981-2025 rain",9.93
+Manyema,2,"2030 land (GHSL), 1981-2025 rain",11.52
+Manyema,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.38
+Manyema,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.57
+Manyema,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",26.81
+Manyema,10,"2014 land, 1981-2025 rain",7.95
+Manyema,10,"2030 land (GHSL), 1981-2025 rain",9.22
+Manyema,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",19.7
+Manyema,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",24.27
+Manyema,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",22.88
+Manyema,50,"2014 land, 1981-2025 rain",7.23
+Manyema,50,"2030 land (GHSL), 1981-2025 rain",8.38
+Manyema,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",18.37
+Manyema,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",22.72
+Manyema,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",21.45
+Catchment 72,2,"2014 land, 1981-2025 rain",18.81
+Catchment 72,2,"2030 land (GHSL), 1981-2025 rain",19.65
+Catchment 72,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",32.14
+Catchment 72,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",37.59
+Catchment 72,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",36.66
+Catchment 72,10,"2014 land, 1981-2025 rain",14.95
+Catchment 72,10,"2030 land (GHSL), 1981-2025 rain",15.62
+Catchment 72,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",26.57
+Catchment 72,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",31.35
+Catchment 72,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.62
+Catchment 72,50,"2014 land, 1981-2025 rain",13.56
+Catchment 72,50,"2030 land (GHSL), 1981-2025 rain",14.16
+Catchment 72,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.58
+Catchment 72,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.12
+Catchment 72,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",28.45
+Tenge River,2,"2014 land, 1981-2025 rain",19.17
+Tenge River,2,"2030 land (GHSL), 1981-2025 rain",19.38
+Tenge River,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.11
+Tenge River,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",34.79
+Tenge River,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",34.56
+Tenge River,10,"2014 land, 1981-2025 rain",15.82
+Tenge River,10,"2030 land (GHSL), 1981-2025 rain",15.99
+Tenge River,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",26.0
+Tenge River,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",30.35
+Tenge River,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",30.17
+Tenge River,50,"2014 land, 1981-2025 rain",14.63
+Tenge River,50,"2030 land (GHSL), 1981-2025 rain",14.79
+Tenge River,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.55
+Tenge River,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.8
+Tenge River,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",28.62
+Catchment 75,2,"2014 land, 1981-2025 rain",15.42
+Catchment 75,2,"2030 land (GHSL), 1981-2025 rain",23.43
+Catchment 75,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",37.46
+Catchment 75,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",43.61
+Catchment 75,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",34.7
+Catchment 75,10,"2014 land, 1981-2025 rain",12.11
+Catchment 75,10,"2030 land (GHSL), 1981-2025 rain",18.32
+Catchment 75,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.19
+Catchment 75,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",35.37
+Catchment 75,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",28.51
+Catchment 75,50,"2014 land, 1981-2025 rain",10.9
+Catchment 75,50,"2030 land (GHSL), 1981-2025 rain",16.46
+Catchment 75,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",27.57
+Catchment 75,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",32.42
+Catchment 75,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",26.27
+Kizinga River (3),2,"2014 land, 1981-2025 rain",9.24
+Kizinga River (3),2,"2030 land (GHSL), 1981-2025 rain",10.39
+Kizinga River (3),2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",20.92
+Kizinga River (3),2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",25.5
+Kizinga River (3),2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.25
+Kizinga River (3),10,"2014 land, 1981-2025 rain",7.51
+Kizinga River (3),10,"2030 land (GHSL), 1981-2025 rain",8.43
+Kizinga River (3),10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",18.14
+Kizinga River (3),10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",22.36
+Kizinga River (3),10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",21.34
+Kizinga River (3),50,"2014 land, 1981-2025 rain",6.88
+Kizinga River (3),50,"2030 land (GHSL), 1981-2025 rain",7.73
+Kizinga River (3),50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",17.14
+Kizinga River (3),50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",21.24
+Kizinga River (3),50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",20.3
+Catchment 77,2,"2014 land, 1981-2025 rain",13.87
+Catchment 77,2,"2030 land (GHSL), 1981-2025 rain",15.99
+Catchment 77,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",28.25
+Catchment 77,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",33.61
+Catchment 77,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",31.27
+Catchment 77,10,"2014 land, 1981-2025 rain",11.12
+Catchment 77,10,"2030 land (GHSL), 1981-2025 rain",12.8
+Catchment 77,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",23.58
+Catchment 77,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",28.28
+Catchment 77,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",26.42
+Catchment 77,50,"2014 land, 1981-2025 rain",10.11
+Catchment 77,50,"2030 land (GHSL), 1981-2025 rain",11.64
+Catchment 77,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",21.9
+Catchment 77,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",26.36
+Catchment 77,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.67
+Chuo Kikuu,2,"2014 land, 1981-2025 rain",6.32
+Chuo Kikuu,2,"2030 land (GHSL), 1981-2025 rain",9.39
+Chuo Kikuu,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",21.07
+Chuo Kikuu,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",26.17
+Chuo Kikuu,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",22.78
+Chuo Kikuu,10,"2014 land, 1981-2025 rain",5.09
+Chuo Kikuu,10,"2030 land (GHSL), 1981-2025 rain",7.55
+Chuo Kikuu,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",17.9
+Chuo Kikuu,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",22.41
+Chuo Kikuu,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",19.69
+Chuo Kikuu,50,"2014 land, 1981-2025 rain",4.64
+Chuo Kikuu,50,"2030 land (GHSL), 1981-2025 rain",6.88
+Chuo Kikuu,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",16.75
+Chuo Kikuu,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",21.04
+Chuo Kikuu,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",18.57
+Catchment 85,2,"2014 land, 1981-2025 rain",28.17
+Catchment 85,2,"2030 land (GHSL), 1981-2025 rain",30.69
+Catchment 85,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",43.98
+Catchment 85,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",49.78
+Catchment 85,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",47.01
+Catchment 85,10,"2014 land, 1981-2025 rain",22.4
+Catchment 85,10,"2030 land (GHSL), 1981-2025 rain",24.37
+Catchment 85,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",35.96
+Catchment 85,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",41.01
+Catchment 85,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",38.84
+Catchment 85,50,"2014 land, 1981-2025 rain",20.33
+Catchment 85,50,"2030 land (GHSL), 1981-2025 rain",22.12
+Catchment 85,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",33.12
+Catchment 85,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",37.91
+Catchment 85,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",35.94
+Chuo Kikuu (2),2,"2014 land, 1981-2025 rain",1.26
+Chuo Kikuu (2),2,"2030 land (GHSL), 1981-2025 rain",1.48
+Chuo Kikuu (2),2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",10.72
+Chuo Kikuu (2),2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",14.75
+Chuo Kikuu (2),2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",14.51
+Chuo Kikuu (2),10,"2014 land, 1981-2025 rain",1.06
+Chuo Kikuu (2),10,"2030 land (GHSL), 1981-2025 rain",1.24
+Chuo Kikuu (2),10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",10.05
+Chuo Kikuu (2),10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",13.88
+Chuo Kikuu (2),10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",13.67
+Chuo Kikuu (2),50,"2014 land, 1981-2025 rain",0.98
+Chuo Kikuu (2),50,"2030 land (GHSL), 1981-2025 rain",1.16
+Chuo Kikuu (2),50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",9.8
+Chuo Kikuu (2),50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",13.57
+Chuo Kikuu (2),50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",13.38
+Mlalakuwa,2,"2014 land, 1981-2025 rain",2.45
+Mlalakuwa,2,"2030 land (GHSL), 1981-2025 rain",5.93
+Mlalakuwa,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",18.17
+Mlalakuwa,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",23.53
+Mlalakuwa,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",19.67
+Mlalakuwa,10,"2014 land, 1981-2025 rain",1.94
+Mlalakuwa,10,"2030 land (GHSL), 1981-2025 rain",4.68
+Mlalakuwa,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",15.3
+Mlalakuwa,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",19.94
+Mlalakuwa,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",16.91
+Mlalakuwa,50,"2014 land, 1981-2025 rain",1.75
+Mlalakuwa,50,"2030 land (GHSL), 1981-2025 rain",4.22
+Mlalakuwa,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",14.25
+Mlalakuwa,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",18.63
+Mlalakuwa,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",15.9
+Catchment 96,2,"2014 land, 1981-2025 rain",75.08
+Catchment 96,2,"2030 land (GHSL), 1981-2025 rain",82.86
+Catchment 96,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",100.81
+Catchment 96,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",108.64
+Catchment 96,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",100.16
+Catchment 96,10,"2014 land, 1981-2025 rain",56.41
+Catchment 96,10,"2030 land (GHSL), 1981-2025 rain",62.02
+Catchment 96,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",76.78
+Catchment 96,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",83.21
+Catchment 96,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",77.07
+Catchment 96,50,"2014 land, 1981-2025 rain",50.01
+Catchment 96,50,"2030 land (GHSL), 1981-2025 rain",54.92
+Catchment 96,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",68.64
+Catchment 96,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",74.61
+Catchment 96,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",69.22
+Catchment 97,2,"2014 land, 1981-2025 rain",12.09
+Catchment 97,2,"2030 land (GHSL), 1981-2025 rain",13.0
+Catchment 97,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",25.12
+Catchment 97,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",30.41
+Catchment 97,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.4
+Catchment 97,10,"2014 land, 1981-2025 rain",9.64
+Catchment 97,10,"2030 land (GHSL), 1981-2025 rain",10.36
+Catchment 97,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",21.01
+Catchment 97,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",25.65
+Catchment 97,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.85
+Catchment 97,50,"2014 land, 1981-2025 rain",8.75
+Catchment 97,50,"2030 land (GHSL), 1981-2025 rain",9.4
+Catchment 97,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",19.52
+Catchment 97,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",23.93
+Catchment 97,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",23.21
+Catchment 98,2,"2014 land, 1981-2025 rain",10.93
+Catchment 98,2,"2030 land (GHSL), 1981-2025 rain",16.92
+Catchment 98,2,"2030 land, rain +8% (SSP2-4.5, 2041-70)",30.33
+Catchment 98,2,"2030 land, rain +12% (SSP5-8.5, 2041-70)",36.21
+Catchment 98,2,"2014 land, rain +12% (SSP5-8.5, 2041-70)",29.54
+Catchment 98,10,"2014 land, 1981-2025 rain",8.61
+Catchment 98,10,"2030 land (GHSL), 1981-2025 rain",13.28
+Catchment 98,10,"2030 land, rain +8% (SSP2-4.5, 2041-70)",24.72
+Catchment 98,10,"2030 land, rain +12% (SSP5-8.5, 2041-70)",29.71
+Catchment 98,10,"2014 land, rain +12% (SSP5-8.5, 2041-70)",24.54
+Catchment 98,50,"2014 land, 1981-2025 rain",7.76
+Catchment 98,50,"2030 land (GHSL), 1981-2025 rain",11.95
+Catchment 98,50,"2030 land, rain +8% (SSP2-4.5, 2041-70)",22.69
+Catchment 98,50,"2030 land, rain +12% (SSP5-8.5, 2041-70)",27.36
+Catchment 98,50,"2014 land, rain +12% (SSP5-8.5, 2041-70)",22.73

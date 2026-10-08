@@ -1,0 +1,598 @@
+<title>Uganda Rains and Heat, 1981–2026</title>
+<meta name="description" content="Why the 2026 El Niño rains have not arrived yet, how Uganda's seasons, temperature and wind have changed since 1981, and what it means for water, food, drainage and bulk water design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a field report. Sticky contents rail on wide screens, ~68ch reading column, figures break out wider. */
+:root {
+  --bg: #f5f6f3;          /* papyrus-grey paper */
+  --surface: #fcfcfb;     /* figure ground, matches the PNGs */
+  --ink: #15201c;         /* deep swamp-green ink */
+  --ink-2: #4b5651;
+  --muted: #7d8782;
+  --rule: #dfe2dc;
+  --accent: #1d6a8a;      /* Lake Victoria blue */
+  --accent-ink: #165570;
+  --warn: #b5481f;        /* laterite / murram */
+  --warn-bg: #f7e6dd;
+  --ok-bg: #e2eef3;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --step--1: 0.84rem; --step-0: 1.02rem; --step-1: 1.22rem; --step-2: 1.55rem; --step-3: 2.1rem; --step-4: 2.8rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111715; --surface: #1a211e; --ink: #e6ebe7; --ink-2: #b7c0bb; --muted: #8b958f; --rule: #2c3531;
+    --accent: #6fb6d6; --accent-ink: #8cc8e2; --warn: #ec8a62; --warn-bg: #3a2219; --ok-bg: #18303a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111715; --surface: #1a211e; --ink: #e6ebe7; --ink-2: #b7c0bb; --muted: #8b958f; --rule: #2c3531;
+  --accent: #6fb6d6; --accent-ink: #8cc8e2; --warn: #ec8a62; --warn-bg: #3a2219; --ok-bg: #18303a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 80px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; }
+@media (max-width: 960px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 0; padding-inline: 16px; } nav.toc { display: none; } }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); align-self: start; font-family: var(--font-display); font-size: 0.86rem; max-height: calc(100vh - 40px); overflow-y: auto; }
+nav.toc p { font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.72rem; color: var(--muted); margin: 0 0 10px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: s; }
+nav.toc a { display: block; padding: 5px 10px; color: var(--ink-2); text-decoration: none; border-left: 2px solid var(--rule); }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent-ink); border-left-color: var(--accent); outline: none; }
+main { min-width: 0; }
+.col { max-width: 70ch; }
+header.top { padding-block: 8px 28px; border-bottom: 1px solid var(--rule); margin-bottom: 28px; }
+.eyebrow { font-family: var(--font-display); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 10px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.15; color: var(--ink); }
+h1 { font-size: var(--step-4); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 14px; }
+h2 { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.01em; margin: 64px 0 14px; padding-top: 18px; border-top: 3px solid var(--ink); }
+h3 { font-size: var(--step-1); font-weight: 700; margin: 34px 0 8px; }
+@media (max-width: 600px) { h1 { font-size: 2.05rem; } h2 { font-size: 1.6rem; } }
+.lede { font-size: var(--step-1); color: var(--ink-2); max-width: 62ch; margin: 0; }
+.meta { font-family: var(--font-data); font-size: 0.78rem; color: var(--muted); margin-top: 16px; }
+p { margin: 0 0 14px; }
+a { color: var(--accent-ink); }
+strong { font-weight: 600; }
+.answer { background: var(--surface); border: 1px solid var(--rule); border-left: 5px solid var(--accent); padding: 18px 22px; margin: 22px 0; }
+.answer.warn { border-left-color: var(--warn); }
+.answer h3 { margin-top: 0; }
+.answer ul, .col ul, .col ol { margin: 0 0 6px; padding-left: 1.2em; display: grid; gap: 6px; }
+.findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px 0 8px; }
+.finding { background: var(--surface); border: 1px solid var(--rule); padding: 14px 16px 12px; min-width: 0; }
+.finding .k { font-family: var(--font-data); font-size: 1.45rem; font-weight: 500; color: var(--accent-ink); display: block; line-height: 1.2; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+.finding.hot .k { color: var(--warn); }
+.finding p { font-size: 0.93rem; margin: 0; color: var(--ink-2); }
+.finding b { font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); display: block; margin-bottom: 2px; }
+figure { margin: 22px 0 26px; }
+figure a { display: block; background: var(--surface); border: 1px solid var(--rule); padding: 6px; }
+figure img { display: block; width: 100%; height: auto; }
+:root[data-theme="dark"] figure img { filter: brightness(0.94); }
+figcaption { font-size: 0.9rem; color: var(--ink-2); margin-top: 8px; max-width: 80ch; }
+figcaption .fn { font-family: var(--font-data); font-size: 0.76rem; color: var(--accent-ink); margin-right: 6px; }
+.tbl { overflow-x: auto; margin: 16px 0 22px; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 7px 10px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; white-space: normal; min-width: 170px; }
+thead th { font-family: var(--font-display); font-size: 0.74rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); background: var(--bg); vertical-align: bottom; white-space: normal; }
+td.up { color: var(--accent-ink); font-weight: 600; }
+td.down { color: var(--warn); font-weight: 600; }
+.note { font-size: 0.86rem; color: var(--muted); }
+.pill { display: inline-block; font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; vertical-align: 2px; }
+.pill.robust { background: var(--ok-bg); color: var(--accent-ink); }
+.pill.uncertain { background: var(--warn-bg); color: var(--warn); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.two > * { min-width: 0; }
+ol.refs { font-size: 0.86rem; color: var(--ink-2); padding-left: 1.3em; display: grid; gap: 6px; }
+code, .mono { font-family: var(--font-data); font-size: 0.84em; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <p>Contents</p>
+  <ol>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#forecast">The 2026 forecast</a></li>
+    <li><a href="#better">Forecasting better</a></li>
+    <li><a href="#zones">Rainfall regions</a></li>
+    <li><a href="#rain">Rainfall trends</a></li>
+    <li><a href="#seasons">Have the seasons shifted?</a></li>
+    <li><a href="#heat">Hotter?</a></li>
+    <li><a href="#wind">Windier, drier air?</a></li>
+    <li><a href="#context">Regional &amp; global context</a></li>
+    <li><a href="#water">Water scarcity</a></li>
+    <li><a href="#food">Food security &amp; irrigation</a></li>
+    <li><a href="#drainage">Drainage design</a></li>
+    <li><a href="#bulk">Bulk water lines</a></li>
+    <li><a href="#closeups">Close-up maps</a></li>
+    <li><a href="#methods">Data, methods, limits</a></li>
+  </ol>
+</nav>
+
+<main>
+<header class="top" id="summary">
+  <p class="eyebrow">Uganda climate study · 1981–2026 · 0.25° satellite-gauge analysis</p>
+  <h1>Uganda's rains and heat, 1981–2026</h1>
+  <p class="lede">The forecast for 2026 promised heavy El Niño rains. So far it has been dry. This report checks that forecast against the data, measures how Uganda's seasons, temperature and wind have changed over 45 years, and turns the results into guidance for water, food, drainage and bulk water design.</p>
+  <p class="meta">Data to 5 Oct 2026 · CHIRPS v2.0, CPC, NASA POWER, GHCN-CAMS, GPCP, ERSST v5, CMIP6 · Code and tables in <span class="mono">src/</span> and <span class="mono">results/</span></p>
+</header>
+
+<div class="findings">
+  <div class="finding hot"><b>2026 so far</b><span class="k">54%</span><p>of normal rain fell from 1 Sep to 5 Oct; June–August was 60% of normal, the driest in the 1981–2025 record.</p></div>
+  <div class="finding"><b>Not over yet</b><span class="k">53% → +37%</span><p>In 1997 Uganda was just as dry on 5 October, then finished Oct–Dec 37% above normal. The heavy rains usually come in late Oct–Nov.</p></div>
+  <div class="finding"><b>What drives the short rains</b><span class="k">Indian Ocean</span><p>Oct–Dec rain follows the Indian Ocean more closely than the Pacific. El Niño helps mainly when the Indian Ocean Dipole is strongly positive.</p></div>
+  <div class="finding"><b>Second rains</b><span class="k">+14%/decade</span><p>Sep–Nov rain in Karamoja (+6% in Acholi). In the north and north-east, the rainy season now ends 5–10 days later each decade.</p></div>
+  <div class="finding hot"><b>Hotter nights</b><span class="k">22 → 60</span><p>warm nights per year (1981–95 vs 2011–25). Minimum temperature is up 0.2–0.34 °C per decade in every dataset.</p></div>
+  <div class="finding"><b>Wind</b><span class="k">No trend</span><p>in mean wind speed; the strongest gust-day of the year is up about 0.1 m/s per decade.</p></div>
+</div>
+
+<div class="col">
+  <div class="answer">
+    <h3>Short answers to the questions asked</h3>
+    <ul>
+      <li><strong>Was the El Niño forecast wrong?</strong> Not yet provable. September was very dry, but in the four strongest El Niños on record (1982, 1997, 2015, 2023) Uganda's Oct–Dec rain ended in the upper third every time. The real risk this year is a weak Indian Ocean Dipole with a warm eastern Indian Ocean, which the forecasters assumed would turn positive.</li>
+      <li><strong>Have the seasons changed?</strong> Yes, in specific ways. The second rains are wetter and longer, especially in the east and north. The single season of the north and Karamoja now ends later. The first rains now start about a week earlier than in the 1980s, most clearly in the south-west.</li>
+      <li><strong>Hotter or colder?</strong> Hotter, especially at night. Daytime maximum warming is real but uncertain in size, because the station record is thin.</li>
+      <li><strong>Windier?</strong> Not on average. The strongest wind days have strengthened slightly.</li>
+      <li><strong>Water-scarce now?</strong> Karamoja (semi-arid, up to 8 dry months a year), then a dry sub-humid belt through Acholi, Lango-Kyoga, Teso and West Nile/Madi, plus the Rwenzori rain shadow (Ntoroko, Kasese lowlands) and the Ankole rangelands of the south-west (4–5 dry months).</li>
+      <li><strong>Water-scarce in future?</strong> The same places, under more pressure. Climate models give rainfall gains that slightly outpace higher evaporation, but population growth and the drier models put the Acholi–Lango–Teso belt and the Ankole rangelands at risk by 2050. See <a href="#future">section 9</a>.</li>
+      <li><strong>Engineering:</strong> keep design storms at least at historical gauge values, add a warming uplift of about 7% per °C, design water sources for a repeat of the 2009 drought, and plan treatment for hotter raw water and sharper turbidity peaks.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================== FORECAST ============================== -->
+<h2 id="forecast">1. The 2026 El Niño forecast against the data</h2>
+<div class="col">
+  <p><strong>What was forecast.</strong> On 30 July 2026 the Ministry of Water and Environment, through the meteorological department, warned of "a high probability of above-normal rainfall episodes in several parts of the country" for September to December 2026, linked to a developing El Niño. On 18 August the regional climate outlook forum (GHACOF-74, ICPAC) issued a wetter-than-normal October–December outlook for most of the Greater Horn of Africa. It relied on El Niño strengthening and on the Indian Ocean Dipole (IOD) turning positive, citing 1997 and 2023 as analogue years.</p>
+  <p><strong>What the ocean did.</strong> El Niño developed as expected and is now exceptionally strong: Niño-3.4 reached +2.9 °C in September 2026 (ERSST v5), and NOAA's three-month ONI reached +2.16 °C for Jul–Sep. The Indian Ocean did not follow the 1997 script. The IOD index is only +0.5 °C, and the eastern pole off Sumatra is <em>warm</em> (+0.4 °C). In 1997 it was cold (−0.8 °C), and that cold eastern pole is what pushes extra moisture onto East Africa.</p>
+  <p><strong>What the rain did.</strong> The figures below compare 2026 with every year since 1981.</p>
+</div>
+<figure><a href="img/fig14_2026_status_maps.jpg" target="_blank" rel="noopener"><img src="img/fig14_2026_status_maps.jpg" alt="Maps of 2026 rainfall as percent of normal and percentile rank for March-May, June-August and 1 September to 5 October 2026" loading="lazy"></a>
+<figcaption><span class="fn">Fig 14</span>2026 rainfall against 1991–2020. March–May was near normal (98% nationally; wet in Karamoja and the north, dry in the south-west). June–August was the driest on record in most zones. September to 5 October is at the 2nd percentile nationally, and only 19% of normal in Karamoja.</figcaption></figure>
+
+<div class="tbl"><table>
+<thead><tr><th>Zone</th><th>Mar–May 2026<br>% of normal</th><th>Jun–Aug 2026<br>% of normal</th><th>1 Sep–5 Oct 2026<br>% of normal</th><th>1 Sep–5 Oct<br>percentile</th></tr></thead>
+<tbody>
+<tr><td>Karamoja (NE, semi-arid)</td><td>123</td><td class="down">32</td><td class="down">19</td><td>0</td></tr>
+<tr><td>North (Acholi–Kitgum)</td><td>110</td><td class="down">56</td><td class="down">54</td><td>2</td></tr>
+<tr><td>West Nile–Lango–Teso–Elgon belt</td><td>100</td><td class="down">63</td><td class="down">56</td><td>2</td></tr>
+<tr><td>Mid-west &amp; Kyoga</td><td>91</td><td class="down">77</td><td class="down">52</td><td>0</td></tr>
+<tr><td>Lake Victoria crescent</td><td>92</td><td class="down">58</td><td class="down">59</td><td>2</td></tr>
+<tr><td>South-west (Ankole–Kigezi)</td><td>86</td><td class="down">64</td><td class="down">60</td><td>2</td></tr>
+<tr><td><strong>Uganda</strong></td><td>98</td><td class="down">60</td><td class="down">54</td><td>2</td></tr>
+</tbody></table></div>
+
+<figure><a href="img/fig15_2026_cumulative.jpg" target="_blank" rel="noopener"><img src="img/fig15_2026_cumulative.jpg" alt="Cumulative rainfall from 1 August for 2026 compared with the 1981-2024 range and El Nino years 1997, 2023, 2015 and 2006" loading="lazy"></a>
+<figcaption><span class="fn">Fig 15</span>Rain accumulated since 1 August. 2026 (black) is tracking at the bottom of the historical range. 1997 (orange) was just as low in early October and then climbed steeply from late October. Most of the season's rain normally falls after the date of this report.</figcaption></figure>
+
+<div class="col">
+  <p>September is the shoulder of the season. In the central and eastern zones the second rains start, on average, between 18 August and 7 September, but the heavy El Niño months are October and November. The El Niño years in the record had dry starts as often as wet ones:</p>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>El Niño year</th><th>ONI Oct–Dec</th><th>IOD (DMI) Sep–Nov</th><th>East IO pole Sep–Nov</th><th>Uganda 1 Sep–5 Oct<br>% of normal</th><th>Uganda Oct–Dec<br>% anomaly</th></tr></thead>
+<tbody>
+<tr><td>1982</td><td>2.0</td><td>0.46</td><td>−0.36</td><td>87</td><td class="up">+13</td></tr>
+<tr><td>1986</td><td>1.0</td><td>0.40</td><td>−0.56</td><td>86</td><td class="down">−11</td></tr>
+<tr><td>1987</td><td>1.2</td><td>0.17</td><td>0.00</td><td>95</td><td class="down">−11</td></tr>
+<tr><td>1991</td><td>1.2</td><td>0.23</td><td>−0.33</td><td>83</td><td class="down">−11</td></tr>
+<tr><td>1994</td><td>0.9</td><td>0.81</td><td>−0.99</td><td>91</td><td>+1</td></tr>
+<tr><td>1997</td><td>2.3</td><td>1.05</td><td>−0.81</td><td class="down">53</td><td class="up">+37</td></tr>
+<tr><td>2002</td><td>1.1</td><td>0.40</td><td>−0.23</td><td>93</td><td class="up">+9</td></tr>
+<tr><td>2006</td><td>0.8</td><td>0.78</td><td>−0.61</td><td>106</td><td class="up">+11</td></tr>
+<tr><td>2009</td><td>1.2</td><td>−0.14</td><td>+0.37</td><td>76</td><td class="down">−10</td></tr>
+<tr><td>2015</td><td>2.4</td><td>0.56</td><td>+0.32</td><td>84</td><td class="up">+33</td></tr>
+<tr><td>2018</td><td>1.0</td><td>0.46</td><td>−0.15</td><td>87</td><td class="down">−6</td></tr>
+<tr><td>2023</td><td>1.9</td><td>1.27</td><td>−0.46</td><td>101</td><td class="up">+15</td></tr>
+<tr><td><strong>2026</strong></td><td><strong>2.2 (Jul–Sep)</strong></td><td><strong>0.52 (Sep)</strong></td><td><strong>+0.42 (Sep)</strong></td><td class="down"><strong>54</strong></td><td><strong>?</strong></td></tr>
+</tbody></table></div>
+
+<figure><a href="img/fig17_enso_iod_scatter.jpg" target="_blank" rel="noopener"><img src="img/fig17_enso_iod_scatter.jpg" alt="Scatter of Uganda October-December rainfall anomaly against Nino-3.4, coloured by the Indian Ocean Dipole" loading="lazy"></a>
+<figcaption><span class="fn">Fig 17</span>Each dot is one year, 1981–2025. Wet short-rains years sit to the upper right (strong El Niño) or are dark blue (strong positive IOD; 2019 was the wettest with only a weak El Niño). Weak and moderate El Niños with a weak IOD (1986, 1987, 1991, 2009, 2018) were all drier than normal. The dashed line marks September 2026, beyond any year in the record.</figcaption></figure>
+
+<div class="tbl"><table>
+<thead><tr><th>Type of year (Sep–Nov ocean state)</th><th>Years</th><th>Mean Oct–Dec<br>anomaly</th><th>Upper third</th><th>Lower third</th></tr></thead>
+<tbody>
+<tr><td>Strong El Niño (Niño-3.4 ≥ 1.5 °C)</td><td>4</td><td class="up">+25%</td><td>4 of 4</td><td>0 of 4</td></tr>
+<tr><td>Positive IOD (DMI ≥ 0.6), not strong El Niño</td><td>3</td><td class="up">+22%</td><td>2 of 3</td><td>0 of 3</td></tr>
+<tr><td>Weak or moderate El Niño, no strong +IOD</td><td>7</td><td class="down">−7%</td><td>1 of 7</td><td>4 of 7</td></tr>
+<tr><td>Neutral</td><td>14</td><td>−5%</td><td>5 of 14</td><td>5 of 14</td></tr>
+<tr><td>La Niña (Niño-3.4 ≤ −0.5 °C)</td><td>17</td><td class="down">−6%</td><td>3 of 17</td><td>9 of 17</td></tr>
+</tbody></table></div>
+
+<div class="col">
+  <div class="answer warn">
+    <h3>Reading this for 2026</h3>
+    <p>History favours a wet end to 2026: every strong El Niño since 1981 gave above-normal Oct–Dec rain. The record is short, though: four cases, and none as strong as 2026. Two things argue for caution. The Indian Ocean's eastern pole is warm rather than cold, as it was in 2009 and 2015, and the dry September has already used up a month of the season. The fairest summary is that the forecast was reasonable but stated with more confidence than the evidence supports. It should have said that much depends on the Indian Ocean, and that the first weeks of the season could be dry.</p>
+  </div>
+</div>
+
+<figure><a href="img/fig16_teleconnection_maps.jpg" target="_blank" rel="noopener"><img src="img/fig16_teleconnection_maps.jpg" alt="Maps of correlation between October-December rainfall and Nino-3.4, the IOD, and west and east Indian Ocean poles" loading="lazy"></a>
+<figcaption><span class="fn">Fig 16</span>Correlation of Oct–Dec rainfall with ocean indices, 1981–2025. The western Indian Ocean (r up to 0.58 around Lake Victoria) and the IOD (0.60) relate more strongly than Niño-3.4 (0.41). Once the IOD is known, ENSO adds almost nothing (partial r = 0.0–0.16). The south-west and Karamoja respond weakly to all of them.</figcaption></figure>
+
+<!-- ============================== BETTER ============================== -->
+<h2 id="better">2. How to forecast better</h2>
+<div class="col">
+  <p>I tested six statistical forecasts of Oct–Dec zone rainfall, each re-fitted 45 times with the target year and its neighbours left out. The forecasts were issued at two times: mid-August, using July ocean temperatures (the GHACOF timing), and early October, adding September ocean data and September rain.</p>
+</div>
+<figure><a href="img/fig18_forecast_skill.jpg" target="_blank" rel="noopener"><img src="img/fig18_forecast_skill.jpg" alt="Bar chart of cross-validated ranked probability skill score by forecast model and issue time" loading="lazy"></a>
+<figcaption><span class="fn">Fig 18</span>Skill against simply forecasting the 30-year average (RPSS; 0 = no better than climatology). All the statistical models hover around zero over the whole record. The machine-learning model (LightGBM) is the worst: with 45 seasons it fits noise. Skill exists only in strong-event years, which is why the table above is more useful than any single regression.</figcaption></figure>
+<div class="col">
+  <p>Taking the best-behaved model (ENSO plus the two Indian Ocean poles) at face value for 2026 gives Uganda an 83% chance of an above-normal Oct–Dec (fig 19). It does not know that 2026 is beyond anything in its training data, so treat it as an upper bound rather than a forecast.</p>
+</div>
+<figure><a href="img/fig19_ond2026_outlook.jpg" target="_blank" rel="noopener"><img src="img/fig19_ond2026_outlook.jpg" alt="Map of tercile probabilities for October-December 2026 rainfall by zone" loading="lazy" style="max-width:520px"></a>
+<figcaption><span class="fn">Fig 19</span>Statistical Oct–Dec 2026 outlook, issued early October: B = below, N = near, A = above normal. Weakest signal in the south-west (45% above), strongest around Lake Victoria (89%).</figcaption></figure>
+<div class="col">
+  <div class="answer">
+    <h3>Practical improvements for Uganda's seasonal forecasts</h3>
+    <ol>
+      <li><strong>Forecast the Indian Ocean, not just El Niño.</strong> Make the IOD, and especially the sign of the eastern pole, the headline predictor for Sep–Dec. State explicitly what happens if the IOD stays neutral.</li>
+      <li><strong>Issue probabilities with conditional language.</strong> Say "65% chance of above normal" rather than "heavy rains". Publish the hindcast skill for each region with each outlook, so users can judge it; skill is near zero for the south-west and Karamoja in most years.</li>
+      <li><strong>Separate onset from season total.</strong> El Niño years often start late. A monthly update with a sub-seasonal forecast (2–4 weeks, tracking the Madden–Julian Oscillation) would have flagged the dry September.</li>
+      <li><strong>Update monthly as the season unfolds.</strong> Re-issue in early October and early November with the latest ocean state and observed rain. That is when the 2026 picture becomes clear.</li>
+      <li><strong>Use multi-model dynamical forecasts</strong> (Copernicus C3S, NMME, WMO Lead Centre) and downscale them to Uganda's six rainfall regions defined here. They capture Indian Ocean–Pacific interaction better than regressions.</li>
+      <li><strong>Rescue and share station data.</strong> Public daily records for Uganda end in 1986. Digitising and releasing UNMA's archive would sharpen every number in this report, from forecast skill to drainage design storms.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ============================== ZONES ============================== -->
+<h2 id="zones">3. Six rainfall regions</h2>
+<div class="col">
+  <p>Uganda's rainfall was grouped by the shape of its yearly cycle and its annual total (k-means clustering of 269 grid cells of 0.25°, about 28 km). The result is six regions, each with a distinct rhythm. The south-west and Lake Victoria crescent have two clear seasons. The north and West Nile have one long season with a mid-year dip. Karamoja has a short, unreliable single season.</p>
+</div>
+<figure><a href="img/fig33_satellite_overview.jpg" target="_blank" rel="noopener"><img src="img/fig33_satellite_overview.jpg" alt="Satellite image of Uganda with the six rainfall zones overlaid, and a map of mean annual rainfall over East Africa" loading="lazy"></a>
+<figcaption><span class="fn">Fig 33</span>Left: Uganda from space with the six rainfall regions. Right: mean annual rainfall from satellite plus gauge data (CHIRPS), 1991–2020. Uganda sits on the wet western flank of the dry East African lowlands. Karamoja is the transition into the Turkana drylands.</figcaption></figure>
+<figure><a href="img/fig01_zones.jpg" target="_blank" rel="noopener"><img src="img/fig01_zones.jpg" alt="Map of six rainfall zones and their mean annual rainfall cycles" loading="lazy"></a>
+<figcaption><span class="fn">Fig 1</span>The regions and their mean daily rainfall through the year (31-day running mean). Annual totals range from 785 mm (Karamoja) to 1,400 mm (Lake Victoria crescent).</figcaption></figure>
+
+<!-- ============================== RAIN ============================== -->
+<h2 id="rain">4. Rainfall trends, 1981–2025</h2>
+<div class="col">
+  <p>Uganda as a whole has become slightly wetter: +1.5% per decade, not statistically significant nationally. The change is uneven. The second rains (Sep–Nov) have grown strongly in the east and north-east, while the first rains (Mar–May) have weakened in the north-west.</p>
+</div>
+<figure><a href="img/fig02_rain_trend_maps.jpg" target="_blank" rel="noopener"><img src="img/fig02_rain_trend_maps.jpg" alt="Five maps of rainfall trend by season" loading="lazy"></a>
+<figcaption><span class="fn">Fig 2</span>Trend in seasonal rainfall, % of the 1991–2020 mean per decade. Dots mark statistically significant trends (Mann–Kendall, p &lt; 0.05).</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Zone</th><th>Annual mean<br>mm</th><th>Annual trend<br>%/decade</th><th>Mar–May<br>%/decade</th><th>Sep–Nov<br>%/decade</th><th>Dec–Feb<br>%/decade</th><th>Year-to-year<br>variability (CV)</th></tr></thead>
+<tbody>
+<tr><td>Karamoja</td><td>785</td><td class="up">+5.9*</td><td class="up">+4.9*</td><td class="up">+13.9*</td><td>−1.6</td><td>21%</td></tr>
+<tr><td>North (Acholi–Kitgum)</td><td>1,256</td><td class="up">+1.9*</td><td>−0.8</td><td class="up">+5.8*</td><td>+0.7</td><td>11%</td></tr>
+<tr><td>West Nile–Lango–Teso–Elgon</td><td>1,355</td><td>+0.4</td><td>−2.0</td><td>+2.3</td><td>+2.0</td><td>10%</td></tr>
+<tr><td>Mid-west &amp; Kyoga</td><td>1,189</td><td>−0.6</td><td>−1.6</td><td>−0.5</td><td>+2.0</td><td>7%</td></tr>
+<tr><td>Lake Victoria crescent</td><td>1,400</td><td class="up">+3.4*</td><td>+2.0</td><td>+3.1</td><td>+6.2</td><td>11%</td></tr>
+<tr><td>South-west</td><td>1,074</td><td>+1.4</td><td>+1.4</td><td>0.0</td><td>+2.0</td><td>7%</td></tr>
+<tr><td><strong>Uganda</strong></td><td>1,215</td><td>+1.5</td><td>−0.2</td><td>+2.7</td><td>+4.0</td><td>9%</td></tr>
+</tbody></table></div>
+<p class="note">* significant at p &lt; 0.05 (Mann–Kendall test corrected for autocorrelation). Zone means are area-weighted means of CHIRPS 0.25° cells.</p>
+<figure><a href="img/fig03_rain_zone_series.jpg" target="_blank" rel="noopener"><img src="img/fig03_rain_zone_series.jpg" alt="Bar charts of annual, March-May and September-November rainfall for each zone, 1981-2025, with trend lines" loading="lazy"></a>
+<figcaption><span class="fn">Fig 3</span>Year-by-year totals by zone with Sen's slope trend lines. Big swings from year to year (for example 1984 dry, 1997 and 2019 very wet) dominate over the trends.</figcaption></figure>
+<figure><a href="img/fig06_rain_month_year_anomaly.jpg" target="_blank" rel="noopener"><img src="img/fig06_rain_month_year_anomaly.jpg" alt="Heat map of Uganda monthly rainfall anomaly by year and month" loading="lazy" style="max-width:560px"></a>
+<figcaption><span class="fn">Fig 6</span>Every month since 1981, as % above (blue) or below (orange) the 1991–2020 average for that month. Wet Oct–Dec spells line up with 1997, 2006, 2011, 2019 and 2023.</figcaption></figure>
+
+<h3>Rainfall extremes</h3>
+<div class="col">
+  <p>Rain falls on more days than it used to (+2% per decade, significant), but the share falling in very heavy downpours has not risen nationally in CHIRPS. Heavy-rain indices rose in Karamoja and around Lake Victoria and fell in the north and mid-west. CHIRPS lost many contributing rain gauges after the 1990s, which can damp recent extremes, so these falls should not be read as a reason to relax design standards (section 12).</p>
+</div>
+<figure><a href="img/fig04_rain_extremes_trends.jpg" target="_blank" rel="noopener"><img src="img/fig04_rain_extremes_trends.jpg" alt="Maps of trends in seven rainfall extreme indices" loading="lazy"></a>
+<figcaption><span class="fn">Fig 4</span>Trends in extreme-rainfall indices: wettest day (Rx1day), wettest 5 days (Rx5day), days ≥ 20 mm, rain from very wet days (R95pTOT), wet days, mean rain per wet day (SDII) and longest dry spell (CDD).</figcaption></figure>
+
+<!-- ============================== SEASONS ============================== -->
+<h2 id="seasons">5. Have the seasons shifted or changed length?</h2>
+<div class="col">
+  <p>Season start and end dates were computed for every grid cell and every year using the anomalous-accumulation method (Liebmann et al. 2012; Dunning et al. 2016). This marks onset where rain starts to exceed the local daily average persistently, rather than at a single wet day. Cells with two seasons were treated separately from cells with one.</p>
+</div>
+<figure><a href="img/fig05_annual_cycle_epochs.jpg" target="_blank" rel="noopener"><img src="img/fig05_annual_cycle_epochs.jpg" alt="Monthly rainfall by zone for 1981-1995, 1996-2010 and 2011-2025" loading="lazy"></a>
+<figcaption><span class="fn">Fig 5</span>Average monthly rain in three 15-year periods. The clearest change is the much wetter October in 2011–2025 (orange) in Karamoja, the north, the West Nile–Teso belt and Lake Victoria crescent. October 2011–2025 averaged 159 mm nationally against 135 mm before.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Season and zone</th><th>Onset<br>1981–95</th><th>Onset<br>2011–25</th><th>End<br>1981–95</th><th>End<br>2011–25</th><th>Length (days)<br>1981–95 → 2011–25</th><th>Total (mm)<br>1981–95 → 2011–25</th></tr></thead>
+<tbody>
+<tr><td>First rains · Lake Victoria crescent</td><td>18 Mar</td><td>11 Mar</td><td>30 May</td><td>30 May</td><td class="up">74 → 81*</td><td class="up">481 → 552*</td></tr>
+<tr><td>First rains · South-west</td><td>16 Mar</td><td>9 Mar*</td><td>16 May</td><td>13 May</td><td>62 → 67</td><td>310 → 346</td></tr>
+<tr><td>First rains · Mid-west &amp; Kyoga</td><td>21 Mar</td><td>15 Mar</td><td>27 May</td><td>22 May</td><td>68 → 69</td><td>376 → 369</td></tr>
+<tr><td>Second rains · Lake Victoria crescent</td><td>6 Sep</td><td>27 Aug</td><td>15 Nov</td><td>27 Nov</td><td class="up">71 → 93*</td><td class="up">388 → 576*</td></tr>
+<tr><td>Second rains · South-west</td><td>3 Sep</td><td>29 Aug</td><td>10 Dec</td><td>17 Dec</td><td class="up">99 → 111</td><td class="up">462 → 520</td></tr>
+<tr><td>Second rains · Mid-west &amp; Kyoga</td><td>21 Aug</td><td>17 Aug</td><td>24 Nov</td><td>28 Nov</td><td>96 → 105</td><td>484 → 533</td></tr>
+<tr><td>Single season · Karamoja</td><td>10 Apr</td><td>3 Apr</td><td>5 Sep</td><td>4 Oct*</td><td class="up">150 → 185*</td><td class="up">553 → 727*</td></tr>
+<tr><td>Single season · North (Acholi)</td><td>8 Apr</td><td>4 Apr</td><td>23 Oct</td><td>4 Nov</td><td class="up">199 → 216</td><td>1,067 → 1,117</td></tr>
+<tr><td>Single season · West Nile–Teso belt</td><td>31 Mar</td><td>8 Apr</td><td>8 Nov</td><td>16 Nov</td><td>223 → 222</td><td>1,194 → 1,167</td></tr>
+</tbody></table></div>
+<p class="note">Dates are zone means of cell-by-cell onset and cessation. * significant trend (p &lt; 0.05). In the West Nile–Teso belt a minority of cells are bimodal; their first rains now end about five days later (16 → 21 Jun). Nationally, first-rains onset moved earlier by 2.4 days per decade (p = 0.05).</p>
+<figure><a href="img/fig07_season_timing_maps.jpg" target="_blank" rel="noopener"><img src="img/fig07_season_timing_maps.jpg" alt="Maps of mean onset, cessation and length of each rainy season and their trends" loading="lazy"></a>
+<figcaption><span class="fn">Fig 7</span>Mean timing (1991–2020) and trend for each season type. The strongest signals: unimodal-season cessation later by about 5 days per decade nationally and 9 days per decade in Karamoja; first-rains onset earlier by about 2.5 days per decade, most clearly in the south-west; second rains lengthening around Lake Victoria.</figcaption></figure>
+<figure><a href="img/fig08_season_bars_zone.jpg" target="_blank" rel="noopener"><img src="img/fig08_season_bars_zone.jpg" alt="Season start-to-end bars for each year and zone" loading="lazy"></a>
+<figcaption><span class="fn">Fig 8</span>Each horizontal line spans one year's season from onset to cessation, 1981 at the top to 2025 at the bottom. Year-to-year scatter of several weeks is normal and is much larger than the trend, which is why farmers experience the seasons as "unpredictable".</figcaption></figure>
+<figure><a href="img/fig09_regime_map.jpg" target="_blank" rel="noopener"><img src="img/fig09_regime_map.jpg" alt="Map of bimodal and unimodal rainfall regimes" loading="lazy" style="max-width:420px"></a>
+<figcaption><span class="fn">Fig 9</span>Which cells have two seasons and which have one, from the ratio of the second to the first harmonic of the annual cycle.</figcaption></figure>
+
+<!-- ============================== HEAT ============================== -->
+<h2 id="heat">6. Has it got hotter?</h2>
+<div class="col">
+  <p>Yes. Three independent temperature datasets agree on warming and disagree on its size. Night-time minimum temperatures rose 0.2–0.34 °C per decade in both the gauge-based CPC record and the NASA POWER (MERRA-2) reanalysis. Warm nights, defined as nights above the 1991–2020 90th percentile for the date, nearly tripled. Daytime maximum temperature rose 0.24 °C per decade in the reanalysis. The CPC gauge record has step changes in 1990–93, 2006–08 and 2016 that track changes in the reporting station network, so its flat daytime trend is unreliable. GHCN-CAMS shows +0.5 °C per decade, but it is interpolated from very few Ugandan stations.</p>
+</div>
+<figure><a href="img/fig11_temperature_series.jpg" target="_blank" rel="noopener"><img src="img/fig11_temperature_series.jpg" alt="Uganda annual temperature anomalies from three datasets" loading="lazy"></a>
+<figcaption><span class="fn">Fig 11</span>Uganda-average temperature anomalies. Night-time warming (right) is consistent across sources; daytime records (left) disagree in the 1980s–2000s and converge on a warm 2015–2025.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Indicator</th><th>Source</th><th>1991–2020 mean</th><th>Trend per decade</th><th>Change 1981–95 → 2011–25</th><th>Confidence</th></tr></thead>
+<tbody>
+<tr><td>Minimum temperature</td><td>CPC gauges</td><td>18.5 °C</td><td class="down">+0.34 °C*</td><td>+0.96 °C</td><td><span class="pill robust">Robust</span></td></tr>
+<tr><td>Minimum temperature</td><td>NASA POWER / MERRA-2</td><td>18.5 °C</td><td class="down">+0.20 °C*</td><td>+0.55 °C</td><td><span class="pill robust">Robust</span></td></tr>
+<tr><td>Maximum temperature</td><td>NASA POWER / MERRA-2</td><td>29.3 °C</td><td class="down">+0.24 °C</td><td>+0.52 °C</td><td><span class="pill uncertain">Uncertain</span></td></tr>
+<tr><td>Maximum temperature</td><td>CPC gauges</td><td>28.0 °C</td><td>+0.05 °C</td><td>+0.10 °C</td><td><span class="pill uncertain">Inhomogeneous</span></td></tr>
+<tr><td>Mean temperature</td><td>GHCN-CAMS</td><td>24.5 °C</td><td class="down">+0.51 °C*</td><td>+1.52 °C</td><td><span class="pill uncertain">Sparse stations</span></td></tr>
+<tr><td>Warm nights (TN90p)</td><td>CPC</td><td>—</td><td class="down">+14 nights*</td><td>22 → 60 nights/yr</td><td><span class="pill robust">Robust</span></td></tr>
+<tr><td>Hot days (TX90p)</td><td>CPC</td><td>—</td><td>+6.6 days</td><td>42 → 66 days/yr</td><td><span class="pill uncertain">Uncertain</span></td></tr>
+<tr><td>Day–night range</td><td>CPC</td><td>—</td><td>−0.3 °C</td><td>10.7 → 9.8 °C</td><td><span class="pill uncertain">Uncertain</span></td></tr>
+</tbody></table></div>
+<figure><a href="img/fig10_temperature_trend_maps.jpg" target="_blank" rel="noopener"><img src="img/fig10_temperature_trend_maps.jpg" alt="Maps of temperature trends from CPC, NASA POWER and GHCN-CAMS" loading="lazy"></a>
+<figcaption><span class="fn">Fig 10</span>Temperature trends by dataset. All five panels show warming over most of the country; they disagree on the size and on where daytime warming is strongest.</figcaption></figure>
+
+<!-- ============================== WIND ============================== -->
+<h2 id="wind">7. Windier? Other climate parameters that matter</h2>
+<div class="col">
+  <p>Rain and temperature are not the whole story for water and engineering. Evaporative demand (ET0) decides how much rain is useful. Humidity and wind drive evaporation from reservoirs and crops. Solar radiation drives crop growth and solar power. Soil moisture integrates all of them. Each was computed from NASA POWER daily data (MERRA-2 meteorology, CERES radiation) and the CPC soil-moisture model.</p>
+</div>
+<figure><a href="img/fig12_other_params_series.jpg" target="_blank" rel="noopener"><img src="img/fig12_other_params_series.jpg" alt="Twelve time series of wind, humidity, radiation, evapotranspiration and soil moisture for Uganda" loading="lazy"></a>
+<figcaption><span class="fn">Fig 12</span>Uganda-average annual values with Sen's slope trend lines.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Parameter</th><th>1991–2020 mean</th><th>Trend per decade</th><th>Significant?</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Wind speed at 2 m</td><td>1.76 m/s</td><td>+0.003 m/s</td><td>No</td><td>Evaporation, structural wind loads</td></tr>
+<tr><td>Daily maximum wind at 10 m</td><td>4.39 m/s</td><td>0.000 m/s</td><td>No</td><td>Storm damage, dust, roofing</td></tr>
+<tr><td>Strongest wind of the year (10 m)</td><td>9.3 m/s</td><td>+0.09 m/s</td><td>Yes (p = 0.04)</td><td>Design wind, power lines, lake transport</td></tr>
+<tr><td>Relative humidity</td><td>66.7%</td><td>−0.3 points</td><td>No</td><td>Evaporation, disease, comfort</td></tr>
+<tr><td>Dew point</td><td>15.9 °C</td><td>+0.13 °C</td><td>No</td><td>Heat stress at night</td></tr>
+<tr><td>Solar radiation</td><td>20.1 MJ/m²/day</td><td>−0.13</td><td>Yes (p = 0.03)</td><td>Crop growth, solar pumping and power</td></tr>
+<tr><td>Vapour pressure deficit</td><td>1.32 kPa</td><td>+0.02</td><td>No</td><td>Crop water stress</td></tr>
+<tr><td>Reference evapotranspiration ET0</td><td>1,733 mm/yr</td><td>+2 mm</td><td>No</td><td>Irrigation, reservoir losses, water balance</td></tr>
+<tr><td>Soil moisture (1.6 m column, CPC model)</td><td>352 mm</td><td class="down">−15 mm</td><td>Yes (p = 0.01)</td><td>Crop failure, groundwater recharge</td></tr>
+</tbody></table></div>
+<figure><a href="img/fig13_other_params_maps.jpg" target="_blank" rel="noopener"><img src="img/fig13_other_params_maps.jpg" alt="Trend maps of wind, humidity, radiation, ET0 and soil moisture" loading="lazy"></a>
+<figcaption><span class="fn">Fig 13</span>Where these parameters changed (% of the mean per decade). The soil-moisture decline is a model estimate driven by temperature and gauge rain; treat it as an indicator, not a measurement.</figcaption></figure>
+<div class="col">
+  <p><strong>Other parameters worth monitoring.</strong> Lake Victoria and Lake Kyoga water levels (intakes, hydropower, flooding of lakeshore towns; Jinja reached a record 13.4 m in 2020); river flows at gauging stations (yield); groundwater levels (most rural supply); lightning (Lake Victoria is one of the most active thunderstorm areas on Earth); hail; dust; and sea surface temperatures in the western Indian Ocean as the best single predictor of Oct–Dec rainfall.</p>
+</div>
+
+<!-- ============================== CONTEXT ============================== -->
+<h2 id="context">8. Uganda against East Africa, Africa and the world</h2>
+<figure><a href="img/fig22_regional_global_series.jpg" target="_blank" rel="noopener"><img src="img/fig22_regional_global_series.jpg" alt="Temperature and rainfall anomaly series for Uganda, East Africa, Africa and global land" loading="lazy"></a>
+<figcaption><span class="fn">Fig 22</span>Annual land temperature (GHCN-CAMS) and rainfall (CHIRPS; GPCP for global land) anomalies.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Region</th><th>Temperature trend<br>°C/decade</th><th>Warming 1981–95 → 2011–25</th><th>Rainfall trend<br>%/decade</th></tr></thead>
+<tbody>
+<tr><td><strong>Uganda</strong></td><td>+0.51 (GHCN-CAMS)<br>+0.20–0.34 nights (CPC, MERRA-2)</td><td>+1.5 °C (CAMS)</td><td>+1.1</td></tr>
+<tr><td>East Africa (12°S–12°N, 28–42°E)</td><td>+0.37</td><td>+1.1 °C</td><td>+1.6*</td></tr>
+<tr><td>Africa (land)</td><td>+0.36</td><td>+1.0 °C</td><td>+1.1*</td></tr>
+<tr><td>Global land</td><td>+0.37</td><td>+1.1 °C</td><td>−0.2</td></tr>
+</tbody></table></div>
+<figure><a href="img/fig20_global_temperature_trends.jpg" target="_blank" rel="noopener"><img src="img/fig20_global_temperature_trends.jpg" alt="Global and African maps of land temperature trend" loading="lazy"></a>
+<figcaption><span class="fn">Fig 20</span>Land warming 1981–2025. Africa warms at about the global land rate. North-east Africa, the Ethiopian highlands and the Uganda–South Sudan area are among the fastest-warming parts of this dataset; the strong Uganda signal partly reflects interpolation from few stations.</figcaption></figure>
+<figure><a href="img/fig21_east_africa_rain_trends.jpg" target="_blank" rel="noopener"><img src="img/fig21_east_africa_rain_trends.jpg" alt="East Africa maps of annual, March-May and October-December rainfall trends" loading="lazy"></a>
+<figcaption><span class="fn">Fig 21</span>East African rainfall trends. Oct–Dec short rains are wetting across South Sudan, Ethiopia, Kenya, Somalia and eastern Uganda. Mar–May long rains declined in eastern Ethiopia, Somalia and coastal Kenya, the so-called East African paradox, and in north-west Uganda. Uganda sits on the western edge of both signals.</figcaption></figure>
+<div class="col">
+  <h3>How these results compare with published studies</h3>
+  <ul>
+    <li><strong>Long rains decline (Mar–May).</strong> Lyon &amp; DeWitt (2012) and Rowell et al. (2015) documented an abrupt decline after 1999 in the eastern Horn. Wainwright et al. (2019) traced it to a shorter season, with later onset and earlier end. In Uganda the decline is weak and confined to the north-west. Around Lake Victoria the first rains have instead started earlier and grown.</li>
+    <li><strong>Short rains increase (Oct–Dec).</strong> Consistent with the observed and projected wetting of East African short rains in IPCC AR6 (Ch. 8 and the Atlas) and with the strong IOD influence of Saji et al. (1999) and Black et al. (2003). This study puts the Uganda signal at +6 to +14% per decade in the north and north-east.</li>
+    <li><strong>Warming.</strong> Uganda's +0.2–0.5 °C per decade is in line with the observed warming IPCC AR6 assesses for East Africa and with the 0.36–0.37 °C per decade found here for East Africa, Africa and global land.</li>
+    <li><strong>CHIRPS reliability.</strong> Kimani et al. (2017) rate CHIRPS among the best products for East African seasonal totals. This study confirms it underestimates point daily extremes by about half compared with Ugandan gauges (section 12).</li>
+  </ul>
+</div>
+
+<!-- ============================== WATER ============================== -->
+<h2 id="water">9. Which parts of Uganda are water-scarce?</h2>
+<div class="col">
+  <p>Climatic water scarcity is measured here by comparing rain (supply) with evaporative demand (ET0, FAO-56 Penman–Monteith). The aridity index P/ET0 uses the UNEP classes. "Dry months" counts months when rain is less than half of ET0. Demand from people and livestock is not included; adding population would sharpen the picture for towns.</p>
+</div>
+<figure><a href="img/fig23_water_balance_present.jpg" target="_blank" rel="noopener"><img src="img/fig23_water_balance_present.jpg" alt="Six maps of rainfall, evapotranspiration, water balance, aridity class, dry months and drought frequency change" loading="lazy"></a>
+<figcaption><span class="fn">Fig 23</span>Water balance, 1991–2020. Only the Lake Victoria crescent, Mt Elgon and parts of the west have rain close to evaporative demand. Panel f: drought months (SPEI-12 &lt; −1) became rarer in Karamoja and the south and more common in parts of Lango, Kyoga and Busoga.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>County (ADM2)</th><th>Rain mm/yr</th><th>ET0 mm/yr</th><th>Aridity P/ET0</th><th>Class</th><th>Dry months</th><th>Drought months %<br>1981–95 → 2011–25</th></tr></thead>
+<tbody>
+<tr><td>Matheniko (Moroto)</td><td>651</td><td>2,171</td><td>0.30</td><td>Semi-arid</td><td>8.3</td><td>25 → 3</td></tr>
+<tr><td>Dodoth (Kaabong)</td><td>804</td><td>2,050</td><td>0.39</td><td>Semi-arid</td><td>7.0</td><td>18 → 3</td></tr>
+<tr><td>Jie (Kotido)</td><td>871</td><td>2,115</td><td>0.41</td><td>Semi-arid</td><td>6.5</td><td>18 → 3</td></tr>
+<tr><td>Bokora (Napak)</td><td>961</td><td>2,151</td><td>0.45</td><td>Semi-arid</td><td>5.5</td><td>25 → 3</td></tr>
+<tr><td>Pian (Nakapiripirit)</td><td>955</td><td>2,106</td><td>0.46</td><td>Semi-arid</td><td>5.7</td><td>28 → 3</td></tr>
+<tr><td>Chua (Kitgum)</td><td>1,090</td><td>1,983</td><td>0.55</td><td>Dry sub-humid</td><td>4.6</td><td>11 → 3</td></tr>
+<tr><td>Jonam (Pakwach)</td><td>994</td><td>1,762</td><td>0.56</td><td>Dry sub-humid</td><td>4.0</td><td>3 → 4</td></tr>
+<tr><td>Labwor (Abim)</td><td>1,196</td><td>2,104</td><td>0.57</td><td>Dry sub-humid</td><td>4.8</td><td>15 → 5</td></tr>
+<tr><td>Kioga (Amolatar)</td><td>1,159</td><td>1,844</td><td>0.63</td><td>Dry sub-humid</td><td>4.0</td><td class="down">4 → 15</td></tr>
+<tr><td>Budiope (Buyende)</td><td>1,176</td><td>1,820</td><td>0.65</td><td>Dry sub-humid</td><td>4.0</td><td class="down">2 → 17</td></tr>
+<tr><td>Ntoroko</td><td>924</td><td>1,549</td><td>0.60</td><td>Dry sub-humid</td><td>4.0</td><td class="down">7 → 11</td></tr>
+<tr><td>Agago</td><td>1,275</td><td>2,047</td><td>0.62</td><td>Dry sub-humid</td><td>4.5</td><td>8 → 6</td></tr>
+</tbody></table></div>
+<p class="note">Full table for all 151 counties: <span class="mono">results/water_district.csv</span>. Values are means over the 0.25° cells whose centres fall in each county.</p>
+<figure><a href="img/fig24_water_districts.jpg" target="_blank" rel="noopener"><img src="img/fig24_water_districts.jpg" alt="County maps of water-scarcity score now and change in aridity by 2041-2070" loading="lazy"></a>
+<figcaption><span class="fn">Fig 24</span>County water-scarcity score (aridity 50%, dry months 35%, drought trend 15%) and projected change in aridity index by 2041–2070.</figcaption></figure>
+
+<h3 id="future">Future water scarcity</h3>
+<div class="col" id="future-text">
+  <p>Sixteen CMIP6 climate models agree that Uganda will warm by 1.3 °C (SSP2-4.5, a middle path) to 1.8 °C (SSP5-8.5, high emissions) by 2041–2070, relative to 1991–2020. Every model warms; the range is 1.0–2.3 °C. Observed warming since 1981 has tracked the model median closely (fig 26). Most models also project more rain: +6% a year in the median under SSP2-4.5 and +10% under SSP5-8.5. The gain comes mostly in Oct–Dec (+8% and +12%), continuing the observed wetting of the second rains. Mar–May changes are small and models disagree, with 1 in 4 projecting less.</p>
+  <p><strong>What this means for scarcity.</strong> Evaporative demand rises 3–4.5% with the warming. In the ensemble median, rainfall gains slightly outpace it, so the aridity index improves a little in every county and no county moves into a drier class. Climate change alone therefore does not create new water-scarce regions by mid-century. Today's scarce areas stay scarce: Karamoja remains semi-arid with 8 dry months in Matheniko.</p>
+  <p>Three things make that reassurance weaker than it looks:</p>
+  <ul>
+    <li><strong>The dry-end models.</strong> One model in ten projects no rainfall gain. In that case the 3–5% extra evaporative demand lowers the aridity index by 3–4%, pushing the dry sub-humid belt of Acholi, Lango-Kyoga and Teso (P/ET0 0.55–0.65) toward semi-arid.</li>
+    <li><strong>The East African paradox.</strong> Models projected wetter long rains for the 1990s–2010s, and the eastern Horn got drier instead (Rowell et al. 2015). Treat projected Mar–May gains with suspicion.</li>
+    <li><strong>Demand grows faster than climate changes.</strong> UN projections have Uganda's population growing by roughly 70–90% by 2050, and irrigation demand is rising. Per-person water availability will fall sharply in the dry belt and in fast-growing towns (Greater Kampala, Gulu, Lira, Mbarara, Arua, Moroto) even if rainfall holds.</li>
+  </ul>
+  <p>The places most likely to become water-stressed by 2050 are the existing dry sub-humid belt (Agago, Kitgum, Pader, Abim, Amolatar, Buyende, Nakasongola, Pakwach) and the Ankole rangelands. There, rising demand meets a rainfall regime that is variable now and close to semi-arid in the drier models.</p>
+</div>
+<figure><a href="img/fig26_cmip6_plumes.jpg" target="_blank" rel="noopener"><img src="img/fig26_cmip6_plumes.jpg" alt="CMIP6 projected temperature and rainfall for Uganda to 2100 with observations" loading="lazy"></a>
+<figcaption><span class="fn">Fig 26</span>Uganda-average projections from 16 climate models (11-year running means; shading spans the 10th–90th percentile of models), with observations in black.</figcaption></figure>
+<figure><a href="img/fig25_cmip6_change_maps.jpg" target="_blank" rel="noopener"><img src="img/fig25_cmip6_change_maps.jpg" alt="CMIP6 ensemble median maps of projected rainfall and temperature change over East Africa" loading="lazy"></a>
+<figcaption><span class="fn">Fig 25</span>Projected change by 2041–2070 under SSP2-4.5 (ensemble median). Crosses mark where fewer than 80% of models agree on the sign of change.</figcaption></figure>
+
+<!-- ============================== FOOD ============================== -->
+<h2 id="food">10. Food security and irrigation</h2>
+<div class="col">
+  <p>For rain-fed farming, what matters is how long the growing period lasts and how often a season fails, more than the annual total. The growing period here is the number of days when rain exceeds half of ET0 (FAO definition). A failed season means seasonal rain below 70% of the local average.</p>
+</div>
+<figure><a href="img/fig27_food_security.jpg" target="_blank" rel="noopener"><img src="img/fig27_food_security.jpg" alt="Maps of growing period length, its trend and variability, dry-spell chance, failed-season probability and change in risk" loading="lazy"></a>
+<figcaption><span class="fn">Fig 27</span>Growing-season reliability. Karamoja's growing period (94 days) has lengthened by about 8 days per decade and its failed-season risk nearly halved (37% → 20%). The single season of the north and the West Nile–Teso belt failed more often (14–15% → 25–29%), while the south-west's first rains became more reliable (26% → 12%).</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Zone</th><th>Growing period<br>days (1991–2020)</th><th>Trend<br>days/decade</th><th>Season most at risk</th><th>Failed-season chance<br>1981–2003 → 2004–25</th></tr></thead>
+<tbody>
+<tr><td>Karamoja</td><td>94</td><td class="up">+7.9*</td><td>Single season</td><td class="up">37% → 20%</td></tr>
+<tr><td>North (Acholi–Kitgum)</td><td>208</td><td>+4.0</td><td>Single season</td><td class="down">14% → 25%</td></tr>
+<tr><td>West Nile–Lango–Teso–Elgon</td><td>252</td><td>+0.7</td><td>Single season</td><td class="down">15% → 29%</td></tr>
+<tr><td>Mid-west &amp; Kyoga</td><td>255</td><td>−3.1</td><td>First rains</td><td class="down">19% → 22%</td></tr>
+<tr><td>Lake Victoria crescent</td><td>273</td><td>+3.4</td><td>Second rains</td><td class="up">38% → 33%</td></tr>
+<tr><td>South-west</td><td>192</td><td>+2.2</td><td>First rains</td><td class="up">26% → 12%</td></tr>
+</tbody></table></div>
+<div class="col">
+  <div class="answer">
+    <h3>Food security implications</h3>
+    <ul>
+      <li><strong>2026 is a live risk.</strong> The record-dry June–September has already hit second-season planting in the bimodal south, and Karamoja's season ended early. If Oct–Dec disappoints, food insecurity in Karamoja and northern Uganda will rise into early 2027. If it delivers El Niño rains, expect flooding and post-harvest losses instead.</li>
+      <li><strong>Shift planting to the second season where it has strengthened.</strong> In Teso, Lango, Acholi and the Lake Victoria crescent the Sep–Dec rains are now longer and wetter than the Mar–May rains.</li>
+      <li><strong>The single season of Acholi, Lango, Teso and West Nile</strong> has failed more often since 2004 (about one year in four). Use short-cycle and drought-tolerant varieties, conserve soil moisture, and add supplementary irrigation. Satellite vegetation records also show the March–July season weakening across most of Uganda.</li>
+      <li><strong>Karamoja</strong> is improving but remains the most variable place in Uganda (growing period CV 29%). Water harvesting and livestock water points remain the priority.</li>
+    </ul>
+  </div>
+</div>
+<figure><a href="img/fig28_irrigation.jpg" target="_blank" rel="noopener"><img src="img/fig28_irrigation.jpg" alt="Maps of net irrigation requirement, dry-season requirement, design duty and future change" loading="lazy"></a>
+<figcaption><span class="fn">Fig 28</span>Irrigation water requirement with 80%-dependable rainfall (rain exceeded in 4 years out of 5), crop coefficient 1.0, effective rain by the USDA-SCS method, and 65% field efficiency.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Zone</th><th>Net requirement, year-round crop<br>mm/yr (80% dependable)</th><th>Dry-season crop<br>mm (Dec–Feb + Jun–Aug)</th><th>Design duty, peak month<br>l/s/ha</th><th>Change by 2041–70<br>SSP2-4.5 / SSP5-8.5</th></tr></thead>
+<tbody>
+<tr><td>Karamoja</td><td>1,523</td><td>765</td><td>1.28</td><td>+3% / +3%</td></tr>
+<tr><td>North (Acholi–Kitgum)</td><td>1,203</td><td>669</td><td>1.24</td><td>+2% / +3%</td></tr>
+<tr><td>West Nile–Lango–Teso–Elgon</td><td>972</td><td>618</td><td>1.08</td><td>+2% / +2%</td></tr>
+<tr><td>Mid-west &amp; Kyoga</td><td>813</td><td>568</td><td>0.81</td><td>+2% / +1%</td></tr>
+<tr><td>Lake Victoria crescent</td><td>711</td><td>504</td><td>0.70</td><td>+1% / +0%</td></tr>
+<tr><td>South-west</td><td>672</td><td>475</td><td>0.64</td><td>+1% / +0%</td></tr>
+</tbody></table></div>
+<p class="note">Design duty is for continuous (24-hour) supply. For 12-hour supply double it. County values: <span class="mono">results/irrigation_district.csv</span>.</p>
+
+<!-- ============================== DRAINAGE ============================== -->
+<h2 id="drainage">11. Road and urban drainage design</h2>
+<div class="col">
+  <p>Drainage is sized from the rainfall depth expected once in T years over the storm duration. Two problems had to be solved. First, satellite data smooth out point downpours: comparing CHIRPS with seven long Ugandan gauge records (Gulu, Masindi, Kasese, Jinja, Tororo, Mbarara, Kabale, 1926–1986) showed gauge return levels are 1.4–2.5 times higher (median 1.9). All design values below are calibrated by that factor. Second, sub-daily intensities come from the daily values using the TRRL East African ratio (Fiddes et al. 1974), the basis of Uganda's road drainage manual.</p>
+</div>
+<figure><a href="img/fig29_design_rain_maps.jpg" target="_blank" rel="noopener"><img src="img/fig29_design_rain_maps.jpg" alt="Maps of 10-year and 50-year 1-day rainfall and their change between 1981-2003 and 2004-2025" loading="lazy"></a>
+<figcaption><span class="fn">Fig 29</span>Gauge-calibrated 10- and 50-year 1-day rainfall, and the change between 1981–2003 and 2004–2025. Heavier storms in Karamoja, Kabale and the Lake Victoria shore near Masaka; lighter ones in CHIRPS across the north and the Rwenzori foothills.</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>Town</th><th>2-yr 24-h<br>mm</th><th>10-yr 24-h<br>mm</th><th>50-yr 24-h<br>mm</th><th>100-yr 24-h<br>mm</th><th>10-yr 1-h<br>mm/h</th><th>Change in 10-yr<br>2004–25 vs 1981–2003</th><th>Uplift for 2041–70<br>SSP2-4.5 / SSP5-8.5</th></tr></thead>
+<tbody>
+<tr><td>Kampala</td><td>58</td><td>79</td><td>97</td><td>105</td><td>54</td><td class="down">-12%</td><td>+9% / +13%</td></tr>
+<tr><td>Entebbe</td><td>66</td><td>87</td><td>108</td><td>118</td><td>59</td><td class="">-6%</td><td>+9% / +13%</td></tr>
+<tr><td>Jinja</td><td>64</td><td>86</td><td>103</td><td>109</td><td>58</td><td class="">+3%</td><td>+9% / +13%</td></tr>
+<tr><td>Masaka</td><td>68</td><td>91</td><td>102</td><td>105</td><td>61</td><td class="up">+14%</td><td>+9% / +13%</td></tr>
+<tr><td>Mbarara</td><td>56</td><td>77</td><td>91</td><td>96</td><td>52</td><td class="">-8%</td><td>+9% / +13%</td></tr>
+<tr><td>Kabale</td><td>66</td><td>94</td><td>116</td><td>126</td><td>64</td><td class="up">+26%</td><td>+9% / +13%</td></tr>
+<tr><td>Fort Portal</td><td>57</td><td>77</td><td>86</td><td>88</td><td>52</td><td class="down">-22%</td><td>+9% / +13%</td></tr>
+<tr><td>Kasese</td><td>50</td><td>69</td><td>78</td><td>80</td><td>47</td><td class="down">-15%</td><td>+9% / +13%</td></tr>
+<tr><td>Hoima</td><td>55</td><td>71</td><td>76</td><td>76</td><td>48</td><td class="">+1%</td><td>+9% / +13%</td></tr>
+<tr><td>Masindi</td><td>55</td><td>71</td><td>80</td><td>83</td><td>48</td><td class="down">-12%</td><td>+9% / +13%</td></tr>
+<tr><td>Gulu</td><td>65</td><td>89</td><td>106</td><td>112</td><td>61</td><td class="down">-27%</td><td>+9% / +13%</td></tr>
+<tr><td>Lira</td><td>61</td><td>82</td><td>95</td><td>99</td><td>56</td><td class="down">-13%</td><td>+9% / +13%</td></tr>
+<tr><td>Arua</td><td>62</td><td>82</td><td>92</td><td>95</td><td>56</td><td class="">-5%</td><td>+9% / +13%</td></tr>
+<tr><td>Soroti</td><td>68</td><td>86</td><td>89</td><td>88</td><td>58</td><td class="down">-11%</td><td>+9% / +13%</td></tr>
+<tr><td>Mbale</td><td>70</td><td>91</td><td>104</td><td>107</td><td>62</td><td class="">-7%</td><td>+9% / +13%</td></tr>
+<tr><td>Tororo</td><td>67</td><td>94</td><td>121</td><td>133</td><td>64</td><td class="">+1%</td><td>+9% / +13%</td></tr>
+<tr><td>Moroto</td><td>84</td><td>123</td><td>149</td><td>157</td><td>84</td><td class="up">+20%</td><td>+9% / +13%</td></tr>
+<tr><td>Kotido</td><td>81</td><td>109</td><td>118</td><td>119</td><td>74</td><td class="up">+18%</td><td>+9% / +13%</td></tr>
+</tbody></table></div>
+<p class="note">CHIRPS cell nearest each town, GEV fitted by L-moments to 1981–2025 annual maxima, multiplied by the gauge calibration factor for that return period (1.96 at 2 yr to 1.69 at 100 yr). Use these as screening values. Final design should use UNMA gauge records for the site.</p>
+<figure><a href="img/fig30_idf_kampala.jpg" target="_blank" rel="noopener"><img src="img/fig30_idf_kampala.jpg" alt="IDF curves for Kampala and annual maximum daily rainfall at four towns" loading="lazy"></a>
+<figcaption><span class="fn">Fig 30</span>Indicative intensity–duration–frequency curves for Kampala (solid: present; dashed: 10- and 50-year storms under SSP5-8.5 for 2041–2070) and the annual maximum daily rain behind them.</figcaption></figure>
+<figure><a href="img/fig34_closeup_kampala.jpg" target="_blank" rel="noopener"><img src="img/fig34_closeup_kampala.jpg" alt="Satellite close-up of Greater Kampala with 10-year storm depth and its change per grid cell" loading="lazy"></a>
+<figcaption><span class="fn">Fig 34</span>Greater Kampala on satellite imagery. Each square is one 28 km analysis cell: the 10-year 1-day storm is 77–87 mm across the metropolitan area. CHIRPS shows it 6–16% lower since 2004, even though flood damage in the city keeps rising. Much of that rise comes from paving and building over wetlands and channels, not from heavier rain.</figcaption></figure>
+<div class="col">
+  <div class="answer">
+    <h3>Drainage design recommendations</h3>
+    <ol>
+      <li><strong>Do not reduce design storms</strong> where CHIRPS shows a decline. The decline is within the noise and partly an artefact of CHIRPS's shrinking gauge input. Use the higher of the historical gauge value and the recent value.</li>
+      <li><strong>Add a climate-change allowance</strong> of 7% per °C of projected warming (Clausius–Clapeyron scaling). That gives the uplift in the table, about +9% (SSP2-4.5) to +13% (SSP5-8.5) for a 2050s design life. Short, intense storms (under 1 hour) may scale faster, so +20% is a prudent allowance for urban minor drainage with long design lives.</li>
+      <li><strong>Urban and peri-urban catchments:</strong> runoff coefficients are rising faster than rainfall. Design with future land-use imperviousness, protect wetlands and channel reserves (Nakivubo, Kinawataka, Lubigi), and use detention and permeable surfaces at plot level.</li>
+      <li><strong>Higher-risk settings:</strong> Mt Elgon and Mbale (rising Sep–Nov rain, steep slopes, landslides); Karamoja (storms 20–50% heavier recently, flash floods on sandy rivers that are dry most of the year); Kabale and Kigezi (heavier extremes, steep terrain); lakeshore towns (lake level).</li>
+      <li><strong>Check culverts and bridges</strong> on the critical network against a 2050s 50-year storm, not only against the design storm they were built for.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ============================== BULK ============================== -->
+<h2 id="bulk">12. Bulk water transmission and treatment</h2>
+<div class="col">
+  <p>Bulk water schemes need a reliable yield in the worst drought of their design life, the capacity to meet peak demand in hot dry spells, and treatment that copes with what storms and heat do to raw water.</p>
+</div>
+<figure><a href="img/fig32_worst_droughts.jpg" target="_blank" rel="noopener"><img src="img/fig32_worst_droughts.jpg" alt="Bar chart of the driest 12, 24 and 36 month rainfall totals by zone" loading="lazy"></a>
+<figcaption><span class="fn">Fig 32</span>Design droughts: the driest 12-, 24- and 36-month spells since 1981, as % of normal rainfall. The 2008–2010 drought is the controlling event almost everywhere, with 12 months at 65–74% of normal. Karamoja's worst was 1984 (58%).</figcaption></figure>
+<figure><a href="img/fig31_spi24_zones.jpg" target="_blank" rel="noopener"><img src="img/fig31_spi24_zones.jpg" alt="Standardised precipitation index over 24 months for each zone, 1983-2026" loading="lazy"></a>
+<figcaption><span class="fn">Fig 31</span>Two-year drought index (SPI-24) by zone. Severe two-year droughts were common in 1981–2010 and rare since 2011, except in the north. By September 2026 the Mid-west &amp; Kyoga zone (SPI-12 −1.1) and the West Nile–Teso belt (−1.0) had entered moderate drought.</figcaption></figure>
+<div class="col">
+  <div class="answer">
+    <h3>Design recommendations for bulk water lines and treatment works</h3>
+    <ul>
+      <li><strong>Source yield:</strong> size river and reservoir yields for a repeat of the 2008–2010 drought (24 months at 77–83% of normal rain), with a margin for higher evaporation: about +2–3% ET0 per °C. Seventeen quiet years since 2009 have made recent flow records look wetter than the long-term reality.</li>
+      <li><strong>Demand:</strong> warmer nights and days raise per-capita and peak-day demand. Add 3–5% to peak-day factors for schemes designed to 2050, and more in the north and Karamoja, where ET0 exceeds 2,000 mm/yr.</li>
+      <li><strong>Transmission:</strong> rising mean temperature has little effect on pipe hydraulics, but it raises chlorine decay and biofilm growth in long mains. Plan rechlorination points for mains longer than about 30 km.</li>
+      <li><strong>Treatment:</strong> design clarifiers and filters for turbidity peaks from intense storms. Each zone sees 1–4 days a year with roughly ≥ 50 mm at a gauge. Plan for first-flush events after long dry spells (most frequent in Karamoja, about 0.6 per year) and for algal blooms in lake intakes (Lake Victoria, Kyoga, Albert) as the water warms. Allow for powdered activated carbon dosing and pre-oxidation.</li>
+      <li><strong>Lake intakes:</strong> design for the full range of lake levels seen since 1960, including the 2020 Lake Victoria high and the 2005–2006 low. Both are plausible within a scheme's life.</li>
+      <li><strong>Diversify sources</strong> in the dry sub-humid belt (Acholi, Lango, Teso, West Nile) and Karamoja: conjunctive surface water and groundwater, and storage sized for 4–8 dry months.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================== CLOSEUPS ============================== -->
+<h2 id="closeups">13. Close-up maps</h2>
+<div class="col"><p>Satellite imagery (Esri World Imagery) with the analysis grid, county boundaries and towns. Cell labels give the value for each 0.25° cell.</p></div>
+<figure><a href="img/fig35_closeup_elgon.jpg" target="_blank" rel="noopener"><img src="img/fig35_closeup_elgon.jpg" alt="Satellite close-up of Mt Elgon, Mbale and Tororo with rainfall trend and 10-year storm" loading="lazy"></a>
+<figcaption><span class="fn">Fig 35</span>Mt Elgon, Mbale and Tororo: Sep–Nov rain rising and 10-year 1-day storms of 85–100 mm on the slopes. This is the setting of the Bududa and Bulambuli landslides.</figcaption></figure>
+<figure><a href="img/fig36_closeup_karamoja.jpg" target="_blank" rel="noopener"><img src="img/fig36_closeup_karamoja.jpg" alt="Satellite close-up of Karamoja with aridity index and dry months" loading="lazy"></a>
+<figcaption><span class="fn">Fig 36</span>Karamoja: aridity index and dry months. The plains east of Moroto and Kotido toward the Kenya border are the most water-scarce land in Uganda.</figcaption></figure>
+<figure><a href="img/fig37_closeup_southwest.jpg" target="_blank" rel="noopener"><img src="img/fig37_closeup_southwest.jpg" alt="Satellite close-up of south-west Uganda with first-rains trend and dry months" loading="lazy"></a>
+<figcaption><span class="fn">Fig 37</span>South-west (Rwizi catchment, Mbarara to Kabale): first-rains trend and dry months. The Ankole rangelands (Nyabushozi, Kazo, Kashari, Isingiro, Bukanga, Rwampara) have 4–5 dry months and a sharp June–August dry season, so their water supply depends on storage.</figcaption></figure>
+
+<!-- ============================== METHODS ============================== -->
+<h2 id="methods">14. Data, methods and limits</h2>
+<div class="col">
+  <h3>Data</h3>
+  <ul>
+    <li><strong>Rainfall:</strong> CHIRPS v2.0 daily, 0.25°, 1981 to Aug 2026 final; CHIRPS preliminary (0.05°, averaged to 0.25°) for 1 Sep–5 Oct 2026. GPCP v2.3 monthly for global land. Seven GHCN-Daily gauges for calibration of extremes.</li>
+    <li><strong>Temperature:</strong> NOAA CPC global daily Tmax/Tmin (0.5°); NASA POWER daily (MERRA-2); GHCN-CAMS monthly (aggregated to 1°).</li>
+    <li><strong>Other:</strong> NASA POWER wind, humidity, dew point, pressure, CERES radiation; CPC soil moisture; ERSST v5 for Niño-3.4, the IOD (DMI) and its poles; NOAA ONI.</li>
+    <li><strong>Projections:</strong> 16 CMIP6 models (r1i1p1f1, historical + SSP2-4.5 + SSP5-8.5), regridded to 1°.</li>
+    <li><strong>Boundaries and imagery:</strong> Natural Earth, geoBoundaries ADM2 (151 counties), Esri World Imagery.</li>
+  </ul>
+  <h3>Methods</h3>
+  <ul>
+    <li>Trends: Sen's slope with the Mann–Kendall test (Hamed–Rao autocorrelation correction for zone series). Base period 1991–2020.</li>
+    <li>Seasons: anomalous accumulation (Liebmann et al. 2012; Dunning et al. 2016); bimodal or unimodal by harmonic ratio.</li>
+    <li>ET0: FAO-56 Penman–Monteith from monthly means of daily POWER fields.</li>
+    <li>Forecasts: linear, ridge and LightGBM regressions with leave-three-out cross-validation; tercile probabilities from Gaussian errors; RPSS against climatology.</li>
+    <li>Extremes: GEV by L-moments (Hosking 1990); gauge calibration factor; TRRL sub-daily ratio; Clausius–Clapeyron scaling of 7% per °C.</li>
+    <li>Future: CMIP6 ensemble-median monthly change factors applied to observed climatology (delta method).</li>
+  </ul>
+  <h3>Limits</h3>
+  <ul>
+    <li>The ground station network behind every gridded dataset is thin in Uganda after 1990. Trends in daily extremes and daytime temperature are the least certain results.</li>
+    <li>The 0.25° grid (about 28 km) cannot resolve single towns, valleys or mountain slopes. The close-up maps show the grid honestly rather than interpolating detail the data do not have.</li>
+    <li>CHIRPS preliminary data for September–October 2026 may be revised when final data are released.</li>
+    <li>Design values are for screening and planning. Detailed design should use UNMA gauge records and site hydrology.</li>
+  </ul>
+  <h3>References</h3>
+  <ol class="refs">
+    <li>Allen, R.G. et al. (1998). Crop evapotranspiration. FAO Irrigation and Drainage Paper 56.</li>
+    <li>Black, E., Slingo, J. &amp; Sperber, K. (2003). An observational study of the relationship between excessively strong short rains in coastal East Africa and Indian Ocean SST. Monthly Weather Review 131.</li>
+    <li>Dunning, C., Black, E. &amp; Allan, R. (2016). The onset and cessation of seasonal rainfall over Africa. JGR Atmospheres 121.</li>
+    <li>Fiddes, D., Forsgate, J.A. &amp; Grigg, A.O. (1974). The prediction of storm rainfall in East Africa. TRRL Laboratory Report 623.</li>
+    <li>Funk, C. et al. (2015). The climate hazards infrared precipitation with stations (CHIRPS). Scientific Data 2.</li>
+    <li>Hosking, J.R.M. (1990). L-moments. Journal of the Royal Statistical Society B 52.</li>
+    <li>ICPAC (2026). GHACOF-74 statement: wetter than normal OND 2026 as El Niño strengthens. 18 August 2026.</li>
+    <li>IPCC (2021). Climate Change 2021: The Physical Science Basis. Chapters 8, 11, 12 and Atlas.</li>
+    <li>Kimani, M., Hoedjes, J. &amp; Su, Z. (2017). An assessment of satellite-derived rainfall products relative to ground observations over East Africa. Remote Sensing 9.</li>
+    <li>Liebmann, B. et al. (2012). Seasonality of African precipitation from 1996 to 2009. Journal of Climate 25.</li>
+    <li>Lyon, B. &amp; DeWitt, D. (2012). A recent and abrupt decline in the East African long rains. GRL 39.</li>
+    <li>Ministry of Water and Environment (2026). Advisory on the anticipated El Niño, 30 July 2026, as reported by the Daily Monitor.</li>
+    <li>NOAA CPC (2026). ENSO diagnostic discussion, El Niño Advisory, October 2026.</li>
+    <li>Rowell, D. et al. (2015). Reconciling past and future rainfall trends over East Africa. Journal of Climate 28.</li>
+    <li>Saji, N.H. et al. (1999). A dipole mode in the tropical Indian Ocean. Nature 401.</li>
+    <li>Wainwright, C. et al. (2019). 'Eastern African Paradox' rainfall decline due to shorter not less intense Long Rains. npj Climate and Atmospheric Science 2.</li>
+  </ol>
+</div>
+</main>
+</div>

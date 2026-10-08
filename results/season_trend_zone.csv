@@ -1,0 +1,85 @@
+season,metric,zone,mean_1991_2020,sen_per_decade,p_value,sd
+S1,onset,West Nile-Lango-Teso-Elgon belt,82.715,-1.856,0.069,13.388
+S1,onset,Mid-west & Kyoga (Bunyoro-Kyoga),73.795,-1.599,0.156,9.954
+S1,onset,Lake Victoria crescent (Central-Busoga),71.353,-2.71,0.059,11.428
+S1,onset,South-west (Ankole-Kigezi),67.786,-2.531,0.033,11.357
+S1,onset,Uganda,71.7,-2.371,0.047,9.94
+S1,cessation,West Nile-Lango-Teso-Elgon belt,169.064,3.257,0.245,19.16
+S1,cessation,Mid-west & Kyoga (Bunyoro-Kyoga),146.89,-1.652,0.244,9.803
+S1,cessation,Lake Victoria crescent (Central-Busoga),151.134,0.298,0.837,10.662
+S1,cessation,South-west (Ankole-Kigezi),135.191,-0.98,0.108,6.916
+S1,cessation,Uganda,145.801,-0.601,0.538,7.748
+S1,length,West Nile-Lango-Teso-Elgon belt,87.349,5.085,0.16,22.93
+S1,length,Mid-west & Kyoga (Bunyoro-Kyoga),74.095,-0.369,0.883,13.891
+S1,length,Lake Victoria crescent (Central-Busoga),80.781,4.218,0.004,14.2
+S1,length,South-west (Ankole-Kigezi),68.405,1.46,0.36,13.276
+S1,length,Uganda,75.101,1.682,0.214,11.478
+S1,total,West Nile-Lango-Teso-Elgon belt,568.04,28.348,0.139,126.516
+S1,total,Mid-west & Kyoga (Bunyoro-Kyoga),384.919,-5.868,0.303,67.723
+S1,total,Lake Victoria crescent (Central-Busoga),526.947,25.001,0.029,86.368
+S1,total,South-west (Ankole-Kigezi),336.714,6.482,0.363,66.821
+S1,total,Uganda,422.522,9.896,0.221,63.551
+S1,maxdry,West Nile-Lango-Teso-Elgon belt,5.028,0.1,0.832,1.889
+S1,maxdry,Mid-west & Kyoga (Bunyoro-Kyoga),4.452,-0.155,0.193,1.116
+S1,maxdry,Lake Victoria crescent (Central-Busoga),4.423,0.004,0.992,1.393
+S1,maxdry,South-west (Ankole-Kigezi),5.251,-0.253,0.062,1.219
+S1,maxdry,Uganda,4.735,-0.13,0.18,1.131
+S1,raindays,West Nile-Lango-Teso-Elgon belt,60.491,3.334,0.188,14.832
+S1,raindays,Mid-west & Kyoga (Bunyoro-Kyoga),49.668,-0.478,0.564,10.177
+S1,raindays,Lake Victoria crescent (Central-Busoga),57.579,2.833,0.013,10.407
+S1,raindays,South-west (Ankole-Kigezi),41.423,0.92,0.326,9.851
+S1,raindays,Uganda,50.025,1.094,0.333,9.023
+S2,onset,West Nile-Lango-Teso-Elgon belt,230.462,-0.27,0.822,13.758
+S2,onset,Mid-west & Kyoga (Bunyoro-Kyoga),232.687,-1.107,0.269,11.563
+S2,onset,Lake Victoria crescent (Central-Busoga),243.508,-2.822,0.137,15.641
+S2,onset,South-west (Ankole-Kigezi),243.044,0.017,1.0,13.959
+S2,onset,Uganda,237.572,-0.907,0.395,11.605
+S2,cessation,West Nile-Lango-Teso-Elgon belt,317.547,3.243,0.111,17.316
+S2,cessation,Mid-west & Kyoga (Bunyoro-Kyoga),329.248,1.446,0.323,12.106
+S2,cessation,Lake Victoria crescent (Central-Busoga),326.465,2.749,0.235,21.667
+S2,cessation,South-west (Ankole-Kigezi),344.829,2.75,0.102,14.181
+S2,cessation,Uganda,332.444,2.563,0.047,12.991
+S2,length,West Nile-Lango-Teso-Elgon belt,88.085,2.81,0.094,14.896
+S2,length,Mid-west & Kyoga (Bunyoro-Kyoga),97.561,1.486,0.323,14.038
+S2,length,Lake Victoria crescent (Central-Busoga),83.957,5.17,0.0,19.072
+S2,length,South-west (Ankole-Kigezi),102.785,3.086,0.098,15.942
+S2,length,Uganda,95.872,2.596,0.054,12.579
+S2,total,West Nile-Lango-Teso-Elgon belt,503.084,14.977,0.098,106.523
+S2,total,Mid-west & Kyoga (Bunyoro-Kyoga),488.566,4.404,0.712,82.59
+S2,total,Lake Victoria crescent (Central-Busoga),489.075,34.803,0.0,151.205
+S2,total,South-west (Ankole-Kigezi),474.041,10.681,0.343,83.939
+S2,total,Uganda,485.91,13.365,0.156,83.685
+S2,maxdry,West Nile-Lango-Teso-Elgon belt,5.086,-0.264,0.087,1.348
+S2,maxdry,Mid-west & Kyoga (Bunyoro-Kyoga),4.516,-0.184,0.14,1.03
+S2,maxdry,Lake Victoria crescent (Central-Busoga),4.281,-0.11,0.417,0.959
+S2,maxdry,South-west (Ankole-Kigezi),5.557,0.141,0.174,1.099
+S2,maxdry,Uganda,4.882,-0.077,0.205,0.814
+S2,raindays,West Nile-Lango-Teso-Elgon belt,58.863,2.908,0.018,11.095
+S2,raindays,Mid-west & Kyoga (Bunyoro-Kyoga),66.977,1.711,0.104,10.432
+S2,raindays,Lake Victoria crescent (Central-Busoga),57.496,4.213,0.014,14.752
+S2,raindays,South-west (Ankole-Kigezi),66.595,2.436,0.08,11.361
+S2,raindays,Uganda,64.318,2.432,0.026,9.738
+U,onset,"Karamoja (NE, semi-arid)",95.989,-3.191,,20.635
+U,onset,North (Acholi-Kitgum),94.724,-0.58,0.392,16.127
+U,onset,West Nile-Lango-Teso-Elgon belt,93.834,1.504,0.451,20.869
+U,onset,Uganda,94.652,0.172,0.96,15.607
+U,cessation,"Karamoja (NE, semi-arid)",269.608,9.469,0.03,41.561
+U,cessation,North (Acholi-Kitgum),306.263,4.258,0.067,14.971
+U,cessation,West Nile-Lango-Teso-Elgon belt,318.886,3.041,0.082,13.24
+U,cessation,Uganda,304.012,4.916,0.009,15.967
+U,length,"Karamoja (NE, semi-arid)",174.619,11.65,0.027,45.886
+U,length,North (Acholi-Kitgum),212.539,5.195,0.164,22.241
+U,length,West Nile-Lango-Teso-Elgon belt,226.052,0.598,0.876,23.143
+U,length,Uganda,210.36,5.368,0.099,21.96
+U,total,"Karamoja (NE, semi-arid)",654.827,54.039,0.011,188.38
+U,total,North (Acholi-Kitgum),1118.749,12.562,0.511,133.675
+U,total,West Nile-Lango-Teso-Elgon belt,1186.365,-10.822,0.601,136.766
+U,total,Uganda,1060.356,17.787,0.357,137.364
+U,maxdry,"Karamoja (NE, semi-arid)",17.711,0.178,0.676,4.291
+U,maxdry,North (Acholi-Kitgum),9.628,0.076,0.583,2.916
+U,maxdry,West Nile-Lango-Teso-Elgon belt,8.555,-0.154,0.624,2.521
+U,maxdry,Uganda,10.911,0.189,0.578,2.98
+U,raindays,"Karamoja (NE, semi-arid)",64.194,5.984,0.004,18.045
+U,raindays,North (Acholi-Kitgum),129.072,5.97,0.024,18.235
+U,raindays,West Nile-Lango-Teso-Elgon belt,141.739,1.448,0.477,17.094
+U,raindays,Uganda,121.671,4.992,0.001,18.177

@@ -1,0 +1,50 @@
+index,zone,mean_1991_2020,sen_per_decade,pct_per_decade,p_value
+Rx1day (mm),"Karamoja (NE, semi-arid)",43.46,0.985,2.266,0.151
+Rx1day (mm),North (Acholi-Kitgum),33.29,-1.15,-3.456,0.064
+Rx1day (mm),West Nile-Lango-Teso-Elgon belt,31.238,-1.135,-3.632,0.001
+Rx1day (mm),Mid-west & Kyoga (Bunyoro-Kyoga),27.961,-1.726,-6.173,0.003
+Rx1day (mm),Lake Victoria crescent (Central-Busoga),33.343,-0.639,-1.917,0.048
+Rx1day (mm),South-west (Ankole-Kigezi),29.357,-0.439,-1.496,0.68
+Rx1day (mm),Uganda,32.0,-0.858,-2.68,0.112
+Rx5day (mm),"Karamoja (NE, semi-arid)",80.119,2.616,3.265,0.049
+Rx5day (mm),North (Acholi-Kitgum),77.055,-0.572,-0.742,0.693
+Rx5day (mm),West Nile-Lango-Teso-Elgon belt,72.21,-0.443,-0.614,0.674
+Rx5day (mm),Mid-west & Kyoga (Bunyoro-Kyoga),63.591,-1.923,-3.024,0.01
+Rx5day (mm),Lake Victoria crescent (Central-Busoga),80.462,2.501,3.109,0.007
+Rx5day (mm),South-west (Ankole-Kigezi),63.888,1.459,2.283,0.249
+Rx5day (mm),Uganda,71.985,0.369,0.512,0.736
+R20mm (days),"Karamoja (NE, semi-arid)",8.281,0.628,7.587,0.001
+R20mm (days),North (Acholi-Kitgum),7.126,-0.389,-5.464,0.067
+R20mm (days),West Nile-Lango-Teso-Elgon belt,6.302,-0.401,-6.369,0.077
+R20mm (days),Mid-west & Kyoga (Bunyoro-Kyoga),3.571,-0.429,-12.003,0.026
+R20mm (days),Lake Victoria crescent (Central-Busoga),6.974,0.321,4.603,0.168
+R20mm (days),South-west (Ankole-Kigezi),3.863,0.015,0.386,0.93
+R20mm (days),Uganda,5.798,-0.177,-3.059,0.207
+R95pTOT (mm),"Karamoja (NE, semi-arid)",146.529,11.504,7.851,0.008
+R95pTOT (mm),North (Acholi-Kitgum),190.346,-13.978,-7.343,0.026
+R95pTOT (mm),West Nile-Lango-Teso-Elgon belt,200.893,-14.12,-7.029,0.039
+R95pTOT (mm),Mid-west & Kyoga (Bunyoro-Kyoga),181.4,-15.114,-8.332,0.103
+R95pTOT (mm),Lake Victoria crescent (Central-Busoga),221.443,10.409,4.701,0.115
+R95pTOT (mm),South-west (Ankole-Kigezi),172.335,-0.435,-0.253,0.951
+R95pTOT (mm),Uganda,188.512,-6.861,-3.64,0.095
+Wet days >=1mm,"Karamoja (NE, semi-arid)",85.234,4.086,4.794,0.003
+Wet days >=1mm,North (Acholi-Kitgum),153.902,4.949,3.216,0.0
+Wet days >=1mm,West Nile-Lango-Teso-Elgon belt,174.088,2.245,1.29,0.134
+Wet days >=1mm,Mid-west & Kyoga (Bunyoro-Kyoga),179.622,1.522,0.847,0.323
+Wet days >=1mm,Lake Victoria crescent (Central-Busoga),186.149,4.751,2.552,0.007
+Wet days >=1mm,South-west (Ankole-Kigezi),162.987,2.762,1.694,0.045
+Wet days >=1mm,Uganda,163.405,3.307,2.024,0.0
+SDII (mm/wet day),"Karamoja (NE, semi-arid)",9.145,0.117,1.282,0.102
+SDII (mm/wet day),North (Acholi-Kitgum),8.158,-0.146,-1.793,0.003
+SDII (mm/wet day),West Nile-Lango-Teso-Elgon belt,7.711,-0.1,-1.301,0.029
+SDII (mm/wet day),Mid-west & Kyoga (Bunyoro-Kyoga),6.547,-0.078,-1.198,0.163
+SDII (mm/wet day),Lake Victoria crescent (Central-Busoga),7.436,0.093,1.255,0.091
+SDII (mm/wet day),South-west (Ankole-Kigezi),6.513,-0.033,-0.499,0.603
+SDII (mm/wet day),Uganda,7.459,-0.048,-0.642,0.105
+CDD (days),"Karamoja (NE, semi-arid)",43.545,0.736,1.689,0.512
+CDD (days),North (Acholi-Kitgum),34.724,0.46,1.325,0.632
+CDD (days),West Nile-Lango-Teso-Elgon belt,27.404,0.554,2.023,0.451
+CDD (days),Mid-west & Kyoga (Bunyoro-Kyoga),19.49,0.57,2.924,0.269
+CDD (days),Lake Victoria crescent (Central-Busoga),17.192,0.075,0.436,0.853
+CDD (days),South-west (Ankole-Kigezi),22.858,0.173,0.757,0.792
+CDD (days),Uganda,26.623,0.434,1.63,0.551

@@ -1,0 +1,16 @@
+variable,source,mean_1991_2020,trend_per_decade,p_value,units,change_1981_95_to_2011_25
+Wind speed at 2 m (m/s),NASA POWER,1.7585,0.0032,0.7675,m/s,-0.0024
+"Daily max wind at 10 m (m/s, annual mean)",NASA POWER,4.3886,-0.0004,0.9922,"m/s, annual mean",-0.0327
+Strongest wind of the year at 10 m (m/s),NASA POWER,9.3102,0.0909,0.0354,m/s,0.2501
+"Windy days (daily max wind > 1991-2020 p95, days/yr)",NASA POWER,18.2402,-0.1396,0.7917,"daily max wind > 1991-2020 p95, days/yr",-0.8254
+Relative humidity (%),NASA POWER,66.6605,-0.3062,0.614,%,-0.379
+Dew point (°C),NASA POWER,15.915,0.1329,0.1279,°C,0.419
+Solar radiation (MJ/m²/day),NASA POWER,20.1335,-0.1344,0.0325,MJ/m²/day,-0.341
+Vapour pressure deficit (kPa),NASA POWER,1.3158,0.0243,0.3797,kPa,0.0459
+Reference evapotranspiration ET0 (mm/yr),NASA POWER,1733.2583,1.9784,0.901,mm/yr,-2.5279
+"Soil moisture (mm, 1.6 m column)",CPC soil,352.3268,-14.8997,0.0097,"mm, 1.6 m column",-45.0072
+CPC (gauge) Tmax,CPC,27.989,0.0488,0.7999,°C,0.1021
+CPC (gauge) Tmin,CPC,18.4508,0.341,0.0,°C,0.9635
+POWER/MERRA-2 Tmax,POWER/MERRA-2,29.3053,0.2445,0.0898,°C,0.518
+POWER/MERRA-2 Tmin,POWER/MERRA-2,18.5444,0.2006,0.0,°C,0.5479
+GHCN-CAMS Tmean,GHCN-CAMS,24.5256,0.506,0.0,°C,1.5202
