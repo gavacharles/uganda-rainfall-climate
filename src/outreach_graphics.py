@@ -522,3 +522,61 @@ def a4_hot_nights():
                                                             dpi=100, savefig_kwargs={"facecolor": NIGHT})
     plt.close(fig)
     print("national warm nights", nat.loc[[1982, 2000, 2024]].round(0).to_dict())
+
+
+def cover():
+    """Substack cover (1456x1048) and social preview (1200x630): headline + map of 2026 rain as % of normal."""
+    import geopandas as gpd
+    import shapely
+    from common import uganda
+    pr = chirps()[0]
+    last = pd.Timestamp(pr.time.values[-1])
+    win = lambda y: pr.sel(time=slice(f"{y}-09-01", f"{y}-{last:%m-%d}")).sum("time")
+    clim = xr.concat([win(y) for y in range(1991, 2021)], "year").mean("year")
+    pct = 100 * win(2026) / clim
+    lat = np.arange(-1.55, 4.3, 0.02)
+    lon = np.arange(29.5, 35.1, 0.02)
+    fine = pct.interp(lat=lat, lon=lon, method="linear", kwargs={"fill_value": None})
+    LO, LA = np.meshgrid(lon, lat)
+    ug = uganda()
+    shapely.prepare(ug)
+    inside = shapely.contains_xy(ug, LO, LA)
+    lakes = gpd.read_file(Path.home() / "uganda-concrete-climate" / "data" / "raw" / "naturalearth" / "ne_10m_lakes.geojson").cx[29.3:35.3, -1.8:4.6]
+    cm = LinearSegmentedColormap.from_list("dry", ["#6e1f0b", RED, "#f0a07f", "#f6e3d6", "#cfe3ec", BLU])
+    u = zone_mean(pr.where(zones() >= 0)).sel(zone="Uganda").to_series()
+    tot = lambda y: u.loc[f"{y}-09-01":f"{y}-{last:%m-%d}"].sum()
+    nat = 100 * tot(2026) / np.mean([tot(y) for y in range(1991, 2021)])
+
+    def make(w_in, h_in, fname, big):
+        fig = plt.figure(figsize=(w_in, h_in), facecolor=BG)
+        mx = fig.add_axes([0.50, 0.16, 0.48, 0.78], facecolor=BG)
+        im = mx.pcolormesh(lon, lat, np.where(inside, fine, np.nan), cmap=cm, vmin=20, vmax=140, shading="auto")
+        lakes.plot(ax=mx, color="#cfe3ec", zorder=2)
+        gpd.GeoSeries([ug]).boundary.plot(ax=mx, color=INK, lw=1.0, zorder=3)
+        mx.set_xlim(29.4, 35.2)
+        mx.set_ylim(-1.7, 4.45)
+        mx.set_aspect("equal")
+        mx.axis("off")
+        cax = fig.add_axes([0.62, 0.075, 0.30, 0.022])
+        cb = fig.colorbar(im, cax=cax, orientation="horizontal", ticks=[20, 50, 80, 110, 140])
+        cb.ax.tick_params(labelsize=big * 0.42, colors=MUTE, length=0)
+        cb.outline.set_visible(False)
+        cb.set_label(f"rain, 1 Sep–{last:%-d %b} 2026, % of normal", fontsize=big * 0.45, color=MUTE)
+        fig.text(0.06, 0.86, "Where is the\nEl Niño rain?", fontsize=big * 1.55, fontweight="bold", color=INK, va="top",
+                 linespacing=1.0)
+        fig.text(0.06, 0.50, f"{nat:.0f}%", fontsize=big * 2.3, fontweight="bold", color=RED, va="center")
+        fig.text(0.06, 0.37, f"of normal rain since 1 September.\nIn 1997, the year of the El Niño\nfloods, it looked just the same.",
+                 fontsize=big * 0.62, color=INK, va="top", linespacing=1.3)
+        fig.text(0.06, 0.10, "Uganda's forecast, seasons and floods:\n45 years of data", fontsize=big * 0.42, color=MUTE, va="bottom")
+        fig.text(0.06, 0.045, CREDIT, fontsize=big * 0.42, color=INK, fontweight="bold", alpha=0.8)
+        with matplotlib.rc_context({"savefig.bbox": "standard"}):
+            fig.savefig(OUT / fname, dpi=100, facecolor=BG)
+        from PIL import Image
+        im_ = Image.open(OUT / fname)
+        target = (round(w_in * 100), round(h_in * 100))
+        if im_.size != target:
+            im_.resize(target, Image.LANCZOS).save(OUT / fname)
+        plt.close(fig)
+    make(14.56, 10.48, "cover_substack_1456x1048.png", 40)
+    make(12.0, 6.30, "cover_social_1200x630.png", 30)
+    print("national % of normal", round(nat))
