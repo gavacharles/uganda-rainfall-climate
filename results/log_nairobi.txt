@@ -105,26 +105,26 @@ figure nb04_nairobi_catchments_map.png
 46  Mathare River (2)  10            149.3              3.7                       3.1
 49  Mathare River (3)  10            149.3              6.4                       4.4
 52       Catchment 93  10            149.3             15.6                      10.3
-scenario           2014 land, 1981-2025 rain  2014 land, rain +14% (SSP5-8.5, 2041-70)  2030 land (GHSL), 1981-2025 rain  2030 land, rain +10% (SSP2-4.5, 2041-70)  2030 land, rain +14% (SSP5-8.5, 2041-70)
-catchment                                                                                                                                                                                                   
-Catchment 35                             7.7                                      29.2                              11.5                                      26.6                                      33.5
-Catchment 42                            21.4                                      44.9                              45.6                                      63.9                                      72.3
-Catchment 68                            13.4                                      34.4                              16.9                                      31.6                                      38.3
-Catchment 69                            10.5                                      32.3                              17.1                                      32.6                                      39.8
-Catchment 78                            14.7                                      36.1                              18.4                                      33.5                                      40.4
-Catchment 80                            33.8                                      58.5                              43.9                                      61.7                                      69.9
-Catchment 93                            15.6                                      38.9                              29.4                                      46.6                                      54.5
-Gatharaini River                        24.8                                      47.6                              29.9                                      45.9                                      53.2
-Kirichwa Kubwa                          13.9                                      33.5                              16.2                                      29.9                                      36.1
-Mathare River                            8.2                                      27.9                              11.1                                      24.9                                      31.2
-Mathare River (2)                        3.7                                      20.7                               4.3                                      15.9                                      21.3
-Mathare River (3)                        6.4                                      27.5                               9.7                                      24.4                                      31.1
-Nairobi River                           27.1                                      47.4                              30.7                                      44.9                                      51.4
-Nairobi River (2)                        2.2                                      19.0                               3.1                                      14.8                                      20.1
-Nairobi river                           22.5                                      45.6                              29.6                                      46.1                                      53.6
-Ngong River                             13.1                                      32.6                              16.4                                      30.0                                      36.2
-Ruiruaka River                           8.1                                      27.9                              11.8                                      25.7                                      32.0
-swamp                                   21.3                                      44.0                              28.1                                      44.4                                      51.8
+scenario           2014 land, 1981-2025 rain  2014 land, rain +13% (SSP5-8.5, 2041-70)  2030 land (GHSL), 1981-2025 rain  2030 land, rain +13% (SSP5-8.5, 2041-70)  2030 land, rain +9% (SSP2-4.5, 2041-70)
+catchment                                                                                                                                                                                                  
+Catchment 35                             7.7                                      28.3                              11.5                                      32.7                                     25.7
+Catchment 42                            21.4                                      44.0                              45.6                                      71.2                                     62.8
+Catchment 68                            13.4                                      33.6                              16.9                                      37.5                                     30.7
+Catchment 69                            10.5                                      31.4                              17.1                                      38.9                                     31.7
+Catchment 78                            14.7                                      35.3                              18.4                                      39.5                                     32.6
+Catchment 80                            33.8                                      57.5                              43.9                                      68.8                                     60.6
+Catchment 93                            15.6                                      38.0                              29.4                                      53.5                                     45.6
+Gatharaini River                        24.8                                      46.7                              29.9                                      52.3                                     44.9
+Kirichwa Kubwa                          13.9                                      32.8                              16.2                                      35.3                                     29.0
+Mathare River                            8.2                                      27.1                              11.1                                      30.4                                     24.0
+Mathare River (2)                        3.7                                      20.0                               4.3                                      20.6                                     15.2
+Mathare River (3)                        6.4                                      26.6                               9.7                                      30.3                                     23.5
+Nairobi River                           27.1                                      46.6                              30.7                                      50.6                                     44.0
+Nairobi River (2)                        2.2                                      18.4                               3.1                                      19.4                                     14.1
+Nairobi river                           22.5                                      44.7                              29.6                                      52.7                                     45.1
+Ngong River                             13.1                                      31.8                              16.4                                      35.4                                     29.2
+Ruiruaka River                           8.1                                      27.1                              11.8                                      31.2                                     24.8
+swamp                                   21.3                                      43.1                              28.1                                      50.8                                     43.3
 catchment  Catchment 35  Catchment 42  Catchment 68  Catchment 69  Catchment 78  Catchment 80  Catchment 93  Gatharaini River  Kirichwa Kubwa  Mathare River  Mathare River (2)  Mathare River (3)  Nairobi River  Nairobi River (2)  Nairobi river  Ngong River  Ruiruaka River  swamp
 epoch                                                                                                                                                                                                                                                                                  
 1975                0.0           0.0           0.0           0.0           0.0           0.0           0.0               0.0             0.0            0.0                0.0                0.0            0.0                0.0            0.0          0.0             0.0    0.0

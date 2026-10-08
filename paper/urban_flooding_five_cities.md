@@ -70,7 +70,7 @@ All inputs are global and public:
 | Copernicus GLO-30 | Catchments, slopes, flow lengths, valley floors | 30 m | [Copernicus DEM](https://copernicus-dem-30m.s3.amazonaws.com/readme.html) |
 | geoBoundaries | City boundaries | ADM1/ADM2 | [geoBoundaries](https://www.geoboundaries.org) |
 | OpenStreetMap | Waterway names | vector | Overpass API |
-| CMIP6 | Warming 2041–2070 vs 1991–2020 | 16 models (East Africa grid, Kampala; Johannesburg point); 7–10 models at the other cities | Pangeo Google Cloud archive |
+| CMIP6 | Warming 2041–2070 vs 1991–2020 | 16 models at every city (East Africa grid for Kampala; city point for the others) | Pangeo Google Cloud archive |
 
 ## 4 Methods
 
@@ -117,10 +117,10 @@ The composite CN weights impervious surface (CN 98) and open space in fair condi
 
 | | Kampala | Nairobi | Dar es Salaam | Lagos | Johannesburg |
 | --- | --- | --- | --- | --- | --- |
-| Warming, SSP2-4.5 (°C) | 1.26 | 1.35 | 1.16 | 1.24 | 1.79 |
-| Warming, SSP5-8.5 (°C) | 1.84 | 1.92 | 1.64 | 1.68 | 2.54 |
-| Design-rain uplift, SSP2-4.5 | +9% | +10% | +8% | +9% | +13% |
-| Design-rain uplift, SSP5-8.5 | +13% | +14% | +12% | +12% | +19% |
+| Warming, SSP2-4.5 (°C) | 1.26 | 1.27 | 1.16 | 1.23 | 1.79 |
+| Warming, SSP5-8.5 (°C) | 1.84 | 1.85 | 1.64 | 1.62 | 2.54 |
+| Design-rain uplift, SSP2-4.5 | +9% | +9% | +8% | +9% | +13% |
+| Design-rain uplift, SSP5-8.5 | +13% | +13% | +12% | +12% | +19% |
 
 The ratio of the two, area-weighted over each city's catchments, is the headline metric: *urbanisation already done ÷ climate to come*.
 
@@ -175,9 +175,9 @@ To match the paving effect, storms would have needed to grow by a median of 19% 
 | City | Urbanisation already done, 1975–2020 | Climate to come, SSP2-4.5 | Climate to come, SSP5-8.5 | Ratio (SSP2-4.5 / SSP5-8.5) |
 | --- | --- | --- | --- | --- |
 | Kampala | +59% | +12% | +18% | 5.0 / 3.3 |
-| Lagos | +36% | +11% | +15% | 3.3 / 2.4 |
+| Lagos | +36% | +11% | +14% | 3.4 / 2.5 |
 | Dar es Salaam | +27% | +10% | +14% | 2.8 / 2.0 |
-| Nairobi | +31% | +12% | +18% | 2.5 / 1.7 |
+| Nairobi | +31% | +11% | +17% | 2.7 / 1.8 |
 | Johannesburg | +37% | +18% | +26% | 2.1 / 1.4 |
 
 10-year peak flow, area-weighted.
@@ -228,13 +228,13 @@ The weak link is rainfall extremes. Gauge calibration factors vary from 1.4 to 2
 - **Sub-daily scaling** uses one East African rule everywhere.
 - **Runoff model:** SCS parameters are uncalibrated; channel capacity, blockage and tidal backwater (Lagos, Dar es Salaam) are not modelled.
 - **Land cover:** GHSL is least reliable before 1990 and does not capture all informal growth.
-- **Climate projections:** Clausius–Clapeyron scaling may understate short-duration intensification. The new cities rely on 7–10 CMIP6 models.
+- **Climate projections:** Clausius–Clapeyron scaling may understate short-duration intensification.
 
 ## 7 Implications
 
 1. **Diagnose before investing.** Run a land-versus-rain diagnostic before sizing drainage in any rapidly urbanising city.
 2. **Treat land-use control as adaptation.** Protecting valley floors, enforcing no-net-increase runoff rules and storing runoff at source should be core adaptation measures, eligible for climate finance.
-3. **Design for end-of-life imperviousness**, then add a climate allowance: +8–14% by 2041–2070 in the four tropical cities and +13–19% in Johannesburg.
+3. **Design for end-of-life imperviousness**, then add a climate allowance: +8–13% by 2041–2070 in the four tropical cities and +13–19% in Johannesburg.
 4. **Update design storms where they have moved**: Johannesburg and Dar es Salaam.
 5. **Open the rain gauge archives.** National meteorological services hold the station data that would remove the largest uncertainty in this diagnostic.
 
