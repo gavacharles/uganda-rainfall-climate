@@ -18,7 +18,7 @@ Farmers and planners in Uganda report that the March–May rains have become les
 
 **Why they disagree.** A district fixed-effects panel shows the second-season improvement is largely climatic: rainfall and rain days increased, and climate covariates explain about 57% of the vegetation trend. The first-season decline is not. Rainfall, dry spells and heat barely changed, and the vegetation trend persists after controlling for them (−3.0 to −3.9 VCI points per decade). It is strongest at the peak of the season (late April–May).
 
-**Outcomes.** Rainfall-based indices track vegetation weakly (r = 0.12–0.26) and national yields not at all. Karamoja's IPC Phase 3+ share rose from 0% to 27–38% between 2011–2013 and 2021–2024 while its seasons improved.
+**Outcomes.** Rainfall-based indices track vegetation weakly (r = 0.12–0.26) and national yields not at all. Karamoja's IPC Phase 3+ share rose from 0% in 2011–2013 to 27–38% in 2021–2024. It rose in good rainy seasons (2019–2020) as well as poor ones (2021–2023), and vegetation condition was above its long-term average throughout 2019–2024.
 
 **Conclusion.** The weakening first season that farmers describe is real in the vegetation record, but its cause is not in the rainfall. Early-warning and adaptation planning that rely on satellite rainfall alone will miss it.
 
@@ -226,7 +226,7 @@ When at least half a district's cells failed, VCI drought followed in 30–36% o
 
 **Yields.** Detrended FAOSTAT national yields of maize, beans, sorghum and millet show no relation with national WRSI (|r| ≤ 0.15, all p > 0.3). National statistics in Uganda are partly modelled and mix two seasons and many regions, so this is a weak test.
 
-**Food security in Karamoja.** The share of Karamoja IPC units in Phase 3 or worse rose from 0% in 2011–2013 to 27–38% in 2021–2024. Over the same years, Karamoja's crop water stress fell and its vegetation condition improved. IPC status is unrelated to the preceding season's WRSI failure (r = 0.10 with CHIRPS, −0.18 with ARC2, not significant). Its weak positive correlation with VCI (r = 0.31) reflects two opposite trends, not a causal link.
+**Food security in Karamoja.** The share of Karamoja IPC units in Phase 3 or worse rose from 0% in 2011–2013 to 27–38% in 2021–2024. The rainy seasons over those years were mixed: good in 2018–2020 (maize WRSI 89–98) and poor in 2021–2023 (28–55), with 2022 a serious drought. Vegetation condition averaged 61 in 2019–2024 against 52 in 1982–2003. IPC status is unrelated to the preceding season's WRSI failure (r = 0.10 with CHIRPS, −0.18 with ARC2, not significant). Its weak positive correlation with VCI (r = 0.31) reflects two opposite trends, not a causal link.
 
 ## 6 Discussion
 
@@ -242,9 +242,9 @@ The first-season loss is a different kind of change. It sits at the peak of the 
 
 Whichever explanation holds, the practical point is the same. Farmers' experience of a less reliable first season is real in the vegetation record, but satellite rainfall alone would not detect it.
 
-### 6.2 Rainfall is not the main driver of recent food insecurity in Karamoja
+### 6.2 Rainfall explains only part of Karamoja's rising food insecurity
 
-Karamoja's IPC classifications worsened sharply after 2018, while its growing seasons became, if anything, more favourable. This is consistent with assessments that cite livestock losses, insecurity, pests and prices alongside climate. Early-warning systems that lean on rainfall-based crop indices would have missed this deterioration.
+Karamoja's IPC classifications worsened sharply after 2018. The poor seasons of 2021–2023 contributed, but the crisis was already rising in the good seasons of 2019–2020, and vegetation stayed above its long-term average. Rainfall explains part of the deterioration, not its persistence, which is consistent with assessments citing livestock losses, insecurity, pests and prices. Early-warning systems that lean on rainfall-based crop indices alone would have missed this.
 
 ### 6.3 Limitations
 
@@ -259,7 +259,7 @@ Karamoja's IPC classifications worsened sharply after 2018, while its growing se
 1. **Monitoring and early warning.** Treat rainfall-based crop indices and vegetation indices as complementary, not interchangeable. In Uganda they diverge on the multi-decadal trend that matters most for planning. Rainfall-based WRSI alone explains little crop or food-security variation.
 2. **Planting advice.** In the north, the West Nile–Lango–Teso belt and much of the bimodal south, the second season is now at least as reliable as the first. Extension services should stop treating March–May as the default main season.
 3. **Look beyond rainfall for the first-season decline.** Soil fertility, land cover and cropping practices may matter more than rain for the March–July season. Soil and water conservation, agroforestry and fallow management are candidate responses alongside drought-tolerant, short-cycle varieties.
-4. **Karamoja.** The recent rise in acute food insecurity happened in improving seasons, so responses must go beyond climate.
+4. **Karamoja.** The recent rise in acute food insecurity began in good rainy seasons and outlasted the 2021–2023 droughts, so responses must go beyond climate.
 5. **Data.** Subnational, season-specific crop statistics (UBOS), UNMA station rainfall and a consistent land-cover time series would allow the explanations above to be separated.
 
 ## 8 Conclusions
@@ -267,7 +267,7 @@ Karamoja's IPC classifications worsened sharply after 2018, while its growing se
 - Two satellite rainfall datasets show few robust changes in the timing or crop water-stress risk of Uganda's growing seasons since 1981.
 - Satellite vegetation shows a clear swap: first-season vegetation drought doubled and second-season drought nearly disappeared, independent of urbanisation and sensor change.
 - Climate explains the second-season improvement (more rain, more rain days) but not the first-season decline, which is strongest at the peak of the season and persists after controlling for rainfall and heat.
-- Rainfall-based crop indices track vegetation weakly and national yields not at all. Karamoja's worsening food insecurity since 2018 is not explained by rainfall.
+- Rainfall-based crop indices track vegetation weakly and national yields not at all. Karamoja's worsening food insecurity since 2018 is only partly explained by rainfall: it began in good seasons and persisted when vegetation was above average.
 
 ## Data and code availability
 
