@@ -1,0 +1,8 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+# Data: downloaded and rebuilt by the scripts in src/ (several GB; see README)
+data/
+# OS / editor
+.DS_Store

@@ -1,0 +1,5 @@
+dataset,season,n,spearman_pooled,p,median_district_r,share_districts_r_pos,vci_when_failed,vci_when_not,n_failed,vci_drought_rate_when_failed,vci_drought_rate_when_not
+CHIRPS,S1,2332,0.122,0.0,0.121,0.679,42.268,48.753,20,0.3,0.199
+CHIRPS,S2,2279,0.259,0.0,0.201,0.736,42.122,53.923,88,0.364,0.15
+ARC2,S1,2365,0.008,0.68,-0.029,0.455,50.35,48.324,51,0.176,0.207
+ARC2,S2,2310,0.216,0.0,0.166,0.691,46.49,54.08,211,0.28,0.149

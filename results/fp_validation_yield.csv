@@ -1,0 +1,9 @@
+dataset,item,wrsi_series,n,spearman,p,share_years_unchanged
+CHIRPS,Maize (corn),maize_both,44,-0.091,0.557,0.0
+CHIRPS,"Beans, dry",beans_both,44,-0.133,0.388,0.0
+CHIRPS,Sorghum,maize_both,44,-0.038,0.805,0.045
+CHIRPS,Millet,maize_both,44,0.15,0.332,0.0
+ARC2,Maize (corn),maize_both,42,0.001,0.995,0.0
+ARC2,"Beans, dry",beans_both,42,-0.141,0.371,0.0
+ARC2,Sorghum,maize_both,42,-0.049,0.758,0.045
+ARC2,Millet,maize_both,42,0.014,0.928,0.0

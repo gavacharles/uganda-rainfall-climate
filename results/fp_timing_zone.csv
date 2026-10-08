@@ -1,0 +1,101 @@
+dataset,variable,zone,median_doy,trend_days_per_decade,p
+CHIRPS,S1_onsetA,"Karamoja (NE, semi-arid)",94.0,0.0,0.922
+CHIRPS,S1_onsetA,North (Acholi-Kitgum),84.0,-2.053,0.171
+CHIRPS,S1_onsetA,West Nile-Lango-Teso-Elgon belt,78.0,-0.488,0.572
+CHIRPS,S1_onsetA,Mid-west & Kyoga (Bunyoro-Kyoga),72.0,0.089,0.837
+CHIRPS,S1_onsetA,Lake Victoria crescent (Central-Busoga),66.0,-1.892,0.052
+CHIRPS,S1_onsetA,South-west (Ankole-Kigezi),71.0,-1.333,0.394
+CHIRPS,S1_onsetA,Uganda,77.0,-0.324,0.731
+CHIRPS,S1_onsetB,West Nile-Lango-Teso-Elgon belt,82.5,-1.25,0.454
+CHIRPS,S1_onsetB,Mid-west & Kyoga (Bunyoro-Kyoga),75.0,-2.105,0.189
+CHIRPS,S1_onsetB,Lake Victoria crescent (Central-Busoga),74.0,-2.759,0.11
+CHIRPS,S1_onsetB,South-west (Ankole-Kigezi),71.0,-3.131,0.03
+CHIRPS,S1_onsetB,Uganda,74.0,-2.554,0.1
+CHIRPS,S1_cessB,West Nile-Lango-Teso-Elgon belt,166.0,3.153,0.149
+CHIRPS,S1_cessB,Mid-west & Kyoga (Bunyoro-Kyoga),143.0,-1.325,0.217
+CHIRPS,S1_cessB,Lake Victoria crescent (Central-Busoga),148.0,-1.667,0.125
+CHIRPS,S1_cessB,South-west (Ankole-Kigezi),134.0,-0.354,0.653
+CHIRPS,S1_cessB,Uganda,143.0,-1.25,0.206
+CHIRPS,S2_onsetA,"Karamoja (NE, semi-arid)",228.0,-2.45,0.282
+CHIRPS,S2_onsetA,North (Acholi-Kitgum),217.0,0.0,0.702
+CHIRPS,S2_onsetA,West Nile-Lango-Teso-Elgon belt,217.0,0.0,0.752
+CHIRPS,S2_onsetA,Mid-west & Kyoga (Bunyoro-Kyoga),223.0,0.625,0.383
+CHIRPS,S2_onsetA,Lake Victoria crescent (Central-Busoga),223.0,0.436,0.53
+CHIRPS,S2_onsetA,South-west (Ankole-Kigezi),237.0,0.588,0.776
+CHIRPS,S2_onsetA,Uganda,221.0,0.357,0.504
+CHIRPS,S2_onsetB,West Nile-Lango-Teso-Elgon belt,221.0,0.318,0.147
+CHIRPS,S2_onsetB,Mid-west & Kyoga (Bunyoro-Kyoga),225.0,-1.0,0.126
+CHIRPS,S2_onsetB,Lake Victoria crescent (Central-Busoga),242.0,-3.268,0.208
+CHIRPS,S2_onsetB,South-west (Ankole-Kigezi),241.0,1.25,0.648
+CHIRPS,S2_onsetB,Uganda,235.5,-1.446,0.252
+CHIRPS,S2_cessB,West Nile-Lango-Teso-Elgon belt,319.0,0.752,0.667
+CHIRPS,S2_cessB,Mid-west & Kyoga (Bunyoro-Kyoga),330.0,1.168,0.457
+CHIRPS,S2_cessB,Lake Victoria crescent (Central-Busoga),333.0,4.41,0.094
+CHIRPS,S2_cessB,South-west (Ankole-Kigezi),346.0,3.0,0.075
+CHIRPS,S2_cessB,Uganda,331.0,1.83,0.337
+CHIRPS,S1_lengthB,West Nile-Lango-Teso-Elgon belt,90.0,4.151,0.292
+CHIRPS,S1_lengthB,Mid-west & Kyoga (Bunyoro-Kyoga),69.0,0.359,0.868
+CHIRPS,S1_lengthB,Lake Victoria crescent (Central-Busoga),77.0,2.764,0.144
+CHIRPS,S1_lengthB,South-west (Ankole-Kigezi),64.0,2.306,0.217
+CHIRPS,S1_lengthB,Uganda,70.0,1.091,0.463
+CHIRPS,S2_lengthB,West Nile-Lango-Teso-Elgon belt,91.0,1.225,0.57
+CHIRPS,S2_lengthB,Mid-west & Kyoga (Bunyoro-Kyoga),97.0,1.752,0.368
+CHIRPS,S2_lengthB,Lake Victoria crescent (Central-Busoga),80.0,5.671,0.0
+CHIRPS,S2_lengthB,South-west (Ankole-Kigezi),106.0,3.333,0.131
+CHIRPS,S2_lengthB,Uganda,93.0,2.094,0.104
+ARC2,S1_onsetA,"Karamoja (NE, semi-arid)",91.0,-1.0,0.675
+ARC2,S1_onsetA,North (Acholi-Kitgum),76.0,1.25,0.373
+ARC2,S1_onsetA,West Nile-Lango-Teso-Elgon belt,70.0,0.27,0.867
+ARC2,S1_onsetA,Mid-west & Kyoga (Bunyoro-Kyoga),63.0,-2.353,0.154
+ARC2,S1_onsetA,Lake Victoria crescent (Central-Busoga),58.0,-2.0,0.173
+ARC2,S1_onsetA,South-west (Ankole-Kigezi),58.0,-2.727,0.036
+ARC2,S1_onsetA,Uganda,68.0,-0.385,0.697
+ARC2,S1_onsetB,"Karamoja (NE, semi-arid)",81.0,-0.8,0.777
+ARC2,S1_onsetB,North (Acholi-Kitgum),78.0,0.526,0.769
+ARC2,S1_onsetB,West Nile-Lango-Teso-Elgon belt,74.0,0.0,0.983
+ARC2,S1_onsetB,Mid-west & Kyoga (Bunyoro-Kyoga),65.0,0.0,0.874
+ARC2,S1_onsetB,Lake Victoria crescent (Central-Busoga),70.0,0.833,0.738
+ARC2,S1_onsetB,South-west (Ankole-Kigezi),57.0,-1.667,0.226
+ARC2,S1_onsetB,Uganda,73.0,-1.29,0.516
+ARC2,S1_cessB,"Karamoja (NE, semi-arid)",149.0,-0.875,0.72
+ARC2,S1_cessB,North (Acholi-Kitgum),166.0,-2.581,0.426
+ARC2,S1_cessB,West Nile-Lango-Teso-Elgon belt,159.0,-1.481,0.5
+ARC2,S1_cessB,Mid-west & Kyoga (Bunyoro-Kyoga),138.0,0.789,0.714
+ARC2,S1_cessB,Lake Victoria crescent (Central-Busoga),138.0,-1.25,0.426
+ARC2,S1_cessB,South-west (Ankole-Kigezi),128.0,2.857,0.071
+ARC2,S1_cessB,Uganda,147.0,-0.952,0.595
+ARC2,S2_onsetA,"Karamoja (NE, semi-arid)",264.0,0.333,0.84
+ARC2,S2_onsetA,North (Acholi-Kitgum),223.0,0.0,0.802
+ARC2,S2_onsetA,West Nile-Lango-Teso-Elgon belt,219.0,0.0,0.9
+ARC2,S2_onsetA,Mid-west & Kyoga (Bunyoro-Kyoga),222.0,0.0,0.769
+ARC2,S2_onsetA,Lake Victoria crescent (Central-Busoga),226.5,-0.714,0.565
+ARC2,S2_onsetA,South-west (Ankole-Kigezi),230.5,0.0,0.896
+ARC2,S2_onsetA,Uganda,223.0,0.0,0.627
+ARC2,S2_onsetB,"Karamoja (NE, semi-arid)",246.5,2.222,0.624
+ARC2,S2_onsetB,North (Acholi-Kitgum),229.0,0.0,1.0
+ARC2,S2_onsetB,West Nile-Lango-Teso-Elgon belt,228.0,0.0,0.811
+ARC2,S2_onsetB,Mid-west & Kyoga (Bunyoro-Kyoga),231.0,-1.842,0.298
+ARC2,S2_onsetB,Lake Victoria crescent (Central-Busoga),248.0,-5.0,0.032
+ARC2,S2_onsetB,South-west (Ankole-Kigezi),244.0,-0.526,0.854
+ARC2,S2_onsetB,Uganda,235.5,-1.053,0.587
+ARC2,S2_cessB,"Karamoja (NE, semi-arid)",299.5,7.692,0.002
+ARC2,S2_cessB,North (Acholi-Kitgum),313.0,2.143,0.293
+ARC2,S2_cessB,West Nile-Lango-Teso-Elgon belt,318.5,4.103,0.103
+ARC2,S2_cessB,Mid-west & Kyoga (Bunyoro-Kyoga),327.5,2.609,0.052
+ARC2,S2_cessB,Lake Victoria crescent (Central-Busoga),336.0,1.6,0.798
+ARC2,S2_cessB,South-west (Ankole-Kigezi),341.25,3.667,0.283
+ARC2,S2_cessB,Uganda,324.5,3.5,0.116
+ARC2,S1_lengthB,"Karamoja (NE, semi-arid)",74.0,-0.61,0.867
+ARC2,S1_lengthB,North (Acholi-Kitgum),91.0,-2.5,0.374
+ARC2,S1_lengthB,West Nile-Lango-Teso-Elgon belt,98.0,-1.042,0.631
+ARC2,S1_lengthB,Mid-west & Kyoga (Bunyoro-Kyoga),71.0,1.176,0.63
+ARC2,S1_lengthB,Lake Victoria crescent (Central-Busoga),72.0,-1.0,0.778
+ARC2,S1_lengthB,South-west (Ankole-Kigezi),65.0,4.815,0.09
+ARC2,S1_lengthB,Uganda,80.0,1.538,0.483
+ARC2,S2_lengthB,"Karamoja (NE, semi-arid)",44.5,5.455,0.102
+ARC2,S2_lengthB,North (Acholi-Kitgum),64.5,4.688,0.119
+ARC2,S2_lengthB,West Nile-Lango-Teso-Elgon belt,83.0,5.714,0.064
+ARC2,S2_lengthB,Mid-west & Kyoga (Bunyoro-Kyoga),91.5,4.286,0.387
+ARC2,S2_lengthB,Lake Victoria crescent (Central-Busoga),73.75,6.429,0.056
+ARC2,S2_lengthB,South-west (Ankole-Kigezi),98.5,3.913,0.3
+ARC2,S2_lengthB,Uganda,81.0,2.759,0.448

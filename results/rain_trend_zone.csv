@@ -1,0 +1,36 @@
+season,zone,mean_1991_2020,sen_mm_per_decade,pct_per_decade,p_value,cv_pct,mean_1981_2003,mean_2004_2025
+Annual,"Karamoja (NE, semi-arid)",785.196,46.395,5.909,0.0,20.575,708.611,837.805
+Annual,North (Acholi-Kitgum),1256.008,23.564,1.876,0.044,10.889,1216.303,1254.113
+Annual,West Nile-Lango-Teso-Elgon belt,1355.093,4.757,0.351,0.792,9.819,1343.728,1337.917
+Annual,Mid-west & Kyoga (Bunyoro-Kyoga),1189.165,-7.162,-0.602,0.428,7.101,1187.314,1179.316
+Annual,Lake Victoria crescent (Central-Busoga),1400.189,48.06,3.432,0.001,10.926,1333.029,1423.718
+Annual,South-west (Ankole-Kigezi),1074.019,14.502,1.35,0.083,7.16,1053.928,1081.771
+Annual,Uganda,1214.766,17.776,1.463,0.091,8.608,1184.561,1217.762
+MAM (first rains),"Karamoja (NE, semi-arid)",262.623,12.791,4.87,0.006,27.826,239.365,281.269
+MAM (first rains),North (Acholi-Kitgum),375.753,-3.142,-0.836,0.538,16.694,371.853,372.973
+MAM (first rains),West Nile-Lango-Teso-Elgon belt,413.063,-8.291,-2.007,0.229,13.098,420.896,401.075
+MAM (first rains),Mid-west & Kyoga (Bunyoro-Kyoga),391.357,-6.177,-1.578,0.278,12.094,398.132,380.971
+MAM (first rains),Lake Victoria crescent (Central-Busoga),511.584,10.132,1.98,0.107,11.135,498.808,513.886
+MAM (first rains),South-west (Ankole-Kigezi),353.167,5.087,1.44,0.323,12.475,342.202,358.796
+MAM (first rains),Uganda,392.062,-0.928,-0.237,0.778,12.229,388.536,389.861
+JJA,"Karamoja (NE, semi-arid)",294.626,2.991,1.015,0.74,28.447,278.582,294.668
+JJA,North (Acholi-Kitgum),464.188,1.252,0.27,0.899,14.427,458.196,448.572
+JJA,West Nile-Lango-Teso-Elgon belt,405.916,0.521,0.128,0.883,14.31,408.179,397.057
+JJA,Mid-west & Kyoga (Bunyoro-Kyoga),252.043,1.909,0.758,0.674,15.32,248.589,251.4
+JJA,Lake Victoria crescent (Central-Busoga),256.35,8.446,3.295,0.052,16.561,242.879,258.628
+JJA,South-west (Ankole-Kigezi),140.313,0.047,0.033,1.0,25.875,134.959,139.028
+JJA,Uganda,314.596,2.674,0.85,0.747,14.71,309.031,309.31
+SON (second rains),"Karamoja (NE, semi-arid)",183.664,25.437,13.85,0.001,36.814,152.033,214.953
+SON (second rains),North (Acholi-Kitgum),348.804,20.362,5.838,0.003,15.891,328.166,362.334
+SON (second rains),West Nile-Lango-Teso-Elgon belt,436.487,10.153,2.326,0.229,13.671,423.64,438.322
+SON (second rains),Mid-west & Kyoga (Bunyoro-Kyoga),412.186,-1.901,-0.461,0.807,10.469,412.169,412.713
+SON (second rains),Lake Victoria crescent (Central-Busoga),422.648,13.251,3.135,0.14,20.118,395.861,432.744
+SON (second rains),South-west (Ankole-Kigezi),377.043,0.005,0.001,1.0,11.228,380.452,377.971
+SON (second rains),Uganda,380.405,10.12,2.66,0.111,12.573,367.665,387.879
+DJF,"Karamoja (NE, semi-arid)",44.283,-0.718,-1.622,0.68,60.651,39.714,46.914
+DJF,North (Acholi-Kitgum),67.264,0.466,0.692,0.898,49.142,59.587,70.235
+DJF,West Nile-Lango-Teso-Elgon belt,99.628,2.023,2.031,0.71,42.672,93.266,101.464
+DJF,Mid-west & Kyoga (Bunyoro-Kyoga),133.578,2.639,1.975,0.592,26.196,131.49,134.231
+DJF,Lake Victoria crescent (Central-Busoga),209.607,12.924,6.166,0.155,29.614,200.404,218.46
+DJF,South-west (Ankole-Kigezi),203.495,4.095,2.012,0.298,20.077,201.571,205.976
+DJF,Uganda,127.703,5.093,3.988,0.319,28.693,122.367,130.712

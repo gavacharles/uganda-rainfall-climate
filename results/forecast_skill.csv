@@ -1,0 +1,85 @@
+issue,zone,model,r,msess,rpss,hit_rate
+mid-Aug (July SST),"Karamoja (NE, semi-arid)",Climatology,0.0,0.0,-0.022,0.289
+mid-Aug (July SST),"Karamoja (NE, semi-arid)",ENSO only,0.134,-0.007,-0.009,0.378
+mid-Aug (July SST),"Karamoja (NE, semi-arid)",ENSO + IOD (DMI),0.099,-0.037,-0.032,0.378
+mid-Aug (July SST),"Karamoja (NE, semi-arid)",ENSO + IO poles,0.378,0.121,0.08,0.467
+mid-Aug (July SST),"Karamoja (NE, semi-arid)",Ridge (all SST + Sep rain),0.323,0.097,0.058,0.422
+mid-Aug (July SST),"Karamoja (NE, semi-arid)",LightGBM (all),0.022,-0.49,-0.24,0.378
+mid-Aug (July SST),North (Acholi-Kitgum),Climatology,0.0,0.0,-0.005,0.333
+mid-Aug (July SST),North (Acholi-Kitgum),ENSO only,0.207,0.031,-0.012,0.356
+mid-Aug (July SST),North (Acholi-Kitgum),ENSO + IOD (DMI),0.123,-0.036,-0.044,0.289
+mid-Aug (July SST),North (Acholi-Kitgum),ENSO + IO poles,0.363,0.117,0.062,0.489
+mid-Aug (July SST),North (Acholi-Kitgum),Ridge (all SST + Sep rain),0.291,0.073,0.021,0.378
+mid-Aug (July SST),North (Acholi-Kitgum),LightGBM (all),-0.095,-0.556,-0.216,0.311
+mid-Aug (July SST),West Nile-Lango-Teso-Elgon belt,Climatology,0.0,0.0,-0.042,0.356
+mid-Aug (July SST),West Nile-Lango-Teso-Elgon belt,ENSO only,0.275,0.069,0.041,0.4
+mid-Aug (July SST),West Nile-Lango-Teso-Elgon belt,ENSO + IOD (DMI),0.214,0.013,-0.003,0.422
+mid-Aug (July SST),West Nile-Lango-Teso-Elgon belt,ENSO + IO poles,0.239,0.01,0.017,0.422
+mid-Aug (July SST),West Nile-Lango-Teso-Elgon belt,Ridge (all SST + Sep rain),0.163,0.018,0.006,0.378
+mid-Aug (July SST),West Nile-Lango-Teso-Elgon belt,LightGBM (all),-0.225,-0.715,-0.278,0.2
+mid-Aug (July SST),Mid-west & Kyoga (Bunyoro-Kyoga),Climatology,0.0,0.0,-0.0,0.356
+mid-Aug (July SST),Mid-west & Kyoga (Bunyoro-Kyoga),ENSO only,0.064,-0.042,-0.029,0.311
+mid-Aug (July SST),Mid-west & Kyoga (Bunyoro-Kyoga),ENSO + IOD (DMI),-0.108,-0.151,-0.078,0.267
+mid-Aug (July SST),Mid-west & Kyoga (Bunyoro-Kyoga),ENSO + IO poles,-0.183,-0.227,-0.111,0.289
+mid-Aug (July SST),Mid-west & Kyoga (Bunyoro-Kyoga),Ridge (all SST + Sep rain),-0.319,-0.08,-0.046,0.244
+mid-Aug (July SST),Mid-west & Kyoga (Bunyoro-Kyoga),LightGBM (all),-0.085,-0.437,-0.263,0.244
+mid-Aug (July SST),Lake Victoria crescent (Central-Busoga),Climatology,0.0,0.0,-0.095,0.311
+mid-Aug (July SST),Lake Victoria crescent (Central-Busoga),ENSO only,0.263,0.045,-0.053,0.4
+mid-Aug (July SST),Lake Victoria crescent (Central-Busoga),ENSO + IOD (DMI),0.268,0.025,-0.082,0.4
+mid-Aug (July SST),Lake Victoria crescent (Central-Busoga),ENSO + IO poles,0.245,-0.024,-0.081,0.444
+mid-Aug (July SST),Lake Victoria crescent (Central-Busoga),Ridge (all SST + Sep rain),0.204,0.007,-0.079,0.422
+mid-Aug (July SST),Lake Victoria crescent (Central-Busoga),LightGBM (all),-0.071,-0.686,-0.329,0.244
+mid-Aug (July SST),South-west (Ankole-Kigezi),Climatology,0.0,0.0,-0.001,0.333
+mid-Aug (July SST),South-west (Ankole-Kigezi),ENSO only,-0.183,-0.099,-0.084,0.267
+mid-Aug (July SST),South-west (Ankole-Kigezi),ENSO + IOD (DMI),-0.287,-0.173,-0.11,0.222
+mid-Aug (July SST),South-west (Ankole-Kigezi),ENSO + IO poles,-0.293,-0.218,-0.132,0.2
+mid-Aug (July SST),South-west (Ankole-Kigezi),Ridge (all SST + Sep rain),-0.789,-0.092,-0.062,0.133
+mid-Aug (July SST),South-west (Ankole-Kigezi),LightGBM (all),-0.32,-0.77,-0.369,0.156
+mid-Aug (July SST),Uganda,Climatology,0.0,0.0,-0.037,0.333
+mid-Aug (July SST),Uganda,ENSO only,0.224,0.025,0.008,0.444
+mid-Aug (July SST),Uganda,ENSO + IOD (DMI),0.147,-0.045,-0.037,0.378
+mid-Aug (July SST),Uganda,ENSO + IO poles,0.197,-0.036,0.017,0.489
+mid-Aug (July SST),Uganda,Ridge (all SST + Sep rain),0.114,-0.023,-0.015,0.4
+mid-Aug (July SST),Uganda,LightGBM (all),-0.169,-0.68,-0.279,0.222
+early Oct (Sep SST + Sep rain),"Karamoja (NE, semi-arid)",Climatology,0.0,0.0,-0.022,0.289
+early Oct (Sep SST + Sep rain),"Karamoja (NE, semi-arid)",ENSO only,-0.084,-0.06,-0.019,0.333
+early Oct (Sep SST + Sep rain),"Karamoja (NE, semi-arid)",ENSO + IOD (DMI),-0.016,-0.074,-0.032,0.378
+early Oct (Sep SST + Sep rain),"Karamoja (NE, semi-arid)",ENSO + IO poles,0.251,0.026,0.071,0.467
+early Oct (Sep SST + Sep rain),"Karamoja (NE, semi-arid)",Ridge (all SST + Sep rain),0.089,-0.047,-0.007,0.333
+early Oct (Sep SST + Sep rain),"Karamoja (NE, semi-arid)",LightGBM (all),0.179,-0.192,-0.165,0.378
+early Oct (Sep SST + Sep rain),North (Acholi-Kitgum),Climatology,0.0,0.0,-0.005,0.333
+early Oct (Sep SST + Sep rain),North (Acholi-Kitgum),ENSO only,0.066,-0.022,-0.046,0.378
+early Oct (Sep SST + Sep rain),North (Acholi-Kitgum),ENSO + IOD (DMI),0.024,-0.073,-0.059,0.311
+early Oct (Sep SST + Sep rain),North (Acholi-Kitgum),ENSO + IO poles,0.254,0.042,-0.023,0.333
+early Oct (Sep SST + Sep rain),North (Acholi-Kitgum),Ridge (all SST + Sep rain),0.222,0.037,-0.037,0.356
+early Oct (Sep SST + Sep rain),North (Acholi-Kitgum),LightGBM (all),0.012,-0.418,-0.228,0.289
+early Oct (Sep SST + Sep rain),West Nile-Lango-Teso-Elgon belt,Climatology,0.0,0.0,-0.042,0.356
+early Oct (Sep SST + Sep rain),West Nile-Lango-Teso-Elgon belt,ENSO only,0.195,0.027,-0.005,0.378
+early Oct (Sep SST + Sep rain),West Nile-Lango-Teso-Elgon belt,ENSO + IOD (DMI),0.152,-0.023,-0.036,0.311
+early Oct (Sep SST + Sep rain),West Nile-Lango-Teso-Elgon belt,ENSO + IO poles,0.164,-0.026,-0.022,0.311
+early Oct (Sep SST + Sep rain),West Nile-Lango-Teso-Elgon belt,Ridge (all SST + Sep rain),0.039,-0.021,-0.033,0.267
+early Oct (Sep SST + Sep rain),West Nile-Lango-Teso-Elgon belt,LightGBM (all),0.259,-0.041,-0.064,0.333
+early Oct (Sep SST + Sep rain),Mid-west & Kyoga (Bunyoro-Kyoga),Climatology,0.0,0.0,-0.0,0.356
+early Oct (Sep SST + Sep rain),Mid-west & Kyoga (Bunyoro-Kyoga),ENSO only,0.142,-0.008,-0.026,0.333
+early Oct (Sep SST + Sep rain),Mid-west & Kyoga (Bunyoro-Kyoga),ENSO + IOD (DMI),0.008,-0.111,-0.057,0.267
+early Oct (Sep SST + Sep rain),Mid-west & Kyoga (Bunyoro-Kyoga),ENSO + IO poles,-0.03,-0.143,-0.069,0.289
+early Oct (Sep SST + Sep rain),Mid-west & Kyoga (Bunyoro-Kyoga),Ridge (all SST + Sep rain),0.202,0.037,0.006,0.4
+early Oct (Sep SST + Sep rain),Mid-west & Kyoga (Bunyoro-Kyoga),LightGBM (all),0.297,-0.08,-0.05,0.422
+early Oct (Sep SST + Sep rain),Lake Victoria crescent (Central-Busoga),Climatology,0.0,0.0,-0.095,0.311
+early Oct (Sep SST + Sep rain),Lake Victoria crescent (Central-Busoga),ENSO only,0.225,0.032,-0.041,0.4
+early Oct (Sep SST + Sep rain),Lake Victoria crescent (Central-Busoga),ENSO + IOD (DMI),0.37,0.117,0.024,0.489
+early Oct (Sep SST + Sep rain),Lake Victoria crescent (Central-Busoga),ENSO + IO poles,0.39,0.129,0.038,0.489
+early Oct (Sep SST + Sep rain),Lake Victoria crescent (Central-Busoga),Ridge (all SST + Sep rain),0.352,0.112,0.027,0.467
+early Oct (Sep SST + Sep rain),Lake Victoria crescent (Central-Busoga),LightGBM (all),0.336,0.047,-0.079,0.4
+early Oct (Sep SST + Sep rain),South-west (Ankole-Kigezi),Climatology,0.0,0.0,-0.001,0.333
+early Oct (Sep SST + Sep rain),South-west (Ankole-Kigezi),ENSO only,-0.319,-0.12,-0.093,0.178
+early Oct (Sep SST + Sep rain),South-west (Ankole-Kigezi),ENSO + IOD (DMI),-0.151,-0.14,-0.085,0.333
+early Oct (Sep SST + Sep rain),South-west (Ankole-Kigezi),ENSO + IO poles,-0.227,-0.189,-0.113,0.267
+early Oct (Sep SST + Sep rain),South-west (Ankole-Kigezi),Ridge (all SST + Sep rain),-0.626,-0.12,-0.082,0.156
+early Oct (Sep SST + Sep rain),South-west (Ankole-Kigezi),LightGBM (all),-0.126,-0.629,-0.268,0.267
+early Oct (Sep SST + Sep rain),Uganda,Climatology,0.0,0.0,-0.037,0.333
+early Oct (Sep SST + Sep rain),Uganda,ENSO only,0.15,-0.005,-0.015,0.378
+early Oct (Sep SST + Sep rain),Uganda,ENSO + IOD (DMI),0.158,-0.033,-0.044,0.378
+early Oct (Sep SST + Sep rain),Uganda,ENSO + IO poles,0.204,-0.011,-0.014,0.4
+early Oct (Sep SST + Sep rain),Uganda,Ridge (all SST + Sep rain),0.09,-0.048,-0.055,0.289
+early Oct (Sep SST + Sep rain),Uganda,LightGBM (all),0.055,-0.329,-0.213,0.244

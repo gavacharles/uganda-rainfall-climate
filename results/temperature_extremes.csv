@@ -1,0 +1,4 @@
+index,mean_1981_1995,mean_2011_2025,trend_per_decade,p_value
+"Hot days (TX90p, days/yr)",42.294,65.859,6.606,0.159
+"Warm nights (TN90p, days/yr)",22.271,60.438,14.108,0.0
+Diurnal temperature range (°C),10.664,9.803,-0.295,0.116

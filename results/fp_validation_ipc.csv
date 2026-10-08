@@ -1,0 +1,3 @@
+dataset,n,spearman_fail_vs_phase3,p
+CHIRPS,46,0.096,0.528
+ARC2,46,-0.178,0.238

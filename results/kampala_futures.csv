@@ -1,0 +1,151 @@
+catchment,T,scenario,change_vs_1992_pct
+Lubigi,2,"2014 land, 1981-2025 rain",38.38
+Lubigi,2,"2030 land (GHSL), 1981-2025 rain",42.65
+Lubigi,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",60.25
+Lubigi,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",68.93
+Lubigi,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",64.19
+Lubigi,10,"2014 land, 1981-2025 rain",31.67
+Lubigi,10,"2030 land (GHSL), 1981-2025 rain",35.12
+Lubigi,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",50.61
+Lubigi,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",58.23
+Lubigi,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",54.42
+Lubigi,50,"2014 land, 1981-2025 rain",28.34
+Lubigi,50,"2030 land (GHSL), 1981-2025 rain",31.38
+Lubigi,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",45.86
+Lubigi,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",52.98
+Lubigi,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",49.62
+Nakivubo,2,"2014 land, 1981-2025 rain",13.31
+Nakivubo,2,"2030 land (GHSL), 1981-2025 rain",15.45
+Nakivubo,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",30.63
+Nakivubo,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",38.14
+Nakivubo,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",35.75
+Nakivubo,10,"2014 land, 1981-2025 rain",11.13
+Nakivubo,10,"2030 land (GHSL), 1981-2025 rain",12.9
+Nakivubo,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",26.55
+Nakivubo,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",33.27
+Nakivubo,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",31.31
+Nakivubo,50,"2014 land, 1981-2025 rain",10.03
+Nakivubo,50,"2030 land (GHSL), 1981-2025 rain",11.61
+Nakivubo,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",24.49
+Nakivubo,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",30.83
+Nakivubo,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",29.07
+Kinawataka,2,"2014 land, 1981-2025 rain",64.05
+Kinawataka,2,"2030 land (GHSL), 1981-2025 rain",68.54
+Kinawataka,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",89.31
+Kinawataka,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",99.55
+Kinawataka,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",94.59
+Kinawataka,10,"2014 land, 1981-2025 rain",51.54
+Kinawataka,10,"2030 land (GHSL), 1981-2025 rain",55.03
+Kinawataka,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",72.79
+Kinawataka,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",81.53
+Kinawataka,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",77.69
+Kinawataka,50,"2014 land, 1981-2025 rain",45.48
+Kinawataka,50,"2030 land (GHSL), 1981-2025 rain",48.5
+Kinawataka,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",64.85
+Kinawataka,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",72.89
+Kinawataka,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",69.57
+Kansanga,2,"2014 land, 1981-2025 rain",33.22
+Kansanga,2,"2030 land (GHSL), 1981-2025 rain",35.08
+Kansanga,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",52.36
+Kansanga,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",60.9
+Kansanga,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",58.83
+Kansanga,10,"2014 land, 1981-2025 rain",27.34
+Kansanga,10,"2030 land (GHSL), 1981-2025 rain",28.84
+Kansanga,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",44.06
+Kansanga,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",51.55
+Kansanga,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",49.9
+Kansanga,50,"2014 land, 1981-2025 rain",24.41
+Kansanga,50,"2030 land (GHSL), 1981-2025 rain",25.73
+Kansanga,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",39.95
+Kansanga,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",46.95
+Kansanga,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",45.49
+North (Kawempe),2,"2014 land, 1981-2025 rain",33.16
+North (Kawempe),2,"2030 land (GHSL), 1981-2025 rain",37.29
+North (Kawempe),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",59.03
+North (Kawempe),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",69.91
+North (Kawempe),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",65.16
+North (Kawempe),10,"2014 land, 1981-2025 rain",26.77
+North (Kawempe),10,"2030 land (GHSL), 1981-2025 rain",30.04
+North (Kawempe),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",48.37
+North (Kawempe),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",57.48
+North (Kawempe),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",53.78
+North (Kawempe),50,"2014 land, 1981-2025 rain",23.67
+North (Kawempe),50,"2030 land (GHSL), 1981-2025 rain",26.52
+North (Kawempe),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",43.25
+North (Kawempe),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",51.53
+North (Kawempe),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",48.32
+Nalukolongo,2,"2014 land, 1981-2025 rain",11.47
+Nalukolongo,2,"2030 land (GHSL), 1981-2025 rain",12.76
+Nalukolongo,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",26.63
+Nalukolongo,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",33.47
+Nalukolongo,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",32.04
+Nalukolongo,10,"2014 land, 1981-2025 rain",9.54
+Nalukolongo,10,"2030 land (GHSL), 1981-2025 rain",10.6
+Nalukolongo,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",23.25
+Nalukolongo,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",29.48
+Nalukolongo,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",28.31
+Nalukolongo,50,"2014 land, 1981-2025 rain",8.56
+Nalukolongo,50,"2030 land (GHSL), 1981-2025 rain",9.51
+Nalukolongo,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",21.55
+Nalukolongo,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",27.47
+Nalukolongo,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",26.42
+West (Lungujja),2,"2014 land, 1981-2025 rain",36.04
+West (Lungujja),2,"2030 land (GHSL), 1981-2025 rain",38.06
+West (Lungujja),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",55.78
+West (Lungujja),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",64.54
+West (Lungujja),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",62.29
+West (Lungujja),10,"2014 land, 1981-2025 rain",29.39
+West (Lungujja),10,"2030 land (GHSL), 1981-2025 rain",31.0
+West (Lungujja),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",46.51
+West (Lungujja),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",54.16
+West (Lungujja),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",52.38
+West (Lungujja),50,"2014 land, 1981-2025 rain",26.08
+West (Lungujja),50,"2030 land (GHSL), 1981-2025 rain",27.5
+West (Lungujja),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",41.95
+West (Lungujja),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",49.06
+West (Lungujja),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",47.51
+North-east (Kyanja),2,"2014 land, 1981-2025 rain",50.68
+North-east (Kyanja),2,"2030 land (GHSL), 1981-2025 rain",55.07
+North-east (Kyanja),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",78.75
+North-east (Kyanja),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",90.57
+North-east (Kyanja),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",85.57
+North-east (Kyanja),10,"2014 land, 1981-2025 rain",39.98
+North-east (Kyanja),10,"2030 land (GHSL), 1981-2025 rain",43.34
+North-east (Kyanja),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",62.95
+North-east (Kyanja),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",72.67
+North-east (Kyanja),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",68.9
+North-east (Kyanja),50,"2014 land, 1981-2025 rain",34.87
+North-east (Kyanja),50,"2030 land (GHSL), 1981-2025 rain",37.75
+North-east (Kyanja),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",55.47
+North-east (Kyanja),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",64.24
+North-east (Kyanja),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",61.03
+South (Munyonyo),2,"2014 land, 1981-2025 rain",31.93
+South (Munyonyo),2,"2030 land (GHSL), 1981-2025 rain",34.33
+South (Munyonyo),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",54.2
+South (Munyonyo),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",64.09
+South (Munyonyo),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",61.37
+South (Munyonyo),10,"2014 land, 1981-2025 rain",25.8
+South (Munyonyo),10,"2030 land (GHSL), 1981-2025 rain",27.7
+South (Munyonyo),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",44.71
+South (Munyonyo),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",53.13
+South (Munyonyo),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",51.0
+South (Munyonyo),50,"2014 land, 1981-2025 rain",22.78
+South (Munyonyo),50,"2030 land (GHSL), 1981-2025 rain",24.44
+South (Munyonyo),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",40.08
+South (Munyonyo),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",47.8
+South (Munyonyo),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",45.95
+Walufumbe,2,"2014 land, 1981-2025 rain",44.06
+Walufumbe,2,"2030 land (GHSL), 1981-2025 rain",46.83
+Walufumbe,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",66.75
+Walufumbe,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",76.62
+Walufumbe,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",73.53
+Walufumbe,10,"2014 land, 1981-2025 rain",35.2
+Walufumbe,10,"2030 land (GHSL), 1981-2025 rain",37.35
+Walufumbe,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",54.38
+Walufumbe,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",62.79
+Walufumbe,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",60.41
+Walufumbe,50,"2014 land, 1981-2025 rain",30.87
+Walufumbe,50,"2030 land (GHSL), 1981-2025 rain",32.72
+Walufumbe,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",48.39
+Walufumbe,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",56.1
+Walufumbe,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",54.06

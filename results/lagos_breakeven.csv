@@ -1,0 +1,136 @@
+catchment,T,P_stationary_mm,land_effect_pct,rain_increase_needed_pct
+Catchment 1,2,87.41,7.4,6.46
+Catchment 1,10,128.93,6.35,5.78
+Catchment 1,50,165.54,5.86,5.44
+Catchment 2,2,87.41,38.81,21.09
+Catchment 2,10,128.93,31.07,19.65
+Catchment 2,50,165.54,27.47,18.81
+Catchment 5,2,87.41,27.5,15.88
+Catchment 5,10,128.93,22.34,14.8
+Catchment 5,50,165.54,19.9,14.17
+Ajegunle Canal,2,87.41,0.0,0.0
+Ajegunle Canal,10,128.93,0.0,0.0
+Ajegunle Canal,50,165.54,0.0,0.0
+Catchment 8,2,87.41,51.4,30.6
+Catchment 8,10,128.93,41.39,28.19
+Catchment 8,50,165.54,36.74,26.83
+Ogudu Creek,2,87.41,0.0,0.0
+Ogudu Creek,10,128.93,0.0,0.0
+Ogudu Creek,50,165.54,0.0,0.0
+Majidun Creek,2,87.41,50.63,30.02
+Majidun Creek,10,128.93,40.72,27.64
+Majidun Creek,50,165.54,36.11,26.3
+Catchment 12,2,87.41,14.05,9.27
+Catchment 12,10,128.93,11.65,8.56
+Catchment 12,50,165.54,10.5,8.17
+Catchment 13,2,87.41,39.88,23.89
+Catchment 13,10,128.93,32.32,22.09
+Catchment 13,50,165.54,28.78,21.07
+Catchment 17,2,87.41,4.75,3.67
+Catchment 17,10,128.93,4.02,3.33
+Catchment 17,50,165.54,3.66,3.15
+Catchment 19,2,87.41,22.39,12.79
+Catchment 19,10,128.93,18.17,11.92
+Catchment 19,50,165.54,16.17,11.42
+Catchment 20,2,87.41,87.57,57.68
+Catchment 20,10,128.93,70.22,51.91
+Catchment 20,50,165.54,62.39,48.9
+Catchment 35,2,87.41,55.74,33.47
+Catchment 35,10,128.93,44.79,30.73
+Catchment 35,50,165.54,39.73,29.21
+Catchment 36,2,87.41,53.86,29.57
+Catchment 36,10,128.93,42.87,27.4
+Catchment 36,50,165.54,37.8,26.15
+Catchment 37,2,87.41,10.36,8.87
+Catchment 37,10,128.93,8.78,7.87
+Catchment 37,50,165.54,8.04,7.36
+Catchment 41,2,87.41,29.19,20.92
+Catchment 41,10,128.93,24.22,19.02
+Catchment 41,50,165.54,21.88,18.0
+Catchment 47,2,87.41,0.0,0.0
+Catchment 47,10,128.93,0.0,0.0
+Catchment 47,50,165.54,0.0,0.0
+Catchment 49,2,87.41,19.48,15.6
+Catchment 49,10,128.93,16.31,13.92
+Catchment 49,50,165.54,14.82,13.06
+Catchment 50,2,87.41,35.53,18.78
+Catchment 50,10,128.93,28.24,17.46
+Catchment 50,50,165.54,24.86,16.69
+Agboyi Creek,2,87.41,13.94,11.65
+Agboyi Creek,10,128.93,11.71,10.31
+Agboyi Creek,50,165.54,10.65,9.63
+Catchment 55,2,87.41,82.7,47.98
+Catchment 55,10,128.93,65.6,43.95
+Catchment 55,50,165.54,57.84,41.72
+Catchment 58,2,87.41,10.92,7.11
+Catchment 58,10,128.93,9.03,6.56
+Catchment 58,50,165.54,8.12,6.25
+Catchment 59,2,87.41,24.9,14.19
+Catchment 59,10,128.93,20.12,13.18
+Catchment 59,50,165.54,17.86,12.59
+Catchment 60,2,87.41,1.35,1.19
+Catchment 60,10,128.93,1.14,1.04
+Catchment 60,50,165.54,1.04,0.97
+Catchment 63,2,87.41,14.56,7.86
+Catchment 63,10,128.93,11.74,7.35
+Catchment 63,50,165.54,10.4,7.04
+Catchment 70,2,87.41,21.01,14.65
+Catchment 70,10,128.93,17.18,13.2
+Catchment 70,50,165.54,15.36,12.41
+Catchment 74,2,87.41,45.39,34.42
+Catchment 74,10,128.93,37.26,30.58
+Catchment 74,50,165.54,33.52,28.61
+Fola Osibo Water Channel,2,87.41,15.62,11.27
+Fola Osibo Water Channel,10,128.93,12.98,10.23
+Fola Osibo Water Channel,50,165.54,11.72,9.66
+River Owo,2,87.41,24.21,15.35
+River Owo,10,128.93,19.77,14.1
+River Owo,50,165.54,17.66,13.39
+Catchment 80,2,87.41,5.81,3.24
+Catchment 80,10,128.93,4.72,3.03
+Catchment 80,50,165.54,4.19,2.9
+Catchment 81,2,87.41,10.19,7.44
+Catchment 81,10,128.93,8.5,6.75
+Catchment 81,50,165.54,7.68,6.38
+Catchment 82,2,87.41,31.84,18.63
+Catchment 82,10,128.93,25.63,17.17
+Catchment 82,50,165.54,22.71,16.33
+Catchment 84,2,87.41,51.94,30.77
+Catchment 84,10,128.93,41.61,28.24
+Catchment 84,50,165.54,36.82,26.81
+Agboyi Creek (2),2,87.41,1.27,1.11
+Agboyi Creek (2),10,128.93,1.07,0.97
+Agboyi Creek (2),50,165.54,0.97,0.9
+Catchment 89,2,87.41,10.26,5.56
+Catchment 89,10,128.93,8.26,5.19
+Catchment 89,50,165.54,7.31,4.97
+Ajegunle Canal (2),2,87.41,0.0,0.0
+Ajegunle Canal (2),10,128.93,0.0,0.0
+Ajegunle Canal (2),50,165.54,0.0,0.0
+Catchment 91,2,87.41,6.75,3.78
+Catchment 91,10,128.93,5.47,3.52
+Catchment 91,50,165.54,4.86,3.37
+Catchment 93,2,87.41,23.69,13.45
+Catchment 93,10,128.93,19.11,12.48
+Catchment 93,50,165.54,16.94,11.92
+Catchment 94,2,87.41,36.13,24.41
+Catchment 94,10,128.93,29.45,22.1
+Catchment 94,50,165.54,26.31,20.85
+Catchment 95,2,87.41,56.79,30.52
+Catchment 95,10,128.93,44.96,28.28
+Catchment 95,50,165.54,39.54,26.98
+Catchment 100,2,87.41,0.0,0.0
+Catchment 100,10,128.93,0.0,0.0
+Catchment 100,50,165.54,0.0,0.0
+Catchment 102,2,87.41,47.46,25.75
+Catchment 102,10,128.93,37.64,23.82
+Catchment 102,50,165.54,33.1,22.7
+Drainage Channel,2,87.41,0.0,0.0
+Drainage Channel,10,128.93,0.0,0.0
+Drainage Channel,50,165.54,0.0,0.0
+Ajegunle Canal (3),2,87.41,0.0,0.0
+Ajegunle Canal (3),10,128.93,0.0,0.0
+Ajegunle Canal (3),50,165.54,0.0,0.0
+Catchment 106,2,87.41,28.73,17.27
+Catchment 106,10,128.93,23.21,15.87
+Catchment 106,50,165.54,20.59,15.07

@@ -1,0 +1,47 @@
+figure fig27_food_security.png
+             season                            metric    zone       value  p_value
+6       First rains      P(failed season) 1981-2003 %  Uganda   21.575677      NaN
+13      First rains      P(failed season) 2004-2025 %  Uganda   16.472489      NaN
+20      First rains  P(dry spell >= 10 d in season) %  Uganda    2.212254      NaN
+27     Second rains      P(failed season) 1981-2003 %  Uganda   17.971509      NaN
+34     Second rains      P(failed season) 2004-2025 %  Uganda   16.464961      NaN
+41     Second rains  P(dry spell >= 10 d in season) %  Uganda    2.981228      NaN
+48  Unimodal season      P(failed season) 1981-2003 %  Uganda   18.643292      NaN
+55  Unimodal season      P(failed season) 2004-2025 %  Uganda   25.412657      NaN
+62  Unimodal season  P(dry spell >= 10 d in season) %  Uganda   50.021388      NaN
+81             Year                LGP days 1991-2020  Uganda  222.670745      NaN
+82             Year             LGP trend days/decade  Uganda    1.574704  0.12644
+83             Year                          LGP CV %  Uganda    6.802474      NaN
+   season                 metric                                     zone  value  p_value
+63   Year     LGP days 1991-2020                 Karamoja (NE, semi-arid)   94.0      NaN
+64   Year  LGP trend days/decade                 Karamoja (NE, semi-arid)    7.9      0.0
+65   Year               LGP CV %                 Karamoja (NE, semi-arid)   29.1      NaN
+66   Year     LGP days 1991-2020                    North (Acholi-Kitgum)  207.7      NaN
+67   Year  LGP trend days/decade                    North (Acholi-Kitgum)    4.0      0.2
+68   Year               LGP CV %                    North (Acholi-Kitgum)    9.6      NaN
+69   Year     LGP days 1991-2020          West Nile-Lango-Teso-Elgon belt  251.9      NaN
+70   Year  LGP trend days/decade          West Nile-Lango-Teso-Elgon belt    0.7      0.7
+71   Year               LGP CV %          West Nile-Lango-Teso-Elgon belt    7.3      NaN
+72   Year     LGP days 1991-2020         Mid-west & Kyoga (Bunyoro-Kyoga)  255.1      NaN
+73   Year  LGP trend days/decade         Mid-west & Kyoga (Bunyoro-Kyoga)   -3.1      0.1
+74   Year               LGP CV %         Mid-west & Kyoga (Bunyoro-Kyoga)    7.5      NaN
+75   Year     LGP days 1991-2020  Lake Victoria crescent (Central-Busoga)  272.8      NaN
+76   Year  LGP trend days/decade  Lake Victoria crescent (Central-Busoga)    3.4      0.2
+77   Year               LGP CV %  Lake Victoria crescent (Central-Busoga)    8.1      NaN
+78   Year     LGP days 1991-2020               South-west (Ankole-Kigezi)  191.7      NaN
+79   Year  LGP trend days/decade               South-west (Ankole-Kigezi)    2.2      0.1
+80   Year               LGP CV %               South-west (Ankole-Kigezi)    8.8      NaN
+81   Year     LGP days 1991-2020                                   Uganda  222.7      NaN
+82   Year  LGP trend days/decade                                   Uganda    1.6      0.1
+83   Year               LGP CV %                                   Uganda    6.8      NaN
+figure fig28_irrigation.png
+                                                                                0                      1                                2                                 3                                        4                           5       6
+zone                                                     Karamoja (NE, semi-arid)  North (Acholi-Kitgum)  West Nile-Lango-Teso-Elgon belt  Mid-west & Kyoga (Bunyoro-Kyoga)  Lake Victoria crescent (Central-Busoga)  South-west (Ankole-Kigezi)  Uganda
+NIR mean rain, year-round (mm/yr)                                         1303.67                 994.55                            776.1                            640.26                                   492.79                      512.27  755.58
+NIR 80% dependable rain, year-round (mm/yr)                               1523.16                1203.38                           972.46                            813.03                                   711.03                      671.53  948.66
+NIR 80% dependable, dry-season crop (mm/season-pair)                       765.39                 668.72                           618.39                             568.3                                   504.21                      474.79  590.95
+Design duty, peak month (l/s/ha)                                             1.28                   1.24                             1.08                              0.81                                      0.7                        0.64    0.95
+NIR 80% dependable, year-round ssp245 2041-2070 (mm/yr)                   1561.83                 1233.0                           992.45                            825.78                                   719.63                      678.64  967.09
+Design duty ssp245 2041-2070 (l/s/ha)                                        1.31                   1.27                             1.09                               0.8                                      0.7                        0.66    0.96
+NIR 80% dependable, year-round ssp585 2041-2070 (mm/yr)                    1576.4                1236.71                            991.4                            823.43                                   714.26                       672.0  966.51
+Design duty ssp585 2041-2070 (l/s/ha)                                        1.34                   1.29                              1.1                              0.81                                      0.7                        0.67    0.98
