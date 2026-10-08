@@ -174,7 +174,7 @@ Every road, drain, dam and irrigation scheme in NDP IV is designed on rainfall s
 ---
 
 *Suggested Substack settings:*
-- *Cover image: `g1_2026_vs_1997.png`*
-- *Social preview: `g2_elnino_iod.png`*
+- *Cover image: `cover_substack_1456x1048.png`*
+- *Social preview (link cards on X, WhatsApp, LinkedIn): `cover_social_1200x630.png`*
 - *Optional: `extra/fig23_water_balance_present.jpg` gives the full water-balance detail behind Graphic 8.*
 - *Tags: Uganda, El Niño, climate, agriculture, Kampala floods*
