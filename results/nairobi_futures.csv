@@ -1,271 +1,271 @@
 catchment,T,scenario,change_vs_1992_pct
 Ngong River,2,"2014 land, 1981-2025 rain",16.75
 Ngong River,2,"2030 land (GHSL), 1981-2025 rain",20.96
-Ngong River,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",36.77
-Ngong River,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",44.0
-Ngong River,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",39.28
+Ngong River,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",35.79
+Ngong River,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",43.09
+Ngong River,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",38.39
 Ngong River,10,"2014 land, 1981-2025 rain",13.15
 Ngong River,10,"2030 land (GHSL), 1981-2025 rain",16.4
-Ngong River,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",30.0
-Ngong River,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",36.2
-Ngong River,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",32.56
+Ngong River,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",29.16
+Ngong River,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",35.41
+Ngong River,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",31.79
 Ngong River,50,"2014 land, 1981-2025 rain",11.61
 Ngong River,50,"2030 land (GHSL), 1981-2025 rain",14.47
-Ngong River,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",27.16
-Ngong River,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",32.92
-Ngong River,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",29.73
+Ngong River,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",26.37
+Ngong River,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",32.2
+Ngong River,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",29.01
 Mathare River,2,"2014 land, 1981-2025 rain",10.6
 Mathare River,2,"2030 land (GHSL), 1981-2025 rain",14.37
-Mathare River,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",30.6
-Mathare River,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",38.05
-Mathare River,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",33.78
+Mathare River,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",29.59
+Mathare River,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",37.1
+Mathare River,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",32.85
 Mathare River,10,"2014 land, 1981-2025 rain",8.23
 Mathare River,10,"2030 land (GHSL), 1981-2025 rain",11.12
-Mathare River,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",24.88
-Mathare River,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",31.16
-Mathare River,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",27.91
+Mathare River,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",24.03
+Mathare River,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",30.36
+Mathare River,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",27.13
 Mathare River,50,"2014 land, 1981-2025 rain",7.21
 Mathare River,50,"2030 land (GHSL), 1981-2025 rain",9.73
-Mathare River,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",22.45
-Mathare River,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",28.24
-Mathare River,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",25.42
+Mathare River,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",21.66
+Mathare River,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",27.51
+Mathare River,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",24.7
 Nairobi River,2,"2014 land, 1981-2025 rain",35.02
 Nairobi River,2,"2030 land (GHSL), 1981-2025 rain",39.8
-Nairobi River,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",56.23
-Nairobi River,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",63.71
-Nairobi River,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",58.42
+Nairobi River,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",55.21
+Nairobi River,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",62.77
+Nairobi River,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",57.5
 Nairobi River,10,"2014 land, 1981-2025 rain",27.11
 Nairobi River,10,"2030 land (GHSL), 1981-2025 rain",30.73
-Nairobi River,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",44.93
-Nairobi River,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",51.39
-Nairobi River,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",47.38
+Nairobi River,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",44.05
+Nairobi River,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",50.57
+Nairobi River,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",46.58
 Nairobi River,50,"2014 land, 1981-2025 rain",23.83
 Nairobi River,50,"2030 land (GHSL), 1981-2025 rain",26.98
-Nairobi River,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",40.3
-Nairobi River,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",46.35
-Nairobi River,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",42.84
+Nairobi River,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",39.48
+Nairobi River,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",45.59
+Nairobi River,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",42.1
 Nairobi river,2,"2014 land, 1981-2025 rain",29.81
 Nairobi river,2,"2030 land (GHSL), 1981-2025 rain",39.5
-Nairobi river,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",60.1
-Nairobi river,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",69.58
-Nairobi river,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",58.5
+Nairobi river,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",58.82
+Nairobi river,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",68.38
+Nairobi river,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",57.36
 Nairobi river,10,"2014 land, 1981-2025 rain",22.48
 Nairobi river,10,"2030 land (GHSL), 1981-2025 rain",29.59
-Nairobi river,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",46.1
-Nairobi river,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",53.63
-Nairobi river,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",45.62
+Nairobi river,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",45.07
+Nairobi river,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",52.68
+Nairobi river,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",44.7
 Nairobi river,50,"2014 land, 1981-2025 rain",19.4
 Nairobi river,50,"2030 land (GHSL), 1981-2025 rain",25.46
-Nairobi river,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",40.35
-Nairobi river,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",47.12
-Nairobi river,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",40.3
+Nairobi river,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",39.42
+Nairobi river,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",46.27
+Nairobi river,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",39.47
 Catchment 35,2,"2014 land, 1981-2025 rain",10.1
 Catchment 35,2,"2030 land (GHSL), 1981-2025 rain",15.17
-Catchment 35,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",33.63
-Catchment 35,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",42.16
-Catchment 35,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",36.3
+Catchment 35,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",32.48
+Catchment 35,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",41.08
+Catchment 35,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",35.25
 Catchment 35,10,"2014 land, 1981-2025 rain",7.71
 Catchment 35,10,"2030 land (GHSL), 1981-2025 rain",11.54
-Catchment 35,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",26.62
-Catchment 35,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",33.53
-Catchment 35,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",29.18
+Catchment 35,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",25.68
+Catchment 35,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",32.65
+Catchment 35,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",28.32
 Catchment 35,50,"2014 land, 1981-2025 rain",6.69
 Catchment 35,50,"2030 land (GHSL), 1981-2025 rain",9.99
-Catchment 35,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",23.67
-Catchment 35,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",29.91
-Catchment 35,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",26.18
+Catchment 35,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",22.82
+Catchment 35,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",29.12
+Catchment 35,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",25.41
 Kirichwa Kubwa,2,"2014 land, 1981-2025 rain",17.91
 Kirichwa Kubwa,2,"2030 land (GHSL), 1981-2025 rain",20.9
-Kirichwa Kubwa,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",36.9
-Kirichwa Kubwa,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",44.21
-Kirichwa Kubwa,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",40.86
+Kirichwa Kubwa,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",35.9
+Kirichwa Kubwa,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",43.29
+Kirichwa Kubwa,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",39.95
 Kirichwa Kubwa,10,"2014 land, 1981-2025 rain",13.89
 Kirichwa Kubwa,10,"2030 land (GHSL), 1981-2025 rain",16.17
-Kirichwa Kubwa,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",29.86
-Kirichwa Kubwa,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",36.09
-Kirichwa Kubwa,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",33.54
+Kirichwa Kubwa,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",29.01
+Kirichwa Kubwa,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",35.3
+Kirichwa Kubwa,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",32.77
 Kirichwa Kubwa,50,"2014 land, 1981-2025 rain",12.17
 Kirichwa Kubwa,50,"2030 land (GHSL), 1981-2025 rain",14.16
-Kirichwa Kubwa,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",26.9
-Kirichwa Kubwa,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",32.69
-Kirichwa Kubwa,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",30.47
+Kirichwa Kubwa,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",26.11
+Kirichwa Kubwa,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",31.96
+Kirichwa Kubwa,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",29.75
 Nairobi River (2),2,"2014 land, 1981-2025 rain",2.7
 Nairobi River (2),2,"2030 land (GHSL), 1981-2025 rain",3.91
-Nairobi River (2),2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",16.9
-Nairobi River (2),2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",22.82
-Nairobi River (2),2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",21.48
+Nairobi River (2),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",16.09
+Nairobi River (2),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",22.08
+Nairobi River (2),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",20.73
 Nairobi River (2),10,"2014 land, 1981-2025 rain",2.15
 Nairobi River (2),10,"2030 land (GHSL), 1981-2025 rain",3.11
-Nairobi River (2),10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",14.79
-Nairobi River (2),10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",20.11
-Nairobi River (2),10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",19.04
+Nairobi River (2),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",14.07
+Nairobi River (2),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",19.44
+Nairobi River (2),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",18.37
 Nairobi River (2),50,"2014 land, 1981-2025 rain",1.92
 Nairobi River (2),50,"2030 land (GHSL), 1981-2025 rain",2.77
-Nairobi River (2),50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",13.9
-Nairobi River (2),50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",18.95
-Nairobi River (2),50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",18.0
+Nairobi River (2),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",13.21
+Nairobi River (2),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",18.31
+Nairobi River (2),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",17.36
 Catchment 42,2,"2014 land, 1981-2025 rain",28.53
 Catchment 42,2,"2030 land (GHSL), 1981-2025 rain",62.15
-Catchment 42,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",85.63
-Catchment 42,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",96.41
-Catchment 42,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",57.94
+Catchment 42,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",84.16
+Catchment 42,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",95.04
+Catchment 42,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",56.77
 Catchment 42,10,"2014 land, 1981-2025 rain",21.41
 Catchment 42,10,"2030 land (GHSL), 1981-2025 rain",45.63
-Catchment 42,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",63.92
-Catchment 42,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",72.26
-Catchment 42,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",44.93
+Catchment 42,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",62.78
+Catchment 42,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",71.21
+Catchment 42,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",44.0
 Catchment 42,50,"2014 land, 1981-2025 rain",18.43
 Catchment 42,50,"2030 land (GHSL), 1981-2025 rain",38.94
-Catchment 42,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",55.23
-Catchment 42,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",62.65
-Catchment 42,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",39.58
+Catchment 42,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",54.22
+Catchment 42,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",61.71
+Catchment 42,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",38.74
 swamp,2,"2014 land, 1981-2025 rain",28.14
 swamp,2,"2030 land (GHSL), 1981-2025 rain",37.46
-swamp,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",57.59
-swamp,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",66.83
-swamp,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",56.2
+swamp,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",56.33
+swamp,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",65.66
+swamp,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",55.09
 swamp,10,"2014 land, 1981-2025 rain",21.27
 swamp,10,"2030 land (GHSL), 1981-2025 rain",28.13
-swamp,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",44.35
-swamp,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",51.75
-swamp,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",44.03
+swamp,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",43.34
+swamp,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",50.82
+swamp,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",43.13
 swamp,50,"2014 land, 1981-2025 rain",18.37
 swamp,50,"2030 land (GHSL), 1981-2025 rain",24.24
-swamp,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",38.9
-swamp,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",45.58
-swamp,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",38.99
+swamp,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",37.99
+swamp,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",44.74
+swamp,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",38.18
 Gatharaini River,2,"2014 land, 1981-2025 rain",32.81
 Gatharaini River,2,"2030 land (GHSL), 1981-2025 rain",39.64
-Gatharaini River,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",59.36
-Gatharaini River,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",68.41
-Gatharaini River,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",60.66
+Gatharaini River,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",58.13
+Gatharaini River,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",67.26
+Gatharaini River,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",59.55
 Gatharaini River,10,"2014 land, 1981-2025 rain",24.84
 Gatharaini River,10,"2030 land (GHSL), 1981-2025 rain",29.88
-Gatharaini River,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",45.9
-Gatharaini River,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",53.21
-Gatharaini River,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",47.56
+Gatharaini River,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",44.91
+Gatharaini River,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",52.29
+Gatharaini River,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",46.66
 Gatharaini River,50,"2014 land, 1981-2025 rain",21.5
 Gatharaini River,50,"2030 land (GHSL), 1981-2025 rain",25.81
-Gatharaini River,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",40.36
-Gatharaini River,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",46.98
-Gatharaini River,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",42.15
+Gatharaini River,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",39.46
+Gatharaini River,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",46.15
+Gatharaini River,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",41.33
 Catchment 68,2,"2014 land, 1981-2025 rain",17.61
 Catchment 68,2,"2030 land (GHSL), 1981-2025 rain",22.27
-Catchment 68,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",40.01
-Catchment 68,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",48.15
-Catchment 68,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",42.85
+Catchment 68,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",38.9
+Catchment 68,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",47.12
+Catchment 68,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",41.85
 Catchment 68,10,"2014 land, 1981-2025 rain",13.41
 Catchment 68,10,"2030 land (GHSL), 1981-2025 rain",16.9
-Catchment 68,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",31.6
-Catchment 68,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",38.31
-Catchment 68,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",34.39
+Catchment 68,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",30.68
+Catchment 68,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",37.46
+Catchment 68,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",33.56
 Catchment 68,50,"2014 land, 1981-2025 rain",11.61
 Catchment 68,50,"2030 land (GHSL), 1981-2025 rain",14.61
-Catchment 68,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",28.07
-Catchment 68,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",34.2
-Catchment 68,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",30.83
+Catchment 68,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",27.23
+Catchment 68,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",33.42
+Catchment 68,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",30.07
 Catchment 69,2,"2014 land, 1981-2025 rain",13.85
 Catchment 69,2,"2030 land (GHSL), 1981-2025 rain",22.68
-Catchment 69,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",41.89
-Catchment 69,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",50.76
-Catchment 69,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",40.58
+Catchment 69,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",40.69
+Catchment 69,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",49.64
+Catchment 69,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",39.51
 Catchment 69,10,"2014 land, 1981-2025 rain",10.5
 Catchment 69,10,"2030 land (GHSL), 1981-2025 rain",17.08
-Catchment 69,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",32.64
-Catchment 69,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",39.75
-Catchment 69,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",32.31
+Catchment 69,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",31.67
+Catchment 69,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",38.86
+Catchment 69,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",31.44
 Catchment 69,50,"2014 land, 1981-2025 rain",9.06
 Catchment 69,50,"2030 land (GHSL), 1981-2025 rain",14.7
-Catchment 69,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",28.77
-Catchment 69,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",35.19
-Catchment 69,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",28.84
+Catchment 69,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",27.9
+Catchment 69,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",34.38
+Catchment 69,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",28.05
 Catchment 78,2,"2014 land, 1981-2025 rain",19.42
 Catchment 78,2,"2030 land (GHSL), 1981-2025 rain",24.53
-Catchment 78,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",42.85
-Catchment 78,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",51.27
-Catchment 78,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",45.46
+Catchment 78,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",41.71
+Catchment 78,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",50.21
+Catchment 78,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",44.42
 Catchment 78,10,"2014 land, 1981-2025 rain",14.66
 Catchment 78,10,"2030 land (GHSL), 1981-2025 rain",18.44
-Catchment 78,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",33.49
-Catchment 78,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",40.36
-Catchment 78,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",36.11
+Catchment 78,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",32.55
+Catchment 78,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",39.49
+Catchment 78,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",35.26
 Catchment 78,50,"2014 land, 1981-2025 rain",12.63
 Catchment 78,50,"2030 land (GHSL), 1981-2025 rain",15.86
-Catchment 78,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",29.58
-Catchment 78,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",35.82
-Catchment 78,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",32.2
+Catchment 78,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",28.73
+Catchment 78,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",35.03
+Catchment 78,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",31.43
 Catchment 80,2,"2014 land, 1981-2025 rain",45.62
 Catchment 80,2,"2030 land (GHSL), 1981-2025 rain",59.9
-Catchment 80,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",82.57
-Catchment 80,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",92.96
-Catchment 80,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",76.75
+Catchment 80,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",81.15
+Catchment 80,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",91.65
+Catchment 80,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",75.51
 Catchment 80,10,"2014 land, 1981-2025 rain",33.78
 Catchment 80,10,"2030 land (GHSL), 1981-2025 rain",43.94
-Catchment 80,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",61.75
-Catchment 80,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",69.87
-Catchment 80,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",58.45
+Catchment 80,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",60.64
+Catchment 80,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",68.84
+Catchment 80,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",57.48
 Catchment 80,50,"2014 land, 1981-2025 rain",28.9
 Catchment 80,50,"2030 land (GHSL), 1981-2025 rain",37.46
-Catchment 80,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",53.39
-Catchment 80,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",60.64
-Catchment 80,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",51.04
+Catchment 80,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",52.4
+Catchment 80,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",59.72
+Catchment 80,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",50.17
 Ruiruaka River,2,"2014 land, 1981-2025 rain",10.68
 Ruiruaka River,2,"2030 land (GHSL), 1981-2025 rain",15.57
-Ruiruaka River,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",32.02
-Ruiruaka River,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",39.57
-Ruiruaka River,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",34.03
+Ruiruaka River,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",30.99
+Ruiruaka River,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",38.61
+Ruiruaka River,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",33.1
 Ruiruaka River,10,"2014 land, 1981-2025 rain",8.15
 Ruiruaka River,10,"2030 land (GHSL), 1981-2025 rain",11.83
-Ruiruaka River,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",25.71
-Ruiruaka River,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",32.03
-Ruiruaka River,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",27.91
+Ruiruaka River,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",24.84
+Ruiruaka River,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",31.24
+Ruiruaka River,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",27.13
 Ruiruaka River,50,"2014 land, 1981-2025 rain",7.06
 Ruiruaka River,50,"2030 land (GHSL), 1981-2025 rain",10.23
-Ruiruaka River,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",23.03
-Ruiruaka River,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",28.86
-Ruiruaka River,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",25.32
+Ruiruaka River,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",22.24
+Ruiruaka River,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",28.13
+Ruiruaka River,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",24.6
 Mathare River (2),2,"2014 land, 1981-2025 rain",4.75
 Mathare River (2),2,"2030 land (GHSL), 1981-2025 rain",5.43
-Mathare River (2),2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",18.39
-Mathare River (2),2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",24.29
-Mathare River (2),2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",23.55
+Mathare River (2),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",17.58
+Mathare River (2),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",23.55
+Mathare River (2),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",22.8
 Mathare River (2),10,"2014 land, 1981-2025 rain",3.74
 Mathare River (2),10,"2030 land (GHSL), 1981-2025 rain",4.27
-Mathare River (2),10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",15.94
-Mathare River (2),10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",21.25
-Mathare River (2),10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",20.67
+Mathare River (2),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",15.22
+Mathare River (2),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",20.58
+Mathare River (2),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",20.0
 Mathare River (2),50,"2014 land, 1981-2025 rain",3.3
 Mathare River (2),50,"2030 land (GHSL), 1981-2025 rain",3.77
-Mathare River (2),50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",14.9
-Mathare River (2),50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",19.96
-Mathare River (2),50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",19.44
+Mathare River (2),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",14.21
+Mathare River (2),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",19.32
+Mathare River (2),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",18.81
 Mathare River (3),2,"2014 land, 1981-2025 rain",8.5
 Mathare River (3),2,"2030 land (GHSL), 1981-2025 rain",12.82
-Mathare River (3),2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",30.75
-Mathare River (3),2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",39.03
-Mathare River (3),2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",34.05
+Mathare River (3),2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",29.63
+Mathare River (3),2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",37.98
+Mathare River (3),2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",33.03
 Mathare River (3),10,"2014 land, 1981-2025 rain",6.43
 Mathare River (3),10,"2030 land (GHSL), 1981-2025 rain",9.67
-Mathare River (3),10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",24.4
-Mathare River (3),10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",31.15
-Mathare River (3),10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",27.48
+Mathare River (3),10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",23.49
+Mathare River (3),10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",30.29
+Mathare River (3),10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",26.65
 Mathare River (3),50,"2014 land, 1981-2025 rain",5.54
 Mathare River (3),50,"2030 land (GHSL), 1981-2025 rain",8.32
-Mathare River (3),50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",21.72
-Mathare River (3),50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",27.83
-Mathare River (3),50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",24.71
+Mathare River (3),50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",20.89
+Mathare River (3),50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",27.06
+Mathare River (3),50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",23.95
 Catchment 93,2,"2014 land, 1981-2025 rain",20.96
 Catchment 93,2,"2030 land (GHSL), 1981-2025 rain",40.04
-Catchment 93,2,"2030 land, rain +10% (SSP2-4.5, 2041-70)",62.01
-Catchment 93,2,"2030 land, rain +14% (SSP5-8.5, 2041-70)",72.15
-Catchment 93,2,"2014 land, rain +14% (SSP5-8.5, 2041-70)",50.15
+Catchment 93,2,"2030 land, rain +9% (SSP2-4.5, 2041-70)",60.63
+Catchment 93,2,"2030 land, rain +13% (SSP5-8.5, 2041-70)",70.87
+Catchment 93,2,"2014 land, rain +13% (SSP5-8.5, 2041-70)",48.98
 Catchment 93,10,"2014 land, 1981-2025 rain",15.63
 Catchment 93,10,"2030 land (GHSL), 1981-2025 rain",29.42
-Catchment 93,10,"2030 land, rain +10% (SSP2-4.5, 2041-70)",46.65
-Catchment 93,10,"2030 land, rain +14% (SSP5-8.5, 2041-70)",54.53
-Catchment 93,10,"2014 land, rain +14% (SSP5-8.5, 2041-70)",38.91
+Catchment 93,10,"2030 land, rain +9% (SSP2-4.5, 2041-70)",45.58
+Catchment 93,10,"2030 land, rain +13% (SSP5-8.5, 2041-70)",53.53
+Catchment 93,10,"2014 land, rain +13% (SSP5-8.5, 2041-70)",37.98
 Catchment 93,50,"2014 land, 1981-2025 rain",13.38
 Catchment 93,50,"2030 land (GHSL), 1981-2025 rain",25.04
-Catchment 93,50,"2030 land, rain +10% (SSP2-4.5, 2041-70)",40.4
-Catchment 93,50,"2030 land, rain +14% (SSP5-8.5, 2041-70)",47.4
-Catchment 93,50,"2014 land, rain +14% (SSP5-8.5, 2041-70)",34.27
+Catchment 93,50,"2030 land, rain +9% (SSP2-4.5, 2041-70)",39.45
+Catchment 93,50,"2030 land, rain +13% (SSP5-8.5, 2041-70)",46.52
+Catchment 93,50,"2014 land, rain +13% (SSP5-8.5, 2041-70)",33.44
