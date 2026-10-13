@@ -12,6 +12,7 @@ This repository is the single home for all of this work: data pipelines, analysi
 | **2. Paper: urban flooding in five cities**: *Quantifying land-cover change and climate change as drivers of urban flood peaks in Kampala, Nairobi, Dar es Salaam, Lagos and Johannesburg* | Full draft (16-model CMIP6 ensemble) | [`paper/urban_flooding_five_cities.md`](paper/urban_flooding_five_cities.md) (+ `.docx`) |
 | **3. Paper: food security**: *Divergent satellite rainfall and vegetation signals of growing-season change in Uganda, 1981–2025* | Full draft | [`paper/uganda_growing_seasons_food_security.md`](paper/uganda_growing_seasons_food_security.md) (+ `.docx`) |
 | **4. Kampala drainage and wetlands study**: channel-by-channel flood pressures, emerging hotspots, people on low ground, radar, 3D films | Paper A drafted (one test pending a flood catalogue); Paper D (land tenure and exposure) drafted; satellite and tool papers parked | [`paper/kampala_drainage_paperA.md`](paper/kampala_drainage_paperA.md) · [`paper/kampala_drainage_paperD.md`](paper/kampala_drainage_paperD.md) · [`paper/kampala_drainage_research_programme.md`](paper/kampala_drainage_research_programme.md) · code `src/kd_*.py` · figures [`figures/kampala_drainage/`](figures/kampala_drainage/) |
+| **4b. Kampala follow-on papers**: lost flood storage (1), access to hospitals (3), flood damage and maintenance value (4), heat-flood double exposure (5), channel design drift (6), Uganda's regional cities (7) | All six drafted | [`paper/kampala_sponge_paper1.md`](paper/kampala_sponge_paper1.md) · [`paper/kampala_access_paper3.md`](paper/kampala_access_paper3.md) · [`paper/kampala_damage_paper4.md`](paper/kampala_damage_paper4.md) · [`paper/kampala_heat_flood_paper5.md`](paper/kampala_heat_flood_paper5.md) · [`paper/kampala_capacity_paper6.md`](paper/kampala_capacity_paper6.md) · [`paper/uganda_cities_paper7.md`](paper/uganda_cities_paper7.md) |
 | **5. Kampala Drain Watch**: open maintenance map of all 6,914 channel stretches | Live and public | Source in [`tool/`](tool/) · live site **https://gavacharles.github.io/kampala-drain-watch/** |
 | **6. Outreach: El Niño and changing seasons**: Substack article, X posts, NDP IV pieces, city cards, animations | Ready to post | [`outreach/`](outreach/) |
 | **7. Outreach: Kampala drains**: Substack ("Kampala isn't drowning in rain. It's drowning in its drains."), LinkedIn, 30+ X posts, covers, GIFs, fly-through videos, 3D films | Ready to post | [`outreach/kampala_drainage/`](outreach/kampala_drainage/) |
@@ -97,6 +98,13 @@ sh src/run_all.sh                        # climate report pipeline (downloads �
 | `kd_3d.py`, `kd_sculpt3d.py` | `figures/kampala_drainage/3d/` | 3D films: water rising, people on low ground, the three-act "sculpt" film |
 | `kd_tests.py` | kd23–kd25 | Hold-out test, waste–culvert test, exposure decomposition |
 | `kd_catalogue.py`, `kd_threshold.py` | flood catalogue, kd26 | News-based flood catalogue (GDELT); falling-threshold test (pending) |
+| `kd_sponge.py` | kd30-kd31 | Paper 1: valley-floor storage 1975-2030, Landsat living sponge |
+| `kd_fetch2.py`, `kd_access.py` | kd32-kd33 | Paper 3: road network, hospitals and schools under flood scenarios |
+| `kd_hydraulics.py`, `kd_damage.py` | kd39 | Paper 4: screening hydraulics, depth-damage, expected annual damage |
+| `kd_heat.py` | kd35-kd36 | Paper 5: MODIS/Landsat surface heat vs flood exposure |
+| `kd_capacity.py` | kd37-kd38 | Paper 6: design-basis drift of channel capacity |
+| `kd_cities.py` | kd40 | Paper 7: Kampala vs Jinja, Mbale, Gulu, Mbarara, Arua |
+| `kd_paperD.py` | kd27-kd29 | Paper D: exposure by system, settlement age, building form |
 | `kd_tool_promo.py`, `kd_programme_map.py` | demo, kd00 | Tool demo render; research-programme diagram |
 
 ## Credit and licence

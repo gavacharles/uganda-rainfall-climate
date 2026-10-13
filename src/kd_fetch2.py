@@ -67,12 +67,12 @@ def lst():
     from odc.stac import load
     cat = pystac_client.Client.open("https://planetarycomputer.microsoft.com/api/stac/v1", modifier=pc.sign_inplace)
     out = {}
-    for tag, years in (("early", (2014, 2015, 2016)), ("late", (2023, 2024, 2025))):
+    for tag, years in (("early", (2013, 2014, 2015, 2016, 2017)), ("late", (2022, 2023, 2024, 2025))):
         items = []
         for y in years:
-            for months in (("01-01", "02-28"), ("06-15", "08-31")):  # the two dry seasons
+            for months in (("12-01", "12-31"), ("01-01", "02-28"), ("06-01", "09-15")):  # both dry seasons, wider window
                 items += list(cat.search(collections=["landsat-c2-l2"], bbox=BBOX, datetime=f"{y}-{months[0]}/{y}-{months[1]}",
-                                         query={"eo:cloud_cover": {"lt": 40}, "platform": {"in": ["landsat-8", "landsat-9"]}}).items())
+                                         query={"eo:cloud_cover": {"lt": 70}, "platform": {"in": ["landsat-8", "landsat-9"]}}).items())
         print(tag, "scenes", len(items), flush=True)
         ds = load(items, bands=["lwir11", "red", "nir08", "qa_pixel"], bbox=BBOX, crs="EPSG:32636", resolution=30,
                   groupby="solar_day", chunks={"x": 1024, "y": 1024})

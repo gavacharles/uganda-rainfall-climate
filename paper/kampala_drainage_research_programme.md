@@ -34,6 +34,18 @@ The two papers already drafted in this repository (five-city urban flooding; Uga
 
 Each planning-journal submission needs a policy and institutional section: the National Environment (Wetlands) Regulations, the KCCA drainage master plan (2016, partly implemented), NDP IV, and ideally interviews with KCCA and NEMA engineers.
 
+# Follow-on papers (October 2026)
+
+| # | Paper | Key result | File |
+|---|---|---|---|
+| 1 | The lost sponge: valley-floor flood storage 1975-2030 | 8.5 Mm³ storage paved over; living wetland sponge -73% to -91% in Kinawataka and Nalukolongo; most systems went from holding to failing a 10-yr storm | `kampala_sponge_paper1.md` |
+| 3 | Cut off by water: hospital and school access | 1 m flood: 36,000 dry-home residents lose all routes to hospital, 131,000 see trips double; Busega A5 and Lubigi roads most critical | `kampala_access_paper3.md` |
+| 4 | The cost of a blocked drain | EAD US$3.0m clean vs US$20.3m silted; maintenance worth ~US$17m/yr; Nakivubo and lower Lubigi most valuable to keep clear | `kampala_damage_paper4.md` |
+| 5 | Double exposure: heat and flood | 53% of low-ground residents in the warmest 20% of nights vs 29% on hills (OR 2.7); low ground +0.33 °C at night after controls | `kampala_heat_flood_paper5.md` |
+| 6 | Design-basis drift | Channels sized for 1990 now get +17% (median) 10-yr flow; 91% of length overloaded >20% under 2041-70 SSP5-8.5; drift is a fringe, not a hotspot, phenomenon | `kampala_capacity_paper6.md` |
+| 7 | The next Kampalas: regional cities | Low ground filling 1.3-2x faster than the city in Mbarara, Gulu, Mbale, Jinja, Arua (2020-30) | `uganda_cities_paper7.md` |
+| 2 | Drains to the tap (Lake Victoria water quality) | Not started; needs NWSC raw-water data | - |
+
 # Shared foundations (done)
 
 - 12,453 channel segments (≈ 900 km) with upstream area, paving 1990/2020, culverts, bridges, waste points, markets, buildings within 15 m, floodplain buildings, wetland left, valley-floor building ([`src/kd_network.py`](../src/kd_network.py)).
