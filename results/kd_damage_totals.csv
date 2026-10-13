@@ -1,0 +1,4 @@
+value_case,usd_per_m2,ead_clean_musd,ead_silted_musd,d10_clean_musd,d100_clean_musd,maintenance_value_musd_per_yr,pv30_maintenance_musd
+low,75.0,1.5,10.13,5.84,15.24,8.63,81.35
+central,150.0,3.0,20.26,11.68,30.48,17.26,162.7
+high,300.0,6.01,40.52,23.36,60.96,34.52,325.39

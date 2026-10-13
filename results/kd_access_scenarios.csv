@@ -1,0 +1,5 @@
+scenario,road_km_flooded,residents_on_flooded_ground,residents_cut_off_from_hospitals,residents_delayed_2x,residents_over_30min,residents_over_30min_normal,hospitals_on_flooded_ground,hospitals_total,schools_on_flooded_ground,schools_total,median_extra_min,p90_extra_min
+water 0.5 m above drains,155.8,143802.6,35075.1,128352.1,121783.5,133.7,2,220,46,1420,0.0,6.7
+water 1 m above drains,229.0,208616.4,36495.4,130654.9,135835.3,133.7,3,220,70,1420,0.0,7.6
+water 2 m above drains,352.8,316618.7,30074.7,163461.2,127550.5,133.7,11,220,118,1420,0.0,9.3
+reported hotspots flood,52.1,208616.4,9316.6,0.0,9450.3,133.7,3,220,70,1420,0.0,0.0
