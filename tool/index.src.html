@@ -1,0 +1,465 @@
+<title>Kampala Drain Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/*LEAFLET_CSS*/
+/* Layout: full-height split - map on the left, an operations panel on the right (stacked on phones). */
+:root {
+  --bg: #f4f2ee; --panel: #ffffff; --ink: #1d2328; --muted: #5d6870; --line: #dcd8d0;
+  --accent: #0b7a8a; --accent-ink: #ffffff; --mud: #9a6a2f; --chip: #eef3f3;
+  --good: #2f7d4f; --warn: #b7791f; --bad: #b3261e;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121518; --panel: #1a1f23; --ink: #e8ecee; --muted: #9aa6ad; --line: #2b3338;
+  --accent: #34b3c4; --accent-ink: #071417; --mud: #d1a067; --chip: #20292e;
+  --good: #5cc28a; --warn: #e2b04a; --bad: #ff7a70; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121518; --panel: #1a1f23; --ink: #e8ecee; --muted: #9aa6ad; --line: #2b3338;
+  --accent: #34b3c4; --accent-ink: #071417; --mud: #d1a067; --chip: #20292e;
+  --good: #5cc28a; --warn: #e2b04a; --bad: #ff7a70; color-scheme: dark }
+html, body { height: 100% }
+body { background: var(--bg); color: var(--ink); font: 15px/1.45 var(--body); margin: 0 }
+.app { display: grid; grid-template-columns: minmax(0, 1fr) 400px; height: 100% }
+header.top { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  padding-block: 10px; padding-inline: 16px; border-bottom: 1px solid var(--line); background: var(--panel) }
+header.top h1 { font: 700 26px/1 var(--display); letter-spacing: .02em; margin: 0; text-transform: uppercase }
+header.top .sub { color: var(--muted); font-size: 13px }
+.app { grid-template-rows: auto minmax(0, 1fr) }
+.app > * { min-width: 0 }
+[hidden] { display: none !important }
+.pane { overflow-wrap: anywhere }
+#map { min-height: 0; background: var(--bg) }
+aside { min-width: 0; min-height: 0; overflow: auto; background: var(--panel); border-left: 1px solid var(--line) }
+.lg-toggle { font: 600 11px var(--body); border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 999px;
+  padding: 2px 10px; cursor: pointer; justify-self: start }
+@media (max-width: 820px) {
+  .app { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 62vh auto; height: auto; width: 100% }
+  aside { width: 100%; box-sizing: border-box }
+  header.top { gap: 6px 10px; padding-block: 8px }
+  header.top h1 { font-size: 22px }
+  header.top .sub { display: none }
+  .search { margin-left: 0; width: 100% }
+  .search input { width: 100%; max-width: none; font-size: 16px }
+  .tabs { overflow-x: auto } .tabs button { white-space: nowrap; padding-inline: 8px }
+  .legend { max-width: 180px; font-size: 11px }
+  .syslab { font-size: 14px }
+  .leaflet-control-attribution { font-size: 9px; max-width: 70%; white-space: normal; line-height: 1.25 }
+  aside { border-left: 0; border-top: 1px solid var(--line); overflow: visible }
+}
+.tabs { display: flex; gap: 2px; position: sticky; top: 0; background: var(--panel); z-index: 2;
+  border-bottom: 1px solid var(--line); padding-inline: 12px }
+.tabs button { font: 600 15px var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+  background: none; border: 0; border-bottom: 3px solid transparent; padding: 10px 10px 8px; cursor: pointer }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent) }
+.tabs button:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.pane { padding: 14px 16px 24px; display: grid; gap: 14px }
+.pane h2 { font: 700 22px/1.1 var(--display); margin: 0; text-wrap: balance }
+.pane h3 { font: 600 13px var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 }
+.muted { color: var(--muted) }
+.kv { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 14px }
+.kv dt { color: var(--muted) } .kv dd { margin: 0; font: 600 14px var(--mono); text-align: right; font-variant-numeric: tabular-nums }
+.meter { height: 8px; border-radius: 4px; background: var(--chip); overflow: hidden }
+.meter > i { display: block; height: 100% }
+.pill { display: inline-block; font: 600 12px var(--body); padding: 2px 8px; border-radius: 999px; background: var(--chip) }
+.pill.urgent { background: #574249; color: #fff } .pill.fix { background: #c85a5a; color: #fff }
+.pill.coming { background: #64acbe; color: #0b1a1e } .pill.watch { background: #ad9ea5; color: #1d1a1c }
+.pill.low { background: #d9d9d9; color: #222 }
+.drivers { margin: 0; padding-left: 18px } .drivers li { margin: 2px 0 }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
+select, textarea { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px }
+textarea { width: 100%; box-sizing: border-box; min-height: 64px; resize: vertical }
+button.primary { font: 700 15px var(--display); letter-spacing: .05em; text-transform: uppercase; background: var(--accent);
+  color: var(--accent-ink); border: 0; border-radius: 6px; padding: 9px 14px; cursor: pointer }
+button.ghost { font: 600 13px var(--body); background: none; color: var(--accent); border: 1px solid var(--line); border-radius: 6px;
+  padding: 5px 10px; cursor: pointer }
+button[disabled] { opacity: .5; cursor: not-allowed }
+.queue { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px }
+.queue li button { width: 100%; text-align: left; display: grid; grid-template-columns: 2.2em minmax(0, 1fr) auto; gap: 8px;
+  align-items: center; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 8px 2px; color: var(--ink);
+  font: inherit; cursor: pointer }
+.queue li button:hover { background: var(--chip) }
+.queue .rank { font: 600 13px var(--mono); color: var(--muted) }
+.queue .nm { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.queue .sc { font: 600 13px var(--mono) }
+.report { border-left: 4px solid var(--line); padding: 6px 10px; background: var(--bg); border-radius: 0 6px 6px 0; display: grid; gap: 4px }
+.report.sev-3 { border-color: var(--bad) } .report.sev-2 { border-color: var(--warn) } .report.sev-1 { border-color: var(--good) }
+.report.resolved { opacity: .6 }
+.report .meta { font-size: 12px; color: var(--muted) }
+.notice { font-size: 13px; color: var(--muted); background: var(--chip); border-radius: 6px; padding: 8px 10px }
+.legend { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 12px;
+  display: grid; gap: 6px; max-width: 220px }
+.legend .ramp { height: 8px; border-radius: 3px }
+.legend .sw { display: inline-block; width: 18px; height: 4px; border-radius: 2px; vertical-align: middle; margin-right: 6px }
+.legend .modes { display: flex; gap: 4px; flex-wrap: wrap }
+.legend .modes button { font: 600 11px var(--body); border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  border-radius: 999px; padding: 2px 8px; cursor: pointer }
+.legend .modes button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+.leaflet-container { font: 13px var(--body) }
+.place { font: 600 11px var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg); white-space: nowrap }
+.credit { font-size: 11px; color: var(--muted) }
+.chlab { font: 600 11px var(--body); color: #0b4f5a; white-space: nowrap; pointer-events: none;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 2px #fff; transform-origin: center center }
+.chlab.t0 { font: 700 13px var(--display); letter-spacing: .05em; text-transform: uppercase; color: #063d47 }
+.chlab.unnamed { font-style: italic; font-weight: 500 }
+:root[data-theme="dark"] .chlab { color: #9be7f2; text-shadow: 0 0 3px #000, 0 0 3px #000 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chlab { color: #9be7f2; text-shadow: 0 0 3px #000, 0 0 3px #000 } }
+.syslab { font: 700 18px var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); opacity: .85;
+  text-shadow: 0 0 4px var(--bg), 0 0 4px var(--bg); white-space: nowrap; pointer-events: none }
+.search { display: flex; gap: 6px; margin-left: auto; min-width: 0 }
+.search input { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; width: 260px; max-width: 60vw }
+.trace { display: grid; gap: 8px; background: var(--chip); border-radius: 8px; padding: 10px }
+.trace .row button { flex: 1 1 auto }
+.stepper { display: flex; gap: 6px } .stepper button { flex: 1 }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important } }
+</style>
+
+<div class="app">
+  <header class="top">
+    <h1>Kampala Drain Watch</h1>
+    <span class="sub">Channel maintenance priorities and field reports for Greater Kampala · research tool by Gava Charles</span>
+    <form class="search" id="search" role="search"><label for="q" class="sr" hidden>Find a drain or place</label>
+      <input id="q" list="qlist" placeholder="Find a drain or neighbourhood…" autocomplete="off"><datalist id="qlist"></datalist></form>
+  </header>
+  <div id="map" role="application" aria-label="Map of Kampala drainage channels"></div>
+  <aside>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="t-ch" aria-selected="true" data-p="p-ch">Channel</button>
+      <button role="tab" id="t-q" aria-selected="false" data-p="p-q">Work queue</button>
+      <button role="tab" id="t-r" aria-selected="false" data-p="p-r">Reports</button>
+      <button role="tab" id="t-a" aria-selected="false" data-p="p-a">About</button>
+    </div>
+    <section class="pane" id="p-ch"></section>
+    <section class="pane" id="p-q" hidden></section>
+    <section class="pane" id="p-r" hidden></section>
+    <section class="pane" id="p-a" hidden>
+      <h2>How to read this map</h2>
+      <p>Every coloured line is a stretch of channel (about 200 m) that drains at least 0.25 km². Hover for its name; click to see why it ranks where it does, walk upstream or downstream, trace where its water goes, and log what you find there.</p>
+      <p>Main channels are labelled on the map. Every drain has a name in its hover label and panel; drains without a name on OpenStreetMap are named after the nearest neighbourhood, for example "Kalerwe drain 2".</p>
+      <h3>Maintenance priority</h3>
+      <p>The average percentile rank of six present-day pressures: runoff load (upstream area × paving), culverts and bridges, mapped dump sites and markets nearby, buildings within 15 m of the channel, buildings on low ground within 150 m, and how little wetland is left. Checked against 45 reported flood hotspots: AUC 0.73.</p>
+      <h3>Emerging risk</h3>
+      <p>Growth since 1990 in upstream paving and in building on the valley floor. Change measured in 1975–2000 predicted where valley floors were built over in 2000–2020 (AUC 0.79).</p>
+      <h3>Work class</h3>
+      <p><b>Urgent</b>: high priority and still worsening. <b>Fix now</b>: high priority, stable. <b>Coming</b>: rising risk, not yet high. <b>Watch</b>: middle on both.</p>
+      <h3>Field reports</h3>
+      <p>Reports are shared with everyone who opens this page. They build the flood and blockage record that keeps the rankings honest.</p>
+      <h3>Background map</h3>
+      <p>Zoom in and the background switches to satellite imagery so you can see the actual channel, roofs and roads. Use the buttons in the legend to choose relief, satellite or street map yourself.</p>
+      <h3>Sources</h3>
+      <p class="credit">Channels, culverts, waste points, places: © OpenStreetMap contributors · buildings: Microsoft Global ML Building Footprints · built-up and population: JRC GHSL R2023A · relief: Copernicus GLO-30 DEM · wetland: ESA WorldCover 2021 · radar: ESA Copernicus Sentinel-1 · hotspots: KCCA/NEMA lists, news and local reports. Satellite imagery: Esri World Imagery (Esri, Maxar, Earthstar Geographics) · street map: © OpenStreetMap contributors. Analysis and tool: Gava Charles.</p>
+    </section>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(async function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const CLS = { urgent: ["Urgent", "#574249"], fix: ["Fix now", "#c85a5a"], coming: ["Coming", "#64acbe"],
+                watch: ["Watch", "#ad9ea5"], low: ["Low", "#bdbdbd"], other: ["Mixed", "#cfcfcf"] };
+  const TYPES = { blockage: "Blocked channel or culvert", dumping: "Dumping into the channel", flooding: "Flooding",
+                  encroachment: "Building in the channel reserve", works: "Cleaning or repair done" };
+  const SEV = { 1: "Minor", 2: "Serious", 3: "Severe" };
+  const dark = () => document.documentElement.dataset.theme === "dark" ||
+    (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+  const ramp = (t, stops) => { t = Math.max(0, Math.min(1, t)); const n = stops.length - 1, i = Math.min(n - 1, Math.floor(t * n)),
+    f = t * n - i, a = stops[i], b = stops[i + 1]; return `rgb(${a.map((v, k) => Math.round(v + (b[k] - v) * f)).join(",")})`; };
+  const PRI = [[69,117,180],[116,173,209],[254,224,144],[244,109,67],[165,0,38]];
+  const EME = [[252,253,191],[254,159,109],[222,73,104],[140,41,129],[59,15,112]];
+  const color = (s, mode) => mode === "p" ? ramp(s.p / 100, PRI) : mode === "e" ? ramp(s.e / 100, EME) : (CLS[s.k] || CLS.other)[1];
+  const weight = (s) => s.a >= 10 ? 4.5 : s.a >= 2 ? 3 : 1.6;
+
+  // ---------------------------------------------------------------- map
+  const map = L.map("map", { preferCanvas: true, zoomSnap: 0.25, minZoom: 11, maxZoom: 18, attributionControl: true })
+    .fitBounds(matchMedia("(max-width: 820px)").matches ? [[0.27, 32.53], [0.37, 32.65]] : [[0.25, 32.50], [0.39, 32.68]]);
+  setTimeout(() => map.invalidateSize(), 300);
+  map.attributionControl.setPrefix(false).addAttribution("© OpenStreetMap contributors · Copernicus · JRC GHSL · Microsoft · Gava Charles");
+  let base = L.imageOverlay(dark() ? "basemap_dark.png" : "basemap_light.png", [[0.20, 32.45], [0.42, 32.72]], { opacity: 1 }).addTo(map);
+  // satellite imagery: switches on automatically when zoomed in (and can be chosen any time)
+  const sat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    { maxZoom: 19, maxNativeZoom: 18, attribution: "Imagery © Esri, Maxar, Earthstar Geographics" });
+  const streets = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    { maxZoom: 19, attribution: "© OpenStreetMap contributors" });
+  let baseMode = "auto";
+  function applyBase() {
+    const z = map.getZoom(), want = baseMode === "auto" ? (z >= 14.5 ? "sat" : "relief") : baseMode;
+    [sat, streets].forEach(l => map.hasLayer(l) && l !== { sat, streets }[want] && map.removeLayer(l));
+    if (want === "sat" && !map.hasLayer(sat)) sat.addTo(map).bringToBack();
+    if (want === "streets" && !map.hasLayer(streets)) streets.addTo(map).bringToBack();
+    base.setOpacity(want === "relief" ? 1 : 0);
+    const onImg = want !== "relief";
+    if (!onImg) casing.remove(); else if (!map.hasLayer(casing)) { casing.addTo(map); lines.forEach(l => l.bringToFront()); }
+    lines.forEach(l => l.setStyle({ weight: weight(l.seg) * (onImg ? 1.6 : 1), opacity: 1 }));
+    document.querySelectorAll(".bases button").forEach(b => b.setAttribute("aria-pressed", b.dataset.b === baseMode));
+  }
+  map.on("zoomend", applyBase);
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { base.setUrl(dark() ? "basemap_dark.png" : "basemap_light.png"); });
+  new MutationObserver(() => base.setUrl(dark() ? "basemap_dark.png" : "basemap_light.png"))
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  const [segs, hotspots, places, chLabels, sysLabels] = await Promise.all(["segments.json", "hotspots.json", "places.json",
+    "channel_labels.json", "system_labels.json"].map(f => fetch(f).then(r => r.json())));
+  const kids = new Map(); segs.forEach(s => { if (s.dn >= 0) { if (!kids.has(s.dn)) kids.set(s.dn, []); kids.get(s.dn).push(s.i); } });
+  const byId = new Map(segs.map(s => [s.i, s]));
+  let mode = "k", selected = null, hl = null, traceLayer = L.layerGroup().addTo(map);
+  const lineOf = new Map();
+  const touch = matchMedia("(pointer: coarse)").matches || matchMedia("(max-width: 820px)").matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const lines = segs.sort((a, b) => a.a - b.a).map(s => {
+    const ln = L.polyline(s.c.map(([x, y]) => [y, x]), { color: color(s, mode), weight: weight(s), opacity: 0.95 });
+    if (touch) L.polyline(s.c.map(([x, y]) => [y, x]), { color: "#000", opacity: 0, weight: 18 }).on("click", () => select(s.i, false)).addTo(map);
+    ln.on("click", () => select(s.i, false));
+    ln.on("mouseover", () => { ln.setStyle({ weight: weight(s) + 4 }); ln.bringToFront(); });
+    ln.on("mouseout", () => ln.setStyle({ weight: weight(s) * (map.hasLayer(casing) ? 1.6 : 1) }));
+    ln.bindTooltip(() => `<b>${esc(s.nm)}</b><br>${s.sy ? esc(s.sy) + " catchment · " : ""}priority ${s.p.toFixed(0)} · ${(CLS[s.k] || CLS.other)[0]}`,
+      { sticky: true, direction: "top", offset: [0, -8] });
+    ln.seg = s; lineOf.set(s.i, ln); return ln.addTo(map);
+  });
+  const casing = L.layerGroup(segs.map(s => L.polyline(s.c.map(([x, y]) => [y, x]),
+    { color: "#ffffff", weight: weight(s) * 1.6 + 2.5, opacity: 0.9, interactive: false })));
+  const restyle = () => lines.forEach(l => l.setStyle({ color: color(l.seg, mode) }));
+  const hsLayer = L.layerGroup(hotspots.map(h => L.circleMarker([h.lat, h.lon], { radius: 7, color: "#e8002a", weight: 2, fill: false })
+    .bindTooltip(`${h.place}<br><span style="opacity:.75">${h.evidence}</span>`))).addTo(map);
+  const placeLayer = L.layerGroup(places.map(([n, la, lo, k]) => L.marker([la, lo], { interactive: false,
+    icon: L.divIcon({ className: "", html: `<span class="place">${n}</span>`, iconSize: null }) })));
+
+  const sysLayer = L.layerGroup(sysLabels.map(([n, la, lo]) => L.marker([la, lo], { interactive: false,
+    icon: L.divIcon({ className: "", html: `<span class="syslab">${esc(n)}</span>`, iconSize: null }) })));
+  sysLayer.addTo(map);
+
+
+  // legend + mode switch
+  const Legend = L.Control.extend({ onAdd() {
+    const d = L.DomUtil.create("div", "legend"); L.DomEvent.disableClickPropagation(d);
+    d.innerHTML = `<button class="lg-toggle" aria-expanded="${!touch}">Legend</button><div class="lg-body" ${touch ? "hidden" : ""}><div class="modes" role="group" aria-label="Colour channels by">
+      <button data-m="k" aria-pressed="true">Work class</button><button data-m="p" aria-pressed="false">Priority</button>
+      <button data-m="e" aria-pressed="false">Emerging</button></div><div id="lg"></div>
+      <div><span class="sw" style="background:none;border:2px solid #e8002a;width:10px;height:10px;border-radius:50%"></span>reported flooding</div>
+      <div><span class="sw" style="background:#0b7a8a;width:10px;height:10px;border-radius:50%"></span>field report</div>
+      <div class="modes bases" role="group" aria-label="Background map"><button data-b="auto" aria-pressed="true">Auto</button>
+      <button data-b="relief" aria-pressed="false">Relief</button><button data-b="sat" aria-pressed="false">Satellite</button>
+      <button data-b="streets" aria-pressed="false">Streets</button></div>
+      <div class="muted" style="font-size:11px">Auto shows satellite imagery when you zoom in.</div></div>`;
+    const tg = d.querySelector(".lg-toggle"), bd = d.querySelector(".lg-body");
+    tg.onclick = () => { bd.hidden = !bd.hidden; tg.setAttribute("aria-expanded", !bd.hidden); };
+    d.querySelectorAll(".modes:not(.bases) button").forEach(b => b.onclick = () => { mode = b.dataset.m;
+      d.querySelectorAll(".modes:not(.bases) button").forEach(x => x.setAttribute("aria-pressed", x === b)); restyle(); drawLegend(); });
+    d.querySelectorAll(".bases button").forEach(b => b.onclick = () => { baseMode = b.dataset.b; applyBase(); });
+    return d; } });
+  new Legend({ position: touch ? "topright" : "bottomleft" }).addTo(map);
+  function drawLegend() {
+    const g = $("#lg");
+    if (mode === "k") g.innerHTML = Object.entries(CLS).filter(([k]) => k !== "other")
+      .map(([k, [n, c]]) => `<div><span class="sw" style="background:${c}"></span>${n}</div>`).join("");
+    else { const st = mode === "p" ? PRI : EME;
+      g.innerHTML = `<div class="ramp" style="background:linear-gradient(90deg,${st.map(c => `rgb(${c})`).join(",")})"></div>
+        <div class="row" style="justify-content:space-between"><span>low</span><span>${mode === "p" ? "maintenance priority" : "emerging risk"}</span><span>high</span></div>`; }
+  }
+  drawLegend(); applyBase();
+
+  // ---------------------------------------------------------------- tabs
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+    document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
+    document.querySelectorAll(".pane").forEach(p => p.hidden = p.id !== b.dataset.p);
+  });
+  const showTab = id => document.getElementById(id).click();
+
+  // ---------------------------------------------------------------- shared reports (db)
+  const C = window.claude;
+  const [db, user] = C && C.use ? await Promise.all([C.use("db").catch(() => null), C.use("user").catch(() => null)]) : [null, null];
+  const myId = user ? await user.id() : null;
+  const canWrite = user ? await user.can("data.write") : null;
+  let reports = [], readOnly = !db || canWrite === false;
+  const repLayer = L.layerGroup().addTo(map);
+  if (db) db.collection("reports").orderBy("at", "desc").limit(500).onSnapshot(snap => {
+    reports = snap.docs.map(d => ({ id: d.id, ...d.data() })); drawReports(); renderQueue(); if (selected) renderChannel(selected);
+  }, () => { reports = []; drawReports(); });
+
+  function drawReports() {
+    repLayer.clearLayers();
+    reports.forEach(r => L.circleMarker([r.lat, r.lon], { radius: 6, color: "#ffffff", weight: 1.5, fillColor: r.status === "resolved" ? "#7a8a90" : "#0b7a8a",
+      fillOpacity: 1 }).bindTooltip(`${TYPES[r.type] || r.type} · ${SEV[r.sev] || ""}`).on("click", () => select(r.seg, true)).addTo(repLayer));
+    renderReportsPane();
+  }
+  async function names(ids) { if (!user) return {}; try { return await user.profiles([...new Set(ids.filter(Boolean))]); } catch { return {}; } }
+  function when(iso) { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }); }
+  async function reportCards(list) {
+    const ps = await names(list.map(r => r.by));
+    const wrap = document.createElement("div"); wrap.style.display = "grid"; wrap.style.gap = "8px";
+    list.forEach(r => {
+      const el = document.createElement("div"); el.className = `report sev-${r.sev} ${r.status === "resolved" ? "resolved" : ""}`;
+      const t = document.createElement("div"); t.style.fontWeight = 600; t.textContent = `${TYPES[r.type] || r.type} · ${SEV[r.sev] || ""}`;
+      const n = document.createElement("div"); n.textContent = r.note || "";
+      const m = document.createElement("div"); m.className = "meta";
+      const seg = byId.get(r.seg);
+      m.textContent = `${when(r.at)} · ${(ps[r.by] && ps[r.by].name) || "Someone"} · ${seg ? seg.nm : ""}${r.status === "resolved" ? " · resolved" : ""}`;
+      el.append(t, n, m);
+      const row = document.createElement("div"); row.className = "row";
+      const go = document.createElement("button"); go.className = "ghost"; go.textContent = "Show on map"; go.onclick = () => select(r.seg, true);
+      row.append(go);
+      if (!readOnly && r.status !== "resolved") { const rs = document.createElement("button"); rs.className = "ghost"; rs.textContent = "Mark resolved";
+        rs.onclick = async () => { rs.disabled = true; try { await db.doc("reports/" + r.id).update({ status: "resolved", resolved_at: new Date().toISOString(), resolved_by: myId }); }
+          catch (e) { rs.disabled = false; rs.textContent = "Could not save - try again"; } }; row.append(rs); }
+      el.append(row); wrap.append(el);
+    });
+    return wrap;
+  }
+  async function renderReportsPane() {
+    const p = $("#p-r"); p.replaceChildren();
+    const h = document.createElement("h2"); h.textContent = "Field reports"; p.append(h);
+    const open = reports.filter(r => r.status !== "resolved");
+    const s = document.createElement("p"); s.className = "muted";
+    s.textContent = db ? `${open.length} open · ${reports.length - open.length} resolved. Select a channel on the map to add a report.`
+                       : "This public version shows the map and rankings. Field reports are collected in the team version used by maintenance crews; to report a blocked drain, contact the author.";
+    p.append(s);
+    if (db && !reports.length) { const n = document.createElement("div"); n.className = "notice";
+      n.textContent = "No reports yet. Click a channel on the map, then use “Log a report” to record a blockage, dumping, flooding, encroachment or works done."; p.append(n); }
+    if (reports.length) p.append(await reportCards(reports.slice(0, 80)));
+  }
+
+  // ---------------------------------------------------------------- channel panel
+  function downstream(id) { const out = [], seen = new Set(); let c = id;
+    while (c !== undefined && c >= 0 && !seen.has(c) && byId.has(c)) { seen.add(c); out.push(c); c = byId.get(c).dn; } return out; }
+  function upstream(id) { const out = [], seen = new Set([id]), st = [id];
+    while (st.length) { const c = st.pop(); out.push(c); for (const k of kids.get(c) || []) if (!seen.has(k)) { seen.add(k); st.push(k); } } return out; }
+  function showTrace(ids, color, label) {
+    traceLayer.clearLayers();
+    const ls = ids.map(i => byId.get(i)).filter(Boolean);
+    ls.forEach(s => traceLayer.addLayer(L.polyline(s.c.map(([x, y]) => [y, x]), { color, weight: weight(s) + 5, opacity: 0.55, interactive: false })));
+    if (ls.length) map.flyToBounds(L.featureGroup(traceLayer.getLayers()).getBounds().pad(0.15), { maxZoom: 16, duration: 0.7 });
+    const km = ls.reduce((t, s) => t + s.L, 0) / 1000, b = ls.reduce((t, s) => t + s.b, 0), cu = ls.reduce((t, s) => t + s.cu, 0),
+      w = ls.reduce((t, s) => t + s.w, 0), worst = ls.slice().sort((a, b) => b.p - a.p)[0];
+    const box = $("#tr-out"); if (!box) return;
+    box.replaceChildren();
+    const t = document.createElement("div"); t.innerHTML = `<b>${label}</b>`;
+    const kv = document.createElement("dl"); kv.className = "kv";
+    [["Channel length", km.toFixed(1) + " km"], ["Buildings within 15 m", b.toLocaleString()], ["Culverts", cu], ["Dump sites within 100 m", w]]
+      .forEach(([a, v]) => { const dt = document.createElement("dt"); dt.textContent = a; const dd = document.createElement("dd"); dd.textContent = v; kv.append(dt, dd); });
+    box.append(t, kv);
+    if (worst) { const go = document.createElement("button"); go.className = "ghost"; go.textContent = `Go to the worst stretch: ${worst.nm} (${worst.p.toFixed(0)})`;
+      go.onclick = () => select(worst.i, true); box.append(go); }
+  }
+  function select(id, fly) {
+    const s = byId.get(id); if (!s) return; selected = id;
+    if (hl) hl.remove();
+    hl = L.polyline(s.c.map(([x, y]) => [y, x]), { color: "#00e5ff", weight: weight(s) + 6, opacity: 0.55 }).addTo(map);
+    if (fly) map.flyToBounds(hl.getBounds().pad(4), { maxZoom: 17, duration: 0.6 });
+    renderChannel(id); showTab("t-ch");
+  }
+  async function renderChannel(id) {
+    const s = byId.get(id), p = $("#p-ch"); p.replaceChildren();
+    const [cn, cc] = CLS[s.k] || CLS.other;
+    const head = document.createElement("div"); head.style.display = "grid"; head.style.gap = "6px";
+    traceLayer.clearLayers();
+    const h = document.createElement("h2"); h.textContent = s.nm || s.n || "Drain";
+    const sub = document.createElement("div"); sub.className = "row";
+    sub.innerHTML = `<span class="pill ${s.k}">${cn}</span><span class="muted">${s.sy ? s.sy + " catchment · " : ""}${s.L} m segment · ${s.a} km² upstream</span>`;
+    head.append(h, sub); p.append(head);
+    const bars = document.createElement("div"); bars.style.display = "grid"; bars.style.gap = "8px";
+    bars.innerHTML = `<div><div class="row" style="justify-content:space-between"><h3>Maintenance priority</h3><b style="font-family:var(--mono)">${s.p.toFixed(0)}<span class="muted">/100</span></b></div>
+      <div class="meter"><i style="width:${s.p}%;background:${ramp(s.p / 100, PRI)}"></i></div></div>
+      <div><div class="row" style="justify-content:space-between"><h3>Emerging risk</h3><b style="font-family:var(--mono)">${s.e.toFixed(0)}<span class="muted">/100</span></b></div>
+      <div class="meter"><i style="width:${s.e}%;background:${ramp(s.e / 100, EME)}"></i></div></div>`;
+    p.append(bars);
+    const why = document.createElement("div"); why.innerHTML = `<h3>Likely causes here</h3>`;
+    const ul = document.createElement("ul"); ul.className = "drivers"; (s.d || "").split("; ").filter(Boolean).forEach(d => { const li = document.createElement("li"); li.textContent = d; ul.append(li); });
+    why.append(ul); p.append(why);
+    const kv = document.createElement("dl"); kv.className = "kv";
+    const rows = [["Buildings within 15 m of the channel", s.b], ["Buildings on low ground within 150 m", s.f], ["Culverts on this stretch", s.cu],
+      ["Mapped dump sites within 100 m", s.w], ["Wetland left within 500 m", s.wl + "%"], ["Upstream paved, 1990 → 2020", `${s.pv[0]}% → ${s.pv[1]}%`],
+      ["Radar new-structure leads within 100 m", s.ra ? s.ra + " ha" : "none"]];
+    rows.forEach(([a, b]) => { const dt = document.createElement("dt"); dt.textContent = a; const dd = document.createElement("dd"); dd.textContent = b; kv.append(dt, dd); });
+    p.append(kv);
+    // walk and trace along the network
+    const up1 = (kids.get(id) || []).map(i => byId.get(i)).filter(Boolean).sort((a, b) => b.a - a.a)[0];
+    const tr = document.createElement("div"); tr.className = "trace";
+    tr.innerHTML = `<h3>Follow the water</h3>
+      <div class="stepper"><button class="ghost" id="st-up" ${up1 ? "" : "disabled"}>↑ Upstream stretch</button>
+      <button class="ghost" id="st-dn" ${s.dn >= 0 && byId.has(s.dn) ? "" : "disabled"}>Downstream stretch ↓</button></div>
+      <div class="row"><button class="ghost" id="tr-dn">Trace to where it drains</button><button class="ghost" id="tr-up">Show everything that drains here</button></div>
+      <div id="tr-out" class="muted" style="display:grid;gap:6px"></div>`;
+    p.append(tr);
+    $("#st-up", tr).onclick = () => up1 && select(up1.i, true);
+    $("#st-dn", tr).onclick = () => s.dn >= 0 && select(s.dn, true);
+    $("#tr-dn", tr).onclick = () => showTrace(downstream(id), "#2196f3", "Downstream path from here");
+    $("#tr-up", tr).onclick = () => showTrace(upstream(id), "#ff9800", "Everything upstream of here");
+    // reports on this segment
+    const mine = reports.filter(r => r.seg === id);
+    const rh = document.createElement("h3"); rh.textContent = `Reports on this stretch (${mine.length})`; p.append(rh);
+    if (mine.length) p.append(await reportCards(mine));
+    // form
+    const f = document.createElement("form"); f.style.display = "grid"; f.style.gap = "8px";
+    f.innerHTML = `<h3>Log a report</h3>
+      <div class="row"><label for="rt" class="muted">What</label><select id="rt">${Object.entries(TYPES).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></div>
+      <div class="row"><label for="rs" class="muted">How bad</label><select id="rs"><option value="1">Minor</option><option value="2" selected>Serious</option><option value="3">Severe</option></select></div>
+      <label for="rn" class="muted">Notes (what you saw, where exactly)</label><textarea id="rn" maxlength="600" placeholder="e.g. culvert at the market crossing half-blocked with plastic and silt"></textarea>
+      <div class="row"><button class="primary" type="submit">Save report</button><span id="rmsg" class="muted" role="status"></span></div>`;
+    if (readOnly) { f.querySelectorAll("select,textarea,button").forEach(x => x.disabled = true);
+      $("#rmsg", f).textContent = db ? "You can view reports but not add them." : "Reporting is open in the team version of this map."; }
+    f.onsubmit = async ev => { ev.preventDefault(); const btn = $("button", f), msg = $("#rmsg", f); btn.disabled = true; msg.textContent = "Saving…";
+      const mid = s.c[Math.floor(s.c.length / 2)];
+      try { await db.collection("reports").add({ seg: id, lat: mid[1], lon: mid[0], type: $("#rt", f).value, sev: +$("#rs", f).value,
+              note: $("#rn", f).value.trim().slice(0, 600), status: "open", at: new Date().toISOString(), by: myId });
+            msg.textContent = "Saved. It is now visible to everyone using this page."; $("#rn", f).value = ""; }
+      catch (e) { msg.textContent = e && e.code === "invalid_argument" ? "You don't have permission to add reports here." :
+                                    e && e.code === "quota_exceeded" ? "The report store is full. Ask the owner to archive old reports." :
+                                    "Could not save. Check your connection and try again."; if (e && e.code === "invalid_argument") readOnly = true; }
+      finally { btn.disabled = readOnly; } };
+    p.append(f);
+  }
+  function renderIntro() {
+    const p = $("#p-ch"); p.innerHTML = `<h2>Pick a channel</h2>
+      <p class="muted">Click any coloured line on the map. The ${segs.length.toLocaleString()} stretches shown carry water from at least 0.25 km² of the city.</p>
+      <div class="notice">Start with the <b>Work queue</b> tab for the stretches that most need attention, or switch the map between work class, priority and emerging risk with the buttons on the map.</div>`;
+  }
+  renderIntro();
+
+  // ---------------------------------------------------------------- work queue
+  const systems = [...new Set(segs.map(s => s.sy).filter(Boolean))].sort();
+  let qSys = "", qCls = "urgent";
+  function renderQueue() {
+    const p = $("#p-q"); p.replaceChildren();
+    const h = document.createElement("h2"); h.textContent = "Work queue"; p.append(h);
+    const ctl = document.createElement("div"); ctl.className = "row";
+    ctl.innerHTML = `<label for="qs" class="muted">Catchment</label><select id="qs"><option value="">All</option>${systems.map(s => `<option ${s === qSys ? "selected" : ""}>${s}</option>`).join("")}</select>
+      <label for="qc" class="muted">Class</label><select id="qc">${["urgent", "fix", "coming", "watch", "all"].map(k => `<option value="${k}" ${k === qCls ? "selected" : ""}>${k === "all" ? "All" : CLS[k][0]}</option>`).join("")}</select>`;
+    p.append(ctl);
+    $("#qs", ctl).onchange = e => { qSys = e.target.value; renderQueue(); };
+    $("#qc", ctl).onchange = e => { qCls = e.target.value; renderQueue(); };
+    const openBy = new Map(); reports.filter(r => r.status !== "resolved").forEach(r => openBy.set(r.seg, (openBy.get(r.seg) || 0) + 1));
+    const list = segs.filter(s => (!qSys || s.sy === qSys) && (qCls === "all" || s.k === qCls))
+      .sort((a, b) => (openBy.get(b.i) || 0) - (openBy.get(a.i) || 0) || b.p - a.p).slice(0, 40);
+    const km = segs.filter(s => (!qSys || s.sy === qSys) && (qCls === "all" || s.k === qCls)).reduce((t, s) => t + s.L, 0) / 1000;
+    const note = document.createElement("p"); note.className = "muted";
+    note.textContent = `${km.toFixed(1)} km of channel in this selection. Top 40 shown, stretches with open reports first, then by priority.`;
+    p.append(note);
+    const ol = document.createElement("ol"); ol.className = "queue";
+    list.forEach((s, i) => { const li = document.createElement("li"); const b = document.createElement("button");
+      const r = openBy.get(s.i) || 0;
+      b.innerHTML = `<span class="rank">${i + 1}</span><span class="nm"></span><span class="sc">${s.p.toFixed(0)}${r ? ` · ${r} open` : ""}</span>`;
+      $(".nm", b).textContent = `${s.nm}${s.sy ? " · " + s.sy : ""}`;
+      b.onclick = () => select(s.i, true); li.append(b); ol.append(li); });
+    p.append(ol);
+  }
+  renderQueue(); renderReportsPane();
+  // search: drain names (best stretch per name) and neighbourhoods
+  const byName = new Map(); segs.forEach(s => { const o = byName.get(s.nm); if (!o || s.a > o.a) byName.set(s.nm, s); });
+  const placeAt = new Map(places.map(([n, la, lo]) => [n, [la, lo]]));
+  const dl = $("#qlist"); [...byName.keys()].sort().concat([...placeAt.keys()].map(n => n + " (place)"))
+    .forEach(n => { const o = document.createElement("option"); o.value = n; dl.append(o); });
+  $("#search").onsubmit = e => { e.preventDefault(); go($("#q").value.trim()); };
+  $("#q").addEventListener("change", e => go(e.target.value.trim()));
+  function go(v) {
+    if (!v) return;
+    const pl = v.endsWith(" (place)") ? placeAt.get(v.slice(0, -8)) : null;
+    if (pl) { map.flyTo(pl, 15.5, { duration: 0.7 }); return; }
+    let hit = byName.get(v) || [...byName.values()].find(s => s.nm.toLowerCase().includes(v.toLowerCase()));
+    if (hit) select(hit.i, true);
+    else { const pk = [...placeAt.keys()].find(n => n.toLowerCase().includes(v.toLowerCase())); if (pk) map.flyTo(placeAt.get(pk), 15.5, { duration: 0.7 }); }
+  }
+})();
+</script>

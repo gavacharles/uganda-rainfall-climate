@@ -169,7 +169,7 @@ Every road, drain, dam and irrigation scheme in NDP IV is designed on rainfall s
 - **Are floods a climate problem?** In Kampala, so far, mostly a concrete problem.
 - **What should NDP IV do?** Plant by the data, size irrigation and water storage region by region starting with the driest areas, design drains for the city as it will be built, and open the rainfall archive.
 
-*Methods and data: CHIRPS and ARC2 satellite–gauge rainfall (1981–2026), NOAA CPC and NASA POWER temperature, NOAA vegetation health (1982–2025), ERSST ocean temperatures, the Global Human Settlement Layer, and 16 CMIP6 climate models. Full report and code: [link to report / GitHub when public].*
+*Methods and data: CHIRPS and ARC2 satellite–gauge rainfall (1981–2026), NOAA CPC and NASA POWER temperature, NOAA vegetation health (1982–2025), ERSST ocean temperatures, the Global Human Settlement Layer, and 16 CMIP6 climate models. Graphics, animations and data sources: https://github.com/gavacharles/where-is-the-el-nino-rain*
 
 ---
 

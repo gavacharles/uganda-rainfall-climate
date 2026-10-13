@@ -580,3 +580,333 @@ def cover():
     make(14.56, 10.48, "cover_substack_1456x1048.png", 40)
     make(12.0, 6.30, "cover_social_1200x630.png", 30)
     print("national % of normal", round(nat))
+
+
+def g12_erratic_months():
+    """fig06 for social: Uganda monthly rain anomaly, years across, months down; extreme-month counts per epoch."""
+    from common import CMAP_RAIN
+    pr = chirps()[0]
+    u = zone_mean(pr.where(zones() >= 0)).sel(zone="Uganda").to_series()
+    m = u.resample("MS").sum()[:"2025-12"]
+    clim = m["1991":"2020"].groupby(m["1991":"2020"].index.month).mean()
+    an = 100 * (m / clim.reindex(m.index.month).values - 1)
+    t = pd.DataFrame({"y": an.index.year, "m": an.index.month, "v": an.values}).pivot(index="y", columns="m", values="v")
+    eps = [(1981, 1995), (1996, 2010), (2011, 2025)]
+    n = [int((t.loc[a:b].abs() > 40).sum().sum()) for a, b in eps]
+    fig = plt.figure(figsize=(W, H))
+    fig.text(0.05, 0.93, "Uganda's rain has become more erratic", fontsize=24, fontweight="bold", color=INK)
+    fig.text(0.05, 0.865, "Each square is one month: rain above (blue) or below (orange) the 1991–2020 normal",
+             fontsize=15, color=MUTE)
+    ax = fig.add_axes([0.07, 0.33, 0.80, 0.48])
+    im = ax.pcolormesh(np.arange(1980.5, 2026), np.arange(0.5, 13), t.values.T, cmap=CMAP_RAIN, vmin=-80, vmax=80,
+                       shading="flat", edgecolors=BG, linewidth=0.6)
+    ax.set_ylim(12.5, 0.5)
+    ax.set_yticks(range(1, 13))
+    ax.set_yticklabels(list("JFMAMJJASOND"), fontsize=11)
+    ax.set_xticks([1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025])
+    ax.tick_params(length=0, labelsize=12)
+    ax.grid(False)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    cax = fig.add_axes([0.895, 0.36, 0.014, 0.42])
+    cb = fig.colorbar(im, cax=cax, ticks=[-80, -40, 0, 40, 80], extend="both")
+    cb.ax.set_yticklabels(["−80%", "−40%", "0", "+40%", "+80%"], fontsize=11)
+    cb.ax.tick_params(length=0, colors=MUTE)
+    cb.outline.set_visible(False)
+    # epoch brackets and counts under the heat map
+    tr = ax.get_xaxis_transform()
+    for (a, b), k, c in zip(eps, n, (MUTE, "#b0613e", RED)):
+        ax.plot([a - 0.4, b + 0.4], [-0.16, -0.16], color=c, lw=3, transform=tr, clip_on=False, solid_capstyle="butt")
+        ax.text((a + b) / 2, -0.24, f"{a}–{b}", ha="center", va="top", fontsize=13, color=MUTE, transform=tr)
+        ax.text((a + b) / 2, -0.36, f"{k} extreme months", ha="center", va="top", fontsize=18, fontweight="bold",
+                color=c, transform=tr)
+    fig.text(0.05, 0.075, "Extreme month = rain more than 40% above or below normal.", fontsize=11.5, color=MUTE)
+    fig.text(0.05, 0.03, "Data: CHIRPS v2.0, Uganda average, 1981–2025.", fontsize=10, color=MUTE)
+    credit(fig)
+    fig.savefig(OUT / "g12_erratic_months.png", dpi=150)
+    plt.close(fig)
+    print("extreme months per epoch", n)
+
+
+def _season_lines():
+    from seasons import DOY0
+    ds = xr.open_dataset(PROC / "seasons.nc")
+    out = {}
+    for s in ("S1", "S2"):
+        on = zone_mean(ds[f"{s}_onset"].where(ds[f"{s}_onset"].count("year") > 35)).sel(zone="Uganda").to_series()
+        ce = zone_mean(ds[f"{s}_cessation"].where(ds[f"{s}_cessation"].count("year") > 35)).sel(zone="Uganda").to_series()
+        out[s] = pd.DataFrame({"on": on, "ce": ce})
+    return out, DOY0
+
+
+def _season_figure():
+    """Uganda first and second rains, one line per year; returns fig and a draw(upto_year) function."""
+    data, DOY0 = _season_lines()
+    eps = [(1981, 1995), (1996, 2010), (2011, 2025)]
+    cols = {1981: "#9aa5a0", 1996: "#5a8fb0", 2011: RED}
+    fig = plt.figure(figsize=(W, H))
+    fig.text(0.05, 0.93, "Uganda's second rains now last nearly two weeks longer", fontsize=24, fontweight="bold", color=INK)
+    fig.text(0.05, 0.865, "Each line is one rainy season, from first to last rains. Boxes: 15-year averages.",
+             fontsize=15, color=MUTE)
+    fig.text(0.05, 0.03, "Data: CHIRPS v2.0, Uganda average; onset and end by the anomalous-accumulation method.",
+             fontsize=10, color=MUTE)
+    credit(fig)
+    axs = [fig.add_axes([0.10, 0.17, 0.36, 0.61]), fig.add_axes([0.57, 0.17, 0.36, 0.61])]
+    lims = {"S1": ("2001-02-01", "2001-08-01"), "S2": ("2001-08-01", "2002-02-01")}
+    names = {"S1": "First rains (Mar–May)", "S2": "Second rains (Sep–Nov)"}
+    doy = lambda d: (pd.Timestamp(d) - DOY0).days + 1
+    lines, boxes = {}, {}
+    for ax, s in zip(axs, ("S1", "S2")):
+        ax.set_xlim(doy(lims[s][0]), doy(lims[s][1]))
+        ax.set_ylim(2026, 1980)
+        ticks = pd.date_range(lims[s][0], lims[s][1], freq="MS")
+        ax.set_xticks([doy(d) for d in ticks])
+        ax.set_xticklabels([d.strftime("%b") for d in ticks], fontsize=12)
+        ax.set_yticks([1985, 1995, 2005, 2015, 2025])
+        ax.tick_params(labelsize=12, length=0)
+        ax.grid(axis="y", visible=False)
+        ax.set_title(names[s], fontsize=17, pad=10)
+        df = data[s]
+        for y, r in df.iterrows():
+            c = cols[max(k for k in cols if k <= y)]
+            ln, = ax.plot([r.on, r.ce], [y, y], color=c, lw=3.2, solid_capstyle="round", visible=False)
+            lines[(s, y)] = ln
+        for a, b in eps:
+            e = df.loc[a:b]
+            o, c_ = e.on.mean(), e.ce.mean()
+            col = cols[a]
+            rect = plt.Rectangle((o, a - 0.6), c_ - o, b - a + 1.2, fill=False, ec=col, lw=2.2, ls="-", visible=False,
+                                 zorder=4)
+            ax.add_patch(rect)
+            txt = ax.text(doy("2001-06-24" if s == "S1" else "2002-01-04"), (a + b) / 2, f"{c_ - o:.0f} days",
+                          va="center", fontsize=15, fontweight="bold", color=col, visible=False)
+            boxes[(s, b)] = (rect, txt)
+
+    def draw(upto):
+        for (s, y), ln in lines.items():
+            ln.set_visible(y <= upto)
+        for (s, b), (rect, txt) in boxes.items():
+            rect.set_visible(b <= upto)
+            txt.set_visible(b <= upto)
+        return list(lines.values())
+    return fig, draw, data
+
+
+def g13_season_lengths():
+    fig, draw, data = _season_figure()
+    draw(2025)
+    fig.savefig(OUT / "g13_second_rains_longer.png", dpi=150)
+    plt.close(fig)
+    for s, df in data.items():
+        a, b = df.loc[1981:1995], df.loc[2011:2025]
+        print(s, "length", round((a.ce - a.on).mean(), 1), "->", round((b.ce - b.on).mean(), 1),
+              "onset", round(a.on.mean(), 1), "->", round(b.on.mean(), 1), "end", round(a.ce.mean(), 1), "->", round(b.ce.mean(), 1))
+
+
+def a5_seasons():
+    fig, draw, _ = _season_figure()
+    yr = fig.text(0.95, 0.858, "", fontsize=26, fontweight="bold", color=RED, ha="right")
+    seq = [y for y in range(1981, 2026) for _ in range(2)] + [2025] * 20
+
+    def step(i):
+        draw(seq[i])
+        yr.set_text(str(seq[i]))
+        return []
+    FuncAnimation(fig, step, frames=len(seq), blit=False).save(OUT / "a5_seasons.gif", writer=PillowWriter(fps=10), dpi=80)
+    plt.close(fig)
+
+
+def g14_east_africa():
+    """fig21 for social: East Africa long-rains vs short-rains trend maps."""
+    from matplotlib.colors import BoundaryNorm
+    from common import BASE, CMAP_RAIN, trend_da
+    from regional_global import outline
+    from common import lakes
+    ch = xr.open_dataset(PROC / "chirps_africa_monthly.nc")["precip"].load().sel(time=slice("1981", "2025"))
+    eab = ch.sel(lat=slice(-12, 16), lon=slice(22, 52))
+    fig = plt.figure(figsize=(W, H))
+    fig.text(0.05, 0.93, "East Africa's short rains are getting wetter", fontsize=24, fontweight="bold", color=INK)
+    fig.text(0.05, 0.865, "Rainfall trend 1981–2025, % per decade. Blue = wetter, orange = drier. Uganda outlined.",
+             fontsize=15, color=MUTE)
+    lev = [-15, -10, -6, -3, -1, 1, 3, 6, 10, 15]
+    axs = [fig.add_axes([0.04, 0.17, 0.44, 0.62]), fig.add_axes([0.52, 0.17, 0.44, 0.62])]
+    for ax, (name, months) in zip(axs, [("March–May (long rains)", (3, 4, 5)), ("October–December (short rains)", (10, 11, 12))]):
+        tot = eab.where(eab.time.dt.month.isin(list(months)), drop=True).groupby("time.year").sum(min_count=3)
+        s, _ = trend_da(tot)
+        mean = tot.sel(year=slice(*BASE)).mean("year")
+        rel = (100 * s / mean).where(mean > 50)
+        im = ax.pcolormesh(rel.lon, rel.lat, rel, cmap=CMAP_RAIN, norm=BoundaryNorm(lev, 256, extend="both"),
+                           shading="nearest", rasterized=True)
+        lakes()[lambda d: d.geometry.area > 0.05].plot(ax=ax, color="#dfe9f3", edgecolor=INK, lw=0.3, zorder=4)
+        outline(ax, (22, 52, -12, 16))
+        for sp in ax.spines.values():
+            sp.set_visible(False)
+        ax.set_title(name, fontsize=17, pad=8)
+    axs[0].annotate("Horn: long rains\ndrying", (44.0, 3.5), xytext=(47.0, -5.0), fontsize=12.5, fontweight="bold",
+                    color=RED, ha="center", arrowprops=dict(arrowstyle="-", color=RED, lw=1.2), zorder=7)
+    cax = fig.add_axes([0.30, 0.115, 0.40, 0.022])
+    cb = fig.colorbar(im, cax=cax, orientation="horizontal", ticks=lev)
+    cb.ax.tick_params(labelsize=10.5, length=0, colors=MUTE)
+    cb.outline.set_visible(False)
+    fig.text(0.05, 0.03, "Data: CHIRPS v2.0 monthly, Sen's slope. Areas with little seasonal rain left blank.",
+             fontsize=10, color=MUTE)
+    credit(fig)
+    fig.savefig(OUT / "g14_east_africa_rains.png", dpi=150)
+    plt.close(fig)
+
+
+def _warming_series():
+    from common import BASE, grid_mask
+    tas = xr.open_dataset(PROC / "ghcncams_monthly_1deg.nc")["tas"].load().sel(time=slice("1981", "2025"))
+    ann = tas.groupby("time.year").mean().where(tas.groupby("time.year").count() >= 10)
+    w = lambda d: np.cos(np.deg2rad(d.lat))
+    ug = grid_mask(ann.lat.sel(lat=slice(-2, 5)), ann.lon.sel(lon=slice(29, 36)), exclude_lakes=False)
+    sub = ann.sel(lat=slice(-2, 5), lon=slice(29, 36)).where(ug)
+    u = sub.weighted(w(sub)).mean(("lat", "lon")).to_series()
+    g = ann.sel(lat=slice(-60, 75))
+    g = g.weighted(w(g)).mean(("lat", "lon")).to_series()
+    u, g = u - u.loc[BASE[0]:BASE[1]].mean(), g - g.loc[BASE[0]:BASE[1]].mean()
+    tr = pd.read_csv(RES / "regional_global_trends.csv").set_index(["variable", "region"])
+    tu = tr.loc[("Temperature (GHCN-CAMS)", "Uganda"), "trend_per_decade"]
+    tg = tr.loc[("Temperature (GHCN-CAMS)", "Global land"), "trend_per_decade"]
+    return u, g, tu, tg
+
+
+def g15_warming_faster():
+    """fig22 for social: Uganda vs global land temperature anomaly."""
+    u, g, tu, tg = _warming_series()
+    fig, ax = frame("Uganda is warming faster than the world",
+                    "Annual land temperature, °C above or below the 1991–2020 average",
+                    "Data: NOAA GHCN-CAMS land temperature, 1981–2025.")
+    fig.subplots_adjust(right=0.80)
+    ax.axhline(0, color=MUTE, lw=1)
+    ax.plot(g.index, g.values, color=MUTE, lw=2.2)
+    ax.plot(u.index, u.values, color=RED, lw=3.6)
+    ax.text(2026, u.iloc[-1] + 0.05, f"Uganda\n+{tu:.2f} °C/decade", color=RED, fontsize=14, fontweight="bold",
+            va="center", clip_on=False)
+    ax.text(2026, g.iloc[-1] - 0.25, f"Global land\n+{tg:.2f} °C/decade", color=MUTE, fontsize=14, fontweight="bold",
+            va="center", clip_on=False)
+    ax.set_xlim(1980, 2025.5)
+    ax.set_yticks([-1, -0.5, 0, 0.5, 1, 1.5])
+    ax.set_yticklabels(["−1.0", "−0.5", "0", "+0.5", "+1.0", "+1.5"])
+    fig.savefig(OUT / "g15_warming_faster.png", dpi=150)
+    plt.close(fig)
+    print("Uganda", u.iloc[-3:].round(2).to_dict(), "global", g.iloc[-3:].round(2).to_dict())
+
+
+def a6_warming():
+    """g15 as an animation: Uganda vs global land temperature, drawn year by year."""
+    u, g, tu, tg = _warming_series()
+    fig, ax = frame("Uganda is warming faster than the world",
+                    "Annual land temperature, °C above or below the 1991–2020 average",
+                    "Data: NOAA GHCN-CAMS land temperature, 1981–2025.")
+    fig.subplots_adjust(right=0.80)
+    ax.axhline(0, color=MUTE, lw=1)
+    ax.set_xlim(1980, 2025.5)
+    ax.set_ylim(-1.4, 1.75)
+    ax.set_yticks([-1, -0.5, 0, 0.5, 1, 1.5])
+    ax.set_yticklabels(["−1.0", "−0.5", "0", "+0.5", "+1.0", "+1.5"])
+    lg, = ax.plot([], [], color=MUTE, lw=2.2)
+    lu, = ax.plot([], [], color=RED, lw=3.6)
+    du, = ax.plot([], [], "o", color=RED, ms=9)
+    dg, = ax.plot([], [], "o", color=MUTE, ms=7)
+    tu_ = ax.text(0, 0, "", color=RED, fontsize=14, fontweight="bold", va="center", clip_on=False, zorder=6,
+                  bbox=dict(facecolor=BG, edgecolor="none", pad=1.5))
+    tg_ = ax.text(0, 0, "", color=MUTE, fontsize=14, fontweight="bold", va="center", clip_on=False, zorder=6,
+                  bbox=dict(facecolor=BG, edgecolor="none", pad=1.5))
+    yr = fig.text(0.95, 0.858, "", fontsize=26, fontweight="bold", color=RED, ha="right")
+    years = list(u.index)
+    seq = [y for y in years for _ in range(2)] + [years[-1]] * 24
+
+    def step(i):
+        y = seq[i]
+        uu, gg = u.loc[:y], g.loc[:y]
+        lu.set_data(uu.index, uu.values)
+        lg.set_data(gg.index, gg.values)
+        du.set_data([y], [uu.iloc[-1]])
+        dg.set_data([y], [gg.iloc[-1]])
+        yr.set_text(str(y))
+        done = i >= len(years) * 2
+        if done:  # final hold: right-margin labels with the trends
+            tu_.set_position((2026, u.iloc[-1] + 0.05))
+            tu_.set_text(f"Uganda\n+{tu:.2f} °C/decade")
+            tg_.set_position((2026, g.iloc[-1] - 0.25))
+            tg_.set_text(f"Global land\n+{tg:.2f} °C/decade")
+        else:  # labels ride with the line ends, kept apart vertically
+            yu, yg = uu.iloc[-1], gg.iloc[-1]
+            if abs(yu - yg) < 0.22:
+                mid = (yu + yg) / 2
+                yu, yg = (mid + 0.11, mid - 0.11) if u.loc[y] >= g.loc[y] else (mid - 0.11, mid + 0.11)
+            tu_.set_position((y + 0.8, yu))
+            fmt = lambda v: "0.0" if round(v, 1) == 0 else f"{v:+.1f}"
+            tu_.set_text(f"Uganda {fmt(u.loc[y])} °C")
+            tg_.set_position((y + 0.8, yg))
+            tg_.set_text(f"Global land {fmt(g.loc[y])} °C")
+        return lu, lg, du, dg, tu_, tg_, yr
+    FuncAnimation(fig, step, frames=len(seq), blit=False).save(OUT / "a6_warming.gif", writer=PillowWriter(fps=10), dpi=80)
+    plt.close(fig)
+
+
+# ---------------------------------------------------------------- Kampala drainage study: social cards
+KDO = OUT / "kampala_drainage"
+
+
+def kd_cards():
+    KDO.mkdir(parents=True, exist_ok=True)
+    # 1: floods on ordinary rain
+    ev = pd.read_csv(RES / "kd_flood_event_rain.csv", parse_dates=["date"]).dropna(subset=["chirps_1d"]).sort_values("chirps_1d_pctile_wetdays")
+    fig, ax = frame("Kampala floods on ordinary rain", "Rain on reported flood days, as a percentile of all wet days (1991–2020)",
+                    "Data: CHIRPS v2.0 satellite rain, Greater Kampala average; flood dates from Daily Monitor, New Vision, NTV, ReliefWeb.")
+    y = np.arange(len(ev))
+    cols = [RED if v >= 90 else "#e9a23b" if v >= 50 else BLU for v in ev.chirps_1d_pctile_wetdays]
+    ax.barh(y, ev.chirps_1d_pctile_wetdays, color=cols, height=0.62)
+    ax.set_yticks(y)
+    ax.set_yticklabels([d.strftime("%-d %b %Y") for d in ev.date], fontsize=13)
+    for yy, v, mm in zip(y, ev.chirps_1d_pctile_wetdays, ev.chirps_1d):
+        ax.text(max(v + 1.5, 91.5) if v < 90 and v > 84 else v + 1.5, yy, f"{v:.0f}th  ({mm:.0f} mm)", va="center", fontsize=12)
+    ax.axvline(90, color=MUTE, ls="--", lw=1.2)
+    ax.text(90.8, len(ev) - 0.45, "a truly heavy day", fontsize=11, color=MUTE, va="bottom")
+    ax.set_xlim(0, 118)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.grid(axis="y", visible=False)
+    fig.savefig(KDO / "x1_floods_ordinary_rain.png", dpi=150)
+    plt.close(fig)
+    # 2: next hotspots (hold-out)
+    ho = pd.read_csv(RES / "kd_test_holdout.csv").iloc[0]
+    fig, ax = frame("We can see the next flood hotspots coming", "Valley floor built over 2000–2020, by a risk score built only from 1975–2000 change",
+                    "Data: JRC GHSL built-up, Copernicus DEM, OpenStreetMap channels. Analysis of 6,902 channel stretches.")
+    vals = [1.6, 1.8, 2.9, 3.8, 6.5]
+    ax.bar(range(5), vals, color=["#fde0c5", "#facba6", "#f8a07e", "#ce6693", "#a63a8a"], width=0.62)
+    for i, v in enumerate(vals):
+        ax.text(i, v + 0.15, f"{v:.1f}", ha="center", fontsize=16, fontweight="bold")
+    ax.set_xticks(range(5))
+    ax.set_xticklabels(["lowest\nrisk score", "", "", "", "highest\nrisk score"], fontsize=13)
+    ax.set_ylabel("percentage points of valley floor built over")
+    ax.set_ylim(0, 8)
+    ax.text(0.02, 0.92, f"4x more encroachment where the early-warning score was highest\n(prediction accuracy AUC {ho.auc_early_score:.2f})",
+            transform=ax.transAxes, fontsize=13.5, va="top")
+    ax.grid(axis="x", visible=False)
+    fig.savefig(KDO / "x2_next_hotspots.png", dpi=150)
+    plt.close(fig)
+    # 3: people in the water's path
+    pop = pd.read_csv(RES / "kd_population_low_ground.csv")
+    fig, ax = frame("More people now live where Kampala's water goes",
+                    "Residents on low ground (< 2 m above the drain) within 150 m of a channel",
+                    "Data: JRC GHS-POP (2025, 2030 projected), Copernicus DEM, OpenStreetMap channels.")
+    ax.fill_between(pop.epoch, pop.pop_low_ground / 1000, color="#f4c7d6")
+    ax.plot(pop.epoch, pop.pop_low_ground / 1000, color="#c2185b", lw=3.5)
+    for e in (1975, 1990, 2020, 2030):
+        v = float(pop.set_index("epoch").pop_low_ground[e]) / 1000
+        ax.scatter([e], [v], color="#c2185b", s=70, zorder=5)
+        ax.annotate(f"{v:,.0f}k", (e, v), xytext=(0, 12), textcoords="offset points", ha="center", fontsize=15, fontweight="bold")
+    ax.axvspan(2020, 2031, color=GRIDC, alpha=0.6, lw=0)
+    ax.text(2025.5, 15, "projected", ha="center", fontsize=11, color=MUTE)
+    ax.set_xlim(1972, 2033)
+    ax.set_ylim(0, 290)
+    ax.set_ylabel("thousand people")
+    fig.savefig(KDO / "x3_people_low_ground.png", dpi=150)
+    plt.close(fig)
+
+
+if __name__ == "__main__" and "kd_cards" in __import__("sys").argv:
+    kd_cards()

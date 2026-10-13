@@ -1,0 +1,2 @@
+n_segments,auc_early_score,ci_lo,ci_hi,spearman,p,auc_already_built_2000
+6902,0.792,0.71,0.866,0.429,0.0,0.575

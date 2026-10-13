@@ -1,0 +1,9 @@
+driver,label,auc_alone,auc_alone_dense_half,hotspot_median_pct,other_median_pct
+low_wetland,Little wetland left to buffer,0.675,0.531,0.658,0.456
+bldg_floodplain,Homes on the floodplain,0.645,0.553,0.748,0.357
+bldg_reserve_per_km,Buildings in channel reserve,0.64,0.562,0.733,0.361
+waste_pressure,Waste dumps & markets nearby,0.609,0.581,0.412,0.412
+crossings_per_km,Culverts & bridges (constrictions),0.603,0.552,0.679,0.327
+valley_built_change,Wetland/floodplain built over since 1990,0.561,0.319,0.6,0.477
+load_2020,Runoff load (upstream area x paving),0.502,0.549,0.386,0.503
+load_growth,Runoff growth since 1990,0.228,0.265,0.212,0.546
