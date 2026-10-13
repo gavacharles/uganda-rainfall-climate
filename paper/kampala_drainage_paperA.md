@@ -104,7 +104,9 @@ In the top-20% priority segments, 60% of hotspots fall within 400 m, against 47%
 
 **4.4 People in the water's path.** People on low ground beside channels numbered 35,600 in 1975, 64,000 in 1990, 205,000 in 2020, and are projected at 247,000 in 2030. The shift toward low ground happened in 1975–2000: 13,000 people beyond what city growth explains. Since 2000, exposure has grown in step with the city (Fig. kd25).
 
-**4.5 Satellite limits.** A Sentinel-1 pass about 13 hours after the 11 October 2026 storm showed no extensive standing water (0.18% of the area looked newly wet). Kampala's floods rise and drain within hours, faster than any satellite revisit.
+**4.5 Waste and culverts: a tested but unsupported pathway.** Culverts with a mapped dump site within 250 m upstream were more often near a reported hotspot (19% vs 12%). However, the effect disappears once upstream paving, catchment size and building density are controlled (odds ratio 0.87 per SD, 95% CI 0.51–1.59; 1,163 culverts). Dumping clusters where the city is dense and paved, so open data cannot separate its effect. Uncollected waste is still large: an estimated 53,000 t per year in the Lubigi catchment and 29,000 t in Nakivubo (2020; 0.55 kg/person/day, about half collected). Testing blockage directly needs field inspection of culverts, which we flag as future work for KCCA.
+
+**4.6 Satellite limits.** A Sentinel-1 pass about 13 hours after the 11 October 2026 storm showed no extensive standing water (0.18% of the area looked newly wet). Kampala's floods rise and drain within hours, faster than any satellite revisit.
 
 Radar change detection of new structures on open land is only exploratory:
 - about 30% of its detections are confirmed by 10 m land cover;
@@ -112,7 +114,7 @@ Radar change detection of new structures on open land is only exploratory:
 
 It is useful for inspection leads, not for counting encroachment.
 
-**4.6 Falling flood thresholds.** **[Pending: trend odds ratio, CI and Kendall τ from kd_threshold.py once the GDELT catalogue is complete.]**
+**4.7 Falling flood thresholds.** **[Pending: trend odds ratio, CI and Kendall τ from kd_threshold.py once the GDELT catalogue is complete.]**
 
 # 5. Discussion: what this means for planning
 
@@ -126,7 +128,7 @@ It is useful for inspection leads, not for counting encroachment.
   - GHSL 2025–2030 values are projections;
   - satellite rainfall underestimates local storms;
   - there is no direct observation of channel blockage;
-  - the waste–culvert link could not be isolated (Paper C).
+  - the waste–culvert link could not be isolated without field inspection (Section 4.5).
 
 # 6. Conclusion
 
