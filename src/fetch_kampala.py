@@ -112,3 +112,40 @@ def arc2():
 if __name__ == "__main__":
     for s in sys.argv[1:] or ["dem", "worldcover", "ghsl", "arc2"]:
         globals()[s]()
+
+
+GHSPOP = ("https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/"
+          "GHS_POP_E{y}_GLOBE_R2023A_4326_3ss/V1-0/tiles/GHS_POP_E{y}_GLOBE_R2023A_4326_3ss_V1_0_R9_C22.zip")
+
+
+POP_EPOCHS = [1975, 1980, 1985, 1990, 2000, 2010, 2020, 2025, 2030]  # slow server: skip 1995/2005/2015
+
+
+def ghs_pop():
+    """GHS-POP R2023A residential population (people per ~100 m cell), 1975-2030 (2025/2030 projected)."""
+    f = OUT / "kampala_ghs_pop.nc"
+    if f.exists():
+        return
+    layers = []
+    for y in POP_EPOCHS:
+        z = RAW / f"ghspop_{y}.zip"
+        if not z.exists():
+            curl(GHSPOP.format(y=y), z)
+        with zipfile.ZipFile(z) as zz:
+            name = [n for n in zz.namelist() if n.endswith(".tif")][0]
+            tif = RAW / name
+            if not tif.exists():
+                zz.extract(name, RAW)
+        a, t = crop(tif)
+        tif.unlink()
+        a = np.where(a < 0, 0, a)
+        lon = t.c + t.a * (np.arange(a.shape[1]) + 0.5)
+        lat = t.f + t.e * (np.arange(a.shape[0]) + 0.5)
+        layers.append(xr.DataArray(a.astype("float32"), dims=("lat", "lon"), coords={"lat": lat, "lon": lon}))
+        print("ghs-pop", y, round(float(a.sum()) / 1e6, 2), "million people in box", flush=True)
+    da = xr.concat(layers, xr.DataArray(POP_EPOCHS, dims="epoch", name="epoch")).rename("pop")
+    step = abs(float(np.diff(da.lat.values).mean()))
+    if step < 0.0005:  # crop window was oversampled (~1 arcsec): back to the native 3 arcsec grid, preserving sums
+        k = int(round(0.000833 / step))
+        da = da.fillna(0).coarsen(lat=k, lon=k, boundary="trim").sum().rename("pop")
+    da.sortby("lat").to_netcdf(f)

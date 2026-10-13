@@ -1,0 +1,2 @@
+n_segments,n_hotspot_segments,n_hotspots,auc_index,auc_ci_lo,auc_ci_hi,auc_index_dense_half,auc_emerging,auc_fitted_spatial_cv,hotspots_with_top20_within_400m,random_points_same
+6914,748,45,0.727,0.577,0.889,0.63,0.346,0.52-0.59,0.6,0.469

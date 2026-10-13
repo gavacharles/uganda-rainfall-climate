@@ -50,8 +50,31 @@ mpl.rcParams.update({
 })
 
 
-def save(fig, name):
-    fig.savefig(FIG / name)
+CREDIT = "Credit: Gava Charles"
+
+
+def credit_strip(fig, source, credit=CREDIT):
+    """Write the data/map sources (left) and the credit (right) just below the lowest content of the figure
+    (savefig bbox 'tight' then includes them without leaving empty space)."""
+    import textwrap
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    inv = fig.transFigure.inverted()
+    bbs = [a.get_tightbbox(r).transformed(inv) for a in fig.axes if a.get_visible()]
+    bbs += [t.get_window_extent(r).transformed(inv) for t in fig.texts if t.get_text()]
+    y0 = min(b.y0 for b in bbs)
+    x0, x1 = min(b.x0 for b in bbs), max(b.x1 for b in bbs)
+    w = fig.get_size_inches()[0] * (min(x1, 1.0) - max(x0, 0.0)) - 2.4  # leave room for the credit
+    lines = textwrap.wrap(source, max(40, int(w * 13)))
+    fig.text(max(x0, 0.0), y0 - 0.012, "\n".join(lines), fontsize=7.5, color="#555", va="top")
+    fig.text(min(x1, 1.0), y0 - 0.012, credit, fontsize=10, fontweight="bold", color="#333", ha="right", va="top")
+
+def save(fig, name, folder=None, source=None):
+    folder = folder or FIG
+    folder.mkdir(parents=True, exist_ok=True)
+    if source:
+        credit_strip(fig, source)
+    fig.savefig(folder / name)
     plt.close(fig)
     print("figure", name)
 

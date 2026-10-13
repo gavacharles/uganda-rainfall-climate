@@ -1,0 +1,10 @@
+date,places,chirps_1d,chirps_3d,chirps_7d,chirps_1d_pctile_wetdays,power_1d,power_3d,power_max1h
+2019-05-26,"Kikajjo; Lubowa; Lufuka (Masajja, Bunamwaya)",13.6,27.9,57.2,88.7,3.8,12.8,0.6
+2020-09-08,"Clock Tower; city centre (rain from 8 Sep, bodies recovered 11 Sep)",14.7,42.9,48.4,90.9,12.2,24.1,2.1
+2023-03-14,Kyambogo; Banda (Jinja Road),18.7,38.5,44.7,96.0,6.3,20.7,0.4
+2025-03-26,Kinawataka/Katogo; Kyambogo; Banda; Bwaise; Kalerwe; Kanyanya; Kyebando; Bukoto; Mukwano Road; Namasuba; Northern Bypass,9.1,17.4,66.6,73.9,23.3,72.1,4.7
+2025-10-31,Downtown arcades; Nakivubo Channel; Kisenyi; Old Taxi Park; Kyambogo (63.4 mm 29-31 Oct at Makerere),6.7,20.7,45.8,60.0,10.9,20.6,1.7
+2026-03-06,Centenary Park (vehicle swept away),2.6,18.7,41.0,19.3,5.3,22.0,1.4
+2026-09-17,Banda; Katogo (Kinawataka road),2.7,7.7,30.5,21.3,9.2,17.5,1.2
+2026-10-10,"Kimbejja; Lubigi (evening downpour, homes flooded, walls collapsed)",,,,,,12.3,
+2026-10-11,Kampala-Hoima Highway at Lubigi; Kinawataka; Banda (rain from ~3am),,,,,,7.5,
