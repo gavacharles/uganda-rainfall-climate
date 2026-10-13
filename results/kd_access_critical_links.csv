@@ -1,5 +1,5 @@
 way,name,highway,person_minutes,residents_delayed_5min,lon,lat
-5398,trunk,trunk,798722.5,95416.8,32.5,0.3
+5398,A5 at Busega roundabout,trunk,798722.5,95416.8,32.5,0.3
 9325,Fort Portal - Kampala Road,primary,798480.0,95415.5,32.5,0.3
 31470,Kampala - Nansana Road,primary,397776.5,9190.8,32.5,0.4
 4258,Hoima Road,primary,353151.9,0.0,32.5,0.3
@@ -19,7 +19,7 @@ way,name,highway,person_minutes,residents_delayed_5min,lon,lat
 4283,Busabala Road,tertiary,35469.7,1304.5,32.6,0.2
 48,Namasole (Kiyembe) Road,secondary,33383.1,556.4,32.6,0.3
 3034,Portbell Road,secondary,30515.1,0.0,32.6,0.3
-1117,tertiary,tertiary,29042.5,0.0,32.5,0.3
+1117,unnamed tertiary,tertiary,29042.5,0.0,32.5,0.3
 35156,Kibuye Natete Road,primary,27058.1,210.1,32.5,0.3
 25844,Kajjansi - Lutembe road,tertiary,23407.1,390.1,32.5,0.2
 4285,Salaama Road,secondary,22783.5,0.0,32.6,0.2
@@ -27,16 +27,17 @@ way,name,highway,person_minutes,residents_delayed_5min,lon,lat
 4776,Weraga Road,tertiary,18725.6,258.1,32.6,0.3
 388,Nalukolongo Road,tertiary,18555.7,267.6,32.5,0.3
 4295,Kulambiro Road,tertiary,18403.1,0.0,32.6,0.4
-11938,primary_link,primary_link,15217.2,0.0,32.6,0.3
+11938,unnamed primary_link,primary_link,15217.2,0.0,32.6,0.3
 5205,Mambule Road,tertiary,14301.1,195.8,32.6,0.4
 3852,Spring Road,secondary,13737.2,0.0,32.6,0.3
 1266,Basooka Kwavula Road,tertiary,10254.5,154.8,32.6,0.3
-31462,motorway_link,motorway_link,9199.7,153.0,32.5,0.3
+31462,unnamed motorway_link,motorway_link,9199.7,153.0,32.5,0.3
 468,Ndejje Road,tertiary,9165.1,122.8,32.6,0.3
 106,Muchanga Road,tertiary,9121.9,150.8,32.5,0.2
 1024,Kisimu,tertiary,7889.0,0.0,32.5,0.4
 218,Mugema Road,tertiary,6405.9,0.0,32.5,0.3
-9323,primary,primary,5712.4,0.0,32.5,0.3
+2510,unnamed trunk,trunk,5746.0,0.0,32.5,0.3
+9323,unnamed primary,primary,5712.4,0.0,32.5,0.3
 3035,Kireka Road,secondary,4545.4,73.7,32.6,0.3
 381,Access to Kajjansi Fisheries Research Centre,tertiary,4413.3,63.0,32.5,0.2
 3740,Bwaise Roundabout,primary,4398.1,0.0,32.6,0.4
@@ -62,7 +63,7 @@ way,name,highway,person_minutes,residents_delayed_5min,lon,lat
 1101,Kimera Road,tertiary,741.6,0.0,32.6,0.3
 9390,5th Street,tertiary,570.7,0.0,32.6,0.3
 5525,Alice Kaggwa Road,tertiary,545.5,0.0,32.6,0.4
-2478,secondary,secondary,444.6,0.0,32.6,0.4
+2478,unnamed secondary,secondary,444.6,0.0,32.6,0.4
 33064,Kyaliwajjala - Naalya Road,secondary,444.6,0.0,32.6,0.4
 3541,Nyanama Road,tertiary,352.0,0.0,32.6,0.3
 152,Wavamuno Road,secondary,340.5,5.3,32.6,0.2
@@ -83,7 +84,7 @@ way,name,highway,person_minutes,residents_delayed_5min,lon,lat
 4104,Kyagwe Road,tertiary,63.7,0.0,32.6,0.3
 32933,Naalya Road,secondary,63.4,0.0,32.6,0.4
 36521,Kyebando Ring Road,primary,63.4,0.0,32.6,0.4
-3611,trunk_link,trunk_link,53.8,0.0,32.6,0.3
+3611,unnamed trunk_link,trunk_link,53.8,0.0,32.6,0.3
 1850,Nsambya Road,primary,45.2,0.0,32.6,0.3
 2223,Apollo Nsibambi Road,tertiary,42.5,0.0,32.5,0.3
 61,Mengo Hill Road,secondary,40.0,0.0,32.6,0.3
@@ -103,10 +104,10 @@ way,name,highway,person_minutes,residents_delayed_5min,lon,lat
 3659,Sir Albert Cook Road,secondary,0.0,0.0,32.5,0.3
 2002,Nawuwongo Road,tertiary,0.0,0.0,32.6,0.3
 3727,Namirembe Road,secondary,0.0,0.0,32.6,0.3
-24080,secondary_link,secondary_link,0.0,0.0,32.6,0.3
+24080,unnamed secondary_link,secondary_link,0.0,0.0,32.6,0.3
 3722,Nsanji - Buloba Road,secondary,0.0,0.0,32.5,0.3
 3713,Zzana Bunamwaya By-Pass Road,tertiary,0.0,0.0,32.6,0.3
-2476,motorway,motorway,0.0,0.0,32.6,0.4
+2476,unnamed motorway,motorway,0.0,0.0,32.6,0.4
 3744,Access Road,trunk,0.0,0.0,32.6,0.3
 282,Kayemba Road,secondary,0.0,0.0,32.6,0.3
 11593,Kampala–Entebbe Expressway,motorway,0.0,0.0,32.5,0.2
