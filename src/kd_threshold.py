@@ -113,7 +113,9 @@ def main():
         axs[0].plot(pd.Timestamp("2017-01-01") + pd.to_timedelta(tt * 365.25, unit="D"), np.polyval(z, tt), "--", color="#b30000",
                     lw=1.5, label=f"trend in rain on flood days ({z[0]:+.1f} mm/yr)")
     axs[0].set_ylabel("3-day rain ending on the day (mm, CHIRPS)")
-    axs[0].legend(fontsize=8.5, loc="upper left")
+    axs[0].axvspan(pd.Timestamp("2021-04-01"), pd.Timestamp("2025-03-01"), color="#eee", lw=0, zorder=0)
+    axs[0].text(pd.Timestamp("2023-03-15"), 2, "news archive gap:\nfew events recovered", ha="center", fontsize=8.5, color="#666")
+    axs[0].legend(fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2, frameon=False)
     axs[0].set_title("Rain on reported flood days", loc="left")
     r0 = res.iloc[0]
     axs[1].errorbar([0, 1, 2], res.trend_or_per_year[:3], yerr=[res.trend_or_per_year[:3] - res.ci_lo[:3], res.ci_hi[:3] - res.trend_or_per_year[:3]],

@@ -8,7 +8,7 @@ date: "Draft, October 2026"
 
 # Abstract
 
-Kampala's floods are often blamed on heavier rain. We test that claim with open data alone. For 6,914 drainage-channel stretches across Greater Kampala (469 km of flowing channel), we combine OpenStreetMap drains, culverts and dump sites, Microsoft building footprints, JRC GHSL built-up and population layers (1975–2030), a 30 m terrain model and satellite rainfall (1981–2025). Kampala's rainfall extremes show no trend: the wettest day of the year changed by −1.0 mm per decade (p = 0.24) and the wettest three days by +0.7 mm per decade (p = 0.46). Annual totals rose by about 15% (p = 0.05). Reported flood days are often ordinary rain days: on five of seven well-dated events, satellite rain that day was below the 92nd percentile of wet days, and on two it was below the 22nd. An index of six present-day drainage pressures separates channels at 45 reported flood hotspots from other channels (AUC 0.73, 95% CI 0.58–0.89, spatial block bootstrap). The strongest pressures are buildings on low ground, buildings inside the 15 m channel reserve, culverts and bridges, and the loss of wetland. Upstream paving, by contrast, does not distinguish today's hotspots, which sit in long-built areas. A score built only from 1975–2000 change predicts where valley floors were built over in 2000–2020 (AUC 0.79, 95% CI 0.71–0.87), against 0.58 for the naive "already-built areas grow" rule. This identifies the fast-growing fringe as where the next hotspots are forming. Since 2000, the number of people on low ground beside channels has grown in step with the city, reaching about 205,000 in 2020. **[Pending: the 2017–2026 test of whether the rain needed to cause a reported flood has fallen, from the news-based flood catalogue.]** The evidence points to drainage capacity and encroachment, not rainfall, as the lever planners control. We release the channel inventory and an open maintenance dashboard.
+Kampala's floods are often blamed on heavier rain. We test that claim with open data alone. For 6,914 drainage-channel stretches across Greater Kampala (469 km of flowing channel), we combine OpenStreetMap drains, culverts and dump sites, Microsoft building footprints, JRC GHSL built-up and population layers (1975–2030), a 30 m terrain model and satellite rainfall (1981–2025). Kampala's rainfall extremes show no trend: the wettest day of the year changed by −1.0 mm per decade (p = 0.24) and the wettest three days by +0.7 mm per decade (p = 0.46). Annual totals rose by about 15% (p = 0.05). Reported flood days are often ordinary rain days: on five of seven well-dated events, satellite rain that day was below the 92nd percentile of wet days, and on two it was below the 22nd. An index of six present-day drainage pressures separates channels at 45 reported flood hotspots from other channels (AUC 0.73, 95% CI 0.58–0.89, spatial block bootstrap). The strongest pressures are buildings on low ground, buildings inside the 15 m channel reserve, culverts and bridges, and the loss of wetland. Upstream paving, by contrast, does not distinguish today's hotspots, which sit in long-built areas. A score built only from 1975–2000 change predicts where valley floors were built over in 2000–2020 (AUC 0.79, 95% CI 0.71–0.87), against 0.58 for the naive "already-built areas grow" rule. This identifies the fast-growing fringe as where the next hotspots are forming. Since 2000, the number of people on low ground beside channels has grown in step with the city, reaching about 205,000 in 2020. A test of whether the rain needed to cause a reported flood has fallen (2017–2026, 22 dated flood days) finds no detectable change, but has little statistical power; flood days are predicted by short, intense bursts (peak-hour rain, p = 0.01) rather than daily totals. The evidence points to drainage capacity and encroachment, not rainfall, as the lever planners control. We release the channel inventory and an open maintenance dashboard.
 
 # 1. Introduction
 
@@ -114,7 +114,15 @@ Radar change detection of new structures on open land is only exploratory:
 
 It is useful for inspection leads, not for counting encroachment.
 
-**4.7 Falling flood thresholds.** **[Pending: trend odds ratio, CI and Kendall τ from kd_threshold.py once the GDELT catalogue is complete.]**
+**4.7 Has the rain needed to flood fallen? Not detectably, and the record is too short to say.** We assembled 22 dated flood days for 2017–2026 from the GDELT news index (events reported by at least two outlets, filtered to flood-event headlines) and verified news reports. The news record has a large gap: few events could be recovered for 2021–2024, which reflects the archive, not an absence of floods. For every day, a logistic model relates the chance of a reported flood to rainfall and a time trend, controlling for the volume of Kampala news coverage.
+
+| Model (wet days, n = 1,947; 19 flood days) | Odds of a flood per year, same rain (95% CI) | p |
+|---|---|---|
+| Daily rain (CHIRPS) + coverage control | 1.07 (0.77–1.50) | 0.68 |
+| Daily rain, no coverage control | 1.02 (0.81–1.28) | 0.86 |
+| Peak-hour rain (NASA POWER) + coverage control | 1.06 (0.75–1.49) | 0.74 |
+
+The rain falling on flood days shows no trend either (Kendall τ = −0.04, p = 0.82; Fig. kd26). The test is underpowered: with so few events, the confidence intervals include both no change and a 50% yearly rise in flood odds at the same rain, so the hypothesis of falling thresholds can be neither confirmed nor rejected. One result is robust, though. Flood days track short, intense bursts far better than daily totals: peak-hour rain strongly predicts a reported flood (odds ratio 3.2 per log-unit, p = 0.01), while daily satellite rain does not (1.75, p = 0.25). Kampala's floods are driven by cloudbursts lasting minutes to hours, which daily satellite products average away. A rain-gauge network with sub-hourly recording, and a systematically kept flood log (such as the field-report layer of the Drain Watch tool), would let this test be repeated with adequate power.
 
 # 5. Discussion: what this means for planning
 
@@ -132,7 +140,9 @@ It is useful for inspection leads, not for counting encroachment.
 
 # 6. Conclusion
 
-[To finalise after 4.6.]
+Kampala's flood hotspots are not explained by heavier rain: rainfall extremes have not increased since 1981, and several recent floods followed ordinary rain. What sets the hotspots apart is how the city has built around its drains: homes on the floodplain, buildings inside the channel reserve, choke-point culverts and bridges, and the near-total loss of valley-floor wetland. A transparent index of these pressures picks out the hotspots (AUC 0.73), and a score built only from 1975–2000 change predicted where valley floors were built over in the following twenty years (AUC 0.79). That makes it possible to see the next hotspots forming, on the northern and eastern fringe, before they flood. About 205,000 people now live on low ground beside the channels.
+
+Whether the rain needed to cause a flood has fallen could not be determined: the dated flood record is too sparse. Kampala's floods respond to short cloudbursts rather than daily totals, which is why the city needs sub-hourly rain gauges and a systematic flood log. For planners, the message is that the main levers lie on the ground: enforce the drainage reserve on the worst stretches, keep culverts clear, protect the remaining wetlands as flood storage, and apply development control on the emerging-risk fringe now.
 
 # Data and code availability
 
@@ -140,4 +150,4 @@ Code: `src/kd_*.py`. Figures: `figures/kampala_drainage/`. Dashboard: Kampala Dr
 
 # Figures
 
-kd04 priority map · kd05 emerging risk · kd06 hotspot drivers · kd12 priority vs emerging · kd02 flood-day rain · kd23 hold-out · kd25 exposure · kd26 threshold trend (pending) · kd13 area pages (supplement) · kd10 radar after the storm.
+kd04 priority map · kd05 emerging risk · kd06 hotspot drivers · kd12 priority vs emerging · kd02 flood-day rain · kd23 hold-out · kd25 exposure · kd26 threshold test · kd13 area pages (supplement) · kd10 radar after the storm.
