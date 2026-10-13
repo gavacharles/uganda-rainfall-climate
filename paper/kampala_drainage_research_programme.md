@@ -27,10 +27,10 @@ The two papers already drafted in this repository (five-city urban flooding; Uga
 | A | Hotspot index AUC 0.73; 1975-2000 score predicts 2000-2020 encroachment (AUC 0.79); rainfall extremes flat; falling-threshold test pending catalogue | Main paper; draft in `kampala_drainage_paperA.md` | *Landscape and Urban Planning*, *Cities* |
 | B | Radar candidates: ~30% confirmed new building, ~1% of all new building detected | Not a standalone paper. Fold into A as a supporting method, or a short note on what free radar can and cannot do in an informal city | *Environment and Planning B* (short note) |
 | C | Dumping near culverts: 19% vs 12% at hotspots raw, but no effect after controls (OR 0.87, 0.51-1.59) | **Dropped as a separate paper (no fieldwork possible).** Reported in Paper A as a tested-but-unsupported pathway: dumping does not predict hotspots once density is controlled | *Habitat International*, *Cities* |
-| D | Exposure 36k (1975) to 205k (2020); shift to low ground 1975-2000 only | Can merge into A, or stand alone with a tenure/land-market section | *Habitat International*, *Land Use Policy* |
-| E | Method coded; Sentinel-2 run deferred (~10 GB) | Needs KCCA desilting dates | *Urban Water Journal* |
+| D | Exposure 36k (1975) to 205k (2020); exposure now growing fastest on the fringe; smaller building grain on low ground | **Drafted with land-tenure angle:** `kampala_drainage_paperD.md` | *Habitat International*, *Land Use Policy* |
+| E | Method coded; Sentinel-2 run deferred (~10 GB) | **Parked** (needs KCCA desilting dates) | *Urban Water Journal* |
 | D0 | GDELT-based catalogue building (2017-2026) | In progress | *Scientific Data* / *Data in Brief* |
-| T | Kampala Drain Watch published (map, work queue, shared field reports) | Pilot with KCCA division engineers | *Environment and Planning B* (urban analytics & code) |
+| T | Kampala Drain Watch live (gavacharles.github.io/kampala-drain-watch) | **Parked** as a paper; the tool stays live | *Environment and Planning B* (urban analytics & code) |
 
 Each planning-journal submission needs a policy and institutional section: the National Environment (Wetlands) Regulations, the KCCA drainage master plan (2016, partly implemented), NDP IV, and ideally interviews with KCCA and NEMA engineers.
 
