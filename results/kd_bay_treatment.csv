@@ -1,0 +1,15 @@
+,value
+vegetated_ha_1986,1200.42
+vegetated_ha_1995,1091.88
+vegetated_ha_2025,587.16
+lost_ha_1986_2025,613.26
+lost_pct,51.09
+value_lost_lo_usd,919890.0
+value_lost_hi_usd,1778454.0
+nakivubo_ratio_2025_1995,0.61
+N_retained_1995_kg_d,448.0
+N_retained_2025_kg_d,272.12
+N_lost_t_yr,64.2
+P_retained_1995_kg_d,60.0
+P_retained_2025_kg_d,36.44
+P_lost_t_yr,8.6

@@ -1,0 +1,31 @@
+year,region,valley_floor_ha,vegetated_ha,n_scenes,vegetated_pct
+1986,Nakivubo,649.0,528.7,4.0,81.5
+1986,Kinawataka,255.8,249.9,4.0,97.7
+1986,Kansanga,326.8,320.6,4.0,98.1
+1986,Munyonyo shore,103.8,101.2,4.0,97.6
+1986,"Bay fringe (lower Kinawataka, Luzira, Port Bell)",4378.7,3010.4,4.0,68.8
+1995,Nakivubo,649.0,466.7,6.0,71.9
+1995,Kinawataka,255.8,214.8,6.0,84.0
+1995,Kansanga,326.8,308.1,6.0,94.3
+1995,Munyonyo shore,103.8,102.2,6.0,98.5
+1995,"Bay fringe (lower Kinawataka, Luzira, Port Bell)",4631.8,3442.0,6.0,74.3
+2005,Nakivubo,647.8,373.7,24.0,57.7
+2005,Kinawataka,255.7,181.6,24.0,71.0
+2005,Kansanga,326.8,273.4,24.0,83.7
+2005,Munyonyo shore,103.8,97.7,24.0,94.2
+2005,"Bay fringe (lower Kinawataka, Luzira, Port Bell)",3981.1,3035.9,24.0,76.3
+2015,Nakivubo,648.8,329.8,7.0,50.8
+2015,Kinawataka,255.8,109.8,7.0,42.9
+2015,Kansanga,326.8,212.8,7.0,65.1
+2015,Munyonyo shore,103.7,82.4,7.0,79.4
+2015,"Bay fringe (lower Kinawataka, Luzira, Port Bell)",4432.5,2921.3,7.0,65.9
+2025,Nakivubo,649.0,283.5,23.0,43.7
+2025,Kinawataka,255.8,55.9,23.0,21.9
+2025,Kansanga,326.8,172.6,23.0,52.8
+2025,Munyonyo shore,103.8,75.1,23.0,72.4
+2025,"Bay fringe (lower Kinawataka, Luzira, Port Bell)",4704.9,2735.2,23.0,58.1
+1986,Bay-draining catchments,1335.3,1200.4,,89.9
+1995,Bay-draining catchments,1335.3,1091.9,,81.8
+2005,Bay-draining catchments,1334.1,926.5,,69.4
+2015,Bay-draining catchments,1335.1,734.8,,55.0
+2025,Bay-draining catchments,1335.3,587.2,,44.0
