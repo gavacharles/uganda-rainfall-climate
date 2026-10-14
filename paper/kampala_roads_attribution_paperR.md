@@ -244,7 +244,7 @@ Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The s
   - **The network is simplified.** Network effects are measured as access to the centre and to hospitals, without travel demand or congestion feedback. They are lower bounds on economic disruption.
   - **Elevation data.** The DEM predates some embankments, and the Entebbe Expressway is treated as raised.
   - **Validation** relies on eight reported events: enough to confirm that the model places floods in the right spots, not to calibrate depths.
-  - **Culvert dimensions are not observed.** Street-level imagery could fill this gap with computer vision: measuring culvert openings and detecting blockage at the ranked crossings. Open archives are thin in Kampala, though. KartaView has a photo within 60 m of only 2 of the top 60 crossings, and Mapillary coverage remains to be checked.
+  - **Culvert dimensions are not observed.** Street-level imagery could fill this gap with computer vision: measuring culvert openings and detecting blockage at the ranked crossings. Open street-level archives are thin in Kampala, though: KartaView has a photo within 60 m of only 2 of the top 60 crossings, and Mapillary was not accessible for this study. A culvert inventory from KCCA or UNRA would be the most direct way to close this gap.
 
 # 5. Conclusion
 
