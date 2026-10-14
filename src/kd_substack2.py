@@ -195,6 +195,90 @@ def x10():
     plt.close(fig)
 
 
+
+
+def _cover(fname, kicker, l1, l2, sub, draw, source):
+    """Substack cover 1456 x 1048, same layout as cover_substack_1456x1048.png."""
+    import matplotlib
+    from PIL import Image
+    D, KICK, R2 = "#0b0e14", "#4fb3e8", "#ff5a4f"
+    fig = plt.figure(figsize=(14.56, 10.48), dpi=100, facecolor=D)
+    ax = fig.add_axes([0.48, 0.045, 0.52, 0.955], facecolor=D)
+    draw(ax)
+    ax.axis("off")
+    g = fig.add_axes([0.48, 0.045, 0.14, 0.955])
+    grad = np.zeros((2, 256, 4))
+    grad[..., :3] = matplotlib.colors.to_rgb(D)
+    grad[..., 3] = np.linspace(1, 0, 256)
+    g.imshow(grad, aspect="auto", extent=[0, 1, 0, 1])
+    g.axis("off")
+    fig.text(0.055, 0.80, kicker, fontsize=17, fontweight="bold", color=KICK)
+    fig.text(0.055, 0.745, l1, fontsize=50, fontweight="bold", color="#f2f2f2", va="top", linespacing=1.05)
+    n1 = l1.count("\n") + 1
+    fig.text(0.055, 0.745 - 0.083 * n1, l2, fontsize=50, fontweight="bold", color=R2, va="top", linespacing=1.05)
+    n2 = l2.count("\n") + 1
+    fig.text(0.055, 0.745 - 0.083 * (n1 + n2) - 0.03, sub, fontsize=20, color="#a9adb5", va="top", linespacing=1.45)
+    fig.text(0.055, 0.075, "Credit: Gava Charles", fontsize=18, fontweight="bold", color="#f2f2f2")
+    fig.add_artist(plt.Rectangle((0, 0), 1, 0.045, transform=fig.transFigure, color="#06080c", zorder=5))
+    fig.text(0.055, 0.017, source, fontsize=10.5, color="#8a8f98", zorder=6)
+    fig.savefig(OUT / fname, dpi=100, facecolor=D)
+    plt.close(fig)
+    im = Image.open(OUT / fname)
+    if im.size != (1456, 1048):
+        im.resize((1456, 1048), Image.LANCZOS).save(OUT / fname)
+
+
+def covers():
+    import xarray as xr
+    from matplotlib.colors import ListedColormap
+    import kd_landcover as lc
+    import kd_bay as kb
+    KD = ROOT / "data" / "kd"
+    x, y, tr = lc.grid()
+    hand, cat, lo, la = lc.terrain(x, y)
+
+    def sponge(ax):
+        cm = ListedColormap(lc.COLORS)
+        r0, r1, c0, c1 = 120, 640, 60, 840
+        for k, yr in enumerate((1986, 2025)):
+            cls = xr.open_dataset(KD / f"landcover_{yr}.nc").cls.values[r0:r1, c0:c1]
+            h = hand[r0:r1, c0:c1]
+            top = 1 - k * 0.5
+            sub = ax.inset_axes([0.0, top - 0.49, 1.0, 0.47])
+            sub.imshow(np.where(np.isfinite(h), 1, np.nan), cmap=ListedColormap(["#1a1f29"]), aspect="auto")
+            sub.imshow(np.where((h < 3) & (cls >= 0), cls, np.nan).astype(float), cmap=cm, vmin=-0.5,
+                       vmax=len(lc.CLASSES) - 0.5, interpolation="nearest", aspect="auto")
+            sub.axis("off")
+            sub.text(0.97, 0.06, str(yr), transform=sub.transAxes, fontsize=34, fontweight="bold", color="white",
+                     ha="right", bbox=dict(facecolor="#0b0e14", alpha=0.6, edgecolor="none", pad=4))
+
+    def bay(ax):
+        comp = xr.open_dataset(KD / "sat_bay_s2_dry.nc")
+        grey = np.clip(np.dstack([comp.B04, comp.B03, comp.B02]).mean(2) / 0.15, 0, 1)
+        ext = [float(comp.x.min()), float(comp.x.max()), float(comp.y.min()), float(comp.y.max())]
+        T = kb.scene_turb("2019-11-21")
+        ax.imshow(grey, cmap="Greys_r", extent=ext, vmin=-0.2, vmax=2.2)
+        ax.imshow(T.values, cmap="YlOrBr", vmin=4, vmax=24,
+                  extent=[float(T.x.min()), float(T.x.max()), float(T.y.min()), float(T.y.max())])
+        ax.set_xlim(455600, 466000)
+        ax.set_ylim(22200, 35800)
+        ax.set_aspect("auto")
+        ax.text(0.97, 0.015, "Murchison Bay after rain, 21 Nov 2019 · darker orange = murkier", transform=ax.transAxes,
+                fontsize=11, color="#e6e6e6", ha="right", bbox=dict(facecolor="#0b0e14", alpha=0.75, edgecolor="none", pad=4))
+
+    _cover("cover_sponge_1456x1048.png", "KAMPALA FLOODS · 40 YEARS FROM SPACE",
+           "Kampala paved\nits sponge.", "Now the rain\ncomes indoors.",
+           "Half the valley wetlands that held storm\nwater are gone. 17 million m³ of water\nnow has nowhere to go.\n\nMaps: valley floors in green (wetland, trees)\nturning red (built, bare).",
+           sponge, "Imagery: NASA/USGS Landsat · land cover: machine learning (LightGBM) on WorldCover/Impact Observatory "
+                   "labels · terrain: Copernicus GLO-30")
+    _cover("cover_bay_1456x1048.png", "KAMPALA'S WATER · LAKE VICTORIA",
+           "We built over", "Kampala's\nkidneys.",
+           "The swamps that cleaned the city's water\nbefore it reached the lake are half gone.\n"
+           "From space, the bay is getting murkier.",
+           bay, "Imagery: Copernicus Sentinel-2 (ESA) · turbidity: Dogliotti et al. 2015 · wetland: NASA/USGS Landsat")
+    print("covers done")
+
+
 if __name__ == "__main__":
     for f in sys.argv[1:] or ["x4", "x5", "x6", "x7", "x8"]:
         globals()[f]()

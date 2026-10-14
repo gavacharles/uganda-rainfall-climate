@@ -1,10 +1,10 @@
-# Kampala's drinking water starts in its drains
+# We built over Kampala's kidneys
 
 *Gava Charles*
 
-**Subtitle:** The swamps that once cleaned the city's water before it reached Lake Victoria are half gone. Forty years of satellite images show the bay turning green and murky where the channels pour in.
+**Subtitle:** Kampala drinks from the same bay its drains empty into. The swamps that once cleaned the city's water before it reached Lake Victoria are half gone. Forty years of satellite images show the bay turning green and murky where the channels pour in.
 
-**Cover image:** `kd42_bay_plumes.png` (or a crop of panel c, the bay after rain).
+**Cover image:** `cover_bay_1456x1048.png` (1456 × 1048).
 
 ---
 
@@ -66,7 +66,7 @@ After heavy rain, plumes of brown water spread across the whole inner bay. Panel
 - **Water bills.** The dirtier the water at the intake, the more chemicals and energy it takes to make it safe. Operators at Ggaba were already reporting more colour, turbidity and algae in the raw water 25 years ago. The satellite record shows the trend has continued.
 - **Health.** Faecal bacteria that the swamp once removed now reach the bay. Fishing communities and people who use lake water directly carry that risk first.
 - **The lake.** Nitrogen and phosphorus feed algal blooms, which take oxygen from the water and harm fish.
-- **Floods.** The same swamps used to hold flood water (that is my previous post, *The sponge we paved*). Kampala lost one piece of land and two services with it.
+- **Floods.** The same swamps used to hold flood water (that is my previous post, *Kampala paved its sponge*). Kampala lost one piece of land and two services with it.
 
 ## What should be done
 

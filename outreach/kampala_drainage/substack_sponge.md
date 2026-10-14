@@ -1,10 +1,10 @@
-# The sponge we paved
+# Kampala paved its sponge. Now the rain comes indoors.
 
 *Gava Charles*
 
 **Subtitle:** Kampala's valley swamps once soaked up storms and cleaned the water flowing into Lake Victoria. We have built over half of them. Here is the bill.
 
-**Cover image:** `x6_sponge_pools.png` (or a frame of `kd_a3_wetlands_timelapse.gif`).
+**Cover image:** `cover_sponge_1456x1048.png` (1456 × 1048).
 
 ---
 
@@ -48,7 +48,7 @@ In 1975, five of Kampala's six main channel systems had more valley storage than
 
 The second job gets far less attention. In the 1990s, scientists measured the Nakivubo swamp removing about half the nitrogen and 91% of the faecal bacteria from the city's wastewater before it reached Lake Victoria, which is where Kampala's drinking water comes from.
 
-Half of the swamps that did that job are now gone, and forty years of satellite images show the bay turning green and murky where the channels pour in. That is the subject of my next post: **Kampala's drinking water starts in its drains.**
+Half of the swamps that did that job are now gone, and forty years of satellite images show the bay turning green and murky where the channels pour in. That is the subject of my next post: **We built over Kampala's kidneys.**
 
 > **[GRAPHIC: `x8_bay_treatment.png`. Green wetland draining to Murchison Bay: 1,200 ha in 1986, 587 ha in 2025.]**
 
