@@ -2,7 +2,7 @@
 
 *Gava Charles*
 
-**Subtitle:** Kampala's valley swamps once soaked up storms and cleaned the water flowing into Lake Victoria. We have built over half of them. Here is the bill.
+**Subtitle:** Kampala's valley swamps once soaked up its storms. We have built over half of them, and 17 million m³ of water now has nowhere to go but streets and homes.
 
 **Cover image:** `cover_sponge_1456x1048.png` (1456 × 1048).
 
