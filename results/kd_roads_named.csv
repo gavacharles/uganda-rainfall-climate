@@ -1,0 +1,440 @@
+name,km,imp_T10_clean_m,imp_T10_silted_m,imp_T2_silted_m,max_depth_T10_m
+Northern Bypass,41.04,10304.24,15957.08,13341.08,1.1
+Entebbe Road,20.45,461.27,1615.78,1319.5,1.05
+Jinja Road,11.94,477.85,1609.96,1242.57,0.4
+Sentema Road,16.61,1325.1,1424.62,1325.1,1.16
+Kampala - Masaka Road,11.14,974.85,1266.53,1066.94,0.65
+Gayaza Road,14.36,468.31,1211.98,620.13,1.15
+Bombo Road,10.38,364.15,1208.78,736.08,1.75
+Mukwano (By-Pass) Road,1.41,0.0,1133.52,853.58,0.2
+Kasangati Road,6.29,783.91,980.87,980.87,0.85
+Access to Kajjansi Fisheries Research Centre,2.06,293.75,881.26,489.59,0.5
+Wankulukuku Road,9.09,449.33,874.77,874.77,1.3
+Mambule Road,0.92,0.0,726.09,503.42,0.28
+Bwaise Nabweru Road,2.24,265.08,605.67,529.89,0.99
+Nsambya Road,2.46,0.0,516.98,495.26,0.15
+Mukwano Road,0.69,0.0,495.58,396.47,0.15
+Ndejje Road,4.72,296.01,493.75,493.75,1.1
+Suna Road,2.57,0.0,473.4,287.27,0.2
+Kigo Road,11.15,258.57,454.03,356.56,1.5
+Nalukolongo Road,1.02,166.36,445.31,445.31,0.5
+Masaka Road,1.83,98.86,395.46,197.73,0.3
+7th Street,2.06,0.0,392.74,294.56,0.15
+Bwaise Roundabout,0.39,294.42,392.56,294.42,0.92
+Kiyimba Road,1.18,0.0,392.12,294.09,0.25
+Kawaala Road,2.26,222.75,385.5,385.5,1.25
+Kibuye Natete Road,4.96,191.53,383.05,287.29,0.55
+Alice Kaggwa Road,0.39,349.92,349.92,349.92,0.65
+Nansana - Busunju Road,16.46,199.54,299.3,199.54,0.45
+Gulu - Kampala Road,13.54,298.72,298.72,298.72,0.9
+Nsanji - Buloba Road,3.51,292.6,292.6,292.6,2.57
+Salaama Road,8.36,193.48,289.94,289.94,0.55
+Nakawuka Road,14.14,195.18,289.69,195.18,0.35
+Eng. Hussein L. Road,1.44,96.24,288.73,192.49,0.3
+Old Masaka Road,1.37,277.63,277.63,277.63,0.45
+Kibuli Road,1.81,0.0,270.98,180.65,0.15
+Hoima Road,7.41,98.67,268.93,170.36,0.45
+Nakigalala Road,1.99,93.41,257.85,257.85,0.35
+Kyagwe Road,1.54,0.0,255.41,255.41,0.1
+5th Street,1.0,77.77,248.31,248.31,0.65
+Junju Road,2.5,79.26,248.08,158.51,0.35
+Buwaate Road,3.28,181.34,233.46,233.46,0.35
+Kajjansi Roundabout,0.23,230.26,230.26,230.26,0.6
+Muchanga road,0.2,134.73,202.09,134.73,0.94
+Wavamuno Road,2.84,99.94,199.89,99.94,0.9
+Kyambogo Road,1.55,99.91,199.81,99.91,0.4
+Ggaba Road,9.58,199.74,199.74,199.74,0.55
+Kireka Road,4.24,199.36,199.36,199.36,0.92
+Kampala - Nansana Road,1.59,99.65,199.3,99.65,0.55
+Kisimu,5.4,98.19,196.37,98.19,0.65
+Naguru Road,1.38,0.0,195.98,195.98,0.25
+Portbell Road,4.63,0.0,195.94,195.94,0.25
+Nyanama Road,2.18,0.0,195.63,97.82,0.25
+Kulambiro Road,0.92,0.0,195.54,195.54,0.25
+Mpaabaana Road,0.29,0.0,192.95,192.95,0.1
+Hanlon Road,1.45,0.0,192.31,192.31,0.0
+Katwe Road,2.19,0.0,192.29,96.14,0.1
+Mutesi Road,0.48,0.0,191.45,95.73,0.15
+Soweto Road,1.24,95.69,191.38,191.38,0.3
+Binaisa Road,2.51,95.12,190.24,190.24,0.45
+Magumba Road,0.57,94.87,189.73,189.73,0.65
+Weraga Road,0.72,0.0,188.34,188.34,0.15
+Busabala Road,10.34,96.38,187.66,96.38,0.6
+Sir Albert Cook Road,1.24,0.0,184.73,184.73,0.2
+Nateete Road,0.91,91.21,182.41,91.21,0.35
+Basooka Kwavula Road,0.63,0.0,181.32,0.0,0.1
+Hajji Kirumaganyi Road,0.72,0.0,180.04,180.04,0.2
+Fort Portal - Kampala Road,12.46,173.52,173.52,173.52,0.55
+Nakivubo Channel Road,0.34,0.0,169.18,0.0,0.1
+Nakivubo Place,0.47,0.0,155.89,0.0,0.05
+Ntinda Road,3.98,0.0,148.47,0.0,0.1
+Muchanga Road,0.22,73.17,146.33,146.33,0.45
+Namirembe Road,1.7,0.0,140.31,0.0,0.1
+Aligo Close,0.12,115.58,115.58,115.58,0.48
+Ring Road Nalukologo Industrial Area,0.11,0.0,112.19,56.1,0.0
+Kyebando Ring Road,1.41,53.65,108.47,108.47,0.35
+Musoke Road,2.0,0.0,99.88,0.0,0.2
+Kinawataka Road,1.9,0.0,99.75,99.75,0.12
+Spring Road,1.99,0.0,99.58,99.58,0.25
+Kawanda - Senge Road,3.98,0.0,99.5,0.0,0.2
+Buwaate Kungu Road,2.47,98.68,98.68,98.68,0.45
+Namasole (Kiyembe) Road,1.94,0.0,98.63,98.63,0.1
+Nakivubo Road,1.03,0.0,98.3,98.3,0.1
+Mugema Road,3.47,0.0,97.78,0.0,0.02
+Kabale Busega Road,2.05,0.0,97.75,97.75,0.0
+Jakana Road,0.68,97.45,97.45,97.45,0.3
+Nawuwongo Road,2.13,0.0,96.9,96.9,0.2
+Makerere Primary Road Kipipa,0.91,0.0,96.4,0.0,0.0
+Makamba Road,1.55,0.0,96.18,96.18,0.25
+Kira - Najjeera Road,1.77,96.03,96.03,96.03,0.55
+Semakokiro Road,0.47,0.0,94.72,0.0,0.05
+Gadafi Road,0.99,0.0,93.69,0.0,0.05
+Munana Road,0.37,93.07,93.07,93.07,1.0
+Kimera Road,0.91,0.0,92.19,0.0,0.1
+Gogonya Road,1.01,0.0,91.41,0.0,0.1
+Kisenyi Road,0.96,0.0,91.35,0.0,0.1
+Muwanga II Road,1.11,0.0,89.33,89.33,0.15
+Lugogo By-Pass - Rotary Avenue,4.79,0.0,88.99,88.99,0.15
+Seguku Bunamwaya Road,4.72,0.0,88.04,88.04,0.2
+Kawaala - Bwaise Road,0.44,0.0,87.81,0.0,0.0
+Wamala Road,1.74,0.0,86.49,0.0,0.06
+Kampala Flyover,0.53,0.0,71.4,71.4,0.15
+Nsooba Kyebando Road,0.39,67.2,67.2,67.2,0.3
+Kyaliwajjala - Naalya Road,2.36,66.75,66.75,66.75,0.35
+Queens Way,1.71,0.0,42.47,42.47,0.1
+Katwe Roundabout,0.14,0.0,41.97,41.97,0.25
+Tula Road,0.15,34.53,34.53,34.53,1.0
+Access Road,0.42,0.0,15.66,15.66,0.25
+Muganzi Awongererwa Road,1.46,0.0,0.0,0.0,0.0
+Nakivubo Street,0.13,0.0,0.0,0.0,0.0
+Mufunya Road,0.32,0.0,0.0,0.0,0.0
+Nalumunye Road,1.1,0.0,0.0,0.0,0.0
+Mudeka Road,0.15,0.0,0.0,0.0,0.0
+Muchanga Bridge,0.01,0.0,0.0,0.0,0.0
+Nabulagala Road,1.54,0.0,0.0,0.0,0.0
+Moyo Road,0.8,0.0,0.0,0.0,0.0
+Namboole Bypass 2 ck,1.58,0.0,0.0,0.0,0.0
+Mobutu Road,1.84,0.0,0.0,0.0,0.0
+Mugongo Road,2.6,0.0,0.0,0.0,0.0
+Namboole Road,2.04,0.0,0.0,0.0,0.0
+Mitala Road,0.12,0.0,0.0,0.0,0.0
+Namilyango Road,2.55,0.0,0.0,0.0,0.0
+Micheal O Close,0.16,0.0,0.0,0.0,0.0
+Mengo Hill Road,0.76,0.0,0.0,0.0,0.0
+Medisell Road,2.05,0.0,0.0,0.0,0.0
+Namugongo Road,3.9,0.0,0.0,0.0,0.0
+Mbogo Road 1,0.8,0.0,0.0,0.0,0.0
+Namulondo Road,1.73,0.0,0.0,0.0,0.0
+Mbogo Road,13.09,0.0,0.0,0.0,0.0
+Muganzi Lwaza Road,0.53,0.0,0.0,0.0,0.0
+Musajja Alumbwa Road,0.01,0.0,0.0,0.0,0.0
+Mugwanya Road,1.2,0.0,0.0,0.0,0.0
+Mulago Hill Road 2,0.49,0.0,0.0,0.0,0.0
+Muwuuriza Road,0.09,0.0,0.0,0.0,0.0
+Nabunya Road,1.29,0.0,0.0,0.0,0.0
+Muwonge Road,0.65,0.0,0.0,0.0,0.0
+Nabweru Road,1.61,0.0,0.0,0.0,0.0
+Naguru Avenue,0.8,0.0,0.0,0.0,0.0
+Mutungo Tank Road,1.43,0.0,0.0,0.0,0.0
+Naguru Drive,1.23,0.0,0.0,0.0,0.0
+Mutungo Road,0.64,0.0,0.0,0.0,0.0
+Mutundwe Road,3.34,0.0,0.0,0.0,0.0
+Nakasero Hill,0.47,0.0,0.0,0.0,0.0
+Nakasero Hill Road,0.75,0.0,0.0,0.0,0.0
+Nakasero Lane,0.31,0.0,0.0,0.0,0.0
+Mutundwe Kirinyabigo Road,3.42,0.0,0.0,0.0,0.0
+Nakasero Road,1.6,0.0,0.0,0.0,0.0
+Nakawa Jinja Road,0.58,0.0,0.0,0.0,0.0
+Mutesa II Road,1.59,0.0,0.0,0.0,0.0
+Nakibinge Road,0.85,0.0,0.0,0.0,0.0
+Mutesa 1 Road,2.12,0.0,0.0,0.0,0.0
+Muteesa Road,0.35,0.0,0.0,0.0,0.0
+Muteesa 1 Road,0.27,0.0,0.0,0.0,0.0
+Mutaasa Road,0.32,0.0,0.0,0.0,0.0
+Musajjawaza Road,0.24,0.0,0.0,0.0,0.0
+Nakivubo Mews,0.17,0.0,0.0,0.0,0.0
+Naalya Road,0.73,0.0,0.0,0.0,0.15
+Munyongo Roundabout,0.18,0.0,0.0,0.0,0.0
+Namungona Road,1.27,0.0,0.0,0.0,0.0
+4th Street,0.51,0.0,0.0,0.0,0.0
+Namuzikiza Close,1.6,0.0,0.0,0.0,0.0
+The Square 2,0.33,0.0,0.0,0.0,0.0
+Ternan Avenue,0.72,0.0,0.0,0.0,0.0
+Tank Hill Road,2.65,0.0,0.0,0.0,0.0
+Tank Hill Bypass,0.51,0.0,0.0,0.0,0.0
+Swaminarayan Road,0.03,0.0,0.0,0.0,0.0
+Subway Rounabout,0.18,0.0,0.0,0.0,0.0
+Stensera Road,0.97,0.0,0.0,0.0,0.0
+Station Road,0.62,0.0,0.0,0.0,0.0
+Station Approach,0.66,0.0,0.0,0.0,0.0
+St.Marks College Road,3.71,0.0,0.0,0.0,0.0
+St. Lawrence University Lane,0.02,0.0,0.0,0.0,0.0
+St. Barnabas Road,0.81,0.0,0.0,0.0,0.0
+St Andrew Kaggwa Road,1.51,0.0,0.0,0.0,0.0
+Ssemwezi Kaggwa Road,0.79,0.0,0.0,0.0,0.0
+Ssebbunza Road,1.27,0.0,0.0,0.0,0.0
+Speke Road,0.64,0.0,0.0,0.0,0.0
+Southern Bypass,3.27,0.0,0.0,0.0,0.0
+Snay Bin Amir Rise,0.21,0.0,0.0,0.0,0.0
+Sir Apollo Kaggwa Road,3.43,0.0,0.0,0.0,0.0
+Sikh Street,0.3,0.0,0.0,0.0,0.0
+The Square 1,0.48,0.0,0.0,0.0,0.0
+Total Road,0.23,0.0,0.0,0.0,0.0
+Siad Barre Avenue,0.2,0.0,0.0,0.0,0.0
+Ttula Road,6.91,0.0,0.0,0.0,0.0
+kira-najeera,8.48,0.0,0.0,0.0,0.0
+Zzana Bunamwaya By-Pass Road,2.53,0.0,0.0,0.0,0.1
+Yusuf Lule Road,5.22,0.0,0.0,0.0,0.0
+Wilson Road,0.49,0.0,0.0,0.0,0.0
+Willis Road,0.66,0.0,0.0,0.0,0.0
+William Street,1.49,0.0,0.0,0.0,0.0
+Wilberforce Kakoma,0.54,0.0,0.0,0.0,0.0
+Waterfront Road,0.3,0.0,0.0,0.0,0.0
+Wandegeya Road,0.5,0.0,0.0,0.0,0.0
+Wampewo Avenue,0.97,0.0,0.0,0.0,0.0
+Waligo Road,0.44,0.0,0.0,0.0,0.0
+Waliggo Road,3.73,0.0,0.0,0.0,0.0
+Wakaliga Road,0.22,0.0,0.0,0.0,0.0
+Victoria View Road,1.36,0.0,0.0,0.0,0.0
+Vanessa Villa Lane,0.55,0.0,0.0,0.0,0.0
+Upper Mulago Hill Road,0.74,0.0,0.0,0.0,0.0
+Upper Kololo Terrace,1.92,0.0,0.0,0.0,0.0
+Tugbuga Road,0.89,0.0,0.0,0.0,0.0
+Tufnell Drive,0.8,0.0,0.0,0.0,0.0
+Siad Barre Road,0.17,0.0,0.0,0.0,0.0
+Shimoni Road,0.38,0.0,0.0,0.0,0.0
+Nanfumbambi Road,1.37,0.0,0.0,0.0,0.0
+Old Butabika Road,1.5,0.0,0.0,0.0,0.0
+Ntinda Kigowa Road,1.31,0.0,0.0,0.0,0.0
+Ntinda II Road,1.57,0.0,0.0,0.0,0.0
+Nsooba Road,0.76,0.0,0.0,0.0,0.0
+Matia Mulumba Road,0.58,0.0,0.0,0.0,0.0
+Nsambya Estate Road,1.46,0.0,0.0,0.0,0.0
+Nsalo Road,0.36,0.0,0.0,0.0,0.0
+Nora Nanfuka Road,0.22,0.0,0.0,0.0,0.0
+Nkurumah Road,0.71,0.0,0.0,0.0,0.0
+Nile Avenue / Shimoni Road,0.19,0.0,0.0,0.0,0.0
+Nile Avenue,2.29,0.0,0.0,0.0,0.0
+Nfufu Road,2.74,0.0,0.0,0.0,0.0
+New Port Bell Road,1.92,0.0,0.0,0.0,0.0
+Nehru Avenue,0.55,0.0,0.0,0.0,0.0
+Ndiwulira Petero Road,0.88,0.0,0.0,0.0,0.0
+Ndingidi Road,0.62,0.0,0.0,0.0,0.0
+Ndagire Road,1.36,0.0,0.0,0.0,0.0
+Nasser Road,0.76,0.0,0.0,0.0,0.0
+Nasir Nsubuga Drive,0.82,0.0,0.0,0.0,0.0
+Nanjala Road,0.21,0.0,0.0,0.0,0.0
+Old Butabika (Mutungo) Road,0.5,0.0,0.0,0.0,0.0
+Old Jinja Road,4.36,0.0,0.0,0.0,0.0
+Shimon Roundabout,0.18,0.0,0.0,0.0,0.0
+Old Kampala Road,0.53,0.0,0.0,0.0,0.0
+Sezibwa Road,0.84,0.0,0.0,0.0,0.0
+Serwanga Musone Road,0.49,0.0,0.0,0.0,0.0
+Sembera Road,1.77,0.0,0.0,0.0,0.0
+Sekabaka Kintu Road,1.08,0.0,0.0,0.0,0.0
+School Lane,0.22,0.0,0.0,0.0,0.0
+Saddler Way,0.4,0.0,0.0,0.0,0.0
+Rubaga Road,2.21,0.0,0.0,0.0,0.0
+Robert Mugabe Road,2.09,0.0,0.0,0.0,0.0
+Rashid Khamis Road,0.66,0.0,0.0,0.0,0.0
+Queens Lane,0.3,0.0,0.0,0.0,0.0
+Princess Avenue,1.38,0.0,0.0,0.0,0.0
+Prince Charles Drive,2.75,0.0,0.0,0.0,0.0
+Prince Badru Kakungulu Road,0.04,0.0,0.0,0.0,0.0
+Posta Road,0.44,0.0,0.0,0.0,0.0
+Philip Morris Victory Road,0.96,0.0,0.0,0.0,0.0
+Paul Wasswa Road,0.43,0.0,0.0,0.0,0.0
+Old Portbell Road,1.67,0.0,0.0,0.0,0.0
+Old Kira Road,0.35,0.0,0.0,0.0,0.0
+Old Kiira Road,2.25,0.0,0.0,0.0,0.0
+Mawanda Road,1.96,0.0,0.0,0.0,0.0
+Lungujja Road,0.64,0.0,0.0,0.0,0.0
+Masiro Road,2.07,0.0,0.0,0.0,0.0
+Frobel Road,0.44,0.0,0.0,0.0,0.0
+Haji Musa Kasule Road,0.87,0.0,0.0,0.0,0.0
+Grace Road,0.13,0.0,0.0,0.0,0.0
+Gomotoka Road,0.7,0.0,0.0,0.0,0.0
+Ggaba TTC Road,0.47,0.0,0.0,0.0,0.0
+Ggaba Bypass Road,0.39,0.0,0.0,0.0,0.0
+Ggaba Bypass,1.3,0.0,0.0,0.0,0.0
+George Street,0.44,0.0,0.0,0.0,0.0
+Gaddafi Road,0.19,0.0,0.0,0.0,0.0
+Gabunga Road 2,2.0,0.0,0.0,0.0,0.0
+Fort Road,0.27,0.0,0.0,0.0,0.0
+Itek Road,0.14,0.0,0.0,0.0,0.0
+Father Mayanja Road,0.79,0.0,0.0,0.0,0.0
+Erisa Road,0.42,0.0,0.0,0.0,0.0
+Entebbe–Kampala Expressway,22.68,0.0,0.0,0.0,0.0
+Entebbe-Kampala Expressway,1.49,0.0,0.0,0.0,0.0
+Entebbe - Kampala Road,0.03,0.0,0.0,0.0,0.0
+Dwaliro Road,0.37,0.0,0.0,0.0,0.0
+Dr. Simbeguya Road,2.27,0.0,0.0,0.0,0.0
+Dastur Street,0.38,0.0,0.0,0.0,0.0
+Chwa II Road,0.62,0.0,0.0,0.0,0.0
+Ismael Road,1.35,0.0,0.0,0.0,0.0
+Janey R Close,0.01,0.0,0.0,0.0,0.0
+Kampala - Entebbe Expressway,2.35,0.0,0.0,0.0,0.0
+Kagimu Drive,0.62,0.0,0.0,0.0,0.0
+Kalungu Road 1,1.88,0.0,0.0,0.0,0.0
+Kalungi Road,0.61,0.0,0.0,0.0,0.0
+Kalinda Road,0.3,0.0,0.0,0.0,0.0
+Kalema Road,2.03,0.0,0.0,0.0,0.0
+Kalasana Road,0.85,0.0,0.0,0.0,0.0
+Kakungulu Road,0.28,0.0,0.0,0.0,0.0
+Kakanga Road,0.71,0.0,0.0,0.0,0.0
+Kajjansi - Lutembe road,1.11,0.0,0.0,0.0,0.0
+Kajagali Close,1.43,0.0,0.0,0.0,0.0
+Kafumbe Mukasa Road,0.63,0.0,0.0,0.0,0.05
+Jinja - Kampala Road,12.37,0.0,0.0,0.0,0.0
+Kafu Road,0.61,0.0,0.0,0.0,0.0
+Kafeero Zone Road,0.79,0.0,0.0,0.0,0.0
+Kaduyu Road,0.53,0.0,0.0,0.0,0.0
+Kaduyu Lane,0.57,0.0,0.0,0.0,0.0
+Kabuusu Road,1.3,0.0,0.0,0.0,0.0
+Kabaka Anjagala Road,0.48,0.0,0.0,0.0,0.0
+KAWEMPE I 2561,0.06,0.0,0.0,0.0,0.0
+Juko Road,0.5,0.0,0.0,0.0,0.0
+Johnson Street,0.36,0.0,0.0,0.0,0.0
+Church Road,1.43,0.0,0.0,0.0,0.0
+Chorley Crescent,1.59,0.0,0.0,0.0,0.0
+Channel Street,0.17,0.0,0.0,0.0,0.0
+Basima Road,0.2,0.0,0.0,0.0,0.0
+Bukasa Road,3.61,0.0,0.0,0.0,0.05
+Buganda Road,2.84,0.0,0.0,0.0,0.0
+Boston Lane,1.07,0.0,0.0,0.0,0.0
+Bivamuntuyo Road,0.23,0.0,0.0,0.0,0.0
+Bishop Tucker Road,7.02,0.0,0.0,0.0,0.0
+Binasha Road,0.3,0.0,0.0,0.0,0.05
+Biina Road,0.55,0.0,0.0,0.0,0.0
+Ben Kiwanuka Street,1.2,0.0,0.0,0.0,0.0
+Bayise Road,0.39,0.0,0.0,0.0,0.0
+Basiimwa Fred Road,0.21,0.0,0.0,0.0,0.0
+Central Road,1.52,0.0,0.0,0.0,0.0
+Bandali Rise,0.67,0.0,0.0,0.0,0.0
+Balintuma Road,1.7,0.0,0.0,0.0,0.0
+Bahai Road,3.52,0.0,0.0,0.0,0.15
+Apollo Nsibambi Road,1.47,0.0,0.0,0.0,0.1
+Albert Cook Road,1.23,0.0,0.0,0.0,0.0
+Akii Bua Road,1.15,0.0,0.0,0.0,0.0
+Africana Roundabout,0.17,0.0,0.0,0.0,0.0
+Adonai Close,0.17,0.0,0.0,0.0,0.0
+Acacia Avenue,3.46,0.0,0.0,0.0,0.1
+Bukerere Road,7.59,0.0,0.0,0.0,0.0
+Bukoto - Kisaasi Road,1.15,0.0,0.0,0.0,0.1
+Bukoto Kisaasi Road,2.76,0.0,0.0,0.0,0.1
+Bukoto Ntinda Road,1.31,0.0,0.0,0.0,0.0
+Cecilia Road,0.79,0.0,0.0,0.0,0.0
+Cavers Crescent,0.93,0.0,0.0,0.0,0.0
+Canon Road,0.53,0.0,0.0,0.0,0.0
+Canon Apollo Kivebulaya Road,0.56,0.0,0.0,0.0,0.0
+Campling Road,0.2,0.0,0.0,0.0,0.0
+Bwebale Road,0.8,0.0,0.0,0.0,0.0
+Bwaise III 2644,0.06,0.0,0.0,0.0,0.0
+Bwaise II 1809,0.89,0.0,0.0,0.0,0.0
+Bwaise I 2503,0.08,0.0,0.0,0.0,0.0
+Buziga Road,0.68,0.0,0.0,0.0,0.0
+Buziga Rise,0.33,0.0,0.0,0.0,0.0
+Buwambu Road,3.45,0.0,0.0,0.0,0.0
+Butikiro Road,0.6,0.0,0.0,0.0,0.0
+Butabika Road,0.98,0.0,0.0,0.0,0.0
+Busega Roundabout,0.23,0.0,0.0,0.0,0.0
+Busega Road,0.39,0.0,0.0,0.0,0.0
+Burton Street,0.46,0.0,0.0,0.0,0.0
+Bulange Way,0.18,0.0,0.0,0.0,0.0
+Bulabira Road,1.3,0.0,0.0,0.0,0.0
+Kamanya Road,1.46,0.0,0.0,0.0,0.0
+Kampala Road,3.88,0.0,0.0,0.0,0.0
+Masanafu Road,1.52,0.0,0.0,0.0,0.0
+Kyanja School Road,1.73,0.0,0.0,0.0,0.0
+Lukuli Road,7.47,0.0,0.0,0.0,0.0
+Lugoba Road,3.81,0.0,0.0,0.0,0.0
+Lubowa Terrace,2.64,0.0,0.0,0.0,0.0
+Lubowa Road,0.28,0.0,0.0,0.0,0.0
+Lubiri Ring Road,3.46,0.0,0.0,0.0,0.0
+Lower Mulago Hill Road,0.5,0.0,0.0,0.0,0.0
+Lower Kololo Terrace,1.08,0.0,0.0,0.0,0.0
+Lasto Lukoma Road,1.42,0.0,0.0,0.0,0.0
+Kyebando Road,0.77,0.0,0.0,0.0,0.0
+Kyanja Road,3.26,0.0,0.0,0.0,0.0
+Luthuli Avenue,1.71,0.0,0.0,0.0,0.1
+Kyaliwajjala - Kira Road,2.08,0.0,0.0,0.0,0.0
+Kyalema Road,0.21,0.0,0.0,0.0,0.0
+Kyadondo Road,0.76,0.0,0.0,0.0,0.0
+Kyaddondo Road 1,1.25,0.0,0.0,0.0,0.0
+Kyabakadde Road,0.42,0.0,0.0,0.0,0.0
+Kweba Road,0.69,0.0,0.0,0.0,0.0
+Kulambiro Ring Road,2.59,0.0,0.0,0.0,0.0
+Kulambiro Kungu Road,1.37,0.0,0.0,0.0,0.0
+Kkaga Road,2.55,0.0,0.0,0.0,0.0
+Lumumba Avenue,1.79,0.0,0.0,0.0,0.0
+Luthuli Lane,0.49,0.0,0.0,0.0,0.0
+Kampala–Entebbe Expressway,0.97,0.0,0.0,0.0,0.0
+Maganjo Mosque Road,4.3,0.0,0.0,0.0,0.0
+Martyrs' Way,2.06,0.0,0.0,0.0,0.0
+Martyrs Way,0.99,0.0,0.0,0.0,0.0
+Martin Road,0.73,0.0,0.0,0.0,0.0
+Market Street,0.44,0.0,0.0,0.0,0.0
+Market Square Street,0.17,0.0,0.0,0.0,0.0
+Mapeera Road,0.98,0.0,0.0,0.0,0.0
+Makindye Ssabagabo Road,1.22,0.0,0.0,0.0,0.0
+Makerere Hill Road,3.2,0.0,0.0,0.0,0.0
+Main Access Road,0.18,0.0,0.0,0.0,0.0
+Magambo Road,1.41,0.0,0.0,0.0,0.0
+Luthuli Rise,1.0,0.0,0.0,0.0,0.0
+Mackay Road 2,1.43,0.0,0.0,0.0,0.0
+Mackay Road,0.05,0.0,0.0,0.0,0.0
+Mabua Road,0.7,0.0,0.0,0.0,0.0
+MAINER ROADS,0.03,0.0,0.0,0.0,0.0
+Lwalanda Road,0.48,0.0,0.0,0.0,0.0
+Luyinja Road,0.5,0.0,0.0,0.0,0.0
+Luwum Street Rise,0.07,0.0,0.0,0.0,0.0
+Luwum Street,0.72,0.0,0.0,0.0,0.0
+Luwafu Road,2.44,0.0,0.0,0.0,0.0
+Kizanyiro Road,1.33,0.0,0.0,0.0,0.0
+Kiwuunya Church Road,0.5,0.0,0.0,0.0,0.0
+Kiwewa Road,1.0,0.0,0.0,0.0,0.05
+Kawempe I 3152,0.4,0.0,0.0,0.0,0.0
+Kibuye Roundabout,0.21,0.0,0.0,0.0,0.0
+Kibaale Road,0.39,0.0,0.0,0.0,0.0
+Kazo Central Zone Road,1.65,0.0,0.0,0.0,0.0
+Kayima Road,0.63,0.0,0.0,0.0,0.0
+Kayemba Road,1.21,0.0,0.0,0.0,0.0
+Kawuku Road,1.92,0.0,0.0,0.0,0.0
+Kawooya Road,0.33,0.0,0.0,0.0,0.0
+Kawempe Ttula Mpererwe Road,2.54,0.0,0.0,0.0,0.0
+Kawempe I 3159,0.44,0.0,0.0,0.0,0.0
+Kawempe I 2287,0.06,0.0,0.0,0.0,0.0
+Kiwatule Road,0.73,0.0,0.0,0.0,0.0
+Kawempe I 2283,0.07,0.0,0.0,0.0,0.0
+Kawempe I 1503,0.15,0.0,0.0,0.0,0.0
+Katazamiti Road,0.28,0.0,0.0,0.0,0.0
+Katalima Loop,1.95,0.0,0.0,0.0,0.0
+Katalemwa X32 Road,1.19,0.0,0.0,0.0,0.0
+Kasokoso Road,1.48,0.0,0.0,0.0,0.0
+Kansanga-Kiwafu Road,1.23,0.0,0.0,0.0,0.0
+Kamwokya Kisalosalo Road,0.4,0.0,0.0,0.0,0.0
+Kamuli Road,2.04,0.0,0.0,0.0,0.0
+Kiggala Road,1.08,0.0,0.0,0.0,0.0
+Kigo road,0.02,0.0,0.0,0.0,0.0
+Kigobe Road,2.0,0.0,0.0,0.0,0.0
+Kiira Road,2.49,0.0,0.0,0.0,0.0
+Kiwafu Road,0.97,0.0,0.0,0.0,0.0
+Kitezi-Buwambo Road,2.09,0.0,0.0,0.0,0.0
+Kitebi Road,1.06,0.0,0.0,0.0,0.0
+Kisugu Road,1.09,0.0,0.0,0.0,0.05
+Kisota Road,1.08,0.0,0.0,0.0,0.0
+Kisingiri Street,1.71,0.0,0.0,0.0,0.0
+Kisingiri Road,0.2,0.0,0.0,0.0,0.0
+Kisaasi Road,6.38,0.0,0.0,0.0,0.0
+Kironde Road,1.73,0.0,0.0,0.0,0.0
+Kirinya-Bukasa Road,4.83,0.0,0.0,0.0,0.0
+Kirinya Road,2.01,0.0,0.0,0.0,0.0
+Kira road,0.01,0.0,0.0,0.0,0.0
+Kira Road,0.1,0.0,0.0,0.0,0.0
+Kira Najjeera Road,1.42,0.0,0.0,0.0,0.0
+Kintu Road,0.82,0.0,0.0,0.0,0.0
+Kintale Road,0.84,0.0,0.0,0.0,0.0
+Kikuba Mutwe,0.61,0.0,0.0,0.0,0.0
+Kikajjo Road,4.53,0.0,0.0,0.0,0.0
+Kiira road,0.09,0.0,0.0,0.0,0.0
+minor road,0.12,0.0,0.0,0.0,0.0

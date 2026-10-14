@@ -62,6 +62,7 @@ def credit_strip(fig, source, credit=CREDIT):
     inv = fig.transFigure.inverted()
     bbs = [a.get_tightbbox(r).transformed(inv) for a in fig.axes if a.get_visible()]
     bbs += [t.get_window_extent(r).transformed(inv) for t in fig.texts if t.get_text()]
+    bbs += [lg.get_window_extent(r).transformed(inv) for lg in fig.legends]
     y0 = min(b.y0 for b in bbs)
     x0, x1 = min(b.x0 for b in bbs), max(b.x1 for b in bbs)
     w = fig.get_size_inches()[0] * (min(x1, 1.0) - max(x0, 0.0)) - 2.4  # leave room for the credit
