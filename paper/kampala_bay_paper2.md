@@ -78,7 +78,7 @@ A lake-fringe zone (lower Kinawataka, Luzira, Port Bell) was also measured but i
 | Munyonyo shore | 101 | 102 | 98 | 82 | 75 | −26% |
 | **All bay-draining** | **1,200** | **1,092** | **927** | **735** | **587** | **−51%** |
 
-The share of valley floor still vegetated fell from 90% to 44% (Fig. kd43a). The loss is steady across four decades and has not slowed.
+The share of valley floor still vegetated fell from 90% to 44% (Fig. kd43a). The loss is steady across four decades and has not slowed. A machine-learning land-cover map (LightGBM trained on agreed WorldCover and Impact Observatory labels; 81% accuracy when trained on 2025 and tested on 2015; Paper 1, Section 3.4) gives the same picture: natural vegetation (wetland plus trees and shrubs) on these valley floors fell from 863 to 384 ha (−56%), and the built and bare share rose from 11% to 56%. Kinawataka is the extreme case, at 3% built in 1986 and 75% in 2025. Two independent methods agree on a loss of about half.
 
 **What was lost.**
 - **Treatment value:** 613 ha × US$1,500–2,900 = **US$0.9–1.8 million a year**. This matches Emerton's whole-wetland estimate of US$1–1.75 million a year for Nakivubo's treatment, a useful consistency check.
@@ -165,4 +165,5 @@ Items marked † were found through search but not opened; verify them before su
 10. Nobre, A. D. et al. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
 11. Crawford, C. J. et al. (2023). The 50-year Landsat collection 2 archive. *Science of Remote Sensing* 8, 100103. doi:10.1016/j.srs.2023.100103
 12. † Vanhellemont, Q. and Ruddick, K. (2018). Atmospheric correction of metre-scale optical satellite data for inland and coastal water applications. *Remote Sensing of Environment* 216, 586–597.
-13. Companion papers of this programme: A, 1 (*The lost sponge*), D0 (flood catalogue).
+13. Ke, G. et al. (2017). LightGBM: a highly efficient gradient boosting decision tree. *Advances in Neural Information Processing Systems* 30, 3146–3154.
+14. Companion papers of this programme: A, 1 (*The lost sponge*), D0 (flood catalogue).

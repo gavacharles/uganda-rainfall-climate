@@ -36,6 +36,10 @@ The green, living part of the sponge shrank fastest:
 - **Lubigi:** 96% to **36%**;
 - **Nakivubo:** 84% to **49%**.
 
+I checked this a second way, using machine learning. I trained a model on modern land-cover maps and used it to classify every valley floor in the old Landsat images. It tells papyrus apart from gardens, trees and roofs. The answer is starker: built and bare ground went from **3% of Kampala's valley floors in 1986 to 35% in 2025**. On the Nalukolongo it is now **93%**, and on the Kinawataka **75%**.
+
+> **[ANIMATION: `kd_a11_valley_landcover_ml.gif`, with `x9_valley_landcover_2025.png` (or `kd44_valley_landcover_ml.png`) as the still. What the valley floors became, 1986 to 2025.]**
+
 > **[ANIMATION: `kd_a3_wetlands_timelapse.gif`, with `kd16_wetlands_timelapse_panels.png` as a still. Lubigi to Kinawataka from space, 1986–2025, with today's channels drawn on.]**
 
 In 1975, five of Kampala's six main channel systems had more valley storage than one 10-year storm's runoff. They could swallow the storm. By 2020, none could comfortably. The water that the swamps used to hold now goes into homes in Bwaise, Kalerwe and Kinawataka.

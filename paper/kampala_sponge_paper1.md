@@ -99,6 +99,27 @@ Between 1975 and 2020 the city lost 8.5 million m³ of 1 m storage and gained 8.
 
 In 1975, five of the six systems had more valley-floor storage than one 10-year storm's runoff. By 2020 only Kansanga, barely, remained above 1. The largest combined gaps are in Lubigi (2.0 million m³), Kinawataka (0.9) and Kansanga (0.7) (Fig. kd30c). The map of lost storage (Fig. kd31) shows the losses as thin ribbons along nearly every channel, worst on the Lubigi, Kinawataka and Nalukolongo valley floors.
 
+**3.4 Machine-learning check: what the valley floors became.** The NDVI rule above cannot tell papyrus from gardens or trees, or bare fill from roofs. We therefore trained a LightGBM classifier (Ke et al. 2017) on the Landsat composites. Labels came from cells where independent 10 m maps agree: ESA WorldCover 2021 and Impact Observatory 2017/2023 (Karra et al. 2021), with wetland requiring two of three sources (WorldCover, Impact Observatory, OpenStreetMap wetland polygons). Features were the five reflectance bands, five indices and HAND. Older Thematic Mapper and ETM+ composites were harmonised to OLI with Roy et al. (2016). Five classes were mapped on the valley floor (HAND < 3 m) for 1986, 1995, 2005, 2015 and 2025 (Fig. kd44).
+
+| Validation | Overall accuracy | Wetland F1 |
+|---|---|---|
+| Spatial block cross-validation, 2025 (3 km blocks) | 84% | 0.89 |
+| Model trained on 2025, tested on 2015 imagery against 2017 labels | 81% | 0.90 |
+
+The second test is the relevant one for going back in time. In 1986 the classifier puts 1.6% of the valley floor in the built class, against 2.8% built surface in GHSL 1985, which is consistent. Accuracy is measured on cells where the label maps agree, which are easier than average, so it is an upper bound.
+
+| Valley floor, 1986 → 2025 | Natural vegetation (wetland + trees and shrubs) | Built and bare share |
+|---|---|---|
+| Nalukolongo | 99 → 5 ha (−95%) | 18% → 93% |
+| Kinawataka | 183 → 27 ha (−85%) | 3% → 75% |
+| Walufumbe | 30 → 7 ha (−77%) | 0% → 48% |
+| Lubigi | 672 → 214 ha (−68%) | 7% → 66% |
+| Kansanga | 260 → 122 ha (−53%) | 1% → 50% |
+| Nakivubo | 343 → 178 ha (−48%) | 21% → 56% |
+| **Greater Kampala core** | **8,006 → 4,144 ha (−48%)** | **3% → 35%** |
+
+The ranking matches the NDVI-based living-sponge losses (Section 3.2), and the losses are steeper: the NDVI rule counted gardens and grass on fill as "green". Wetland vegetation in the strict sense fell from 1,807 to 733 ha city-wide (−59%). Cultivation took part of the valley floor first, in the 1990s and 2000s, and was then itself built over. Crops and grass on the Lubigi valley floor fell from 269 to 133 ha. HAND is among the most-used features, but it is the same in every year, so the change between years comes from the imagery alone.
+
 # 4. Discussion
 
 - **Storage is infrastructure.** Every cubic metre of valley floor lost must be replaced by channel capacity downstream, or it floods. Valuing storage in m³ makes this trade-off visible in budgets: the 17 million m³ gap for one 10-year storm is the volume the drainage system must now handle that the landscape once absorbed.
@@ -133,6 +154,7 @@ Kampala has paved over about 8.5 million m³ of valley-floor flood storage since
 
 - kd30: a, storage vs paving 1975–2030; b, living sponge 1986 vs 2025 by system; c, combined gap by system
 - kd31: map of storage lost 1975–2020
+- kd44: machine-learning land cover of the valley floors, 1986 vs 2025, and class areas 1986–2025
 - kd16: wetland time-lapse panels (Landsat), from the companion study
 
 # References
@@ -153,3 +175,6 @@ Items marked † were found through search, or are grey literature not yet opene
 12. Tucker, C. J. (1979). Red and photographic infrared linear combinations for monitoring vegetation. *Remote Sensing of Environment* 8, 127–150.
 13. Xu, H. (2006). Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. *International Journal of Remote Sensing* 27(14), 3025–3033.
 14. Companion papers of this programme: A (*Rainfall or drainage?*), D (*Building in the water's path*).
+15. Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q. and Liu, T.-Y. (2017). LightGBM: a highly efficient gradient boosting decision tree. *Advances in Neural Information Processing Systems* 30, 3146–3154.
+16. Karra, K., Kontgis, C., Statman-Weil, Z., Mazzariello, J. C., Mathis, M. and Brumby, S. P. (2021). Global land use/land cover with Sentinel 2 and deep learning. *IEEE IGARSS 2021*, 4704–4707.
+17. Roy, D. P., Kovalskyy, V., Zhang, H. K., Vermote, E. F., Yan, L., Kumar, S. S. and Egorov, A. (2016). Characterization of Landsat-7 to Landsat-8 reflective wavelength and normalized difference vegetation index continuity. *Remote Sensing of Environment* 185, 57–70. doi:10.1016/j.rse.2015.12.024

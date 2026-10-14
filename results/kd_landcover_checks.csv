@@ -1,0 +1,3 @@
+check,n,overall_accuracy,macro_f1,wetland_f1
+2025-trained model on 2015 imagery vs 2017 labels,25000,0.808,0.812,0.897
+"1986 built share of valley floor (overall_accuracy = classifier, macro_f1 = GHSL 1985)",224462,0.016,0.028,
