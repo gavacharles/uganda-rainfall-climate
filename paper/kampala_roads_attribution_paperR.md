@@ -27,7 +27,9 @@ Results:
 3. **Even an ordinary 2-year storm closes the city when channels are silted.** It puts 199 km of road under water and cuts off 149,000 people, against 4 km and 1,500 people with clean channels. Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm when channels are silted and 13 when they are clean.
 4. **Climate change matters less than maintenance, but it matters more for a well-kept system.** By the 2050s, climate change adds 9% to road flooding if channels stay silted. With clean channels it nearly doubles expected disruption (from 30 to 57 km a year), because silt otherwise masks it.
 5. **The result is robust.** Across 400 Monte Carlo versions of the model, varying 12 uncertain assumptions, siltation is the largest driver in 399. Its share is 77% (90% interval 62–88%) of the increase in impassable road and 79% (64–90%) of the increase in people cut off. A machine-learning emulator (gradient boosting, cross-validated R² = 0.90) shows that the share depends mainly on how much depth silt removes and on channel roughness, while the absolute road length depends most on road height above the terrain model.
-6. **Much of today's exposure was built on former wetland.** 68% of the road that floods in a 10-year storm sits on valley floor that was wetland or bush in 1986. Urban road on low ground beside channels grew from 141 km (1975) to 315 km (2020).
+6. **The model puts floods where people report them, and the silted version does so best.** Reported flood-prone roads (KCCA's 2021 risk assessment, press lists and the flood catalogue) lie a median 335 m from modelled impassable main road, against 1,000 m for random road locations (AUC 0.80, p < 0.001). With clean channels the match is weaker (AUC 0.70), which is indirect evidence that the channels really are silted.
+7. **Keeping channels clean is worth far more than it costs.** Avoided travel disruption (about US$0.5 million a year) plus avoided building damage (US$17 million, Paper 4) is about 6.6 times KCCA's annual road-and-drainage maintenance allocation.
+8. **Much of today's exposure was built on former wetland.** 68% of the road that floods in a 10-year storm sits on valley floor that was wetland or bush in 1986. Urban road on low ground beside channels grew from 141 km (1975) to 315 km (2020).
 
 The model reproduces all eight road floods reported in the news, 2007–2026. We rank the crossings where desilting would avoid the most closures: Jinja Road over the Nakivubo, Kibuye–Natete Road on the Nalukolongo, and the Northern Bypass, Gayaza Road and Bombo Road at Bwaise–Kalerwe. Kampala's road flooding is mainly a maintenance problem, and the cheapest adaptation is a shovel.
 
@@ -38,7 +40,7 @@ The model reproduces all eight road floods reported in the news, 2007–2026. We
   - Global studies estimate road exposure and damage from river and surface floods (Koks et al. 2019).
   - City studies model the effect of flooded links on travel and emergency access (Yin et al. 2016; Green et al. 2017; Coles et al. 2017; Pregnolato et al. 2017).
   - In Kampala, a World Bank analysis estimated about 11 km of main roads flooded in a 50-year event in the inner city, with knock-on loss of access to health care (Hallegatte et al. 2019).
-  - A recent traffic study of 22 links found overtopping from the 5-year storm and near-doubling of travel times under full closure (TRID record 2724562).
+  - A recent traffic study of 22 links found overtopping from the 5-year storm and near-doubling of travel times under full closure (TRID record 2724562; published on ScienceDirect, article S2950196226000311).
 - **The gap.** None of these studies separates the drivers. Road flood risk is usually presented as a single state, sometimes compared with a future climate. To our knowledge there is no published decomposition of urban road flood disruption into maintenance, land use, encroachment and climate, and none for an African city. That decomposition decides where adaptation money should go.
 - **Contributions:**
   1. a city-wide, road-by-road flood depth model for every drivable road in Kampala, checked against reported road floods;
@@ -130,7 +132,17 @@ The rating curves are vectorised over all stretches and the network uses a compi
 
 ## 2.8 Validation
 
-Eight road floods named in the flood catalogue (Paper D0, 2007–2026) were checked against the model. For each, we took the deepest modelled water on the named road within 1.5 km of the reported place.
+Two tests, against two independent sets of reports:
+1. **Catalogue road floods.** Eight road floods named in the flood catalogue (Paper D0, 2007–2026). For each, the deepest modelled water on the named road within 1.5 km of the reported place.
+2. **Flood-prone road list.** Seventeen flood-prone road locations: those named from KCCA's 2021 risk assessment (as listed in the Daily Monitor, 2023: Jinja Road at Game–Shoprite and at Banda, Lugogo Bypass, Kyambogo Junction, Kibuli Road, Mulago), the Observer's list of roads often cut off (Queen's Way, Ssebaana Kizito Road, Kabuusu, the Jinja Road roundabout), and the catalogue's road floods. Twelve could be geocoded (OpenStreetMap Nominatim, or the catalogue's positions). Report locations are approximate (±500 m), so the test asks whether reported spots lie closer to modelled impassable main road (10-year storm) than 5,000 random points on main roads do. We report the proximity AUC and a one-sided Mann–Whitney test (Mann and Whitney 1947).
+
+## 2.9 Can satellites see channel condition?
+
+To replace the uniform silt scenario with an observed one, we built Sentinel-2 dry-season median NDVI composites at 10 m for five seasons (2024–2026) and sampled the centreline of every channel stretch draining at least 3 km² (3,604 stretches, 262 km), and a band 30–60 m either side. We also ran a spatially varying silt scenario: depth lost = 10% + 40% × the stretch's dumping-pressure percentile (OSM waste points and markets; mean ≈ 30%).
+
+## 2.10 Valuing disruption
+
+Annual value of lost access = people cut off (expected annual) × hours a crossing stays impassable (2–8 h, flash floods) × share of residents travelling during the event (30–70%) × value of travel time (US$0.5–1.8 per hour; no official Ugandan value exists, and the upper end follows a published Kampala productivity estimate). Extra minutes for those still connected are valued the same way. All terms were sampled jointly (20,000 draws). This is compared with avoided building damage (Paper 4) and with KCCA's road-and-drainage maintenance allocation (UGX 10 billion, about US$2.7 million a year).
 
 # 3. Results
 
@@ -161,7 +173,29 @@ Flooding concentrates on the Lubigi system (Bwaise, Kalerwe, the Northern Bypass
 
 All eight reported roads are impassable in the silted state even in a 2-year storm, and six of eight in a 10-year storm with clean channels. This is consistent with the flood catalogue's finding that Kampala floods on ordinary rain.
 
-## 3.3 Attribution
+**The independent list** (Fig. kd54):
+
+| 10-year storm | Median distance, reported spots → modelled impassable main road | Random road points | Reported within 500 m | Random within 500 m | Proximity AUC |
+|---|---|---|---|---|---|
+| Channels clean | 824 m | 1,560 m | 33% | 15% | 0.70 (p = 0.009) |
+| Channels silted | 335 m | 1,000 m | 83% | 27% | 0.80 (p < 0.001) |
+
+Reported flood-prone roads lie much closer to modelled flooding than random road locations. Two points matter:
+- **The silted model matches the reports better than the clean one.** It is not just that silted channels flood more roads: the comparison against random points controls for that. The reported pattern of flooding is better explained by silted channels, which is indirect evidence for the scenario this paper puts at the centre.
+- **Some reported spots are street floods, not channel floods.** At Banda and Kyambogo Junction the model places the water at the Kinawataka crossings 300–700 m away, not at the junction itself. Junction flooding there is partly from blocked roadside drains, which this model does not simulate.
+
+## 3.3 Satellites cannot see the channels; where the silt sits does not matter
+
+At 10 m, centreline NDVI tracks the surrounding land almost perfectly (r = 0.90): channels in green fringe areas look "choked", and channels in dense neighbourhoods look "clean". The difference between channel and surroundings is tiny (median +0.007) and is unrelated to dumping pressure (Spearman −0.10) or to reported hotspots. Kampala's channels, mostly under 10 m wide, cannot be inspected from Sentinel-2. Their condition needs very-high-resolution imagery, drones or KCCA's desilting records. We therefore keep silt as a scenario and test its pattern instead:
+
+| Silt pattern (mean ≈ 30% of depth) | Siltation share, impassable road / people cut off | Impassable road, 2-year storm |
+|---|---|---|
+| Uniform | 83% / 86% | 199 km |
+| Concentrated where dumping is heaviest | 84% / 87% | 208 km |
+
+Where the silt sits changes the answer very little.
+
+## 3.4 Attribution
 
 | Share of the change since 1990 (Shapley) | Paving | Siltation | Encroachment | Climate |
 |---|---|---|---|---|
@@ -176,7 +210,7 @@ All eight reported roads are impassable in the silted state even in a 2-year sto
 
 **The interaction matters.** With clean channels, climate change nearly doubles expected road disruption (30 → 57 km a year; 19,800 → 38,900 people cut off). With silted channels it adds only about 10%, because the system already fails in frequent storms. In other words, maintaining the drains is also what makes climate adaptation visible.
 
-## 3.4 How much silt does it take?
+## 3.5 How much silt does it take?
 
 | Channel depth lost | Siltation share (road-km / people cut off) | Paving share |
 |---|---|---|
@@ -187,7 +221,7 @@ All eight reported roads are impassable in the silted state even in a 2-year sto
 
 (Fig. kd52.) Even a light silting, a tenth of the channel depth plus a vegetated bed, accounts for most of the change. The conclusion does not depend on the assumed silt level.
 
-## 3.5 Uncertainty: 400 versions of the model
+## 3.6 Uncertainty: 400 versions of the model
 
 | Quantity (today, average year) | Main run | Median | 90% interval |
 |---|---|---|---|
@@ -207,7 +241,7 @@ All eight reported roads are impassable in the silted state even in a 2-year sto
 
 Encroachment rises from 2% to a median 7% once buildings are allowed to block more than their footprint. This supports the view that the main run understates it.
 
-## 3.6 The crossings to clear first
+## 3.7 The crossings to clear first
 
 Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm when silted and 13 when clean. The crossings where desilting avoids the most disruption (Fig. kd51) are:
 
@@ -226,7 +260,18 @@ Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm wh
 
 Several of these, such as Bwaise Roundabout and Bombo Road, close every 5 years even with clean channels: they also need more capacity, not only maintenance. The full ranked list is in `results/kd_roadsR_crossings.csv`.
 
-## 3.7 How the exposure was built
+## 3.8 What it costs
+
+| Avoided by keeping channels clean (US$ million a year) | Central | 90% range |
+|---|---|---|
+| Travel disruption (lost access + delay) | 0.5 | 0.2–1.0 |
+| Building damage (Paper 4) | 17.3 | 8.6–34.5 |
+| **Total** | **17.7** | |
+| KCCA road-and-drainage maintenance allocation | 2.7 | |
+
+Travel losses are modest on their own because floods are short and the network offers detours. Building damage dominates. Together, the losses avoided by clean channels are about 6.6 times what KCCA is allocated for maintaining roads and drains. Even the low end of the range (about US$9 million) is more than three times that allocation. These are lower bounds: they exclude lost trade, goods, health effects, deaths and the cost of emergency response.
+
+## 3.9 How the exposure was built
 
 Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The share on low ground beside channels stayed near 6%, but its length more than doubled, from 141 to 315 km (Fig. kd47). 526 km of today's road sits on valley floor that was wetland or bush in 1986. Of the road impassable in a 10-year storm with clean channels, 68% lies on such former wetland. At Lubigi, the Northern Bypass and its feeder roads were built across what was open wetland in 1986 (Fig. kd49).
 
@@ -234,6 +279,8 @@ Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The s
 
 - **A maintenance problem first.** The single largest lever on Kampala's road flooding is the condition of its channels and culverts, not rainfall. A city that keeps its channels clear avoids roughly five-sixths of the disruption that has built up since 1990. This shifts the policy conversation from climate-proofing roads to funding routine desilting, trash screens and culvert clearing before every rainy season.
 - **But maintenance is not enough everywhere.** Paving has made 1990-sized channels too small for the 10-year storm, and crossings like Bwaise Roundabout flood every 5 years even when clean. These need larger culverts, upstream detention and protection of the remaining wetland (Paper 1).
+- **The reports point to silt too.** The flood-prone roads people report fit the silted model clearly better than the clean one (AUC 0.80 vs 0.70). Satellites cannot measure silt in Kampala's narrow channels, but the pattern of reported flooding is what silted channels would produce.
+- **The economics are lopsided.** Losses avoided by clean channels are several times the maintenance allocation, so under-funding desilting is a false economy.
 - **Climate adaptation depends on maintenance.** Climate change matters most for a well-maintained system. Investing in climate-resilient road drainage without a maintenance regime would see its benefits masked by silt.
 - **Targeting.** The crossing ranking gives KCCA and UNRA a short list where pre-season desilting buys the most network function. Each of the top five crossings carries the fastest route into town for 200,000 to 1.1 million residents (these route counts overlap and cannot be summed).
 - **Planning.** Most flooded road was built on former wetland. New roads in Kampala's fringe and in Uganda's regional cities (Paper 7) should avoid valley floors or cross them on bridges sized for future flows.
@@ -243,7 +290,9 @@ Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The s
   - **Encroachment only through footprints.** It is represented only by footprint blockage of conveyance. Fill, walls and raised plots are not captured, so its contribution is probably underestimated.
   - **The network is simplified.** Network effects are measured as access to the centre and to hospitals, without travel demand or congestion feedback. They are lower bounds on economic disruption.
   - **Elevation data.** The DEM predates some embankments, and the Entebbe Expressway is treated as raised.
-  - **Validation** relies on eight reported events: enough to confirm that the model places floods in the right spots, not to calibrate depths.
+  - **Validation** uses 8 catalogue events and 12 geocoded flood-prone road locations: enough to show that the model places floods in the right areas, not to calibrate depths.
+  - **Street flooding is not modelled.** Ponding at junctions from blocked roadside drains (for example Kyambogo Junction, Banda) is outside the model, which floods roads only from channel overflow.
+  - **Costs** use assumed values of time, flood durations and trip shares, given as ranges.
   - **Culvert dimensions are not observed.** Street-level imagery could fill this gap with computer vision: measuring culvert openings and detecting blockage at the ranked crossings. Open street-level archives are thin in Kampala, though: KartaView has a photo within 60 m of only 2 of the top 60 crossings, and Mapillary was not accessible for this study. A culvert inventory from KCCA or UNRA would be the most direct way to close this gap.
 
 # 5. Conclusion
@@ -252,7 +301,7 @@ Most of the growth in Kampala's road flooding since 1990 comes from silted chann
 
 # Data and code availability
 
-Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_roads_attrib.py` (16 scenarios, network, Shapley, crossings, sensitivity), `src/kd_roads_mc.py` (Monte Carlo and emulator), `src/kd_roads_maps.py` and `src/kd_roadsR_figs.py` (figures kd45–kd52). Results: `results/kd_roads_*.csv`, `results/kd_roadsR_*.csv`.
+Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_roads_attrib.py` (16 scenarios, network, Shapley, crossings, sensitivity), `src/kd_roads_mc.py` (Monte Carlo and emulator), `src/kd_roads_upgrade.py` (spatial silt, validation, costs), `src/kd_channel_condition.py` (Sentinel-2 channel test), `src/kd_roads_maps.py` and `src/kd_roadsR_figs.py` (figures kd45–kd52). Results: `results/kd_roads_*.csv`, `results/kd_roadsR_*.csv`.
 
 # Figures
 
@@ -265,6 +314,7 @@ Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_road
 - kd51: the crossings to desilt first.
 - kd52: sensitivity of the attribution to the silt level.
 - kd53: Monte Carlo uncertainty (400 draws) and the emulator's ranking of assumptions.
+- kd54: validation against flood-prone roads from KCCA, the press and the flood catalogue.
 
 # References
 
@@ -285,12 +335,17 @@ Items marked † were found through search but not opened, or their author lists
 13. Pesaresi, M. and Politis, P. (2023); Schiavina, M. et al. (2023). GHS-BUILT-S and GHS-POP R2023A. European Commission, Joint Research Centre.
 14. Pregnolato, M., Ford, A., Wilkinson, S. M. and Dawson, R. J. (2017). The impact of flooding on road transport: a depth-disruption function. *Transportation Research Part D* 55, 67–81. doi:10.1016/j.trd.2017.06.020
 15. Shapley, L. S. (1953). A value for n-person games. In Kuhn, H. W. and Tucker, A. W. (eds.), *Contributions to the Theory of Games II*, 307–317. Princeton University Press.
-16. † TRID record 2724562 (2025/26). Flood-induced traffic disruption and network vulnerability in Kampala's urban road system. Transportation Research Board (authors and journal to confirm).
+16. † Flood-induced traffic disruption and network vulnerability in Kampala's urban road system (2026). ScienceDirect, article S2950196226000311; TRID record 2724562 (authors and journal to confirm).
 17. Yin, J., Yu, D., Yin, Z., Liu, M. and He, Q. (2016). Evaluating the impact and risk of pluvial flash flood on intra-urban road network: a case study in the city center of Shanghai, China. *Journal of Hydrology* 537, 138–145. doi:10.1016/j.jhydrol.2016.03.037
 18. Zheng, X., Tarboton, D. G., Maidment, D. R., Liu, Y. Y. and Passalacqua, P. (2018). River channel geometry and rating curve estimation using height above the nearest drainage. *Journal of the American Water Resources Association* 54(4), 785–806. doi:10.1111/1752-1688.12661
 19. Microsoft (2023). Global ML Building Footprints; OpenStreetMap contributors.
-20. Breiman, L. (2001). Random forests. *Machine Learning* 45, 5–32.
-21. Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics* 29(5), 1189–1232.
-22. McKay, M. D., Beckman, R. J. and Conover, W. J. (1979). A comparison of three methods for selecting values of input variables in the analysis of output from a computer code. *Technometrics* 21(2), 239–245.
-23. Pedregosa, F. et al. (2011). Scikit-learn: machine learning in Python. *Journal of Machine Learning Research* 12, 2825–2830.
-24. Companion papers of this programme: A, D0 (flood catalogue), 1 (lost sponge, incl. machine-learning land cover), 3 (access), 4 (damage), 6 (channel design drift), 7 (regional cities).
+20. † Daily Monitor (2023). Let's watch out for flood prone roads (editorial listing KCCA's 2021 flood-risk roads).
+21. † The Observer. Six killed, hundreds stranded as floods ravage Kampala (list of roads often cut off).
+22. † KCCA. MPs: KCCA can't maintain roads, drainage on UGX 10 billion. kcca.go.ug/news/1102.
+23. † Daily Monitor. Under the 30 km/h speed limit, Kampala's slower streets could spell a slower economy (commentary; productivity value of time).
+24. Mann, H. B. and Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics* 18, 50–60.
+25. Breiman, L. (2001). Random forests. *Machine Learning* 45, 5–32.
+26. Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics* 29(5), 1189–1232.
+27. McKay, M. D., Beckman, R. J. and Conover, W. J. (1979). A comparison of three methods for selecting values of input variables in the analysis of output from a computer code. *Technometrics* 21(2), 239–245.
+28. Pedregosa, F. et al. (2011). Scikit-learn: machine learning in Python. *Journal of Machine Learning Research* 12, 2825–2830.
+29. Companion papers of this programme: A, D0 (flood catalogue), 1 (lost sponge, incl. machine-learning land cover), 3 (access), 4 (damage), 6 (channel design drift), 7 (regional cities).

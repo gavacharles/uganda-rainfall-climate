@@ -37,7 +37,7 @@ Using Landsat satellite images back to 1986, I measured how much green wetland r
 - **2025:** 587 hectares, **a loss of 51%.**
 - The Kinawataka valley lost **78%**. The Nakivubo and Kansanga valleys lost **46%** each.
 
-I checked this a second way, with a machine-learning model that tells papyrus apart from gardens, trees and roofs. It gives the same answer, about half gone. In the Kinawataka valley, built and bare ground went from 3% in 1986 to 75% today.
+I checked this a second way, with a machine-learning model that tells papyrus apart from gardens, trees and roofs. It gives the same answer, about half gone, and so does a sharper 10-metre view from Sentinel-2 (2024–26): about 570 hectares left. In the Kinawataka valley, built and bare ground went from 3% in 1986 to 75% today.
 
 At the 1990s prices, that lost swamp was doing **US$1–2 million of water treatment every year**. In nutrients, it means about **64 tonnes of nitrogen and 9 tonnes of phosphorus a year** that the Nakivubo swamp no longer holds back. The city has more than doubled since those measurements were taken, so the real figure is higher.
 

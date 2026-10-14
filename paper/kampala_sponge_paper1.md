@@ -120,6 +120,8 @@ The second test is the relevant one for going back in time. In 1986 the classifi
 
 The ranking matches the NDVI-based living-sponge losses (Section 3.2), and the losses are steeper: the NDVI rule counted gardens and grass on fill as "green". Wetland vegetation in the strict sense fell from 1,807 to 733 ha city-wide (−59%). Cultivation took part of the valley floor first, in the 1990s and 2000s, and was then itself built over. Crops and grass on the Lubigi valley floor fell from 269 to 133 ha. HAND is among the most-used features, but it is the same in every year, so the change between years comes from the imagery alone.
 
+**A third, 10 m check of today.** Sentinel-2 dry-season medians for 2024–26 (10 m, five seasons) give the share of valley floor (HAND < 3 m, open water excluded) still green (NDVI > 0.45). They agree with the 30 m Landsat 2025 estimate to within 1–7 percentage points: Lubigi 34% vs 36%, Nakivubo 42% vs 49%, Kinawataka 24% vs 23%, Kansanga 52% vs 56%, Nalukolongo 9% vs 7% (Fig. kd55). The machine-learning share is lower everywhere because it counts only wetland and trees, not grass and crops. Three methods at two resolutions tell the same story.
+
 # 4. Discussion
 
 - **Storage is infrastructure.** Every cubic metre of valley floor lost must be replaced by channel capacity downstream, or it floods. Valuing storage in m³ makes this trade-off visible in budgets: the 17 million m³ gap for one 10-year storm is the volume the drainage system must now handle that the landscape once absorbed.
@@ -155,6 +157,7 @@ Kampala has paved over about 8.5 million m³ of valley-floor flood storage since
 - kd30: a, storage vs paving 1975–2030; b, living sponge 1986 vs 2025 by system; c, combined gap by system
 - kd31: map of storage lost 1975–2020
 - kd44: machine-learning land cover of the valley floors, 1986 vs 2025, and class areas 1986–2025
+- kd55: valley floors today at 10 m (Sentinel-2, 2024–26) and the agreement of three methods
 - kd16: wetland time-lapse panels (Landsat), from the companion study
 
 # References
@@ -178,3 +181,4 @@ Items marked † were found through search, or are grey literature not yet opene
 15. Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q. and Liu, T.-Y. (2017). LightGBM: a highly efficient gradient boosting decision tree. *Advances in Neural Information Processing Systems* 30, 3146–3154.
 16. Karra, K., Kontgis, C., Statman-Weil, Z., Mazzariello, J. C., Mathis, M. and Brumby, S. P. (2021). Global land use/land cover with Sentinel 2 and deep learning. *IEEE IGARSS 2021*, 4704–4707.
 17. Roy, D. P., Kovalskyy, V., Zhang, H. K., Vermote, E. F., Yan, L., Kumar, S. S. and Egorov, A. (2016). Characterization of Landsat-7 to Landsat-8 reflective wavelength and normalized difference vegetation index continuity. *Remote Sensing of Environment* 185, 57–70. doi:10.1016/j.rse.2015.12.024
+18. Copernicus Sentinel-2 L2A (ESA), via the Microsoft Planetary Computer.

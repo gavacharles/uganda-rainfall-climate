@@ -1,0 +1,5 @@
+state,storm,auc,spots_hit_pct,main_road_km_flagged_pct,positives,negatives
+clean,2-yr,0.496,,0.105,165,16566
+clean,10-yr,0.589,16.667,2.433,165,16566
+silted,2-yr,0.614,41.667,3.882,165,16566
+silted,10-yr,0.618,50.0,4.76,165,16566

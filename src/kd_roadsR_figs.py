@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from common import FIG, RES, ROOT, save
+from common import FIG, PROC, RES, ROOT, save
 from kd_roads_maps import extent, frame, relief, scalebar
 
 KD = ROOT / "data" / "kd"
@@ -164,6 +164,105 @@ def kd52():
                  fontweight="bold", fontsize=15)
     fig.text(0.01, 0.875, "Dotted line: the 30% used in the main results", fontsize=10.5, color="#555")
     save(fig, "kd52_roads_silt_sensitivity.png", OUT, source=SRC)
+
+
+
+
+def kd54():
+    """Validation: distance from reported road floods to modelled impassable main road vs random road locations."""
+    import geopandas as gpd
+    import shapely
+    import kd_roads_attrib as ra
+    p = gpd.read_parquet(KD / "road_pieces.parquet").to_crs(UTM).reset_index(drop=True)
+    z = np.load(KD / "roadsR_depth.npz")
+    v = pd.read_csv(RES / "kd_roadsR_validation_spots.csv")
+    v = v[v.geocoded]
+    main = p.cls.isin(["highway", "main road", "local through road"]).values & ~p.raised.values
+    mid = p.geometry.interpolate(0.5, normalized=True).values
+    rnd = mid[np.random.default_rng(0).choice(np.flatnonzero(main), 5000, replace=False)]
+    pts = gpd.GeoSeries(gpd.points_from_xy(v.lon, v.lat), crs=4326).to_crs(UTM).values
+    pr = pd.read_csv(RES / "kd_roadsR_validation_proximity.csv")
+    fig, axs = plt.subplots(1, 2, figsize=(14, 5.6), gridspec_kw=dict(wspace=0.25))
+    fig.subplots_adjust(left=0.07, right=0.98, top=0.8, bottom=0.14)
+    for ax, (tag, key, ttl) in zip(axs, (("clean", "1010", "a  Channels clean"), ("silted", "1110", "b  Channels silted"))):
+        fl = main & (z[key][:, ra.TS.index(10)] >= 0.3)
+        tree = shapely.STRtree(mid[fl])
+        ds = np.sort(shapely.distance(pts, mid[fl][tree.nearest(pts)]))
+        dr = np.sort(shapely.distance(rnd, mid[fl][tree.nearest(rnd)]))
+        ax.plot(dr / 1000, np.arange(1, len(dr) + 1) / len(dr), color="#999", lw=2.2, label="random road locations")
+        ax.step(ds / 1000, np.arange(1, len(ds) + 1) / len(ds), where="post", color="#a50026", lw=2.6,
+                label=f"reported road floods (n = {len(ds)})")
+        auc = pr[(pr.state == tag) & (pr["T"] == 10)].auc_proximity.iloc[0]
+        ax.set_xlim(0, 3)
+        ax.set_ylim(0, 1.02)
+        ax.axvline(0.5, color="#ccc", ls=":", lw=1)
+        ax.set_xlabel("distance to the nearest modelled impassable main road, 10-year storm (km)")
+        ax.set_ylabel("share of locations")
+        ax.set_title(f"{ttl}  ·  AUC = {auc:.2f}", loc="left", fontsize=11.5)
+        ax.legend(fontsize=9.5, loc="lower right", frameon=False)
+        ax.spines[["top", "right"]].set_visible(False)
+    fig.suptitle("Does the model put floods where people report them?", x=0.01, ha="left", fontweight="bold", fontsize=15)
+    fig.text(0.01, 0.875, "Flood-prone roads from KCCA's 2021 risk assessment, the Observer and the flood catalogue, "
+             "against 5,000 random points on main roads", fontsize=10.5, color="#555")
+    save(fig, "kd54_roads_validation.png", OUT,
+         source="Reported roads: KCCA 2021 risk assessment (via Daily Monitor), The Observer, flood catalogue D0; "
+                "geocoding: OpenStreetMap Nominatim · model: this study")
+
+
+def kd55():
+    """Valley floors today at 10 m (Sentinel-2) and the agreement of three methods."""
+    import rasterio
+    import xarray as xr
+    from matplotlib.colors import ListedColormap
+    from kd_roads_maps import extent, frame, relief, scalebar
+    from rasterio.warp import Resampling, reproject
+    nd = xr.open_dataarray(KD / "s2_ndvi_2024_2026_median.nc")
+    x0, x1, y0, y1 = extent()
+    H, W = nd.shape
+    tr = rasterio.transform.from_origin(float(nd.x[0]) - 5, float(nd.y[0]) + 5, 10, 10)
+    hand = np.zeros((H, W), "float32")
+    with rasterio.open(PROC / "kampala_catchments.tif") as r:
+        reproject(r.read(2).astype("float32"), hand, src_transform=r.transform, src_crs=r.crs, dst_transform=tr,
+                  dst_crs="EPSG:32636", resampling=Resampling.nearest)
+    wc = np.zeros((H, W), "uint8")
+    with rasterio.open(PROC / "kampala_worldcover.tif") as r:
+        reproject(r.read(1), wc, src_transform=r.transform, src_crs=r.crs, dst_transform=tr, dst_crs="EPSG:32636",
+                  resampling=Resampling.nearest)
+    v = nd.values
+    vf = (hand < 3) & np.isfinite(v) & (v > 0) & (wc != 80)  # open water (incl. algae-rich bay) excluded
+    cls = np.where(vf, np.where(v > 0.45, 1, 0), np.nan)
+    c = pd.read_csv(RES / "kd_valley_s2_check.csv")
+    fig = plt.figure(figsize=(17, 8.6))
+    ax = fig.add_axes([0.005, 0.1, 0.6, 0.78])
+    relief(ax, x0, x1, y0, y1, alpha=0.3)
+    ext = [float(nd.x.min()) - 5, float(nd.x.max()) + 5, float(nd.y.min()) - 5, float(nd.y.max()) + 5]
+    ax.imshow(cls, cmap=ListedColormap(["#d6604d", "#1b7837"]), vmin=0, vmax=1, extent=ext, interpolation="nearest",
+              zorder=3)
+    frame(ax, x0, x1, y0, y1)
+    scalebar(ax, x0 + 1500, y0 + 1200)
+    ax.set_title("a  Valley floors (< 3 m above the drains) today: green or not, 10 m", loc="left", fontsize=12)
+    from matplotlib.patches import Patch
+    ax.legend(handles=[Patch(color="#1b7837", label="green (NDVI > 0.45)"), Patch(color="#d6604d", label="built, bare or paved")],
+              loc="lower right", fontsize=10, frameon=True)
+    bx = fig.add_axes([0.66, 0.16, 0.32, 0.7])
+    order = ["Kansanga", "Walufumbe", "Nakivubo", "Lubigi", "Kinawataka", "Nalukolongo"]
+    d = c.set_index("region").loc[order]
+    y = np.arange(len(order))
+    bx.barh(y - 0.27, d.s2_vegetated_pct, 0.26, color="#1b7837", label="Sentinel-2 10 m, 2024–26")
+    bx.barh(y, d.landsat_2025_pct, 0.26, color="#7fbc41", label="Landsat 30 m, 2025")
+    bx.barh(y + 0.27, d.ml_2025_natural_pct, 0.26, color="#c2a5cf", label="machine learning: wetland + trees only")
+    bx.set_yticks(y)
+    bx.set_yticklabels(order, fontsize=11)
+    bx.invert_yaxis()
+    bx.set_xlim(0, 75)
+    bx.set_xlabel("valley floor still green (%)")
+    bx.legend(fontsize=9.5, loc="lower right", frameon=False)
+    bx.set_title("b  Three methods, one picture", loc="left", fontsize=12)
+    bx.spines[["top", "right"]].set_visible(False)
+    fig.suptitle("Kampala's valley floors today, seen at 10 m", x=0.005, ha="left", fontweight="bold", fontsize=16)
+    save(fig, "kd55_valley_vegetation_10m.png", OUT,
+         source="Imagery: Copernicus Sentinel-2 L2A (ESA), dry-season medians 2024–26; NASA/USGS Landsat; terrain: "
+                "Copernicus GLO-30 · machine-learning land cover: this study")
 
 
 if __name__ == "__main__":

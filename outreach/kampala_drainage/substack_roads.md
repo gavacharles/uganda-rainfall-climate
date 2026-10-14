@@ -56,6 +56,8 @@ I ran the model with each of these switched on and off, in every combination, an
 
 Silt came out as the biggest cause in 399 of the 400 runs.
 
+There is another clue. KCCA's own list of flood-prone roads, together with press reports, fits the version of the model with **silted** channels much better than the clean version: reported trouble spots sit a median of about 300 metres from where the silted model floods roads, against about a kilometre for random spots on the road network. The channels look silted because the floods behave as if they are. (I also tried to see silt from space with 10-metre satellite images. It cannot be done: most of Kampala's channels are narrower than one pixel.)
+
 ## Climate change matters more once the drains are clean
 
 There is a twist. If the channels stay silted, climate change barely shows: the roads already flood in ordinary storms, so heavier ones add little. But if the channels are kept clean, climate change **nearly doubles** road flooding by the 2050s.
@@ -82,6 +84,10 @@ The top of the list:
 5. **Gayaza Road** and **Bwaise Roundabout / Bombo Road** at Bwaise–Kalerwe.
 
 Bwaise Roundabout and Bombo Road flood every 5 years even with clean channels. Those need bigger culverts, not only a shovel.
+
+## What it costs, and what it would save
+
+Keeping the channels clean would avoid about **US$0.5 million a year** in lost trips and delays, and about **US$17 million a year** in flood damage to buildings. That is roughly **six times** what KCCA is allocated each year to maintain both roads and drains (about UGX 10 billion). These are conservative numbers: they leave out lost trade, damaged goods, illness and lives.
 
 ## What this means
 

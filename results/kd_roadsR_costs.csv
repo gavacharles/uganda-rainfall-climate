@@ -1,0 +1,8 @@
+item,central,p05,p95
+"travel disruption, channels clean (US$ m/yr)",0.14,0.06,0.27
+"travel disruption, channels silted (US$ m/yr)",0.63,0.28,1.26
+avoided by keeping channels clean: travel (US$ m/yr),0.49,0.21,1.0
+"avoided by keeping channels clean: building damage (US$ m/yr, Paper 4)",17.26,8.63,34.52
+"KCCA road and drainage maintenance allocation (US$ m/yr, UGX 10 bn)",2.7,,
+"total avoided (travel + buildings), central (US$ m/yr)",17.75,,
+ratio of avoided losses to the KCCA allocation,6.57,,

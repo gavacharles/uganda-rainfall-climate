@@ -1,0 +1,18 @@
+spot,source,geocoded,lat,lon,pieces,max_depth_T10_clean,max_depth_T10_silted,max_depth_T2_silted
+Jinja Road at Game–Shoprite (Lugogo),KCCA 2021,True,0.33,32.61,14.0,0.15,0.3,0.2
+Jinja Road at Banda (Moil),KCCA 2021,True,0.34,32.64,13.0,0.0,0.0,0.0
+Jinja Road at Banda (Yoshino),KCCA 2021,True,0.34,32.65,7.0,0.0,0.0,0.0
+Lugogo Bypass (Cricket Oval),KCCA 2021,False,,,,,,
+Kyambogo Junction,KCCA 2021,True,0.33,32.63,15.0,0.0,0.0,0.0
+Kibuli Road (Police Station),KCCA 2021,False,,,,,,
+Mulago roundabout / flyover,KCCA 2021,False,,,,,,
+Queen's Way,Observer,True,0.31,32.58,6.0,0.1,0.55,0.4
+Ssebaana Kizito Road,Observer,False,,,,,,
+Kabuusu Junction,Observer,True,0.29,32.55,34.0,0.0,0.0,0.0
+Jinja Road roundabout,Observer,False,,,,,,
+Hoima Road at Lubigi,catalogue,True,0.34,32.54,15.0,0.28,1.07,0.57
+"Northern Bypass, Bwaise–Kalerwe",catalogue,True,0.35,32.57,18.0,1.05,2.1,1.6
+Bombo Road at Bwaise,catalogue,True,0.35,32.56,12.0,1.8,2.45,2.15
+"Entebbe Road, Namasuba",catalogue,True,0.27,32.56,10.0,0.0,0.0,0.0
+Mukwano Road,catalogue,True,0.31,32.59,14.0,0.15,0.6,0.45
+Kinawataka Road,catalogue,True,0.34,32.64,8.0,0.0,0.0,0.0

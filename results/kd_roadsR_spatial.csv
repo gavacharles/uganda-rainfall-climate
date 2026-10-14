@@ -1,0 +1,5 @@
+scenario,metric,siltation,paving,encroachment,total_today,silt_2yr_km
+uniform 30%,ea_km,82.55,15.27,2.19,162.64,199.02
+uniform 30%,ea_cut,85.87,11.56,2.57,117544.35,199.02
+dumping-weighted (mean 30%),ea_km,83.56,14.43,2.01,167.85,207.55
+dumping-weighted (mean 30%),ea_cut,86.5,11.22,2.28,119788.79,207.55

@@ -38,6 +38,10 @@ The green, living part of the sponge shrank fastest:
 
 I checked this a second way, using machine learning. I trained a model on modern land-cover maps and used it to classify every valley floor in the old Landsat images. It tells papyrus apart from gardens, trees and roofs. The answer is starker: built and bare ground went from **3% of Kampala's valley floors in 1986 to 35% in 2025**. On the Nalukolongo it is now **93%**, and on the Kinawataka **75%**.
 
+And a third check, with today's sharper 10-metre satellite images (Sentinel-2, 2024–26), lands within a few points of the same numbers.
+
+> **[GRAPHIC: `kd55_valley_vegetation_10m.png`. Kampala's valley floors today at 10 m: green or built over, and three methods agreeing.]**
+
 > **[ANIMATION: `kd_a11_valley_landcover_ml.gif`, with `x9_valley_landcover_2025.png` (or `kd44_valley_landcover_ml.png`) as the still. What the valley floors became, 1986 to 2025.]**
 
 > **[ANIMATION: `kd_a3_wetlands_timelapse.gif`, with `kd16_wetlands_timelapse_panels.png` as a still. Lubigi to Kinawataka from space, 1986–2025, with today's channels drawn on.]**
