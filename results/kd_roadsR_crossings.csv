@@ -1,0 +1,637 @@
+osm_id,name,cls,system,lat,lon,T_close_clean,T_close_silted,pop_through,people_x_p_silted,avoided_by_desilting
+w199767989,Jinja Road,highway,Nakivubo,0.317,32.594,50.0,2.0,640761.628,320380.814,307565.582
+w198065413,Jinja Road,highway,Kinawataka,0.338,32.625,25.0,2.0,435526.4,217763.2,200342.144
+w1252909583,Kibuye Natete Road,main road,Nalukolongo,0.298,32.539,25.0,2.0,401023.592,200511.796,184470.853
+w116502568,Northern Bypass,highway,Lubigi,0.349,32.559,10.0,2.0,366447.091,183223.545,146578.836
+w580154547,Katwe Road,highway,Nakivubo,0.299,32.575,,10.0,1125811.545,112581.154,112581.154
+w198020118,Gayaza Road,main road,Lubigi,0.341,32.572,100.0,2.0,203564.997,101782.499,99746.849
+w206307747,Gayaza Road,main road,Lubigi,0.354,32.572,25.0,2.0,199066.943,99533.471,91570.794
+w199689518,Bwaise Roundabout,main road,Lubigi,0.35,32.563,5.0,2.0,294407.374,147203.687,88322.212
+w116505794,Bombo Road,main road,Lubigi,0.35,32.563,5.0,2.0,293947.211,146973.606,88184.163
+w529345525,,main road,Lubigi,0.353,32.572,10.0,2.0,199687.785,99843.893,79875.114
+w377087538,Gayaza Road,main road,Lubigi,0.354,32.572,10.0,2.0,199066.943,99533.471,79626.777
+w377090386,Gayaza Road,main road,Lubigi,0.356,32.573,10.0,2.0,192479.611,96239.805,76991.844
+w199587001,Entebbe Road,main road,other / outside city catchments,0.262,32.566,50.0,2.0,139738.098,69869.049,67074.287
+w503439990,Jinja Road,highway,Nakivubo,0.317,32.594,50.0,2.0,117534.557,58767.278,56416.587
+w579837625,Entebbe Road,main road,other / outside city catchments,0.249,32.56,25.0,2.0,120060.162,60030.081,55227.674
+w568563194,Kampala - Masaka Road,main road,other / outside city catchments,0.286,32.493,10.0,2.0,118668.247,59334.124,47467.299
+w116502575,Gayaza Road,main road,Lubigi,0.341,32.572,50.0,2.0,89916.514,44958.257,43159.927
+w220476946,Bwaise Nabweru Road,main road,Lubigi,0.353,32.561,10.0,2.0,102208.976,51104.488,40883.59
+w503247068,Old Masaka Road,main road,other / outside city catchments,0.299,32.53,10.0,2.0,85810.988,42905.494,34324.395
+w43897517,Ndejje Road,local through road,other / outside city catchments,0.259,32.568,10.0,2.0,85792.486,42896.243,34316.994
+w45764111,Wankulukuku Road,main road,Nalukolongo,0.291,32.55,10.0,2.0,85748.537,42874.269,34299.415
+w52728583,,main road,Lubigi,0.352,32.572,10.0,2.0,78875.116,39437.558,31550.047
+w1223688272,Ntinda Road,main road,Kinawataka,0.342,32.616,,5.0,132060.997,26412.199,26412.199
+w43897516,,local through road,other / outside city catchments,0.258,32.569,5.0,2.0,85330.221,42665.111,25599.066
+w1018435403,Northern Bypass,highway,Lubigi,0.354,32.59,10.0,2.0,63271.554,31635.777,25308.622
+w26796315,Hanlon Road,main road,Kansanga,0.293,32.586,25.0,2.0,53975.443,26987.721,24828.704
+w343215529,Ggaba Road,main road,Kansanga,0.28,32.613,5.0,2.0,78581.931,39290.966,23574.579
+w498001415,Nansana - Busunju Road,main road,other / outside city catchments,0.393,32.503,5.0,2.0,78323.021,39161.51,23496.906
+w702592184,Northern Bypass,highway,Lubigi,0.338,32.531,10.0,2.0,57362.336,28681.168,22944.934
+w755669487,Sentema Road,main road,Lubigi,0.333,32.526,10.0,2.0,55733.674,27866.837,22293.469
+w156298314,Portbell Road,main road,Nakivubo,0.317,32.632,10.0,2.0,47419.645,23709.823,18967.858
+w39914568,Sentema Road,main road,other / outside city catchments,0.32,32.547,10.0,2.0,43560.778,21780.389,17424.311
+w39914719,Sentema Road,main road,Lubigi,0.332,32.526,5.0,2.0,55739.572,27869.786,16721.871
+w108284771,Kiyimba Road,local through road,Nalukolongo,0.289,32.548,25.0,2.0,33780.165,16890.082,15538.876
+w1327216729,Gayaza Road,main road,Lubigi,0.365,32.576,100.0,10.0,162079.628,16207.963,14587.167
+w197889974,Nyanama Road,local through road,other / outside city catchments,0.273,32.558,25.0,2.0,25616.265,12808.133,11783.482
+w292684815,Kibuli Road,local through road,Nakivubo,0.309,32.59,50.0,2.0,19740.381,9870.191,9475.383
+w264268492,Weraga Road,local through road,Nalukolongo,0.292,32.564,25.0,2.0,19405.252,9702.626,8926.416
+w502976499,Suna Road,local through road,Nalukolongo,0.29,32.562,100.0,2.0,15467.121,7733.56,7578.889
+w569055352,,main road,other / outside city catchments,0.212,32.542,5.0,2.0,21188.587,10594.293,6356.576
+w282111995,Eng. Hussein L. Road,local through road,other / outside city catchments,0.256,32.539,10.0,2.0,11691.715,5845.858,4676.686
+w155251017,Gulu - Kampala Road,main road,other / outside city catchments,0.408,32.54,5.0,2.0,13138.473,6569.237,3941.542
+w600994642,Nsooba Kyebando Road,local through road,Lubigi,0.35,32.579,10.0,2.0,9023.424,4511.712,3609.37
+w44582216,,residential street,other / outside city catchments,0.395,32.555,10.0,2.0,8914.944,4457.472,3565.978
+w326986202,,residential street,other / outside city catchments,0.32,32.497,5.0,2.0,11661.554,5830.777,3498.466
+w501870791,Nateete Road,main road,Nalukolongo,0.302,32.54,10.0,2.0,8061.291,4030.646,3224.516
+w199156554,Kyambogo Road,local through road,Kinawataka,0.339,32.626,10.0,2.0,7650.751,3825.375,3060.3
+w571103099,,highway,other / outside city catchments,0.209,32.556,25.0,2.0,6176.049,3088.025,2840.983
+w39092887,Wavamuno Road,main road,other / outside city catchments,0.256,32.626,5.0,2.0,9424.74,4712.37,2827.422
+w751582528,Senfuka Lane,residential street,Lubigi,0.365,32.558,25.0,2.0,5800.683,2900.342,2668.314
+w665256337,Hajji Kalule Lane,residential street,Lubigi,0.365,32.558,25.0,2.0,5722.559,2861.28,2632.377
+w168287433,Nsamba Road,residential street,Lubigi,0.365,32.558,10.0,2.0,6464.121,3232.06,2585.648
+w741228708,Masajage Lane,residential street,Lubigi,0.365,32.557,25.0,2.0,5528.743,2764.371,2543.222
+w664050918,,residential street,other / outside city catchments,0.26,32.565,50.0,2.0,4678.631,2339.315,2245.743
+w583160819,Entebbe Road,main road,other / outside city catchments,0.262,32.566,10.0,2.0,5589.556,2794.778,2235.823
+w179377360,,local through road,other / outside city catchments,0.263,32.566,25.0,2.0,4571.557,2285.778,2102.916
+w252281941,Kyagwe Road,local through road,Nakivubo,0.317,32.572,50.0,2.0,4301.134,2150.567,2064.544
+w198951380,Naguru Road,local through road,Nakivubo,0.331,32.605,25.0,2.0,4327.107,2163.553,1990.469
+w44518856,,local through road,other / outside city catchments,0.391,32.517,5.0,2.0,6117.489,3058.745,1835.247
+w116523358,Sentema Road,main road,other / outside city catchments,0.35,32.477,5.0,2.0,5995.116,2997.558,1798.535
+w444796137,Acacia Avenue,main road,Nakivubo,0.325,32.587,,50.0,79744.804,1594.896,1594.896
+w377068246,,local through road,Lubigi,0.362,32.573,5.0,2.0,5246.065,2623.033,1573.82
+w44582220,Kaboggoza Road,residential street,other / outside city catchments,0.386,32.558,5.0,2.0,5043.022,2521.511,1512.906
+w1018435410,Northern Bypass,highway,Lubigi,0.354,32.59,10.0,2.0,3720.445,1860.223,1488.178
+w661197202,,residential street,other / outside city catchments,0.387,32.52,5.0,2.0,4943.813,2471.907,1483.144
+w43859455,Mpaabaana Road,local through road,Nakivubo,0.322,32.572,50.0,2.0,2851.771,1425.885,1368.85
+w757040049,St. Francis Close,residential street,Lubigi,0.367,32.558,10.0,2.0,3220.45,1610.225,1288.18
+w52729972,,local through road,other / outside city catchments,0.321,32.51,50.0,5.0,6968.7,1393.74,1254.366
+w44582222,,local through road,other / outside city catchments,0.407,32.55,10.0,2.0,3018.485,1509.242,1207.394
+w44518899,,residential street,Lubigi,0.369,32.573,10.0,2.0,2880.908,1440.454,1152.363
+w44518844,Kisimu,local through road,other / outside city catchments,0.398,32.536,5.0,2.0,3694.351,1847.175,1108.305
+w43875029,,residential street,other / outside city catchments,0.249,32.559,10.0,2.0,2640.145,1320.073,1056.058
+w116502558,Northern Bypass,highway,Lubigi,0.349,32.559,10.0,2.0,2605.316,1302.658,1042.126
+w44518886,Norah Nanfuka Road,residential street,Lubigi,0.372,32.572,25.0,2.0,2263.53,1131.765,1041.224
+w747367775,Bulungi Bwansi Road,residential street,Lubigi,0.342,32.547,10.0,2.0,2587.874,1293.937,1035.15
+w751582521,Kazo 3584,residential street,Lubigi,0.368,32.558,10.0,2.0,2454.421,1227.21,981.768
+w988521077,Ntinda Road,main road,Kinawataka,0.342,32.616,,5.0,4752.065,950.413,950.413
+w168287431,Sheikh Muzaata Road,residential street,Lubigi,0.353,32.56,10.0,2.0,2360.042,1180.021,944.017
+w45396872,,residential street,other / outside city catchments,0.256,32.502,5.0,2.0,2984.308,1492.154,895.292
+w1307886586,,highway,Lubigi,0.352,32.59,10.0,2.0,2068.389,1034.194,827.355
+w571123662,Nakigalala Road,local through road,other / outside city catchments,0.226,32.526,25.0,2.0,1686.631,843.315,775.85
+w43859464,Mutesi Road,local through road,Nakivubo,0.301,32.576,25.0,2.0,1680.794,840.397,773.165
+w45504385,Hajji Kirumaganyi Road,local through road,Nakivubo,0.316,32.63,25.0,2.0,1647.274,823.637,757.746
+w662118214,,residential street,other / outside city catchments,0.261,32.565,10.0,2.0,1851.126,925.563,740.451
+w39916079,Kabale Busega Road,local through road,other / outside city catchments,0.31,32.516,,2.0,1287.965,643.983,643.983
+w568974726,,highway,other / outside city catchments,0.213,32.541,5.0,2.0,1844.52,922.26,553.356
+w580411651,Ring Road Nalukologo Industrial Area,residential street,Nalukolongo,0.293,32.545,25.0,2.0,1166.088,583.044,536.4
+w751576085,Kanamwanji Road,residential street,Lubigi,0.37,32.557,10.0,2.0,1338.063,669.031,535.225
+w111873573,,residential street,other / outside city catchments,0.25,32.564,5.0,2.0,1783.795,891.897,535.138
+w665049926,Masaka 1,residential street,Nalukolongo,0.288,32.562,25.0,2.0,1154.142,577.071,530.905
+w751576094,Sesilia Road,residential street,Lubigi,0.374,32.555,10.0,2.0,1268.843,634.421,507.537
+w502965056,,service lane,Nalukolongo,0.29,32.55,50.0,2.0,1020.309,510.154,489.748
+w585216850,,highway,other / outside city catchments,0.209,32.556,25.0,2.0,1033.934,516.967,475.61
+w376254981,Nakawuka Road,main road,other / outside city catchments,0.243,32.498,,25.0,11739.209,469.568,469.568
+w580154557,Ring Road Nalukologo Industrial Area,residential street,Nalukolongo,0.293,32.545,10.0,2.0,1166.088,583.044,466.435
+w747367772,Kawaala - Bwaise Road,residential street,Lubigi,0.346,32.558,25.0,2.0,992.403,496.202,456.505
+w44582221,,residential street,other / outside city catchments,0.388,32.556,50.0,2.0,926.867,463.433,444.896
+w665237132,Bwaise II 3592,residential street,Lubigi,0.362,32.559,10.0,2.0,1111.892,555.946,444.757
+w45396885,,residential street,other / outside city catchments,0.286,32.488,25.0,2.0,966.53,483.265,444.604
+w616119093,,service lane,Kinawataka,0.337,32.624,25.0,2.0,918.558,459.279,422.537
+w664671681,Kazo 3483,residential street,Lubigi,0.373,32.555,10.0,2.0,1053.359,526.68,421.344
+w396484362,,residential street,other / outside city catchments,0.221,32.517,25.0,2.0,852.121,426.061,391.976
+w664174808,,residential street,other / outside city catchments,0.388,32.557,50.0,2.0,816.604,408.302,391.97
+w44111774,,residential street,Lubigi,0.348,32.587,5.0,2.0,1242.195,621.098,372.659
+w377068315,,residential street,Lubigi,0.348,32.568,100.0,2.0,758.939,379.469,371.88
+w198667876,St. Lawrence University Lane,residential street,other / outside city catchments,0.3,32.562,25.0,2.0,806.811,403.405,371.133
+w568350784,,residential street,Kansanga,0.295,32.58,100.0,2.0,716.641,358.321,351.154
+w133403616,,residential street,Kansanga,0.28,32.607,10.0,2.0,869.08,434.54,347.632
+w391306604,,residential street,Nalukolongo,0.296,32.533,10.0,2.0,853.352,426.676,341.341
+w860935015,,residential street,Nalukolongo,0.296,32.533,10.0,2.0,853.352,426.676,341.341
+w875094079,,residential street,Nakivubo,0.308,32.614,25.0,2.0,734.222,367.111,337.742
+w600994640,Northern Bypass,highway,Walufumbe,0.369,32.618,25.0,2.0,731.753,365.877,336.607
+w661056657,Kawempe I 1714,residential street,Lubigi,0.372,32.572,50.0,2.0,681.847,340.923,327.286
+w664641183,,residential street,Lubigi,0.364,32.576,5.0,2.0,1062.586,531.293,318.776
+w737509739,KAZO 1324,residential street,Lubigi,0.367,32.557,25.0,2.0,673.724,336.862,309.913
+w580941803,,service lane,Nalukolongo,0.291,32.549,25.0,2.0,654.059,327.029,300.867
+w760396463,,residential street,Nalukolongo,0.287,32.547,100.0,5.0,1581.378,316.276,300.462
+w568974728,,highway,other / outside city catchments,0.213,32.542,50.0,2.0,612.49,306.245,293.995
+w111871608,,residential street,Nalukolongo,0.302,32.54,50.0,2.0,605.448,302.724,290.615
+w220467833,Magumba Road,local through road,other / outside city catchments,0.391,32.556,10.0,2.0,726.138,363.069,290.455
+w198356263,,residential street,Lubigi,0.337,32.549,10.0,2.0,715.237,357.619,286.095
+w44518905,,local through road,Lubigi,0.351,32.57,5.0,2.0,912.44,456.22,273.732
+w616556443,Cleveland Road,residential street,Lubigi,0.355,32.589,10.0,2.0,682.456,341.228,272.982
+w578603102,,residential street,other / outside city catchments,0.203,32.527,10.0,2.0,621.644,310.822,248.657
+w751582520,KAZO 1822,residential street,Lubigi,0.368,32.558,10.0,2.0,617.288,308.644,246.915
+w44529168,Kimera Road,local through road,Lubigi,0.334,32.559,100.0,5.0,1299.383,259.877,246.883
+w44180439,,service lane,other / outside city catchments,0.211,32.541,25.0,2.0,508.444,254.222,233.884
+w194587323,,residential street,Lubigi,0.352,32.561,10.0,2.0,570.883,285.441,228.353
+w116497544,Northern Bypass,highway,Walufumbe,0.369,32.619,50.0,2.0,442.646,221.323,212.47
+w503422799,Northern Bypass,highway,other / outside city catchments,0.322,32.523,10.0,2.0,517.166,258.583,206.866
+w44180432,Kigo Road,local through road,other / outside city catchments,0.203,32.546,5.0,2.0,679.875,339.938,203.963
+w381089670,Sempangi Road,residential street,other / outside city catchments,0.385,32.633,10.0,2.0,506.173,253.087,202.469
+w580122180,,residential street,other / outside city catchments,0.254,32.567,10.0,2.0,499.623,249.812,199.849
+w582703542,,residential street,Nalukolongo,0.29,32.554,25.0,2.0,434.254,217.127,199.757
+w1056617604,,highway,Lubigi,0.353,32.571,10.0,2.0,492.891,246.446,197.157
+w43875048,,residential street,Nalukolongo,0.285,32.545,25.0,2.0,425.851,212.926,195.892
+w391306626,,residential street,Nalukolongo,0.296,32.532,10.0,2.0,459.262,229.631,183.705
+w627436319,Ssekanjako Msk Close,residential street,Lubigi,0.368,32.573,100.0,5.0,933.927,186.785,177.446
+w52730387,,residential street,other / outside city catchments,0.329,32.518,25.0,2.0,383.171,191.586,176.259
+w665898644,,residential street,Lubigi,0.336,32.55,25.0,2.0,382.785,191.392,176.081
+w751576093,,residential street,Lubigi,0.374,32.554,10.0,2.0,435.077,217.539,174.031
+w1417071497,,residential street,other / outside city catchments,0.392,32.622,5.0,2.0,576.122,288.061,172.837
+w580575920,,residential street,Nalukolongo,0.29,32.541,10.0,2.0,421.362,210.681,168.545
+w377060938,Kagga Sam Road,residential street,Lubigi,0.358,32.571,10.0,2.0,406.4,203.2,162.56
+w663881770,,residential street,Lubigi,0.341,32.558,25.0,2.0,350.013,175.007,161.006
+w862772953,,service lane,Lubigi,0.357,32.591,10.0,2.0,400.672,200.336,160.269
+w44582238,,local through road,other / outside city catchments,0.398,32.553,25.0,2.0,347.251,173.625,159.735
+w111871605,,residential street,Nalukolongo,0.297,32.538,25.0,2.0,342.023,171.011,157.33
+w45504337,,residential street,Nakivubo,0.317,32.627,25.0,2.0,336.866,168.433,154.958
+w575982104,,service lane,other / outside city catchments,0.211,32.542,5.0,2.0,508.444,254.222,152.533
+w1450297342,,service lane,Lubigi,0.349,32.567,25.0,2.0,325.506,162.753,149.733
+w580941693,,residential street,Nalukolongo,0.291,32.546,25.0,2.0,323.052,161.526,148.604
+w1392343108,,residential street,Nakivubo,0.317,32.632,10.0,2.0,367.1,183.55,146.84
+w665107545,,residential street,other / outside city catchments,0.259,32.601,10.0,2.0,352.217,176.109,140.887
+w582703555,,residential street,Nalukolongo,0.291,32.554,25.0,2.0,293.142,146.571,134.845
+w26928285,Muwanga II Road,local through road,Nakivubo,0.31,32.569,25.0,2.0,291.965,145.982,134.304
+w377068341,,service lane,Lubigi,0.346,32.571,25.0,2.0,290.936,145.468,133.831
+w327272693,Northern Bypass,highway,Lubigi,0.353,32.569,10.0,2.0,327.934,163.967,131.173
+w501841500,,residential street,Nalukolongo,0.301,32.541,50.0,2.0,272.059,136.03,130.588
+w664589022,,residential street,other / outside city catchments,0.28,32.553,25.0,2.0,282.963,141.482,130.163
+w760100134,,service lane,other / outside city catchments,0.273,32.558,25.0,2.0,281.727,140.863,129.594
+w664999464,,residential street,Lubigi,0.375,32.571,5.0,2.0,422.632,211.316,126.79
+w319902901,,residential street,Nalukolongo,0.289,32.546,,5.0,621.037,124.207,124.207
+w580561096,,service lane,Nalukolongo,0.292,32.541,25.0,2.0,265.627,132.813,122.188
+w45425907,,residential street,Nalukolongo,0.3,32.541,100.0,5.0,630.248,126.05,119.747
+w665352824,,residential street,Walufumbe,0.373,32.619,25.0,2.0,258.647,129.323,118.978
+w1178268373,,residential street,Kansanga,0.274,32.614,10.0,2.0,289.521,144.761,115.809
+w665483890,,residential street,other / outside city catchments,0.322,32.549,50.0,2.0,239.199,119.6,114.816
+w377098168,Pimbas Road,residential street,Lubigi,0.357,32.571,10.0,2.0,282.87,141.435,113.148
+w45425908,,residential street,Nalukolongo,0.299,32.541,25.0,2.0,242.314,121.157,111.465
+w26704162,Namasole (Kiyembe) Road,main road,other / outside city catchments,0.287,32.571,50.0,2.0,229.065,114.532,109.951
+w530125358,,service lane,Lubigi,0.346,32.558,50.0,2.0,226.57,113.285,108.754
+w391306602,,residential street,other / outside city catchments,0.301,32.527,25.0,2.0,231.693,115.846,106.579
+w580122193,,residential street,other / outside city catchments,0.257,32.568,5.0,2.0,352.997,176.498,105.899
+w135978655,,residential street,Lubigi,0.342,32.558,25.0,2.0,228.332,114.166,105.033
+w43875058,,residential street,Nalukolongo,0.291,32.541,25.0,2.0,226.046,113.023,103.981
+w502980328,,residential street,Nalukolongo,0.29,32.568,100.0,2.0,201.271,100.635,98.623
+w867737046,,service lane,other / outside city catchments,0.261,32.567,50.0,2.0,202.919,101.459,97.401
+w220118189,Kyagwe Road,local through road,Nakivubo,0.317,32.572,50.0,2.0,202.195,101.097,97.053
+w501841465,,residential street,Nalukolongo,0.3,32.541,100.0,5.0,509.769,101.954,96.856
+w944590722,,residential street,Lubigi,0.35,32.563,10.0,2.0,240.08,120.04,96.032
+w44104907,,local through road,Kinawataka,0.344,32.624,5.0,2.0,318.729,159.364,95.619
+w377068337,,residential street,Lubigi,0.345,32.571,25.0,2.0,207.345,103.673,95.379
+w43875057,,local through road,Nalukolongo,0.29,32.542,100.0,2.0,194.439,97.219,95.275
+w664641199,Kawempe I 2231,residential street,Lubigi,0.369,32.573,5.0,2.0,316.761,158.381,95.028
+w116524627,Northern Bypass,highway,other / outside city catchments,0.321,32.523,10.0,2.0,222.59,111.295,89.036
+w377068249,,residential street,Lubigi,0.359,32.573,10.0,2.0,216.256,108.128,86.503
+w378018971,Musajja Alumbwa Road,residential street,Nakivubo,0.309,32.568,50.0,2.0,176.09,88.045,84.523
+w663795406,,residential street,other / outside city catchments,0.255,32.581,25.0,2.0,183.002,91.501,84.181
+w894643267,,local through road,Kinawataka,0.328,32.643,10.0,2.0,207.89,103.945,83.156
+w116505795,Bombo Road,main road,Lubigi,0.351,32.563,5.0,2.0,275.782,137.891,82.735
+w43916896,,residential street,other / outside city catchments,0.223,32.541,10.0,2.0,201.841,100.921,80.737
+w582813103,,service lane,Nalukolongo,0.29,32.55,10.0,2.0,201.419,100.709,80.568
+w1450297343,,service lane,Lubigi,0.346,32.569,25.0,2.0,174.533,87.267,80.285
+w582703544,,residential street,Nalukolongo,0.29,32.553,25.0,2.0,172.401,86.2,79.304
+w627436321,Kawempe I 3732,residential street,Lubigi,0.367,32.572,25.0,2.0,170.575,85.288,78.465
+w894642868,,service lane,Kinawataka,0.337,32.622,25.0,2.0,169.121,84.56,77.796
+w43875055,,local through road,Nalukolongo,0.29,32.542,10.0,2.0,194.439,97.219,77.775
+w737509745,Monica Close,residential street,Lubigi,0.366,32.558,10.0,2.0,193.816,96.908,77.527
+w894643112,,residential street,Kinawataka,0.327,32.64,5.0,2.0,255.855,127.927,76.756
+w750743594,,residential street,Lubigi,0.374,32.572,10.0,2.0,190.554,95.277,76.222
+w580122028,,residential street,other / outside city catchments,0.26,32.566,50.0,2.0,152.65,76.325,73.272
+w664050926,,residential street,other / outside city catchments,0.259,32.569,10.0,2.0,179.431,89.715,71.772
+w380875088,,residential street,Kansanga,0.282,32.605,10.0,2.0,179.313,89.656,71.725
+w758056443,Bwaise II 3035,residential street,Lubigi,0.358,32.56,10.0,2.0,175.1,87.55,70.04
+w664641178,,residential street,Lubigi,0.364,32.576,10.0,2.0,171.386,85.693,68.554
+w663795425,,residential street,other / outside city catchments,0.258,32.575,5.0,2.0,223.936,111.968,67.181
+w502965007,,service lane,Nalukolongo,0.289,32.547,25.0,2.0,145.148,72.574,66.768
+w662077110,,residential street,other / outside city catchments,0.261,32.566,10.0,2.0,161.196,80.598,64.479
+w891909087,,highway,Lubigi,0.344,32.54,10.0,2.0,161.095,80.547,64.438
+w666886661,,service lane,Nakivubo,0.324,32.572,100.0,2.0,129.511,64.756,63.46
+w751784332,Musoke Road,residential street,Lubigi,0.354,32.571,5.0,2.0,210.743,105.371,63.223
+w751788138,Access Road to Nabukalu Well,residential street,Lubigi,0.355,32.562,10.0,2.0,156.912,78.456,62.765
+w829605497,,local through road,Lubigi,0.346,32.587,50.0,2.0,130.651,65.325,62.712
+w580941775,,residential street,Nalukolongo,0.29,32.548,10.0,2.0,156.738,78.369,62.695
+w737815517,,residential street,Lubigi,0.36,32.573,25.0,2.0,135.002,67.501,62.101
+w390058915,,service lane,Nakivubo,0.321,32.571,100.0,2.0,123.558,61.779,60.544
+w45406661,,residential street,Lubigi,0.358,32.593,10.0,2.0,146.789,73.395,58.716
+w874640366,,residential street,Nalukolongo,0.304,32.543,25.0,2.0,125.758,62.879,57.849
+w661058451,Bob Mustafa Close,residential street,Lubigi,0.374,32.571,5.0,2.0,190.554,95.277,57.166
+w661058449,,residential street,Lubigi,0.374,32.572,5.0,2.0,190.554,95.277,57.166
+w395465998,,residential street,other / outside city catchments,0.28,32.576,100.0,2.0,116.651,58.326,57.159
+w503109999,,service lane,other / outside city catchments,0.286,32.572,25.0,2.0,120.137,60.068,55.263
+w156317632,Kireka Road,main road,Kinawataka,0.335,32.634,5.0,2.0,183.333,91.667,55.0
+w894642869,,service lane,Kinawataka,0.337,32.623,10.0,2.0,136.581,68.291,54.633
+w580237785,,service lane,Nalukolongo,0.294,32.536,10.0,2.0,135.238,67.619,54.095
+w665564116,,residential street,Kansanga,0.29,32.592,100.0,5.0,283.125,56.625,53.794
+w661058450,,residential street,Lubigi,0.373,32.572,5.0,2.0,177.686,88.843,53.306
+w757040052,Kasirye George Close,residential street,Lubigi,0.372,32.555,25.0,2.0,112.586,56.293,51.789
+w661056652,,local through road,Lubigi,0.372,32.574,25.0,2.0,112.186,56.093,51.605
+w1245480363,,residential street,other / outside city catchments,0.318,32.542,25.0,2.0,112.129,56.065,51.58
+w978363144,,residential street,Lubigi,0.366,32.574,10.0,2.0,128.066,64.033,51.226
+w199689517,Northern Bypass,highway,Lubigi,0.353,32.569,10.0,2.0,127.951,63.976,51.18
+w1056617596,,highway,Lubigi,0.353,32.571,10.0,2.0,127.951,63.976,51.18
+w666574270,,residential street,other / outside city catchments,0.32,32.548,10.0,2.0,120.13,60.065,48.052
+w116600117,Old Kiira Road,local through road,Lubigi,0.345,32.593,,100.0,4755.364,47.554,47.554
+w760632293,,service lane,Nalukolongo,0.288,32.547,10.0,2.0,118.093,59.046,47.237
+w168389324,,residential street,Lubigi,0.351,32.589,10.0,2.0,117.831,58.915,47.132
+w257780369,,residential street,other / outside city catchments,0.285,32.572,10.0,2.0,115.456,57.728,46.182
+w978303876,,residential street,Lubigi,0.373,32.572,10.0,2.0,113.091,56.546,45.237
+w331058929,,residential street,Lubigi,0.35,32.566,10.0,2.0,110.928,55.464,44.371
+w582350327,,service lane,Nalukolongo,0.287,32.55,50.0,2.0,91.924,45.962,44.123
+w750107772,,residential street,Lubigi,0.363,32.558,10.0,2.0,109.953,54.976,43.981
+w1138233308,,service lane,other / outside city catchments,0.287,32.571,100.0,5.0,229.065,45.813,43.522
+w1276433036,,service lane,Lubigi,0.363,32.574,50.0,2.0,89.017,44.508,42.728
+w397569291,,service lane,Kinawataka,0.337,32.623,25.0,2.0,92.497,46.249,42.549
+w531968181,Bwaise III 2620,residential street,Lubigi,0.35,32.562,5.0,2.0,139.286,69.643,41.786
+w856306670,,local through road,Lubigi,0.35,32.579,10.0,2.0,103.446,51.723,41.379
+w664641200,,residential street,Lubigi,0.37,32.573,5.0,2.0,137.798,68.899,41.339
+w750374991,Ssalongo Sekilime Close,residential street,Lubigi,0.35,32.56,10.0,2.0,102.92,51.46,41.168
+w664412993,,residential street,other / outside city catchments,0.255,32.585,5.0,2.0,135.91,67.955,40.773
+w737509761,Bwaise II 3592,residential street,Lubigi,0.363,32.558,10.0,2.0,97.723,48.862,39.089
+w664632842,,residential street,Lubigi,0.358,32.55,,10.0,378.741,37.874,37.874
+w580154573,,service lane,Nalukolongo,0.294,32.541,10.0,2.0,93.54,46.77,37.416
+w751576090,Kaguta Close,residential street,Lubigi,0.371,32.556,10.0,2.0,93.253,46.626,37.301
+w760436687,,service lane,Nalukolongo,0.288,32.548,25.0,2.0,77.204,38.602,35.514
+w757230050,Buyingo Elifazi Close,residential street,Lubigi,0.352,32.56,,5.0,171.83,34.366,34.366
+w1065811920,,service lane,other / outside city catchments,0.365,32.634,5.0,2.0,113.38,56.69,34.014
+w850862567,Tirupati Road,residential street,Lubigi,0.355,32.59,5.0,2.0,111.445,55.722,33.433
+w223240986,Kitante Lane,residential street,Nakivubo,0.332,32.582,100.0,5.0,172.396,34.479,32.755
+w396405952,,highway,other / outside city catchments,0.215,32.533,5.0,2.0,108.39,54.195,32.517
+w568573333,,service lane,other / outside city catchments,0.3,32.513,50.0,2.0,67.445,33.722,32.373
+w363508137,,residential street,Lubigi,0.356,32.573,10.0,2.0,80.096,40.048,32.038
+w1416760607,,residential street,Lubigi,0.34,32.518,25.0,5.0,198.921,39.784,31.827
+w664646717,,residential street,Lubigi,0.365,32.574,25.0,2.0,64.592,32.296,29.712
+w420271390,,residential street,other / outside city catchments,0.271,32.55,25.0,2.0,64.081,32.041,29.477
+w357206920,Bulaimu Kibirige Road,service lane,Nakivubo,0.32,32.592,10.0,2.0,72.183,36.091,28.873
+w447026356,,residential street,Nakivubo,0.316,32.61,25.0,2.0,60.267,30.134,27.723
+w501828687,,residential street,Nalukolongo,0.298,32.538,10.0,2.0,66.795,33.397,26.718
+w751582522,Kazo 3585,residential street,Lubigi,0.366,32.559,10.0,2.0,60.468,30.234,24.187
+w763912253,,residential street,Lubigi,0.356,32.572,5.0,2.0,80.096,40.048,24.029
+w1352955969,,main road,Lubigi,0.352,32.59,5.0,2.0,80.062,40.031,24.019
+w381107919,,residential street,Walufumbe,0.37,32.618,25.0,2.0,51.448,25.724,23.666
+w223239643,Kulambiro Road,local through road,Walufumbe,0.379,32.619,25.0,2.0,49.407,24.704,22.727
+w574560326,,service lane,other / outside city catchments,0.286,32.494,10.0,2.0,54.766,27.383,21.906
+w662077105,,residential street,other / outside city catchments,0.261,32.568,,100.0,2085.57,20.856,20.856
+w576017657,,service lane,other / outside city catchments,0.209,32.543,10.0,2.0,50.846,25.423,20.339
+w48813524,Kimera Road,residential street,Kinawataka,0.346,32.614,,5.0,100.9,20.18,20.18
+w397383494,,service lane,Nakivubo,0.329,32.605,50.0,2.0,41.243,20.622,19.797
+w396405726,,residential street,other / outside city catchments,0.216,32.533,100.0,10.0,219.798,21.98,19.782
+w534482498,,residential street,Nakivubo,0.308,32.635,,50.0,973.923,19.478,19.478
+w574581896,,residential street,other / outside city catchments,0.283,32.486,25.0,2.0,42.266,21.133,19.442
+w861175206,,residential street,Kinawataka,0.347,32.614,100.0,5.0,100.9,20.18,19.171
+w376251086,,highway,other / outside city catchments,0.212,32.53,50.0,5.0,106.182,21.236,19.113
+w257780361,,residential street,other / outside city catchments,0.286,32.572,,5.0,91.727,18.345,18.345
+w663881775,Klasswa Juma Road,residential street,Lubigi,0.349,32.554,5.0,2.0,57.5,28.75,17.25
+w737509766,Nakandi Close,residential street,Lubigi,0.364,32.558,100.0,5.0,89.655,17.931,17.034
+w894643008,,local through road,Kinawataka,0.326,32.646,5.0,2.0,54.244,27.122,16.273
+w760396579,,service lane,Nalukolongo,0.287,32.547,10.0,2.0,39.893,19.947,15.957
+w1166268958,,service lane,Kinawataka,0.339,32.625,25.0,2.0,34.206,17.103,15.735
+w44518896,,residential street,Lubigi,0.372,32.573,10.0,2.0,38.878,19.439,15.551
+w396006089,,residential street,other / outside city catchments,0.212,32.532,25.0,2.0,33.575,16.788,15.445
+w327365678,,residential street,Lubigi,0.353,32.571,10.0,2.0,37.263,18.632,14.905
+w572155106,,residential street,other / outside city catchments,0.205,32.544,5.0,2.0,48.398,24.199,14.52
+w389637729,,residential street,Nalukolongo,0.294,32.561,,100.0,1439.799,14.398,14.398
+w1185414709,,service lane,Lubigi,0.351,32.563,10.0,2.0,34.473,17.236,13.789
+w578517806,,highway,other / outside city catchments,0.215,32.534,100.0,10.0,147.396,14.74,13.266
+w396405910,,highway,other / outside city catchments,0.215,32.534,100.0,10.0,143.958,14.396,12.956
+w664016518,,residential street,other / outside city catchments,0.25,32.566,10.0,2.0,31.019,15.51,12.408
+w128119747,Butikiro Road,residential street,Nakivubo,0.308,32.565,,25.0,309.886,12.395,12.395
+w571225192,,residential street,other / outside city catchments,0.208,32.543,5.0,2.0,40.903,20.451,12.271
+w396005557,,residential street,other / outside city catchments,0.209,32.543,5.0,2.0,40.903,20.451,12.271
+w666063301,,local through road,other / outside city catchments,0.225,32.542,10.0,2.0,30.347,15.173,12.139
+w45406653,Twamulabirawo Road,residential street,Lubigi,0.357,32.59,5.0,2.0,39.699,19.85,11.91
+w1328703203,,service lane,other / outside city catchments,0.298,32.529,10.0,2.0,29.303,14.651,11.721
+w664432362,,residential street,other / outside city catchments,0.273,32.557,,25.0,282.716,11.309,11.309
+w297541120,,residential street,other / outside city catchments,0.405,32.601,10.0,2.0,27.705,13.852,11.082
+w44180441,,residential street,other / outside city catchments,0.213,32.543,,25.0,263.466,10.539,10.539
+w791726610,,service lane,Kinawataka,0.339,32.627,100.0,5.0,55.441,11.088,10.534
+w578603106,,residential street,other / outside city catchments,0.201,32.527,,50.0,521.186,10.424,10.424
+w894642795,,service lane,Kinawataka,0.335,32.634,,10.0,95.643,9.564,9.564
+w45343589,Kawaala Road,local through road,Lubigi,0.348,32.554,10.0,2.0,23.516,11.758,9.406
+w1164034099,,service lane,Lubigi,0.349,32.553,10.0,2.0,22.892,11.446,9.157
+w824642164,,main road,Nakivubo,0.305,32.577,,25.0,216.101,8.644,8.644
+w665021865,,residential street,other / outside city catchments,0.3,32.526,10.0,2.0,20.854,10.427,8.341
+w568803646,,highway,other / outside city catchments,0.212,32.531,10.0,2.0,20.785,10.392,8.314
+w791726609,,service lane,Kinawataka,0.339,32.627,100.0,5.0,43.672,8.734,8.298
+w396600260,,service lane,other / outside city catchments,0.221,32.54,,10.0,81.351,8.135,8.135
+w663881774,Seruwu Muhammad Road,residential street,Lubigi,0.349,32.554,10.0,2.0,19.146,9.573,7.658
+w215522464,Katwe Road,local through road,Nakivubo,0.299,32.575,,10.0,68.523,6.852,6.852
+w209075648,Kanyange,residential street,other / outside city catchments,0.396,32.544,,25.0,146.53,5.861,5.861
+w29748753,Gadafi Road,local through road,Nakivubo,0.322,32.569,,5.0,28.425,5.685,5.685
+w568573336,,residential street,other / outside city catchments,0.3,32.513,100.0,5.0,28.397,5.679,5.396
+w663772108,,residential street,other / outside city catchments,0.414,32.549,5.0,2.0,16.729,8.365,5.019
+w1393918421,,residential street,other / outside city catchments,0.26,32.568,100.0,5.0,25.855,5.171,4.912
+w503279054,,service lane,Nalukolongo,0.294,32.54,10.0,2.0,11.614,5.807,4.646
+w755048679,,service lane,other / outside city catchments,0.23,32.49,10.0,2.0,10.947,5.474,4.379
+w381755136,,residential street,other / outside city catchments,0.258,32.568,,25.0,107.76,4.31,4.31
+w1340563612,,residential street,Lubigi,0.348,32.543,10.0,2.0,10.468,5.234,4.187
+w501870799,,residential street,Nalukolongo,0.304,32.544,,50.0,197.901,3.958,3.958
+w167777121,Kasangati Road,local through road,other / outside city catchments,0.419,32.624,5.0,2.0,12.651,6.326,3.795
+w381071464,,residential street,Kansanga,0.296,32.579,,50.0,166.917,3.338,3.338
+w664641187,Kawempe I 3802,residential street,Lubigi,0.367,32.572,,100.0,281.301,2.813,2.813
+w760099838,,service lane,Nalukolongo,0.292,32.55,,25.0,67.129,2.685,2.685
+w125497803,,residential street,other / outside city catchments,0.225,32.549,,100.0,228.3,2.283,2.283
+w636066739,Enkunkalu Street,residential street,other / outside city catchments,0.256,32.628,50.0,5.0,12.499,2.5,2.25
+w43930265,,service lane,other / outside city catchments,0.222,32.532,10.0,2.0,5.229,2.615,2.092
+w43875040,Access to Kajjansi Fisheries Research Centre,local through road,other / outside city catchments,0.222,32.532,,25.0,42.116,1.685,1.685
+w569055351,,main road,other / outside city catchments,0.212,32.542,5.0,2.0,5.492,2.746,1.648
+w396405796,,local through road,other / outside city catchments,0.237,32.515,25.0,2.0,3.062,1.531,1.408
+w1415226769,,residential street,other / outside city catchments,0.241,32.499,5.0,2.0,4.585,2.293,1.376
+w571225301,,residential street,other / outside city catchments,0.208,32.543,5.0,2.0,4.321,2.16,1.296
+w751788139,Bwaise I 2503,local through road,Lubigi,0.355,32.562,,50.0,58.589,1.172,1.172
+w571103189,,service lane,other / outside city catchments,0.204,32.546,10.0,2.0,2.867,1.434,1.147
+w47309346,,residential street,Kinawataka,0.347,32.624,,25.0,26.72,1.069,1.069
+w568803638,,highway,other / outside city catchments,0.215,32.533,5.0,2.0,3.38,1.69,1.014
+w501819738,,residential street,Nalukolongo,0.298,32.538,,100.0,66.795,0.668,0.668
+w664612802,,residential street,other / outside city catchments,0.345,32.529,5.0,2.0,2.218,1.109,0.665
+w569055373,,service lane,other / outside city catchments,0.211,32.544,,100.0,57.678,0.577,0.577
+w661829289,,residential street,other / outside city catchments,0.276,32.579,,5.0,2.542,0.508,0.508
+w660405213,,residential street,Lubigi,0.374,32.572,,25.0,6.646,0.266,0.266
+w496441379,,local through road,other / outside city catchments,0.203,32.479,,25.0,1.554,0.062,0.062
+w747922697,,service lane,other / outside city catchments,0.213,32.543,,,0.0,0.0,0.0
+w751485680,Luyomya Road,residential street,Lubigi,0.373,32.571,,,1281.92,0.0,0.0
+w737524164,,residential street,Lubigi,0.354,32.56,,,0.0,0.0,0.0
+w751506494,Kabinika Road,residential street,Lubigi,0.373,32.57,,,0.0,0.0,0.0
+w741227582,Kazo 1823,residential street,Lubigi,0.366,32.557,,,97.878,0.0,0.0
+w751565834,Kenzire .S. Close,residential street,Lubigi,0.376,32.553,,,65.802,0.0,0.0
+w737509744,Kawempe I 2478,residential street,Lubigi,0.366,32.56,,,44.943,0.0,0.0
+w751565836,Kiwanuka Road,residential street,Lubigi,0.376,32.552,,,0.0,0.0,0.0
+w751485678,Kawempe I 2220,residential street,Lubigi,0.374,32.571,5.0,2.0,0.0,0.0,0.0
+w750408217,,residential street,Lubigi,0.376,32.552,,,0.0,0.0,0.0
+w747922143,,service lane,other / outside city catchments,0.215,32.553,,,13.064,0.0,0.0
+w749629227,,residential street,other / outside city catchments,0.232,32.57,,,0.0,0.0,0.0
+w749740668,,service lane,other / outside city catchments,0.201,32.525,,,0.0,0.0,0.0
+w737509760,Semambo Lane,residential street,Lubigi,0.363,32.557,,,203.294,0.0,0.0
+w750117194,KAZO 3586,residential street,Lubigi,0.365,32.559,,,0.0,0.0,0.0
+w749740791,,service lane,other / outside city catchments,0.201,32.526,,,0.0,0.0,0.0
+w737509764,,residential street,Lubigi,0.364,32.558,,,0.0,0.0,0.0
+w749740796,,residential street,other / outside city catchments,0.201,32.527,2.0,2.0,0.0,0.0,0.0
+w750107777,Nabajja Lane,residential street,Lubigi,0.362,32.558,,,0.0,0.0,0.0
+w749740797,,residential street,other / outside city catchments,0.202,32.527,2.0,2.0,100.458,50.229,0.0
+w26703855,,main road,Nakivubo,0.308,32.578,25.0,2.0,0.0,0.0,0.0
+w879148744,,residential street,Lubigi,0.333,32.561,25.0,2.0,0.0,0.0,0.0
+w1179671293,,residential street,Lubigi,0.372,32.557,,,133.878,0.0,0.0
+w1267428571,,service lane,Lubigi,0.367,32.56,,,0.0,0.0,0.0
+w1267058338,,residential street,other / outside city catchments,0.317,32.542,,,112.129,0.0,0.0
+w1262470820,,service lane,Nalukolongo,0.304,32.543,25.0,2.0,0.0,0.0,0.0
+w1262444028,,service lane,Nalukolongo,0.298,32.539,25.0,2.0,0.0,0.0,0.0
+w1258141272,,service lane,Lubigi,0.349,32.554,5.0,2.0,0.0,0.0,0.0
+w1242422578,,service lane,Nalukolongo,0.303,32.544,,25.0,0.0,0.0,0.0
+w1223997878,Acacia Avenue,main road,Nakivubo,0.325,32.587,,,3.052,0.0,0.0
+w1213267589,Mukubira Lane,residential street,other / outside city catchments,0.302,32.56,,,160.204,0.0,0.0
+w1202708609,,residential street,Lubigi,0.374,32.552,,,150.196,0.0,0.0
+w1202708608,,residential street,Lubigi,0.374,32.552,,,0.0,0.0,0.0
+w1175536465,,service lane,Nalukolongo,0.29,32.549,10.0,2.0,0.0,0.0,0.0
+w751582523,KAZO 2447,residential street,Lubigi,0.362,32.558,,,803.736,0.0,0.0
+w1138561735,,service lane,Kinawataka,0.339,32.631,,,0.0,0.0,0.0
+w1138233309,,service lane,other / outside city catchments,0.287,32.572,25.0,2.0,0.0,0.0,0.0
+w1006634019,,highway,Lubigi,0.354,32.59,5.0,2.0,0.0,0.0,0.0
+w978363143,,residential street,Lubigi,0.366,32.574,10.0,2.0,0.0,0.0,0.0
+w972252182,,residential street,Kinawataka,0.342,32.616,,5.0,0.0,0.0,0.0
+w938162336,,residential street,Lubigi,0.351,32.551,10.0,2.0,0.0,0.0,0.0
+w933227840,KAWEMPE I 2562,residential street,Lubigi,0.366,32.572,,50.0,0.0,0.0,0.0
+w894642828,,service lane,Kinawataka,0.337,32.622,10.0,2.0,0.0,0.0,0.0
+w894642642,,service lane,Kinawataka,0.348,32.613,25.0,2.0,0.0,0.0,0.0
+w1294659243,,service lane,Lubigi,0.354,32.57,10.0,2.0,0.0,0.0,0.0
+w1294659244,,service lane,Lubigi,0.354,32.569,5.0,2.0,0.0,0.0,0.0
+w1341219775,,service lane,other / outside city catchments,0.299,32.529,10.0,2.0,0.0,0.0,0.0
+w1453401073,,residential street,other / outside city catchments,0.238,32.571,,,8.174,0.0,0.0
+w1450297354,,service lane,Lubigi,0.35,32.567,10.0,2.0,0.0,0.0,0.0
+w1450297344,,service lane,Lubigi,0.346,32.569,,,0.0,0.0,0.0
+w1450297341,,service lane,Lubigi,0.345,32.569,,,111.61,0.0,0.0
+w1450297335,,service lane,Lubigi,0.344,32.569,,,0.0,0.0,0.0
+w1450297334,,service lane,Lubigi,0.345,32.569,,,0.0,0.0,0.0
+w1449415340,,residential street,Lubigi,0.348,32.568,25.0,2.0,0.0,0.0,0.0
+w1435805425,,local through road,other / outside city catchments,0.205,32.491,,,0.0,0.0,0.0
+w1435805424,,local through road,other / outside city catchments,0.205,32.491,,,1.053,0.0,0.0
+w1417078220,,service lane,Nakivubo,0.328,32.604,,,25.429,0.0,0.0
+w1416775745,,residential street,other / outside city catchments,0.344,32.528,,25.0,0.0,0.0,0.0
+w1416760534,,residential street,Lubigi,0.338,32.517,,,239.482,0.0,0.0
+w1396211177,,residential street,Lubigi,0.376,32.552,,,0.0,0.0,0.0
+w1396211176,,residential street,Lubigi,0.375,32.553,,,0.0,0.0,0.0
+w1370992882,Northern Bypass,highway,other / outside city catchments,0.316,32.519,,,71.752,0.0,0.0
+w1352955970,Kyebando Ring Road,main road,Lubigi,0.352,32.59,10.0,2.0,0.0,0.0,0.0
+w891910112,,service lane,other / outside city catchments,0.414,32.518,2.0,2.0,0.0,0.0,0.0
+w737509725,KAZO 2302,residential street,Lubigi,0.374,32.556,,,121.63,0.0,0.0
+w879148737,,residential street,Lubigi,0.331,32.562,,,1218.942,0.0,0.0
+w760632304,,service lane,Nalukolongo,0.288,32.547,10.0,2.0,0.0,0.0,0.0
+w760396983,,service lane,Nalukolongo,0.291,32.549,50.0,2.0,0.0,0.0,0.0
+w760396594,,service lane,Nalukolongo,0.287,32.548,10.0,2.0,0.0,0.0,0.0
+w760396560,,service lane,Nalukolongo,0.287,32.547,25.0,2.0,0.0,0.0,0.0
+w760100132,,service lane,other / outside city catchments,0.273,32.557,,5.0,0.0,0.0,0.0
+w760100131,,service lane,other / outside city catchments,0.273,32.557,,,0.0,0.0,0.0
+w760100035,,residential street,other / outside city catchments,0.28,32.555,,,171.358,0.0,0.0
+w758062555,,residential street,Lubigi,0.371,32.556,10.0,2.0,0.0,0.0,0.0
+w758056431,Kawempe I 2482,residential street,Lubigi,0.366,32.56,,,5116.571,0.0,0.0
+w758056429,Kazo 3483,residential street,Lubigi,0.373,32.555,,,1147.213,0.0,0.0
+w757396718,,service lane,other / outside city catchments,0.241,32.543,,,71.999,0.0,0.0
+w757110292,,service lane,other / outside city catchments,0.221,32.539,,,11.244,0.0,0.0
+w757040055,Namatovu Close,residential street,Lubigi,0.369,32.556,,,145.109,0.0,0.0
+w755669486,Sentema Road,main road,Lubigi,0.334,32.524,2.0,2.0,55729.898,27864.949,0.0
+w755559630,,residential street,other / outside city catchments,0.208,32.488,,25.0,0.0,0.0,0.0
+w755241378,,service lane,other / outside city catchments,0.229,32.49,,,0.0,0.0,0.0
+w755060819,,local through road,other / outside city catchments,0.204,32.491,,,5.647,0.0,0.0
+w755060815,,local through road,other / outside city catchments,0.205,32.49,,,1.053,0.0,0.0
+w755060813,,local through road,other / outside city catchments,0.204,32.492,,,0.0,0.0,0.0
+w760632302,,service lane,Nalukolongo,0.288,32.548,25.0,2.0,0.0,0.0,0.0
+w761584818,,residential street,other / outside city catchments,0.271,32.549,,,687.996,0.0,0.0
+w877420862,,service lane,Lubigi,0.345,32.569,,,0.0,0.0,0.0
+w764352840,,service lane,Lubigi,0.348,32.547,10.0,2.0,0.0,0.0,0.0
+w876451007,,service lane,Kinawataka,0.337,32.622,25.0,2.0,0.0,0.0,0.0
+w874999996,,service lane,Nakivubo,0.302,32.613,,,80.187,0.0,0.0
+w874999995,,service lane,Nakivubo,0.302,32.613,,,0.0,0.0,0.0
+w874640365,,residential street,Nalukolongo,0.304,32.544,25.0,2.0,0.0,0.0,0.0
+w870662588,,service lane,Lubigi,0.351,32.563,10.0,2.0,0.0,0.0,0.0
+w869076179,,service lane,Kansanga,0.28,32.607,10.0,2.0,0.0,0.0,0.0
+w864944456,,residential street,other / outside city catchments,0.384,32.562,,,4973.741,0.0,0.0
+w860940432,,residential street,Lubigi,0.373,32.555,10.0,2.0,0.0,0.0,0.0
+w860937444,,service lane,Lubigi,0.365,32.559,,,45.415,0.0,0.0
+w860937443,,service lane,Lubigi,0.366,32.559,,,0.0,0.0,0.0
+w860684038,,service lane,Lubigi,0.338,32.518,,,4.108,0.0,0.0
+w860639407,,highway,Lubigi,0.354,32.59,25.0,2.0,0.0,0.0,0.0
+w860606830,,service lane,Lubigi,0.329,32.562,,,0.0,0.0,0.0
+w859731348,,residential street,other / outside city catchments,0.261,32.566,25.0,2.0,0.0,0.0,0.0
+w859620900,,service lane,Nakivubo,0.31,32.576,,10.0,0.0,0.0,0.0
+w858884618,,service lane,Kinawataka,0.337,32.622,10.0,2.0,0.0,0.0,0.0
+w857248909,,residential street,Lubigi,0.348,32.554,10.0,2.0,0.0,0.0,0.0
+w840928018,,residential street,Nakivubo,0.309,32.636,,,75.137,0.0,0.0
+w764352841,,service lane,Lubigi,0.347,32.547,10.0,2.0,0.0,0.0,0.0
+w737509735,,residential street,Lubigi,0.369,32.558,,,107.348,0.0,0.0
+w573317212,,residential street,other / outside city catchments,0.276,32.518,,,0.0,0.0,0.0
+w737509712,,residential street,Lubigi,0.372,32.557,,,98.669,0.0,0.0
+w391132689,,service lane,Nakivubo,0.318,32.593,,,0.0,0.0,0.0
+w385996485,Access from Jakana Road to Nabukalu Well,residential street,Lubigi,0.361,32.56,,,0.0,0.0,0.0
+w384683840,,service lane,Nakivubo,0.319,32.593,,,13.934,0.0,0.0
+w382724400,,residential street,other / outside city catchments,0.223,32.55,,,137.752,0.0,0.0
+w382724398,,residential street,other / outside city catchments,0.224,32.549,,,294.387,0.0,0.0
+w381030860,,residential street,Lubigi,0.365,32.561,,,0.0,0.0,0.0
+w381014282,KAZO 1806,residential street,Lubigi,0.367,32.559,,,112.371,0.0,0.0
+w381014281,St. Francis Close,residential street,Lubigi,0.367,32.559,,,3414.885,0.0,0.0
+w380811404,Kadugala Road,residential street,Lubigi,0.375,32.552,,,230.367,0.0,0.0
+w380811390,Kazo Church Road,residential street,Lubigi,0.374,32.552,,,104.659,0.0,0.0
+w377090376,,service lane,Lubigi,0.355,32.572,25.0,2.0,0.0,0.0,0.0
+w377068340,,residential street,Lubigi,0.345,32.571,25.0,2.0,0.0,0.0,0.0
+w377060942,,residential street,Lubigi,0.356,32.572,10.0,2.0,0.0,0.0,0.0
+w376254993,,local through road,other / outside city catchments,0.205,32.529,2.0,2.0,4572.684,2286.342,0.0
+w376251080,,highway,other / outside city catchments,0.31,32.514,,,681.83,0.0,0.0
+w376251077,,highway,other / outside city catchments,0.312,32.515,,,672.74,0.0,0.0
+w346189605,Saddler Way,local through road,Nakivubo,0.341,32.597,,,5631.76,0.0,0.0
+w327272697,Bwaise II 1797,residential street,Lubigi,0.353,32.561,10.0,2.0,0.0,0.0,0.0
+w288197623,,residential street,other / outside city catchments,0.318,32.544,10.0,2.0,0.0,0.0,0.0
+w396005869,,service lane,other / outside city catchments,0.211,32.542,5.0,2.0,0.0,0.0,0.0
+w396405765,,residential street,other / outside city catchments,0.215,32.54,5.0,2.0,0.0,0.0,0.0
+w496438384,,local through road,other / outside city catchments,0.206,32.48,,,15.751,0.0,0.0
+w496438379,,local through road,other / outside city catchments,0.203,32.479,,,338.798,0.0,0.0
+w496378571,,service lane,other / outside city catchments,0.206,32.476,,,4.379,0.0,0.0
+w474384633,,residential street,Lubigi,0.344,32.588,,,95.46,0.0,0.0
+w455312785,Jinja Road,highway,Nakivubo,0.326,32.607,,,102698.804,0.0,0.0
+w451570764,,service lane,Nakivubo,0.345,32.599,,,0.0,0.0,0.0
+w451555667,,service lane,Nakivubo,0.341,32.598,,,28.981,0.0,0.0
+w451555645,,service lane,Nakivubo,0.341,32.597,,,29.425,0.0,0.0
+w451551006,,service lane,Nakivubo,0.341,32.597,,,10.315,0.0,0.0
+w451551002,,service lane,Nakivubo,0.341,32.597,,,0.0,0.0,0.0
+w451550980,,service lane,Nakivubo,0.341,32.597,,,0.0,0.0,0.0
+w451550979,,service lane,Nakivubo,0.341,32.597,,,0.0,0.0,0.0
+w451546948,,service lane,Nakivubo,0.344,32.599,,,187.313,0.0,0.0
+w436250896,Naguru Close,residential street,Nakivubo,0.344,32.599,,,878.833,0.0,0.0
+w411410827,,service lane,Nakivubo,0.329,32.604,,,0.0,0.0,0.0
+w400224802,Kibuye Natete Road,main road,Nalukolongo,0.294,32.561,,,520496.291,0.0,0.0
+w397795884,,service lane,Nakivubo,0.327,32.606,,,19.383,0.0,0.0
+w397569286,,service lane,Kinawataka,0.337,32.621,,,0.0,0.0,0.0
+w397569284,,service lane,Kinawataka,0.336,32.621,,,0.0,0.0,0.0
+w282230622,Seguku Bunamwaya Road,main road,other / outside city catchments,0.227,32.545,,,407.307,0.0,0.0
+w257780365,,residential street,other / outside city catchments,0.286,32.571,,,235.593,0.0,0.0
+w501768780,,residential street,Nalukolongo,0.3,32.54,10.0,2.0,0.0,0.0,0.0
+w111873576,,residential street,other / outside city catchments,0.242,32.57,5.0,2.0,0.0,0.0,0.0
+w47852762,,residential street,Nakivubo,0.308,32.635,,,0.0,0.0,0.0
+w47852739,,residential street,Nakivubo,0.31,32.636,,,1080.219,0.0,0.0
+w45504355,Bunyonyi Drive,residential street,Nakivubo,0.323,32.619,,,271.448,0.0,0.0
+w45425947,,residential street,Nalukolongo,0.303,32.543,,,1231.124,0.0,0.0
+w45425889,Netpa Access,residential street,Nalukolongo,0.296,32.542,,,187.276,0.0,0.0
+w45425887,,service lane,Nalukolongo,0.295,32.541,10.0,2.0,0.0,0.0,0.0
+w45425880,,local through road,Nalukolongo,0.296,32.545,,,482.23,0.0,0.0
+w45353368,,residential street,Nakivubo,0.313,32.599,,,293.434,0.0,0.0
+w45353345,,residential street,Lubigi,0.344,32.569,,,94.071,0.0,0.0
+w44518894,,residential street,Lubigi,0.376,32.572,,,350.813,0.0,0.0
+w44518885,,residential street,Lubigi,0.375,32.57,10.0,2.0,0.0,0.0,0.0
+w43930218,Kkaga Road,local through road,other / outside city catchments,0.203,32.479,,,338.798,0.0,0.0
+w43916923,,residential street,other / outside city catchments,0.238,32.555,,,1567.41,0.0,0.0
+w43897515,,residential street,other / outside city catchments,0.263,32.567,,,88847.773,0.0,0.0
+w43874993,Suna Road,local through road,Nalukolongo,0.291,32.569,,,2990.995,0.0,0.0
+w39913180,,local through road,other / outside city catchments,0.317,32.542,25.0,2.0,0.0,0.0,0.0
+w27606823,Bombo Road,main road,Lubigi,0.366,32.56,,,155164.564,0.0,0.0
+w26802533,,main road,Nakivubo,0.308,32.578,25.0,2.0,0.0,0.0,0.0
+w48499820,,local through road,Nakivubo,0.302,32.613,,,0.0,0.0,0.0
+w222985932,Kira - Najjeera Road,main road,other / outside city catchments,0.393,32.63,2.0,2.0,28700.325,14350.162,0.0
+w116505796,,highway,Lubigi,0.35,32.565,5.0,2.0,0.0,0.0,0.0
+w208556970,,residential street,other / outside city catchments,0.384,32.56,,,690.231,0.0,0.0
+w208180215,Spring Road,main road,Nakivubo,0.322,32.609,,,12670.783,0.0,0.0
+w207942815,Estate Link Road,residential street,Nakivubo,0.342,32.598,,,1685.419,0.0,0.0
+w207010855,Kigobe Road,local through road,Kinawataka,0.357,32.622,,,514.918,0.0,0.0
+w202783793,,residential street,other / outside city catchments,0.257,32.63,,,0.0,0.0,0.0
+w198345270,,service lane,other / outside city catchments,0.364,32.634,2.0,2.0,1.626,0.813,0.0
+w194551061,,residential street,Lubigi,0.347,32.559,,,102.35,0.0,0.0
+w177516210,,residential street,other / outside city catchments,0.261,32.635,,,40.48,0.0,0.0
+w168287436,Takuba Road,residential street,Lubigi,0.366,32.561,,,425.544,0.0,0.0
+w167658128,Kawanda - Senge Road,local through road,other / outside city catchments,0.415,32.519,,,2018.309,0.0,0.0
+w154101761,Zebra Road,residential street,other / outside city catchments,0.368,32.634,2.0,2.0,37.719,18.86,0.0
+w132807018,,residential street,Nakivubo,0.301,32.621,,,714.35,0.0,0.0
+w116523353,Sentema Road,main road,Lubigi,0.332,32.526,10.0,2.0,0.0,0.0,0.0
+w116522713,Northern Bypass,highway,Lubigi,0.338,32.532,,,326.117,0.0,0.0
+w116505804,,highway,Lubigi,0.35,32.566,10.0,2.0,0.0,0.0,0.0
+w501768796,,residential street,Nalukolongo,0.3,32.54,,25.0,0.0,0.0,0.0
+w735054183,,residential street,Kinawataka,0.348,32.613,50.0,2.0,0.0,0.0,0.0
+w659830538,Wankulukuku Road,main road,other / outside city catchments,0.254,32.519,2.0,2.0,409.508,204.754,0.0
+w642572457,,residential street,Lubigi,0.377,32.575,,,2010.813,0.0,0.0
+w640125821,Nziramba Road,residential street,Lubigi,0.356,32.59,5.0,2.0,0.0,0.0,0.0
+w636865636,,service lane,other / outside city catchments,0.253,32.631,25.0,2.0,0.0,0.0,0.0
+w636855316,,residential street,other / outside city catchments,0.254,32.631,,,11.371,0.0,0.0
+w636380696,,residential street,other / outside city catchments,0.256,32.63,,,0.0,0.0,0.0
+w636281901,,residential street,other / outside city catchments,0.257,32.628,,,0.0,0.0,0.0
+w627124617,,residential street,other / outside city catchments,0.254,32.631,,,42.897,0.0,0.0
+w582884618,,service lane,Nalukolongo,0.284,32.545,10.0,2.0,0.0,0.0,0.0
+w582813125,,service lane,Nalukolongo,0.291,32.55,25.0,2.0,0.0,0.0,0.0
+w582694551,,residential street,Nalukolongo,0.29,32.56,,,0.0,0.0,0.0
+w582360882,,residential street,Nalukolongo,0.29,32.553,10.0,2.0,0.0,0.0,0.0
+w582360830,,residential street,Nalukolongo,0.289,32.552,25.0,2.0,0.0,0.0,0.0
+w582188953,,service lane,Nalukolongo,0.286,32.549,,,138.795,0.0,0.0
+w582003336,,service lane,Nalukolongo,0.289,32.547,,10.0,0.0,0.0,0.0
+w582003335,,service lane,Nalukolongo,0.289,32.547,50.0,2.0,0.0,0.0,0.0
+w581995506,,service lane,Nalukolongo,0.288,32.546,50.0,2.0,0.0,0.0,0.0
+w581616683,,service lane,Nalukolongo,0.29,32.541,,,0.0,0.0,0.0
+w580941796,,service lane,Nalukolongo,0.291,32.549,25.0,2.0,0.0,0.0,0.0
+w580915987,,service lane,Nalukolongo,0.292,32.544,10.0,2.0,0.0,0.0,0.0
+w642572458,,residential street,Lubigi,0.375,32.573,,,288.813,0.0,0.0
+w660405212,,residential street,Lubigi,0.378,32.57,,,64.25,0.0,0.0
+w579863364,,service lane,other / outside city catchments,0.249,32.56,100.0,5.0,0.0,0.0,0.0
+w734741581,,service lane,Nakivubo,0.326,32.606,,,0.0,0.0,0.0
+w734741580,,service lane,Nakivubo,0.326,32.607,,,29.759,0.0,0.0
+w734741579,,service lane,Nakivubo,0.326,32.606,,,0.0,0.0,0.0
+w701787058,,residential street,other / outside city catchments,0.21,32.566,,,0.0,0.0,0.0
+w701787057,,residential street,other / outside city catchments,0.21,32.566,,,208.73,0.0,0.0
+w701770127,Kigo Road,local through road,other / outside city catchments,0.211,32.569,,,0.0,0.0,0.0
+w666672231,,residential street,Nalukolongo,0.295,32.541,10.0,2.0,0.0,0.0,0.0
+w666147510,,residential street,Kansanga,0.296,32.579,,100.0,0.0,0.0,0.0
+w665872099,,residential street,Lubigi,0.344,32.571,,,0.0,0.0,0.0
+w665560540,,service lane,other / outside city catchments,0.209,32.544,5.0,2.0,0.0,0.0,0.0
+w665234519,Semugenya Lane,residential street,Lubigi,0.369,32.556,,,0.0,0.0,0.0
+w665062116,Serunjogi Close,residential street,Lubigi,0.374,32.554,25.0,2.0,0.0,0.0,0.0
+w665021869,,residential street,other / outside city catchments,0.3,32.528,10.0,2.0,0.0,0.0,0.0
+w664671682,Sesilia Road,residential street,Lubigi,0.374,32.556,,,1940.046,0.0,0.0
+w663832802,,residential street,other / outside city catchments,0.388,32.632,2.0,2.0,580.075,290.037,0.0
+w662413105,,residential street,other / outside city catchments,0.401,32.517,2.0,2.0,22.185,11.093,0.0
+w662380539,,local through road,other / outside city catchments,0.394,32.511,2.0,2.0,6220.206,3110.103,0.0
+w662077111,,residential street,other / outside city catchments,0.26,32.568,,,0.0,0.0,0.0
+w661789603,,residential street,Nakivubo,0.309,32.635,25.0,2.0,0.0,0.0,0.0
+w661067077,,residential street,Lubigi,0.376,32.571,,,293.495,0.0,0.0
+w579863379,,service lane,other / outside city catchments,0.249,32.56,25.0,2.0,0.0,0.0,0.0
+w579863360,,service lane,other / outside city catchments,0.25,32.56,,,2640.145,0.0,0.0
+w501774267,,residential street,Nalukolongo,0.302,32.54,50.0,2.0,0.0,0.0,0.0
+w529345532,,main road,Lubigi,0.353,32.572,10.0,2.0,0.0,0.0,0.0
+w504008928,,service lane,Nakivubo,0.339,32.595,,,0.0,0.0,0.0
+w504008925,,service lane,Nakivubo,0.339,32.595,,,0.0,0.0,0.0
+w504008922,,service lane,Nakivubo,0.339,32.594,,,74.364,0.0,0.0
+w503891749,,service lane,Nakivubo,0.329,32.603,,,52.597,0.0,0.0
+w503775124,,service lane,Nakivubo,0.339,32.597,100.0,2.0,0.0,0.0,0.0
+w503656796,,service lane,Nakivubo,0.339,32.596,,100.0,0.0,0.0,0.0
+w503617963,,residential street,Nakivubo,0.336,32.603,,,0.0,0.0,0.0
+w503191701,,service lane,Nalukolongo,0.298,32.537,,,0.0,0.0,0.0
+w503109983,,residential street,other / outside city catchments,0.286,32.572,,,0.0,0.0,0.0
+w503035384,,residential street,other / outside city catchments,0.287,32.572,,,273.183,0.0,0.0
+w502992316,,residential street,other / outside city catchments,0.287,32.571,50.0,2.0,0.0,0.0,0.0
+w502992310,,service lane,other / outside city catchments,0.286,32.571,25.0,2.0,0.0,0.0,0.0
+w502980327,,service lane,Nalukolongo,0.29,32.568,,5.0,0.0,0.0,0.0
+w502965027,,residential street,Nalukolongo,0.29,32.548,10.0,2.0,0.0,0.0,0.0
+w502443413,,service lane,Nalukolongo,0.298,32.54,,,0.0,0.0,0.0
+w502443409,,service lane,Nalukolongo,0.297,32.54,100.0,5.0,0.0,0.0,0.0
+w501888872,,service lane,Nalukolongo,0.304,32.545,,,0.0,0.0,0.0
+w501870831,,residential street,Nalukolongo,0.304,32.545,,,372.326,0.0,0.0
+w501870783,,service lane,Nalukolongo,0.304,32.545,,,115.473,0.0,0.0
+w501860764,,service lane,Nalukolongo,0.304,32.544,,,0.0,0.0,0.0
+w501860759,,service lane,Nalukolongo,0.304,32.544,,,0.0,0.0,0.0
+w501828653,,service lane,Nalukolongo,0.298,32.538,,5.0,0.0,0.0,0.0
+w501828650,,service lane,Nalukolongo,0.298,32.538,10.0,2.0,0.0,0.0,0.0
+w504008962,,service lane,Nakivubo,0.339,32.594,,,0.0,0.0,0.0
+w531968182,Bwaise III 3633,residential street,Lubigi,0.352,32.562,,5.0,0.0,0.0,0.0
+w578457330,,residential street,other / outside city catchments,0.2,32.526,,,36.709,0.0,0.0
+w531972056,,residential street,Lubigi,0.353,32.55,,,493.358,0.0,0.0
+w576444105,,service lane,other / outside city catchments,0.2,32.545,,,0.0,0.0,0.0
+w575960347,Jinja Road,highway,Nakivubo,0.326,32.607,,,620001.632,0.0,0.0
+w575696357,,service lane,other / outside city catchments,0.211,32.541,,25.0,0.0,0.0,0.0
+w573618760,,service lane,Nalukolongo,0.283,32.543,,,0.0,0.0,0.0
+w573618723,,residential street,Nalukolongo,0.284,32.544,,,0.0,0.0,0.0
+w571213818,,service lane,other / outside city catchments,0.209,32.543,5.0,2.0,0.0,0.0,0.0
+w571213815,,service lane,other / outside city catchments,0.209,32.543,5.0,2.0,0.0,0.0,0.0
+w571127680,,local through road,other / outside city catchments,0.23,32.523,5.0,2.0,0.0,0.0,0.0
+w571123701,,local through road,other / outside city catchments,0.209,32.53,2.0,2.0,1241.836,620.918,0.0
+w571083155,,service lane,other / outside city catchments,0.21,32.543,10.0,2.0,0.0,0.0,0.0
+w571083151,,service lane,other / outside city catchments,0.21,32.542,5.0,2.0,0.0,0.0,0.0
+w568588355,,residential street,other / outside city catchments,0.275,32.517,,,0.0,0.0,0.0
+w568588342,,residential street,other / outside city catchments,0.275,32.517,,,0.0,0.0,0.0
+w568588341,,residential street,other / outside city catchments,0.276,32.517,,,0.0,0.0,0.0
+w567577350,,residential street,Nalukolongo,0.29,32.559,,,260.576,0.0,0.0
+w545113807,,residential street,other / outside city catchments,0.279,32.577,50.0,2.0,0.0,0.0,0.0
+w1480652619,,residential street,Nakivubo,0.301,32.576,,50.0,0.0,0.0,0.0
