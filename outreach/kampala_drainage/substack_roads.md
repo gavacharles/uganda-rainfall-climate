@@ -4,7 +4,7 @@
 
 **Subtitle:** I modelled every road in Kampala in every kind of storm. Most of the flooding that closes the city's roads is down to clogged channels, not heavier rain.
 
-**Cover image:** `cover_roads_1456x1048.png` (1456 × 1048).
+**Cover image:** `cover_roads_split_1456x1048.png` (same storm, clean vs silted; recommended) or `cover_roads_1456x1048.png`. Social previews (1200 × 627): `cover_roads_split_social_1200x627.png`, `cover_roads_social_1200x627.png`.
 
 ---
 
