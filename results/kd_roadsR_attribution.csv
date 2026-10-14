@@ -1,0 +1,36 @@
+metric,horizon,factor,baseline,endpoint,contribution,share_pct
+ea_km,today,paving (land use),5.764,162.909,23.938,15.233
+ea_km,today,channel siltation,5.764,162.909,129.796,82.596
+ea_km,today,floodplain encroachment,5.764,162.909,3.411,2.171
+ea_km,2050s,paving (land use),5.764,178.571,25.823,14.943
+ea_km,2050s,channel siltation,5.764,178.571,127.599,73.839
+ea_km,2050s,floodplain encroachment,5.764,178.571,3.462,2.003
+ea_km,2050s,climate change,5.764,178.571,15.923,9.214
+ea_cutoff_centre,today,paving (land use),4602.293,117778.79,13183.921,11.649
+ea_cutoff_centre,today,channel siltation,4602.293,117778.79,97146.629,85.836
+ea_cutoff_centre,today,floodplain encroachment,4602.293,117778.79,2845.948,2.515
+ea_cutoff_centre,2050s,paving (land use),4602.293,125065.914,14031.239,11.648
+ea_cutoff_centre,2050s,channel siltation,4602.293,125065.914,93757.122,77.83
+ea_cutoff_centre,2050s,floodplain encroachment,4602.293,125065.914,2697.606,2.239
+ea_cutoff_centre,2050s,climate change,4602.293,125065.914,9977.654,8.283
+ea_extra_min_centre,today,paving (land use),0.589,9.886,1.248,13.427
+ea_extra_min_centre,today,channel siltation,0.589,9.886,8.012,86.175
+ea_extra_min_centre,today,floodplain encroachment,0.589,9.886,0.037,0.398
+ea_extra_min_centre,2050s,paving (land use),0.589,10.087,1.384,14.576
+ea_extra_min_centre,2050s,channel siltation,0.589,10.087,7.361,77.5
+ea_extra_min_centre,2050s,floodplain encroachment,0.589,10.087,0.03,0.311
+ea_extra_min_centre,2050s,climate change,0.589,10.087,0.723,7.614
+ea_cutoff_hospital,today,paving (land use),4621.521,118435.152,13201.522,11.599
+ea_cutoff_hospital,today,channel siltation,4621.521,118435.152,97766.08,85.9
+ea_cutoff_hospital,today,floodplain encroachment,4621.521,118435.152,2846.03,2.501
+ea_cutoff_hospital,2050s,paving (land use),4621.521,125865.779,14039.32,11.579
+ea_cutoff_hospital,2050s,channel siltation,4621.521,125865.779,94413.989,77.871
+ea_cutoff_hospital,2050s,floodplain encroachment,4621.521,125865.779,2738.264,2.258
+ea_cutoff_hospital,2050s,climate change,4621.521,125865.779,10052.685,8.291
+ea_extra_min_hospital,today,paving (land use),0.071,1.221,0.282,24.53
+ea_extra_min_hospital,today,channel siltation,0.071,1.221,0.872,75.823
+ea_extra_min_hospital,today,floodplain encroachment,0.071,1.221,-0.004,-0.353
+ea_extra_min_hospital,2050s,paving (land use),0.071,1.292,0.282,23.109
+ea_extra_min_hospital,2050s,channel siltation,0.071,1.292,0.844,69.121
+ea_extra_min_hospital,2050s,floodplain encroachment,0.071,1.292,0.002,0.166
+ea_extra_min_hospital,2050s,climate change,0.071,1.292,0.093,7.603

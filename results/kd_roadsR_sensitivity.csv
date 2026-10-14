@@ -1,0 +1,25 @@
+silt_depth_lost,metric,factor,share_pct,endpoint,clean_today
+0.1,ea_km,paving (land use),26.52,128.44,29.9
+0.1,ea_km,channel siltation,71.07,128.44,29.9
+0.1,ea_km,floodplain encroachment,2.41,128.44,29.9
+0.1,ea_cutoff_centre,paving (land use),22.23,94040.71,19769.86
+0.1,ea_cutoff_centre,channel siltation,75.0,94040.71,19769.86
+0.1,ea_cutoff_centre,floodplain encroachment,2.76,94040.71,19769.86
+0.2,ea_km,paving (land use),19.39,149.99,29.9
+0.2,ea_km,channel siltation,78.14,149.99,29.9
+0.2,ea_km,floodplain encroachment,2.46,149.99,29.9
+0.2,ea_cutoff_centre,paving (land use),15.92,108688.1,19769.86
+0.2,ea_cutoff_centre,channel siltation,81.22,108688.1,19769.86
+0.2,ea_cutoff_centre,floodplain encroachment,2.86,108688.1,19769.86
+0.3,ea_km,paving (land use),15.23,162.91,29.9
+0.3,ea_km,channel siltation,82.6,162.91,29.9
+0.3,ea_km,floodplain encroachment,2.17,162.91,29.9
+0.3,ea_cutoff_centre,paving (land use),11.65,117778.79,19769.86
+0.3,ea_cutoff_centre,channel siltation,85.84,117778.79,19769.86
+0.3,ea_cutoff_centre,floodplain encroachment,2.51,117778.79,19769.86
+0.5,ea_km,paving (land use),11.62,182.83,29.9
+0.5,ea_km,channel siltation,86.72,182.83,29.9
+0.5,ea_km,floodplain encroachment,1.66,182.83,29.9
+0.5,ea_cutoff_centre,paving (land use),8.82,128010.04,19769.86
+0.5,ea_cutoff_centre,channel siltation,89.39,128010.04,19769.86
+0.5,ea_cutoff_centre,floodplain encroachment,1.78,128010.04,19769.86

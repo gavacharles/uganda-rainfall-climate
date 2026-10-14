@@ -45,6 +45,7 @@ Each planning-journal submission needs a policy and institutional section: the N
 | 6 | Design-basis drift | Channels sized for 1990 now get +17% (median) 10-yr flow; 91% of length overloaded >20% under 2041-70 SSP5-8.5; drift is a fringe, not a hotspot, phenomenon | `kampala_capacity_paper6.md` |
 | 7 | The next Kampalas: regional cities | Low ground filling 1.3-2x faster than the city in Mbarara, Gulu, Mbale, Jinja, Arua (2020-30) | `uganda_cities_paper7.md` |
 | 2 | The lost free treatment plant: wetland loss and Inner Murchison Bay, 1986-2026 (satellite only, no NWSC data) | Drafted: bay-draining wetland -51% (1,200 to 587 ha); outlet/lake turbidity ratio 1.14 to 1.51; +5.3% per 100 ha lost (p = 0.019); `kampala_bay_paper2.md` | *Science of the Total Environment*; *J. Great Lakes Research* |
+| R | Silt, not storms: attributing flood disruption of Kampala's road network (factorial scenarios, Shapley) | Drafted: siltation 83% of the rise in impassable road-km, 86% of people cut off; `kampala_roads_attribution_paperR.md` | *Transportation Research Part D*; *NHESS* |
 
 # Shared foundations (done)
 
