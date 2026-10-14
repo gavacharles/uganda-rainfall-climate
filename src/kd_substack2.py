@@ -160,6 +160,41 @@ def x8():
     plt.close(fig)
 
 
+def x10():
+    p = pd.read_csv(RES / "kd_bay_landsat_periods.csv")
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(12, 6.75), gridspec_kw=dict(wspace=0.28))
+    fig.subplots_adjust(left=0.08, right=0.97, top=0.76, bottom=0.17)
+    fig.text(0.08, 0.93, "As the swamps went, the bay got murkier", fontsize=24, fontweight="bold", color=INK)
+    fig.text(0.08, 0.865, "Where Kampala's channels enter Murchison Bay, compared with the open lake on the same day",
+             fontsize=15, color=MUTE)
+    fig.text(0.08, 0.03, "Data: NASA/USGS Landsat 1984–2026 (179 images); valley floors from Copernicus GLO-30 DEM.", fontsize=10, color=MUTE)
+    credit(fig)
+    x = np.arange(len(p))
+    lab = ["1984–95", "1996–2005", "2006–15", "2016–26"]
+    a1.bar(x, p.wetland_ha_mid, color="#2e8b57", width=0.65)
+    for i, v in enumerate(p.wetland_ha_mid):
+        a1.text(i, v + 25, f"{v:,.0f} ha", ha="center", fontsize=13, color=INK)
+    a1.set_title("Wetland draining to the bay", fontsize=15, color=INK, pad=8)
+    a1.set_ylim(0, p.wetland_ha_mid.max() * 1.2)
+    ex = 100 * (p.ratio_median - 1)
+    cols = [RED] * len(p)
+    a2.bar(x, ex, color=cols, width=0.65, alpha=1)
+    a2.patches[0].set_alpha(0.45)
+    for i, v in enumerate(ex):
+        a2.text(i, v + 1.2, f"+{v:.0f}%", ha="center", fontsize=15, fontweight="bold", color=INK)
+    a2.text(0, ex[0] / 2, "few\nimages", ha="center", va="center", fontsize=10, color="white")
+    a2.set_title("Outlets: how much murkier than the lake", fontsize=15, color=INK, pad=8)
+    a2.set_ylim(0, ex.max() * 1.25)
+    for ax in (a1, a2):
+        ax.set_xticks(x)
+        ax.set_xticklabels(lab, fontsize=12)
+        ax.set_yticks([])
+        ax.grid(False)
+        ax.spines["left"].set_visible(False)
+    fig.savefig(OUT / "x10_bay_murkier.png", dpi=150)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     for f in sys.argv[1:] or ["x4", "x5", "x6", "x7", "x8"]:
         globals()[f]()
