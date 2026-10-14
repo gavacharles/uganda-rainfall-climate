@@ -17,7 +17,7 @@ The two papers already drafted in this repository (five-city urban flooding; Uga
 | C | Waste, culverts and floods: quantifying the solid-waste blockage chain from open data | Do culverts downstream of dumping sites coincide with reported flooding, city-wide? | Inventory built (1,553 waste points, 3,135 culverts) | *Waste Management*; *Science of the Total Environment*; *J. Environmental Management* |
 | D | Moving into the water's path: population on Kampala's floodplains, 1975-2030 | Is population on low ground beside channels growing faster than the city? | Population data downloading | *Landscape and Urban Planning*; *Environmental Research Letters*; *Cities*; *Habitat International* |
 | E | Satellites as drainage inspectors: Sentinel-2 monitoring of channel clogging and clearing | Can 10 m imagery detect vegetation/silt choking wide channels and the effect of desilting? | Method coded; run pending | *Urban Water Journal*; *Remote Sensing*; *Int. J. Applied Earth Observation and Geoinformation* |
-| D0 | A Kampala flood-event catalogue, 2000-2026, from news and official reports (data paper) | A dated, geocoded, open record of floods | 9 events and 43 hotspots so far | *Scientific Data*; *Earth System Science Data* |
+| D0 | A dated, geocoded catalogue of reported floods in Kampala, 2007-2026 (data paper) | A dated, geocoded, open record of floods | Drafted: 22 events (A 11, B 7, C 4), 51 place records; `kampala_flood_catalogue_paper.md` | *Scientific Data*; *Data in Brief* |
 | T | An open-data drainage maintenance dashboard for Kampala (software paper) | A working tool: priority map, alerts, field reports | To build after A-C layers stabilise | *Environmental Modelling & Software*; *SoftwareX* |
 
 # Status after first results (12 October 2026)
@@ -29,7 +29,7 @@ The two papers already drafted in this repository (five-city urban flooding; Uga
 | C | Dumping near culverts: 19% vs 12% at hotspots raw, but no effect after controls (OR 0.87, 0.51-1.59) | **Dropped as a separate paper (no fieldwork possible).** Reported in Paper A as a tested-but-unsupported pathway: dumping does not predict hotspots once density is controlled | *Habitat International*, *Cities* |
 | D | Exposure 36k (1975) to 205k (2020); exposure now growing fastest on the fringe; smaller building grain on low ground | **Drafted with land-tenure angle:** `kampala_drainage_paperD.md` | *Habitat International*, *Land Use Policy* |
 | E | Method coded; Sentinel-2 run deferred (~10 GB) | **Parked** (needs KCCA desilting dates) | *Urban Water Journal* |
-| D0 | GDELT-based catalogue building (2017-2026) | In progress | *Scientific Data* / *Data in Brief* |
+| D0 | GDELT (2017-2026) + verified reports (2007-2026); 2021-24 reporting gap | Drafted, `kampala_flood_catalogue_paper.md` | *Scientific Data* / *Data in Brief* |
 | T | Kampala Drain Watch live (gavacharles.github.io/kampala-drain-watch) | **Parked** as a paper; the tool stays live | *Environment and Planning B* (urban analytics & code) |
 
 Each planning-journal submission needs a policy and institutional section: the National Environment (Wetlands) Regulations, the KCCA drainage master plan (2016, partly implemented), NDP IV, and ideally interviews with KCCA and NEMA engineers.

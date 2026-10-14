@@ -163,14 +163,27 @@ Kampala's flood exposure grew fivefold between 1975 and 2020, to about 205,000 p
 - kd15 people on low ground, maps
 - kd05 emerging-risk map (from Paper A)
 
-# References (to complete)
+# References
 
-- Isunju, J.B., Orach, C.G., Kemp, J. (2016). Hazards and vulnerabilities among informal wetland communities in Kampala, Uganda. *Environment and Urbanization* 28(1). doi:10.1177/0956247815613689
-- Bird, J., Venables, A.J. Land tenure and land-use in a developing city: a quantitative spatial model applied to Kampala, Uganda. CEPR Discussion Paper DP13563 / *Journal of Urban Economics*.
-- Muinde, K. (2013). Land tenure and informal land access in Kampala. MSc thesis, ITC, University of Twente.
-- Nyakaana v. National Environment Management Authority & 6 Ors. Constitutional Court of Uganda.
-- Government of Uganda. Constitution (1995), Article 237; Land Act 1998; National Environment Act 2019; National Environment (Wetlands, River Banks and Lake Shores Management) Regulations.
-- KCCA (2024). Kampala moves to protect wetlands as loss reaches alarming levels.
-- Understanding the Evolving Nature of Urban Flood Risks in Sub-Saharan Africa: The Case of Kampala City, Uganda. IntechOpen chapter.
-- Daily Monitor (2023). Govt to cancel 20,000 land titles in wetlands.
-- JRC GHSL R2023A; Microsoft Global ML Building Footprints; Copernicus GLO-30 DEM; OpenStreetMap.
+Items marked † were found through search, or are grey literature not yet opened; verify them before submission.
+
+1. Isunju, J. B., Orach, C. G. and Kemp, J. (2016). Hazards and vulnerabilities among informal wetland communities in Kampala, Uganda. *Environment and Urbanization* 28(1), 275–293. doi:10.1177/0956247815613689
+2. Bird, J. and Venables, A. J. (2020). Land tenure and land-use in a developing city: a quantitative spatial model applied to Kampala, Uganda. *Journal of Urban Economics* 119, 103268. doi:10.1016/j.jue.2020.103268
+3. Goodfellow, T. (2013). Planning and development regulation amid rapid urban growth: explaining divergent trajectories in Africa. *Geoforum* 48, 83–93. doi:10.1016/j.geoforum.2013.04.007
+4. Lwasa, S. (2010). Adapting urban areas in Africa to climate change: the case of Kampala. *Current Opinion in Environmental Sustainability* 2(3), 166–171. doi:10.1016/j.cosust.2010.06.009
+5. Douglas, I., Alam, K., Maghenda, M., Mcdonnell, Y., McLean, L. and Campbell, J. (2008). Unjust waters: climate change, flooding and the urban poor in Africa. *Environment and Urbanization* 20(1), 187–205. doi:10.1177/0956247808089156
+6. Arinabo, D. (2024). Understanding the evolving nature of urban flood risks in sub-Saharan Africa: the case of Kampala City, Uganda. IntechOpen.
+7. † Amooti Godfrey Nyakaana v. National Environment Management Authority and others. Constitutional Court of Uganda (2009); Supreme Court of Uganda, Constitutional Appeal (2015). Summary at UNEP LEAP national case law.
+8. Government of Uganda. Constitution of the Republic of Uganda (1995), Article 237; Land Act, Cap. 227 (1998); National Environment Act (2019); National Environment (Wetlands, River Banks and Lake Shores Management) Regulations, S.I. No. 3 of 2000.
+9. † Muinde, K. (2013). Land tenure and informal land access in Kampala. MSc thesis, Faculty ITC, University of Twente.
+10. † KCCA (2024). Kampala moves to protect wetlands as loss reaches alarming levels. KCCA news release.
+11. † Daily Monitor (2023). Govt to cancel 20,000 land titles in wetlands.
+12. Rentschler, J., Avner, P., Marconcini, M., Su, R., Strano, E., Vousdoukas, M. and Hallegatte, S. (2023). Global evidence of rapid urban growth in flood zones since 1985. *Nature* 622, 87–92. doi:10.1038/s41586-023-06468-9
+13. Tellman, B. et al. (2021). Satellite imaging reveals increased proportion of population exposed to floods. *Nature* 596, 80–86. doi:10.1038/s41586-021-03695-w
+14. Pesaresi, M. and Politis, P. (2023). GHS-BUILT-S R2023A: GHS built-up surface grid, 1975–2030. European Commission, Joint Research Centre.
+15. Schiavina, M., Freire, S., Carioli, A. and MacManus, K. (2023). GHS-POP R2023A: GHS population grid, 1975–2030. European Commission, Joint Research Centre.
+16. Microsoft (2023). Global ML Building Footprints. github.com/microsoft/GlobalMLBuildingFootprints
+17. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+18. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+19. OpenStreetMap contributors. OpenStreetMap. openstreetmap.org (data under ODbL).
+20. Companion papers of this programme: A, 1, 7.

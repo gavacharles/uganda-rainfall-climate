@@ -102,8 +102,24 @@ Kampala's drainage channels are falling behind the flows their catchments now pr
 - kd37: a, overload ratio by scenario; b, overloaded length by system
 - kd38: map of 2020 overload ratio
 
-# References (to complete)
+# References
 
-- Kirpich (1940); Hack (1957); USDA rational-method and ARF guidance.
-- Zheng et al. (2018). HAND-based synthetic rating curves, *JAWRA*.
-- Papers A and 1 of this programme; CMIP6 uplift from the five-city paper.
+Items marked † were found through search, or are grey literature not yet opened; verify them before submission.
+
+1. Kuichling, E. (1889). The relation between the rainfall and the discharge of sewers in populous districts. *Transactions of the American Society of Civil Engineers* 20, 1–56.
+2. Kirpich, Z. P. (1940). Time of concentration of small agricultural watersheds. *Civil Engineering* 10(6), 362.
+3. Hack, J. T. (1957). Studies of longitudinal stream profiles in Virginia and Maryland. U.S. Geological Survey Professional Paper 294-B.
+4. Svensson, C. and Jones, D. A. (2010). Review of methods for deriving areal reduction factors. *Journal of Flood Risk Management* 3, 232–245. doi:10.1111/j.1753-318X.2010.01075.x
+5. Chow, V. T. (1959). *Open-channel hydraulics*. McGraw-Hill, New York.
+6. Zheng, X., Tarboton, D. G., Maidment, D. R., Liu, Y. Y. and Passalacqua, P. (2018). River channel geometry and rating curve estimation using height above the nearest drainage. *Journal of the American Water Resources Association* 54(4), 785–806. doi:10.1111/1752-1688.12661
+7. Fiddes, D., Forsgate, J. A. and Grigg, A. O. (1974). The prediction of storm rainfall in East Africa. TRRL Laboratory Report 623, Crowthorne.
+8. Funk, C. et al. (2015). The climate hazards infrared precipitation with stations: a new environmental record for monitoring extremes. *Scientific Data* 2, 150066. doi:10.1038/sdata.2015.66
+9. Fowler, H. J. et al. (2021). Anthropogenic intensification of short-duration rainfall extremes. *Nature Reviews Earth & Environment* 2, 107–122. doi:10.1038/s43017-020-00128-6
+10. Arnbjerg-Nielsen, K., Willems, P., Olsson, J., Beecham, S., Pathirana, A., Bülow Gregersen, I., Madsen, H. and Nguyen, V.-T.-V. (2013). Impacts of climate change on rainfall extremes and urban drainage systems: a review. *Water Science & Technology* 68(1), 16–28. doi:10.2166/wst.2013.251
+11. Eyring, V., Bony, S., Meehl, G. A., Senior, C. A., Stevens, B., Stouffer, R. J. and Taylor, K. E. (2016). Overview of the Coupled Model Intercomparison Project Phase 6 (CMIP6) experimental design and organization. *Geoscientific Model Development* 9, 1937–1958. doi:10.5194/gmd-9-1937-2016
+12. O'Neill, B. C. et al. (2016). The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6. *Geoscientific Model Development* 9, 3461–3482. doi:10.5194/gmd-9-3461-2016
+13. † KCCA (2017). Kampala Drainage Master Plan (update of the 2003 plan), Kampala Capital City Authority; see Daily Monitor, 'KCCA develops master plan to curb city flooding'.
+14. Pesaresi, M. and Politis, P. (2023). GHS-BUILT-S R2023A: GHS built-up surface grid, 1975–2030. European Commission, Joint Research Centre.
+15. Zanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200. doi:10.5281/zenodo.7254221
+16. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+17. Companion papers of this programme: A and 1; CMIP6 uplift from the five-city flooding paper.

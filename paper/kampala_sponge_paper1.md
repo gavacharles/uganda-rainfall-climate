@@ -135,10 +135,21 @@ Kampala has paved over about 8.5 million m³ of valley-floor flood storage since
 - kd31: map of storage lost 1975–2020
 - kd16: wetland time-lapse panels (Landsat), from the companion study
 
-# References (to complete)
+# References
 
-- Landsat wetland encroachment in Kampala–Wakiso, 1986–2016 (PMC10521074).
-- KCCA (2024). Kampala moves to protect wetlands as loss reaches alarming levels.
-- Nobre, A.D. et al. (2011). Height Above the Nearest Drainage, *Journal of Hydrology*.
-- JRC GHSL R2023A; Copernicus GLO-30; ESA WorldCover 2021; USGS Landsat Collection 2.
-- Companion papers: A (*Rainfall or drainage?*), D (*Building in the water's path*).
+Items marked † were found through search, or are grey literature not yet opened; verify them before submission.
+
+1. Acreman, M. and Holden, J. (2013). How wetlands affect floods. *Wetlands* 33, 773–786. doi:10.1007/s13157-013-0473-2
+2. Bullock, A. and Acreman, M. (2003). The role of wetlands in the hydrological cycle. *Hydrology and Earth System Sciences* 7(3), 358–389. doi:10.5194/hess-7-358-2003
+3. Kabiri, S., Allen, M., Okuonzia, J. T., Akello, B., Ssabaganzi, R., Mubiru, D., Wan, H., Dale, P. and Brooks, B. (2022). Detecting wetland encroachment and urban agriculture land classification in Uganda using hyper-temporal remote sensing. *AAS Open Research*. doi:10.12688/aasopenres.13040.2
+4. Kansiime, F. and Nalubega, M. (1999). *Wastewater treatment by a natural wetland: the Nakivubo swamp, Uganda – processes and implications*. PhD thesis, IHE Delft / Wageningen University.
+5. † Emerton, L., Iyango, L., Luwum, P. and Malinga, A. (1999). *The present economic value of Nakivubo urban wetland, Uganda*. IUCN Eastern Africa Regional Office and National Wetlands Programme, Kampala.
+6. † KCCA (2024). Kampala moves to protect wetlands as loss reaches alarming levels. KCCA news release.
+7. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+8. Pesaresi, M. and Politis, P. (2023). GHS-BUILT-S R2023A: GHS built-up surface grid, 1975–2030. European Commission, Joint Research Centre.
+9. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+10. Zanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200. doi:10.5281/zenodo.7254221
+11. Crawford, C. J. et al. (2023). The 50-year Landsat collection 2 archive. *Science of Remote Sensing* 8, 100103. doi:10.1016/j.srs.2023.100103
+12. Tucker, C. J. (1979). Red and photographic infrared linear combinations for monitoring vegetation. *Remote Sensing of Environment* 8, 127–150.
+13. Xu, H. (2006). Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. *International Journal of Remote Sensing* 27(14), 3025–3033.
+14. Companion papers of this programme: A (*Rainfall or drainage?*), D (*Building in the water's path*).

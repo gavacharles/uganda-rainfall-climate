@@ -107,8 +107,17 @@ When Kampala's low roads flood, harm reaches far beyond the flooded homes: 36,00
 - kd32: a, residents affected by scenario; b, most critical flood-prone roads
 - kd33: map of extra travel time to hospital (1 m scenario), flooded links, hospitals, critical roads
 
-# References (to complete)
+# References
 
-- Papers A, D and 1 of this programme.
-- OpenStreetMap contributors; JRC GHS-POP R2023A; Copernicus GLO-30.
-- Literature on flood impacts on emergency access (for example, Green et al., urban flood access and ambulance response) to be added.
+1. Green, D., Yu, D., Pattison, I., Wilby, R., Bosher, L., Patel, R., Thompson, P., Trowell, K., Draycon, J., Halse, M., Yang, L. and Ryley, T. (2017). City-scale accessibility of emergency responders operating during flood events. *Natural Hazards and Earth System Sciences* 17, 1–16. doi:10.5194/nhess-17-1-2017
+2. Coles, D., Yu, D., Wilby, R. L., Green, D. and Herring, Z. (2017). Beyond 'flood hotspots': modelling emergency service accessibility during flooding in York, UK. *Journal of Hydrology* 546, 419–436. doi:10.1016/j.jhydrol.2016.12.013
+3. Yin, J., Yu, D., Yin, Z., Liu, M. and He, Q. (2016). Evaluating the impact and risk of pluvial flash flood on intra-urban road network: a case study in the city center of Shanghai, China. *Journal of Hydrology* 537, 138–145. doi:10.1016/j.jhydrol.2016.03.037
+4. Pregnolato, M., Ford, A., Wilkinson, S. M. and Dawson, R. J. (2017). The impact of flooding on road transport: a depth-disruption function. *Transportation Research Part D* 55, 67–81. doi:10.1016/j.trd.2017.06.020
+5. Weiss, D. J. et al. (2020). Global maps of travel time to healthcare facilities. *Nature Medicine* 26, 1835–1838. doi:10.1038/s41591-020-1059-1
+6. Dijkstra, E. W. (1959). A note on two problems in connexion with graphs. *Numerische Mathematik* 1, 269–271.
+7. Hagberg, A. A., Schult, D. A. and Swart, P. J. (2008). Exploring network structure, dynamics, and function using NetworkX. *Proceedings of the 7th Python in Science Conference*, 11–15.
+8. OpenStreetMap contributors. OpenStreetMap. openstreetmap.org (data under ODbL).
+9. Schiavina, M., Freire, S., Carioli, A. and MacManus, K. (2023). GHS-POP R2023A: GHS population grid, 1975–2030. European Commission, Joint Research Centre.
+10. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+11. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+12. Companion papers of this programme: A, D and 1.

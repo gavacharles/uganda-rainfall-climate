@@ -126,7 +126,7 @@ The rain falling on flood days shows no trend either (Kendall τ = −0.04, p = 
 
 # 5. Discussion: what this means for planning
 
-- **Lever:** the pressures that separate hotspots (building in the reserve and on the floodplain, constrictions, lost wetland) are planning and enforcement variables, not climate variables. These include the National Environment (Wetlands) Regulations, KCCA physical-planning controls and the 2016 Drainage Master Plan.
+- **Lever:** the pressures that separate hotspots (building in the reserve and on the floodplain, constrictions, lost wetland) are planning and enforcement variables, not climate variables. These include the National Environment (Wetlands) Regulations, KCCA physical-planning controls and the 2017 update of KCCA's Drainage Master Plan.
 - **Prioritising:** an equal-weight, transparent index beats a fitted model when flood records are sparse and biased toward the city centre.
 - **Prevention:** the hold-out shows that encroachment can be anticipated 20 years ahead from open data. Development control on emerging-risk channels now is cheaper than retrofitting.
 - **Monitoring:** satellites track slow change. Flood detection needs gauges, culvert water-level sensors and resident reports (the open dashboard collects these).
@@ -151,3 +151,37 @@ Code: `src/kd_*.py`. Figures: `figures/kampala_drainage/`. Dashboard: Kampala Dr
 # Figures
 
 kd04 priority map · kd05 emerging risk · kd06 hotspot drivers · kd12 priority vs emerging · kd02 flood-day rain · kd23 hold-out · kd25 exposure · kd26 threshold test · kd13 area pages (supplement) · kd10 radar after the storm.
+
+# References
+
+Items marked † were found through search, or are grey literature not yet opened; verify them before submission.
+
+1. Lwasa, S. (2010). Adapting urban areas in Africa to climate change: the case of Kampala. *Current Opinion in Environmental Sustainability* 2(3), 166–171. doi:10.1016/j.cosust.2010.06.009
+2. Douglas, I., Alam, K., Maghenda, M., Mcdonnell, Y., McLean, L. and Campbell, J. (2008). Unjust waters: climate change, flooding and the urban poor in Africa. *Environment and Urbanization* 20(1), 187–205. doi:10.1177/0956247808089156
+3. Isunju, J. B., Orach, C. G. and Kemp, J. (2016). Hazards and vulnerabilities among informal wetland communities in Kampala, Uganda. *Environment and Urbanization* 28(1), 275–293. doi:10.1177/0956247815613689
+4. Arinabo, D. (2024). Understanding the evolving nature of urban flood risks in sub-Saharan Africa: the case of Kampala City, Uganda. IntechOpen.
+5. Olsson, H., Mugume, S. N. and Sörensen, J. (2025). Modelling the effect of sediment and solid waste deposition on pluvial flood risk using in situ high-resolution rainfall and water level measurements. *Water Science & Technology* 91(6), 757–. doi:10.2166/wst.2025.039
+6. † Mugume, S. N., Gomez, D. E., Fu, G., Farmani, R. and Butler, D. (2015). A global analysis approach for investigating structural resilience in urban drainage systems. *Water Research* 81, 15–26.
+7. Young, A., Bhattacharya, B. and Zevenbergen, C. (2021). A rainfall threshold-based approach to early warnings in urban data-scarce regions: a case study of pluvial flooding in Alexandria, Egypt. *Journal of Flood Risk Management* 14(2), e12702. doi:10.1111/jfr3.12702
+8. † KCCA (2017). Kampala Drainage Master Plan (update of the 2003 plan), Kampala Capital City Authority; see Daily Monitor, 'KCCA develops master plan to curb city flooding'.
+9. Funk, C. et al. (2015). The climate hazards infrared precipitation with stations: a new environmental record for monitoring extremes. *Scientific Data* 2, 150066. doi:10.1038/sdata.2015.66
+10. Gelaro, R. et al. (2017). The Modern-Era Retrospective Analysis for Research and Applications, version 2 (MERRA-2). *Journal of Climate* 30, 5419–5454. doi:10.1175/JCLI-D-16-0758.1
+11. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+12. Bartos, M. pysheds: simple and fast watershed delineation in Python. github.com/mdbartos/pysheds
+13. Kendall, M. G. (1938). A new measure of rank correlation. *Biometrika* 30, 81–93.
+14. Newey, W. K. and West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica* 55(3), 703–708.
+15. Fawcett, T. (2006). An introduction to ROC analysis. *Pattern Recognition Letters* 27, 861–874. doi:10.1016/j.patrec.2005.10.010
+16. Künsch, H. R. (1989). The jackknife and the bootstrap for general stationary observations. *Annals of Statistics* 17(3), 1217–1241.
+17. Leetaru, K. and Schrodt, P. A. (2013). GDELT: Global data on events, location and tone, 1979–2012. International Studies Association annual convention, San Francisco.
+18. Rentschler, J., Avner, P., Marconcini, M., Su, R., Strano, E., Vousdoukas, M. and Hallegatte, S. (2023). Global evidence of rapid urban growth in flood zones since 1985. *Nature* 622, 87–92. doi:10.1038/s41586-023-06468-9
+19. Tellman, B. et al. (2021). Satellite imaging reveals increased proportion of population exposed to floods. *Nature* 596, 80–86. doi:10.1038/s41586-021-03695-w
+20. Pesaresi, M. and Politis, P. (2023). GHS-BUILT-S R2023A: GHS built-up surface grid, 1975–2030. European Commission, Joint Research Centre.
+21. Schiavina, M., Freire, S., Carioli, A. and MacManus, K. (2023). GHS-POP R2023A: GHS population grid, 1975–2030. European Commission, Joint Research Centre.
+22. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+23. Zanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200. doi:10.5281/zenodo.7254221
+24. Karra, K., Kontgis, C., Statman-Weil, Z., Mazzariello, J. C., Mathis, M. and Brumby, S. P. (2021). Global land use/land cover with Sentinel 2 and deep learning. *IEEE IGARSS 2021*, 4704–4707.
+25. Copernicus Sentinel-1 data (ESA), radiometrically terrain-corrected (RTC) product served by the Microsoft Planetary Computer. planetarycomputer.microsoft.com.
+26. Microsoft (2023). Global ML Building Footprints. github.com/microsoft/GlobalMLBuildingFootprints
+27. OpenStreetMap contributors. OpenStreetMap. openstreetmap.org (data under ODbL).
+28. Gava, C. (2026). A dated, geocoded catalogue of reported floods in Kampala, Uganda, 2007–2026 (data paper D0 of this programme).
+29. Companion papers of this programme: D, 1, 5, 6.

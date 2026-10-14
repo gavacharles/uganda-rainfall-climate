@@ -104,8 +104,18 @@ Kampala shows where unmanaged valley-floor development leads. Uganda's regional 
 
 - kd40: a, valley floor built over 1975–2030; b, people on low ground relative to 2000; c, 2020–30 growth, low ground vs whole area
 
-# References (to complete)
+# References
 
-- Government of Uganda (2024). Fourth National Development Plan (NDP IV) 2025/26–2029/30; National Physical Development Plan.
-- JRC GHSL R2023A; Copernicus GLO-30; Microsoft Building Footprints; Nobre et al. (2011) HAND.
-- Papers A, D, 1 of this programme.
+Items marked † were found through search, or are grey literature not yet opened; verify them before submission.
+
+1. National Planning Authority (2025). *Fourth National Development Plan (NDP IV) 2025/26–2029/30*. Government of Uganda, Kampala.
+2. † Ministry of Lands, Housing and Urban Development. National Physical Development Plan, Uganda.
+3. Rentschler, J., Avner, P., Marconcini, M., Su, R., Strano, E., Vousdoukas, M. and Hallegatte, S. (2023). Global evidence of rapid urban growth in flood zones since 1985. *Nature* 622, 87–92. doi:10.1038/s41586-023-06468-9
+4. Tellman, B. et al. (2021). Satellite imaging reveals increased proportion of population exposed to floods. *Nature* 596, 80–86. doi:10.1038/s41586-021-03695-w
+5. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+6. Bartos, M. pysheds: simple and fast watershed delineation in Python. github.com/mdbartos/pysheds
+7. Pesaresi, M. and Politis, P. (2023). GHS-BUILT-S R2023A: GHS built-up surface grid, 1975–2030. European Commission, Joint Research Centre.
+8. Schiavina, M., Freire, S., Carioli, A. and MacManus, K. (2023). GHS-POP R2023A: GHS population grid, 1975–2030. European Commission, Joint Research Centre.
+9. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+10. Microsoft (2023). Global ML Building Footprints. github.com/microsoft/GlobalMLBuildingFootprints
+11. Companion papers of this programme: A, D, 1.

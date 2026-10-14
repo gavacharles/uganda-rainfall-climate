@@ -114,8 +114,18 @@ Keeping Kampala's drainage channels clean is worth roughly US$17 million a year 
 
 - kd39: a, damage per storm, clean vs silted; b, avoided damage per km by system
 
-# References (to complete)
+# References
 
-- Huizinga, J., de Moel, H., Szewczyk, W. (2017). *Global flood depth-damage functions*. JRC Technical Report.
-- Zheng, X. et al. (2018). River channel geometry and rating curve estimation using height above the nearest drainage. *JAWRA*.
-- Papers A, 1, 3 and 6 of this programme.
+1. Huizinga, J., de Moel, H. and Szewczyk, W. (2017). *Global flood depth-damage functions: methodology and the database with guidelines*. EUR 28552 EN, JRC105688. Publications Office of the European Union. doi:10.2760/16510
+2. Zheng, X., Tarboton, D. G., Maidment, D. R., Liu, Y. Y. and Passalacqua, P. (2018). River channel geometry and rating curve estimation using height above the nearest drainage. *Journal of the American Water Resources Association* 54(4), 785–806. doi:10.1111/1752-1688.12661
+3. Ward, P. J., Jongman, B., Weiland, F. S., Bouwman, A., van Beek, R., Bierkens, M. F. P., Ligtvoet, W. and Winsemius, H. C. (2013). Assessing flood risk at the global scale: model setup, results, and sensitivity. *Environmental Research Letters* 8, 044019. doi:10.1088/1748-9326/8/4/044019
+4. Meyer, V. et al. (2013). Review article: Assessing the costs of natural hazards – state of the art and knowledge gaps. *Natural Hazards and Earth System Sciences* 13, 1351–1373. doi:10.5194/nhess-13-1351-2013
+5. Rentschler, J., Salhab, M. and Jafino, B. A. (2022). Flood exposure and poverty in 188 countries. *Nature Communications* 13, 3527. doi:10.1038/s41467-022-30727-4
+6. Olsson, H., Mugume, S. N. and Sörensen, J. (2025). Modelling the effect of sediment and solid waste deposition on pluvial flood risk using in situ high-resolution rainfall and water level measurements. *Water Science & Technology* 91(6), 757–. doi:10.2166/wst.2025.039
+7. Kuichling, E. (1889). The relation between the rainfall and the discharge of sewers in populous districts. *Transactions of the American Society of Civil Engineers* 20, 1–56.
+8. Kirpich, Z. P. (1940). Time of concentration of small agricultural watersheds. *Civil Engineering* 10(6), 362.
+9. Chow, V. T. (1959). *Open-channel hydraulics*. McGraw-Hill, New York.
+10. Microsoft (2023). Global ML Building Footprints. github.com/microsoft/GlobalMLBuildingFootprints
+11. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+12. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+13. Companion papers of this programme: A, 1, 3 and 6.

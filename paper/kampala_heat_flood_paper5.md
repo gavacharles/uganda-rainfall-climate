@@ -80,7 +80,22 @@ Kampala's flood-prone low ground is also where its nights are warmest. More than
 - kd35: a, night temperature by built-up quintile, low vs higher ground; b, residents facing heat, flood or both
 - kd36: map of night-time surface temperature with channels and double-exposure cells
 
-# References (to complete)
+# References
 
-- Papers A, D, 1 of this programme; the Uganda climate report (warm-nights analysis).
-- NASA MODIS MOD11A2 v061; USGS Landsat Collection 2 Surface Temperature; JRC GHSL R2023A.
+Items marked † were found through search, or are grey literature not yet opened; verify them before submission.
+
+1. Oke, T. R. (1982). The energetic basis of the urban heat island. *Quarterly Journal of the Royal Meteorological Society* 108, 1–24. doi:10.1002/qj.49710845502
+2. Peng, S., Piao, S., Ciais, P., Friedlingstein, P., Ottle, C., Bréon, F.-M., Nan, H., Zhou, L. and Myneni, R. B. (2012). Surface urban heat island across 419 global big cities. *Environmental Science & Technology* 46, 696–703. doi:10.1021/es2030438
+3. Imhoff, M. L., Zhang, P., Wolfe, R. E. and Bounoua, L. (2010). Remote sensing of the urban heat island effect across biomes in the continental USA. *Remote Sensing of Environment* 114, 504–513. doi:10.1016/j.rse.2009.10.008
+4. Bowler, D. E., Buyung-Ali, L., Knight, T. M. and Pullin, A. S. (2010). Urban greening to cool towns and cities: a systematic review of the empirical evidence. *Landscape and Urban Planning* 97, 147–155. doi:10.1016/j.landurbplan.2010.05.006
+5. Zscheischler, J. et al. (2018). Future climate risk from compound events. *Nature Climate Change* 8, 469–477. doi:10.1038/s41558-018-0156-3
+6. † Wan, Z., Hook, S. and Hulley, G. (2021). MODIS/Terra Land Surface Temperature/Emissivity 8-Day L3 Global 1 km SIN Grid V061 (MOD11A2). NASA EOSDIS Land Processes DAAC. doi:10.5067/MODIS/MOD11A2.061
+7. Crawford, C. J. et al. (2023). The 50-year Landsat collection 2 archive. *Science of Remote Sensing* 8, 100103. doi:10.1016/j.srs.2023.100103
+8. Tucker, C. J. (1979). Red and photographic infrared linear combinations for monitoring vegetation. *Remote Sensing of Environment* 8, 127–150.
+9. Cameron, A. C. and Miller, D. L. (2015). A practitioner's guide to cluster-robust inference. *Journal of Human Resources* 50(2), 317–372.
+10. Pesaresi, M. and Politis, P. (2023). GHS-BUILT-S R2023A: GHS built-up surface grid, 1975–2030. European Commission, Joint Research Centre.
+11. Schiavina, M., Freire, S., Carioli, A. and MacManus, K. (2023). GHS-POP R2023A: GHS population grid, 1975–2030. European Commission, Joint Research Centre.
+12. European Space Agency (2021). Copernicus DEM GLO-30. doi:10.5270/ESA-c5d3d65
+13. Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M. and Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically relevant new terrain model. *Journal of Hydrology* 404, 13–29. doi:10.1016/j.jhydrol.2011.03.051
+14. Gava, C. (2026). A dated, geocoded catalogue of reported floods in Kampala, Uganda, 2007–2026 (data paper D0 of this programme).
+15. Companion papers of this programme: A, D, 1; the Uganda climate report (warm-nights analysis).
