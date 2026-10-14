@@ -352,6 +352,55 @@ def cover_roads():
                  "flood depths: screening model (this study)", fs=44)
 
 
+def cover_roads_split():
+    """Alternative roads cover: Bwaise in the same 2-year storm, channels clean (top) vs silted (bottom)."""
+    import contextily as ctx
+    import geopandas as gpd
+    from PIL import Image
+    KD = ROOT / "data" / "kd"
+    p = gpd.read_parquet(KD / "road_pieces.parquet").to_crs(32636)
+    c = gpd.GeoSeries(gpd.points_from_xy([32.5640], [0.3520]), crs=4326).to_crs(32636).iloc[0]
+    x0, x1, y0, y1 = c.x - 900, c.x + 900, c.y - 520, c.y + 520
+    pp = p.cx[x0:x1, y0:y1]
+    sc = pd.read_csv(RES / "kd_roadsR_scenarios.csv")
+    row = lambda S: sc[(sc.L == 1) & (sc.S == S) & (sc.E == 1) & (sc.C == 0)].iloc[0]
+
+    def draw(ax):
+        for k, (col, lab, S) in enumerate((("d2_2020 clean", "channels clean", 0), ("d2_2020 silted", "channels silted", 1))):
+            sub = ax.inset_axes([0.0, 0.505 - 0.505 * k, 1.0, 0.49])
+            d = pp[col]
+            pp[pp.cls.isin(["highway", "main road", "local through road"])].plot(ax=sub, color="white", lw=1.2, alpha=0.8, zorder=4)
+            for lo, hi, cc, lw in ((0.3, 1.0, "#f46d43", 3.2), (1.0, 9, "#a50026", 4.2)):
+                pp[(d >= lo) & (d < hi)].plot(ax=sub, color=cc, lw=lw, zorder=5)
+            sub.set_xlim(x0, x1)
+            sub.set_ylim(y0, y1)
+            ctx.add_basemap(sub, crs="EPSG:32636", source=ctx.providers.Esri.WorldImagery, zoom=16, attribution=False)
+            sub.set_aspect("auto")
+            sub.axis("off")
+            r = row(S)
+            sub.text(0.97, 0.06, f"{lab}: {r.km_T2:,.0f} km of road under water in Kampala", transform=sub.transAxes,
+                     ha="right", fontsize=13, fontweight="bold", color=INK,
+                     bbox=dict(facecolor=BG, alpha=1.0, edgecolor="none", pad=5), zorder=20)
+        ax.text(0.97, 0.985, "Bwaise, the same ordinary 2-year storm · red = road under water", transform=ax.transAxes,
+                ha="right", va="top", fontsize=11, color=INK, bbox=dict(facecolor=BG, alpha=1.0, edgecolor="none", pad=4),
+                zorder=20)
+
+    src = ("Imagery: Esri World Imagery (Esri, Maxar, Earthstar Geographics) · roads: © OpenStreetMap contributors · "
+           "flood depths: screening model (this study)")
+    _cover("cover_roads_split_1456x1048.png", "KAMPALA ROADS · SAME STORM", "Kampala's roads",
+           "are drowning\nin silt.", "Not in rain. Clogged channels explain\nabout four-fifths of the rise in flooded\n"
+           "roads since 1990.", draw, src, fs=44)
+    # social preview 1200 x 627 from both covers (scaled, light padding)
+    for nm in ("cover_roads_1456x1048.png", "cover_roads_split_1456x1048.png"):
+        im = Image.open(OUT / nm).convert("RGB")
+        h = 627
+        w = round(im.width * h / im.height)
+        im = im.resize((w, h), Image.LANCZOS)
+        canvas = Image.new("RGB", (1200, 627), (251, 250, 247))
+        canvas.paste(im, ((1200 - w) // 2, 0))
+        canvas.save(OUT / nm.replace("1456x1048", "social_1200x627"))
+
+
 if __name__ == "__main__":
     for f in sys.argv[1:] or ["x4", "x5", "x6", "x7", "x8"]:
         globals()[f]()
