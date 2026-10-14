@@ -1,0 +1,5 @@
+state,T,median_dist_spots_m,median_dist_random_m,spots_within_500m,random_within_500m,spots_within_1km,random_within_1km,auc_proximity,p_mwu
+clean,2,4440.73,4799.681,0.0,1.76,0.0,4.38,0.598,0.12
+clean,10,824.026,1558.798,33.333,15.48,66.667,32.84,0.698,0.009
+silted,2,405.316,1066.159,75.0,24.78,91.667,47.36,0.797,0.0
+silted,10,335.462,1002.811,83.333,26.98,91.667,49.9,0.795,0.0
