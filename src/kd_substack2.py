@@ -197,7 +197,7 @@ def x10():
 
 
 
-def _cover(fname, kicker, l1, l2, sub, draw, source):
+def _cover(fname, kicker, l1, l2, sub, draw, source, fs=50):
     """Substack cover 1456 x 1048, same layout as cover_substack_1456x1048.png."""
     import matplotlib
     from PIL import Image
@@ -213,9 +213,9 @@ def _cover(fname, kicker, l1, l2, sub, draw, source):
     g.imshow(grad, aspect="auto", extent=[0, 1, 0, 1])
     g.axis("off")
     fig.text(0.055, 0.80, kicker, fontsize=17, fontweight="bold", color=KICK)
-    fig.text(0.055, 0.745, l1, fontsize=50, fontweight="bold", color=INK, va="top", linespacing=1.05)
+    fig.text(0.055, 0.745, l1, fontsize=fs, fontweight="bold", color=INK, va="top", linespacing=1.05)
     n1 = l1.count("\n") + 1
-    fig.text(0.055, 0.745 - 0.083 * n1, l2, fontsize=50, fontweight="bold", color=R2, va="top", linespacing=1.05)
+    fig.text(0.055, 0.745 - 0.083 * n1, l2, fontsize=fs, fontweight="bold", color=R2, va="top", linespacing=1.05)
     n2 = l2.count("\n") + 1
     fig.text(0.055, 0.745 - 0.083 * (n1 + n2) - 0.03, sub, fontsize=20, color=MUTE, va="top", linespacing=1.45)
     fig.text(0.055, 0.075, "Credit: Gava Charles", fontsize=18, fontweight="bold", color=INK)
@@ -277,6 +277,79 @@ def covers():
            "From space, the bay is getting murkier.",
            bay, "Imagery: Copernicus Sentinel-2 (ESA) · turbidity: Dogliotti et al. 2015 · wetland: NASA/USGS Landsat")
     print("covers done")
+
+
+def x12():
+    sc = pd.read_csv(RES / "kd_roadsR_scenarios.csv")
+    cl = sc[(sc.L == 1) & (sc.S == 0) & (sc.E == 1) & (sc.C == 0)].iloc[0]
+    si = sc[(sc.L == 1) & (sc.S == 1) & (sc.E == 1) & (sc.C == 0)].iloc[0]
+    fig = plt.figure(figsize=(12, 6.75))
+    fig.text(0.05, 0.92, "Same storm. Different drains.", fontsize=26, fontweight="bold", color=INK)
+    fig.text(0.05, 0.86, "An ordinary 2-year storm in Kampala today, as modelled for every road in the city", fontsize=15,
+             color=MUTE)
+    for x0, row, ttl, col in ((0.05, cl, "Channels clean", "#2e8b57"), (0.53, si, "Channels silted", RED)):
+        fig.text(x0, 0.72, ttl, fontsize=20, fontweight="bold", color=col)
+        fig.text(x0, 0.52, f"{row.km_T2:,.0f} km", fontsize=56, fontweight="bold", color=INK)
+        fig.text(x0, 0.46, "of road under water", fontsize=15, color=MUTE)
+        fig.text(x0, 0.27, f"{round(row.cutoff_centre_T2, -2):,.0f}", fontsize=56, fontweight="bold", color=INK)
+        fig.text(x0, 0.21, "people cut off from the city centre", fontsize=15, color=MUTE)
+    fig.add_artist(plt.Line2D([0.5, 0.5], [0.18, 0.76], color=GRIDC, lw=2, transform=fig.transFigure))
+    fig.text(0.05, 0.03, "Data: OpenStreetMap, Copernicus DEM, JRC GHSL, CHIRPS; screening flood model (this study).",
+             fontsize=10, color=MUTE)
+    credit(fig)
+    fig.savefig(OUT / "x12_same_storm_different_drains.png", dpi=150)
+    plt.close(fig)
+
+
+def x13():
+    m = pd.read_csv(RES / "kd_roadsR_mc_summary.csv").set_index("quantity")
+    rows = [("Silt in the channels", "ea_cut_today_S", RED), ("Paving upstream", "ea_cut_today_L", "#8c6bb1"),
+            ("Building on the floodplain", "ea_cut_today_E", "#f4a582"), ("Climate change (by the 2050s)", "ea_cut_2050s_C", BLU)]
+    fig, ax = frame("Why Kampala's roads go under", "Share of the rise since 1990 in people cut off by flooded roads, "
+                    "average year (400 model runs)", "Data: flood and road-network model of Kampala, Monte Carlo "
+                    "of 12 assumptions. Bars: median; lines: 90% range.")
+    fig.subplots_adjust(left=0.27)
+    for i, (lab, k, c) in enumerate(rows):
+        r = m.loc[k]
+        ax.barh(i, r["median"], color=c, height=0.55)
+        ax.plot([r.p05, r.p95], [i, i], color=INK, lw=1.6)
+        ax.text(max(r["median"], r.p95) + 2, i, f"{r['median']:.0f}%", va="center", fontsize=17, fontweight="bold",
+                color=INK)
+    ax.set_yticks(range(len(rows)))
+    ax.set_yticklabels([r[0] for r in rows], fontsize=15)
+    ax.invert_yaxis()
+    ax.set_xlim(0, 105)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.grid(axis="y", visible=False)
+    fig.savefig(OUT / "x13_why_roads_go_under.png", dpi=150)
+    plt.close(fig)
+
+
+def cover_roads():
+    import contextily as ctx
+    import geopandas as gpd
+    KD = ROOT / "data" / "kd"
+    p = gpd.read_parquet(KD / "road_pieces.parquet").to_crs(32636)
+    c = gpd.GeoSeries(gpd.points_from_xy([32.5640], [0.3520]), crs=4326).to_crs(32636).iloc[0]
+
+    def draw(ax):
+        x0, x1, y0, y1 = c.x - 700, c.x + 700, c.y - 1000, c.y + 1000
+        pp = p.cx[x0:x1, y0:y1]
+        d = pp["d2_2020 silted"]
+        pp[pp.cls.isin(["highway", "main road", "local through road"])].plot(ax=ax, color="white", lw=1.4, alpha=0.8, zorder=4)
+        for lo, hi, col, lw in ((0.3, 1.0, "#f46d43", 3.5), (1.0, 9, "#a50026", 4.5)):
+            pp[(d >= lo) & (d < hi)].plot(ax=ax, color=col, lw=lw, zorder=5)
+        ax.set_xlim(x0, x1)
+        ax.set_ylim(y0, y1)
+        ctx.add_basemap(ax, crs="EPSG:32636", source=ctx.providers.Esri.WorldImagery, zoom=16, attribution=False)
+        ax.set_aspect("auto")
+        ax.text(0.97, 0.015, "Bwaise, 2-year storm, channels silted · red = road under water", transform=ax.transAxes,
+                fontsize=11, color=INK, ha="right", bbox=dict(facecolor=BG, alpha=1.0, edgecolor="none", pad=4), zorder=20)
+
+    _cover("cover_roads_1456x1048.png", "KAMPALA ROADS · 400 MODEL RUNS", "Kampala's roads", "are drowning\nin silt.",
+           "Not in rain. Clogged channels explain\nabout four-fifths of the rise in flooded\nroads since 1990.",
+           draw, "Imagery: Esri World Imagery (Esri, Maxar, Earthstar Geographics) · roads: © OpenStreetMap contributors · "
+                 "flood depths: screening model (this study)", fs=44)
 
 
 if __name__ == "__main__":
