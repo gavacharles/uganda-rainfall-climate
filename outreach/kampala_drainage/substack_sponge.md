@@ -46,30 +46,11 @@ In 1975, five of Kampala's six main channel systems had more valley storage than
 
 ## Job 2: cleaning the water
 
-The second job gets far less attention.
+The second job gets far less attention. In the 1990s, scientists measured the Nakivubo swamp removing about half the nitrogen and 91% of the faecal bacteria from the city's wastewater before it reached Lake Victoria, which is where Kampala's drinking water comes from.
 
-In the 1990s, scientists measured what the Nakivubo swamp was doing to the city's wastewater on its way to the lake. It removed about **half the nitrogen, 40% of the phosphorus and 91% of the faecal bacteria**. Economists priced that service at **US$1,500–2,900 per hectare per year**, the cost of the treatment plant you would otherwise need to build.
-
-So I measured the swamps that drain into Inner Murchison Bay, the arm of Lake Victoria next to the city: the Nakivubo, Kinawataka and Kansanga valleys.
+Half of the swamps that did that job are now gone, and forty years of satellite images show the bay turning green and murky where the channels pour in. That is the subject of my next post: **Kampala's drinking water starts in its drains.**
 
 > **[GRAPHIC: `x8_bay_treatment.png`. Green wetland draining to Murchison Bay: 1,200 ha in 1986, 587 ha in 2025.]**
-
-**Half of it is gone: from 1,200 hectares in 1986 to 587 today.** Kinawataka has lost 78%. That is roughly **US$1–2 million a year of free water treatment** the city no longer gets. In nutrients, it is about 64 tonnes of nitrogen and 9 tonnes of phosphorus a year that now flow on to the lake instead of being held in the swamp.
-
-## You can see it from space
-
-Satellites can measure how murky and how green lake water is. I took every clear image of the bay since 1984, about 900 scene-days, and compared the water where Kampala's channels enter with the open lake further south, on the same day.
-
-> **[GRAPHIC: `kd42_bay_plumes.png`. The bay from space: where the channels enter, a dry day, and the day after heavy rain.]**
-
-What it shows:
-- **The bay is green where the city drains into it.** The algae index at the channel mouths is about **four times** that of the open lake.
-- **It is getting worse as the swamps disappear.** In the late 1980s and early 1990s, the water at the channel mouths was about 14% murkier than the open lake. Today it is **51% murkier**. The more wetland was lost, the bigger the gap.
-- **Storms make it worse, but it is bad even in dry weather.** After heavy rain, plumes of brown water spread across the inner bay. But the channel mouths are degraded even after a week without rain.
-
-> **[GRAPHIC: `kd43_bay_wetland_turbidity.png`. Wetland lost, the growing gap between the outlets and the open lake, and the algae gradient.]**
-
-Kampala's drinking water is drawn from this bay at Ggaba. The dirtier the water arriving at the intake, the more it costs to treat.
 
 ## One loss, two bills
 
