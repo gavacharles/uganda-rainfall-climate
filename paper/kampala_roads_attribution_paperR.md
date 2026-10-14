@@ -26,7 +26,7 @@ Results:
 2. **Siltation causes most of it:** 83% of the increase in impassable road and 86% of the increase in people cut off. Paving contributes 15% and 12%, and floodplain encroachment about 2%.
 3. **Even an ordinary 2-year storm closes the city when channels are silted.** It puts 199 km of road under water and cuts off 149,000 people, against 4 km and 1,500 people with clean channels. Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm when channels are silted and 13 when they are clean.
 4. **Climate change matters less than maintenance, but it matters more for a well-kept system.** By the 2050s, climate change adds 9% to road flooding if channels stay silted. With clean channels it nearly doubles expected disruption (from 30 to 57 km a year), because silt otherwise masks it.
-5. **The result is robust.** Siltation remains the largest driver whether channels lose 10% (71–75% of the change) or 50% (87–89%) of their depth.
+5. **The result is robust.** Across 400 Monte Carlo versions of the model, varying 12 uncertain assumptions, siltation is the largest driver in 399. Its share is 77% (90% interval 62–88%) of the increase in impassable road and 79% (64–90%) of the increase in people cut off. A machine-learning emulator (gradient boosting, cross-validated R² = 0.90) shows that the share depends mainly on how much depth silt removes and on channel roughness, while the absolute road length depends most on road height above the terrain model.
 6. **Much of today's exposure was built on former wetland.** 68% of the road that floods in a 10-year storm sits on valley floor that was wetland or bush in 1986. Urban road on low ground beside channels grew from 141 km (1975) to 315 km (2020).
 
 The model reproduces all eight road floods reported in the news, 2007–2026. We rank the crossings where desilting would avoid the most closures: Jinja Road over the Nakivubo, Kibuye–Natete Road on the Nalukolongo, and the Northern Bypass, Gayaza Road and Bombo Road at Bwaise–Kalerwe. Kampala's road flooding is mainly a maintenance problem, and the cheapest adaptation is a shovel.
@@ -107,7 +107,28 @@ For a metric V and a set of drivers F, the Shapley value of driver i is the aver
 
 **History.** Each road piece is dated by the first GHSL epoch (1975–2020) in which its 100 m cell was at least 15% built. It is also classified by its 1986 land cover from the machine-learning land-cover map (Paper 1, Section 3.4).
 
-## 2.7 Validation
+## 2.7 Uncertainty and the machine-learning emulator
+
+**Monte Carlo.** Twelve assumptions were varied together in 400 Latin hypercube draws (McKay et al. 1979), each re-running all 16 scenarios, six storms and the network model:
+
+| Assumption | Range (main run) |
+|---|---|
+| Design standard of the channels | 5–25-year 1990 flow (10) |
+| Manning n: clean channel / silted channel / floodplain | 0.020–0.030 (0.025) / 0.030–0.045 (0.035) / 0.04–0.10 (0.06) |
+| Channel depth lost to silt | 10–50% (30%) |
+| Paving calibration (GHSL → impervious) | 1.8–2.7 (2.27) |
+| Runoff coefficient of unpaved ground | 0.15–0.35 (0.25) |
+| Design-storm error | ±15% |
+| Size of the climate change factor | 0.5–1.5 × (1) |
+| Road surface above the 30 m DEM ground | 0–0.3 m (0) |
+| Floodplain blocked per unit of footprint (walls, fill) | 1–3 × (1) |
+| Depth that stops cars | 0.2–0.4 m (0.3) |
+
+The rating curves are vectorised over all stretches and the network uses a compiled shortest-path routine (scipy), so one draw takes about 6 s. The central draw reproduces the main results (siltation share 82.5% vs 82.6%).
+
+**Emulator.** A gradient-boosting regression (Friedman 2001; scikit-learn, Pedregosa et al. 2011) was trained on the 400 draws to predict the siltation share and the total disruption from the 12 assumptions. It was evaluated by 5-fold cross-validation, and permutation importance (Breiman 2001) ranks the assumptions by their influence. The emulator is used only to explain the uncertainty. The attribution itself comes from the physically based scenarios.
+
+## 2.8 Validation
 
 Eight road floods named in the flood catalogue (Paper D0, 2007–2026) were checked against the model. For each, we took the deepest modelled water on the named road within 1.5 km of the reported place.
 
@@ -166,7 +187,27 @@ All eight reported roads are impassable in the silted state even in a 2-year sto
 
 (Fig. kd52.) Even a light silting, a tenth of the channel depth plus a vegetated bed, accounts for most of the change. The conclusion does not depend on the assumed silt level.
 
-## 3.5 The crossings to clear first
+## 3.5 Uncertainty: 400 versions of the model
+
+| Quantity (today, average year) | Main run | Median | 90% interval |
+|---|---|---|---|
+| Siltation share, impassable road | 83% | 77% | 62–88% |
+| Siltation share, people cut off | 86% | 79% | 64–90% |
+| Paving share, impassable road | 15% | 15% | 8–29% |
+| Encroachment share, impassable road | 2% | 7% | 3–14% |
+| Climate share by the 2050s, impassable road | 9% | 9% | 5–19% |
+| Impassable road, channels silted | 163 km | 132 km | 61–200 km |
+| Impassable road, channels clean | 30 km | 16 km | 2–55 km |
+| People cut off from centre, silted | 117,500 | 100,000 | 51,000–139,000 |
+
+(Fig. kd53.) Siltation is the largest driver in 399 of 400 draws. The emulator predicts the siltation share well (cross-validated R² = 0.90). Its influence ranking:
+- **the siltation share** depends mainly on silt depth, then the roughness of clean and of silted channels;
+- **paving's calibration and the climate signal** barely matter for the share;
+- **the absolute kilometres** depend most on how far roads sit above the DEM ground and on floodplain roughness. Absolute road lengths are therefore the least certain result, and the shares the most robust.
+
+Encroachment rises from 2% to a median 7% once buildings are allowed to block more than their footprint. This supports the view that the main run understates it.
+
+## 3.6 The crossings to clear first
 
 Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm when silted and 13 when clean. The crossings where desilting avoids the most disruption (Fig. kd51) are:
 
@@ -185,7 +226,7 @@ Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm wh
 
 Several of these, such as Bwaise Roundabout and Bombo Road, close every 5 years even with clean channels: they also need more capacity, not only maintenance. The full ranked list is in `results/kd_roadsR_crossings.csv`.
 
-## 3.6 How the exposure was built
+## 3.7 How the exposure was built
 
 Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The share on low ground beside channels stayed near 6%, but its length more than doubled, from 141 to 315 km (Fig. kd47). 526 km of today's road sits on valley floor that was wetland or bush in 1986. Of the road impassable in a 10-year storm with clean channels, 68% lies on such former wetland. At Lubigi, the Northern Bypass and its feeder roads were built across what was open wetland in 1986 (Fig. kd49).
 
@@ -203,6 +244,7 @@ Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The s
   - **The network is simplified.** Network effects are measured as access to the centre and to hospitals, without travel demand or congestion feedback. They are lower bounds on economic disruption.
   - **Elevation data.** The DEM predates some embankments, and the Entebbe Expressway is treated as raised.
   - **Validation** relies on eight reported events: enough to confirm that the model places floods in the right spots, not to calibrate depths.
+  - **Culvert dimensions are not observed.** Street-level imagery could fill this gap with computer vision: measuring culvert openings and detecting blockage at the ranked crossings. Open archives are thin in Kampala, though. KartaView has a photo within 60 m of only 2 of the top 60 crossings, and Mapillary coverage remains to be checked.
 
 # 5. Conclusion
 
@@ -210,7 +252,7 @@ Most of the growth in Kampala's road flooding since 1990 comes from silted chann
 
 # Data and code availability
 
-Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_roads_attrib.py` (16 scenarios, network, Shapley, crossings, sensitivity), `src/kd_roads_maps.py` and `src/kd_roadsR_figs.py` (figures kd45–kd52). Results: `results/kd_roads_*.csv`, `results/kd_roadsR_*.csv`.
+Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_roads_attrib.py` (16 scenarios, network, Shapley, crossings, sensitivity), `src/kd_roads_mc.py` (Monte Carlo and emulator), `src/kd_roads_maps.py` and `src/kd_roadsR_figs.py` (figures kd45–kd52). Results: `results/kd_roads_*.csv`, `results/kd_roadsR_*.csv`.
 
 # Figures
 
@@ -222,6 +264,7 @@ Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_road
 - kd50: Shapley attribution, today and 2050s; the 2-year storm, clean vs silted.
 - kd51: the crossings to desilt first.
 - kd52: sensitivity of the attribution to the silt level.
+- kd53: Monte Carlo uncertainty (400 draws) and the emulator's ranking of assumptions.
 
 # References
 
@@ -246,4 +289,8 @@ Items marked † were found through search but not opened, or their author lists
 17. Yin, J., Yu, D., Yin, Z., Liu, M. and He, Q. (2016). Evaluating the impact and risk of pluvial flash flood on intra-urban road network: a case study in the city center of Shanghai, China. *Journal of Hydrology* 537, 138–145. doi:10.1016/j.jhydrol.2016.03.037
 18. Zheng, X., Tarboton, D. G., Maidment, D. R., Liu, Y. Y. and Passalacqua, P. (2018). River channel geometry and rating curve estimation using height above the nearest drainage. *Journal of the American Water Resources Association* 54(4), 785–806. doi:10.1111/1752-1688.12661
 19. Microsoft (2023). Global ML Building Footprints; OpenStreetMap contributors.
-20. Companion papers of this programme: A, D0 (flood catalogue), 1 (lost sponge, incl. machine-learning land cover), 3 (access), 4 (damage), 6 (channel design drift), 7 (regional cities).
+20. Breiman, L. (2001). Random forests. *Machine Learning* 45, 5–32.
+21. Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics* 29(5), 1189–1232.
+22. McKay, M. D., Beckman, R. J. and Conover, W. J. (1979). A comparison of three methods for selecting values of input variables in the analysis of output from a computer code. *Technometrics* 21(2), 239–245.
+23. Pedregosa, F. et al. (2011). Scikit-learn: machine learning in Python. *Journal of Machine Learning Research* 12, 2825–2830.
+24. Companion papers of this programme: A, D0 (flood catalogue), 1 (lost sponge, incl. machine-learning land cover), 3 (access), 4 (damage), 6 (channel design drift), 7 (regional cities).
