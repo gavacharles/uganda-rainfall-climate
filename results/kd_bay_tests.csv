@@ -1,0 +1,8 @@
+test,n,estimate,p,ci_lo,ci_hi
+Landsat outlet/open-lake turbidity ratio vs time (Kendall),179,0.1795,0.0004,,
+Landsat ratio vs bay-draining wetland remaining (Spearman),179,-0.2485,0.0008,,
+"log ratio per 100 ha wetland lost (sensor, month, 3-day rain controls)",179,0.0519,0.0188,0.0086,0.0951
+S2 log outlet/lake ratio per log(1+3-day rain mm),123,0.0425,0.0687,,
+"S2 ratio, dry scenes (3-day rain < 1 mm), median",35,1.1496,,,
+"S2 ratio, wet scenes (3-day rain >= 25 mm), median",15,1.3098,,,
+"S2 NDCI outlet minus open lake (median, same scene)",124,0.2236,0.0,,

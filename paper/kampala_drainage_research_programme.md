@@ -44,7 +44,7 @@ Each planning-journal submission needs a policy and institutional section: the N
 | 5 | Double exposure: heat and flood | 53% of low-ground residents in the warmest 20% of nights vs 29% on hills (OR 2.7); low ground +0.33 °C at night after controls | `kampala_heat_flood_paper5.md` |
 | 6 | Design-basis drift | Channels sized for 1990 now get +17% (median) 10-yr flow; 91% of length overloaded >20% under 2041-70 SSP5-8.5; drift is a fringe, not a hotspot, phenomenon | `kampala_capacity_paper6.md` |
 | 7 | The next Kampalas: regional cities | Low ground filling 1.3-2x faster than the city in Mbarara, Gulu, Mbale, Jinja, Arua (2020-30) | `uganda_cities_paper7.md` |
-| 2 | Drains to the tap (Lake Victoria water quality) | Not started; needs NWSC raw-water data | - |
+| 2 | The lost free treatment plant: wetland loss and Inner Murchison Bay, 1986-2026 (satellite only, no NWSC data) | Drafted: bay-draining wetland -51% (1,200 to 587 ha); outlet/lake turbidity ratio 1.14 to 1.51; +5.3% per 100 ha lost (p = 0.019); `kampala_bay_paper2.md` | *Science of the Total Environment*; *J. Great Lakes Research* |
 
 # Shared foundations (done)
 
