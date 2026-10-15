@@ -32,11 +32,15 @@ The same land conversion removed two services at once. Valley-floor wetland shou
 
 # 2. Study area: the valley floors and the bay
 
-Kampala's valley floors, the land less than 3 m above the nearest drain, cover about 104 km² of the study box, a quarter of its land (Fig. cm2). In 1986 most was green: papyrus in the wet centres, *Miscanthidium* grass, gardens and trees at the edges. Two kinds of valley matter here:
+Kampala's valley floors, the land less than 3 m above the nearest drain, cover about 104 km² of the study box, a quarter of its land (Figure 1). In 1986 most was green: papyrus in the wet centres, *Miscanthidium* grass, gardens and trees at the edges. Two kinds of valley matter here:
 - **Valleys that drain away from the lake**, chiefly the Lubigi, which flows north-west to the Mayanja river. Their wetlands matter for flood storage only.
 - **Valleys that drain to Inner Murchison Bay**: Nakivubo (the city centre and Industrial Area), Kinawataka (Ntinda, Kyambogo, Banda, joining the Namanve wetland), Kansanga (Kabalagala, Ggaba) and a strip of Munyonyo shore. Their wetlands did both jobs, storing storm water and treating it before it reached the lake.
 
-Inner Murchison Bay is a shallow, sheltered arm of Lake Victoria about 4 km across, opening south through a narrows near Ggaba into the outer bay and the open lake. The Ggaba waterworks, which supply most of Kampala's piped water, draw from the bay's western shore. The bay therefore receives the city's drainage and supplies its drinking water, with the valley wetlands between the two. Figure lc2 shows that landscape from Landsat in 1986 and 2025: the dark papyrus of the Nakivubo and Kinawataka valleys in 1986, and roofs, industry and gardens across most of it by 2025.
+![**Figure 1.** Study area: valley-floor land cover today (machine-learning map), the catchments draining to Inner Murchison Bay, the bay zones used for the water analysis and the Ggaba intake.](../figures/kampala_drainage/cm2_case_double_loss.png){width=100%}
+
+Inner Murchison Bay is a shallow, sheltered arm of Lake Victoria about 4 km across, opening south through a narrows near Ggaba into the outer bay and the open lake. The Ggaba waterworks, which supply most of Kampala's piped water, draw from the bay's western shore. The bay therefore receives the city's drainage and supplies its drinking water, with the valley wetlands between the two. Figure 2 shows that landscape from Landsat in 1986 and 2025: the dark papyrus of the Nakivubo and Kinawataka valleys in 1986, and roofs, industry and gardens across most of it by 2025.
+
+![**Figure 2.** The Nakivubo and Kinawataka valleys from Landsat, 1986 and 2025, with the edge of the valley floor (3 m above the nearest drain).](../figures/kampala_drainage/lc2_nakivubo_then_now.png){width=100%}
 
 # 3. Data and methods
 
@@ -82,7 +86,9 @@ For a water level *h* above the nearest drain, each 30 m cell holds max(0, h −
 | Nakivubo | 343 → 178 ha (−48%) | 21% → 56% |
 | **Greater Kampala core** | **8,006 → 4,144 ha (−48%)** | **3% → 35%** |
 
-Cultivation took part of the valley floor first, in the 1990s and 2000s, and was then itself built over. Today's green share from 10 m Sentinel-2 agrees with 30 m Landsat within 1–7 points (Lubigi 34% vs 36%, Kinawataka 24% vs 23%, Nalukolongo 9% vs 7%; Fig. kd55). The classifier's share is lower because it counts only wetland and trees (Fig. kd44).
+Cultivation took part of the valley floor first, in the 1990s and 2000s, and was then itself built over. Today's green share from 10 m Sentinel-2 agrees with 30 m Landsat within 1–7 points (Lubigi 34% vs 36%, Kinawataka 24% vs 23%, Nalukolongo 9% vs 7%; Figure S1). The classifier's share is lower because it counts only wetland and trees (Figure 3).
+
+![**Figure 3.** Machine-learning land cover of the valley floors, 1986 and 2025, and class areas 1986–2025.](../figures/kampala_drainage/kd44_valley_landcover_ml.png){width=100%}
 
 ## 4.2 Flood storage: from surplus to deficit
 
@@ -92,7 +98,11 @@ Cultivation took part of the valley floor first, in the 1990s and 2000s, and was
 | Effective storage, 1 m (million m³) | 86.4 | 77.9 | 76.2 |
 | 10-year storm runoff (million m³) | 17.5 | 26.0 | 26.3 |
 
-The city lost 8.5 million m³ of 1 m storage and gained 8.5 million m³ of 10-year runoff: a 17 million m³ gap for one storm (Fig. kd30). Storage on still-green valley floor fell faster, from 90.3 to 73.2 million m³ (1986–2025).
+The city lost 8.5 million m³ of 1 m storage and gained 8.5 million m³ of 10-year runoff: a 17 million m³ gap for one storm (Figure 4, Figure 5). Storage on still-green valley floor fell faster, from 90.3 to 73.2 million m³ (1986–2025).
+
+![**Figure 4.** Flood storage: (a) valley-floor storage against storm runoff 1975–2030; (b) the living sponge, 1986 vs 2025, by system; (c) combined gap by system.](../figures/kampala_drainage/kd30_lost_sponge.png){width=100%}
+
+![**Figure 5.** Map of valley-floor storage lost, 1975–2020.](../figures/kampala_drainage/kd31_sponge_lost_map.png){width=100%}
 
 | Storm-to-storage ratio (1 m storage ÷ 10-yr runoff) | 1975 | 2020 | Storage needed to restore a ratio of 1 |
 |---|---|---|---|
@@ -131,7 +141,11 @@ The classifier gives the same picture (natural vegetation 863 → 384 ha, −56%
 | 2006–15 | 43 | 1.34 | 831 |
 | 2016–26 | 111 | 1.51 | 646 |
 
-The outlets' NDCI exceeds the open lake's by a median 0.22 on the same day (n = 124, p < 0.001). The ratio rose over time (Kendall τ = 0.18, p < 0.001) and with wetland loss: +5.3% per 100 ha lost (95% CI 0.9–10%, p = 0.019), controlling for sensor, month and rain (Fig. kd43). After rain, plumes spread across the inner bay (ratio 1.31 after ≥ 25 mm in three days, 1.15 after dry spells, p = 0.07), but the outlets are degraded even in dry weather (Fig. kd42).
+The outlets' NDCI exceeds the open lake's by a median 0.22 on the same day (n = 124, p < 0.001). The ratio rose over time (Kendall τ = 0.18, p < 0.001) and with wetland loss: +5.3% per 100 ha lost (95% CI 0.9–10%, p = 0.019), controlling for sensor, month and rain (Figure 6). After rain, plumes spread across the inner bay (ratio 1.31 after ≥ 25 mm in three days, 1.15 after dry spells, p = 0.07), but the outlets are degraded even in dry weather (Figure 7).
+
+![**Figure 6.** (a) Wetland draining to the bay, 1986–2025; (b) outlet-to-open-lake turbidity ratio from Landsat, 1984–2026; (c) chlorophyll index by zone.](../figures/kampala_drainage/kd43_bay_wetland_turbidity.png){width=100%}
+
+![**Figure 7.** Inner Murchison Bay from Sentinel-2: (a) the outlets; (b) turbidity after a dry spell; (c) turbidity after rain.](../figures/kampala_drainage/kd42_bay_plumes.png){width=100%}
 
 # 5. Discussion
 
@@ -163,8 +177,13 @@ Code: `src/kd_sponge.py`, `kd_landcover.py`, `kd_bay.py`, `kd_channel_condition.
 
 # Figures
 
-Main: cm2 study area · lc2 Nakivubo–Kinawataka 1986 vs 2025 · kd44 machine-learning land cover 1986 vs 2025 · kd30 storage vs runoff · kd31 map of storage lost · kd42 bay plumes · kd43 wetland and outlet turbidity.
-Supplement: kd55 valley floors at 10 m and method agreement · kd16 wetland time-lapse panels.
+Figures are embedded in the text.
+
+# Supplementary figures
+
+![**Figure S1.** Valley floors today at 10 m (Sentinel-2, 2024–26) and the agreement of three methods.](../figures/kampala_drainage/kd55_valley_vegetation_10m.png){width=100%}
+
+![**Figure S2.** Landsat time-lapse of the valley wetlands, 1986–2025.](../figures/kampala_drainage/kd16_wetlands_timelapse_panels.png){width=100%}
 
 # References
 

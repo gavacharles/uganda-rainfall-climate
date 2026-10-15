@@ -37,7 +37,9 @@ The catalogue, its code and its grading rules are open. It is designed to be ext
 
 # Study area
 
-Greater Kampala (32.45–32.72° E, 0.20–0.42° N): the 195 km² of Kampala Capital City and the most built-up parts of Wakiso district around it, drained by six main channel systems to Lake Victoria and the Mayanja river (Paper 1). The catalogue's 31 distinct places lie on the Lubigi, Nakivubo and Kinawataka systems above all; 23 are inside the KCCA boundary (Fig. cm0).
+Greater Kampala (32.45–32.72° E, 0.20–0.42° N): the 195 km² of Kampala Capital City and the most built-up parts of Wakiso district around it, drained by six main channel systems to Lake Victoria and the Mayanja river (Paper 1). The catalogue's 31 distinct places lie on the Lubigi, Nakivubo and Kinawataka systems above all; 23 are inside the KCCA boundary (Figure 1).
+
+![**Figure 1.** Study area: places named in Kampala's 22 catalogued flood events, 2007–2026, by best record grade and number of events, with the independent KCCA/NEMA and press hotspot list.](../figures/kampala_drainage/cm0_case_flood_catalogue.png){width=100%}
 
 # Methods
 
@@ -110,7 +112,9 @@ Two CSV files, linked by `event_id` (format `KLA-YYYYMMDD`):
 | Most-named places | Bwaise (5 events), Kalerwe (4), Banda (4), Kyambogo (4), then Katwe, Ndeeba, Kyebando, Namasuba, Kinawataka, Clock Tower (2 each) |
 | Channels most often named | Lubigi; Kinawataka; Nakivubo |
 
-The most-named places sit on the three systems that the hotspot study ranks highest: Bwaise and Kalerwe on the Lubigi and Nsooba, Banda and Kyambogo on the Kinawataka, and Katwe, Ndeeba and the Clock Tower on the Nakivubo (Fig. kd41).
+The most-named places sit on the three systems that the hotspot study ranks highest: Bwaise and Kalerwe on the Lubigi and Nsooba, Banda and Kyambogo on the Kinawataka, and Katwe, Ndeeba and the Clock Tower on the Nakivubo (Figure 2).
+
+![**Figure 2.** The catalogue: (a) events by date, grade, reported deaths and number of outlets, with the 2021–2024 reporting gap shaded; (b) places named in flood reports over the channel network.](../figures/kampala_drainage/kd41_flood_catalogue.png){width=100%}
 
 ## Rainfall on flood days
 
@@ -154,12 +158,11 @@ The 2021–2024 hole is itself a finding. Kampala's flood record depends on whet
 
 # Code availability
 
-`src/kd_catalogue.py` (GDELT download and event building) and `src/kd_flood_catalogue.py` (merging, grading, geocoding, rainfall attribution, Fig. kd41). Python 3; pandas, geopandas, xarray. Data are released under CC BY 4.0. Source articles remain the property of their publishers, and only headlines, dates and URLs are redistributed.
+`src/kd_catalogue.py` (GDELT download and event building) and `src/kd_flood_catalogue.py` (merging, grading, geocoding, rainfall attribution, Figure 2). Python 3; pandas, geopandas, xarray. Data are released under CC BY 4.0. Source articles remain the property of their publishers, and only headlines, dates and URLs are redistributed.
 
 # Figures
 
-- cm0: where Kampala's reported floods happened (places by best grade, with the hotspot list).
-- kd41: a, timeline of events by grade, reported deaths and number of outlets, with the 2021–2024 gap shaded; b, places named in flood reports, sized by number of events, over the channel network.
+Figures are embedded in the text.
 
 # References
 

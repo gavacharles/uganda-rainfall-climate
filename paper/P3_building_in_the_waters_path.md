@@ -32,13 +32,17 @@ Exposure is now being created at the fringe, where development control is weakes
 
 # 2. Study area: inner valleys and the fringe
 
-The study box covers Kampala Capital City (195 km², governed by KCCA) and the most built-up parts of Wakiso district around it, including Nansana, Kira, Namugongo and Kyaliwajjala, which are separate municipalities with their own planning authorities. In 2020 about 204,000 people lived on low ground beside the channels: 149,000 inside the KCCA boundary and 55,000 outside it (Fig. cm3).
+The study box covers Kampala Capital City (195 km², governed by KCCA) and the most built-up parts of Wakiso district around it, including Nansana, Kira, Namugongo and Kyaliwajjala, which are separate municipalities with their own planning authorities. In 2020 about 204,000 people lived on low ground beside the channels: 149,000 inside the KCCA boundary and 55,000 outside it (Figure 1).
+
+![**Figure 1.** Study area: residents on low ground beside the channels in 2020, inside the KCCA boundary and in the Wakiso fringe.](../figures/kampala_drainage/cm3_case_waters_path.png){width=100%}
 
 Two kinds of low-ground settlement emerge:
 - **Inner valleys**, settled before 1990: Bwaise and Kalerwe on the Lubigi–Nsooba, Kisenyi and Katwe on the Nakivubo, Ndeeba and Kibuye on the Nalukolongo. Dense, mixed rental and owner-occupied housing, markets and small industry line the channels.
 - **Fringe valleys** in Wakiso, settled since 2000 and still filling: the upper Lubigi around Nansana, the Kinawataka headwaters around Kira and Namugongo, and the southern streams around Kajjansi.
 
-Figure bg3 shows the grain of building in a low-ground neighbourhood (Bwaise) beside a nearby hillside (Kawempe hill). Single windows vary, so the evidence for the difference is the city-wide comparison in Section 4.3. The window illustrates what it looks like on the ground: lanes of small rooms close against the channel.
+Figure 2 shows the grain of building in a low-ground neighbourhood (Bwaise) beside a nearby hillside (Kawempe hill). Single windows vary, so the evidence for the difference is the city-wide comparison in Section 4.3. The window illustrates what it looks like on the ground: lanes of small rooms close against the channel.
+
+![**Figure 2.** The grain of building: footprints by size in a low-ground neighbourhood (Bwaise) and on a nearby hill (Kawempe), with their size distributions.](../figures/kampala_drainage/bg3_building_grain.png){width=100%}
 
 # 3. Data and methods
 
@@ -71,7 +75,7 @@ Figure bg3 shows the grain of building in a low-ground neighbourhood (Bwaise) be
 | 2000–2020 | 3.6% | 3.5% | 3.6% |
 | 2020–2030 (proj.) | 1.9% | 3.6% | 3.5% |
 
-In 1975–2000, 13,400 more people moved onto low ground than city growth alone explains (Fig. kd25). Since 2000, exposure has grown at the city's pace.
+In 1975–2000, 13,400 more people moved onto low ground than city growth alone explains (Figure S1). Since 2000, exposure has grown at the city's pace.
 
 ## 4.2 The centre of exposure has moved to the fringe
 
@@ -85,7 +89,11 @@ In 1975–2000, 13,400 more people moved onto low ground than city growth alone 
 | Walufumbe | 100 | 600 | 2,000 | 2,000 |
 | **Other (fringe) catchments** | **4,300** | **21,400** | **77,900** | **107,400** |
 
-By 2030 the fringe catchments are projected to hold over 40% of the total (Fig. kd27), matching Paper 1's emerging-risk and design-drift maps. Low ground and hills were settled at the same pace until now (median first-built year 1990 for both), but in the projected 2025–30 period new built cells are almost all on low ground (4.8% vs 0.4%; Fig. kd28): as higher land fills, building is pushed onto the remaining valley floors.
+By 2030 the fringe catchments are projected to hold over 40% of the total (Figure 3), matching Paper 1's emerging-risk and design-drift maps. Low ground and hills were settled at the same pace until now (median first-built year 1990 for both), but in the projected 2025–30 period new built cells are almost all on low ground (4.8% vs 0.4%; Figure 4): as higher land fills, building is pushed onto the remaining valley floors.
+
+![**Figure 3.** Residents on low ground by channel system, 1975–2030.](../figures/kampala_drainage/kd27_exposure_by_system.png){width=100%}
+
+![**Figure 4.** Settlement age: first-built period of today's built cells, low ground vs hills.](../figures/kampala_drainage/kd28_settlement_age.png){width=100%}
 
 ## 4.3 A finer grain of building on low ground
 
@@ -97,7 +105,9 @@ By 2030 the fringe catchments are projected to hold over 40% of the total (Fig. 
 | Over 200 m² | 11% | 13% |
 | Residents per built hectare (2020) | 377 | 367 |
 
-The finest grain is on the Kinawataka and Walufumbe low ground (median 58 and 51 m²; a third under 40 m²); the coarsest is along Nakivubo (87 m²), lined by commercial and industrial buildings (Fig. kd29).
+The finest grain is on the Kinawataka and Walufumbe low ground (median 58 and 51 m²; a third under 40 m²); the coarsest is along Nakivubo (87 m²), lined by commercial and industrial buildings (Figure 5).
+
+![**Figure 5.** Building size on low ground vs hills, by system.](../figures/kampala_drainage/kd29_building_form.png){width=100%}
 
 ## 4.4 The same people face the most heat
 
@@ -107,7 +117,11 @@ The finest grain is on the Kinawataka and Walufumbe low ground (median 58 and 51
 | Mean night surface temperature (°C) | | 19.8 | 19.4 |
 | Mean day surface temperature (°C) | | 32.6 | 31.5 |
 
-People-weighted odds ratio of heat given flood exposure: 2.7, about 108,000 people. Controlling for built-up share and vegetation, low ground is 0.33 °C warmer at night (95% CI 0.25–0.41), and 0.3–0.5 °C warmer within every built-up quintile (Fig. kd35). Dense construction and still air in the enclosed valley floors outweigh any cooling from cold-air pooling. Night-time surface temperature rose about 0.8 °C between 2013–16 and 2022–25, on low ground and hills alike. The double exposure follows the central valleys of Nakivubo, Lubigi–Bwaise–Kalerwe, Nalukolongo and Kinawataka (Fig. kd36).
+People-weighted odds ratio of heat given flood exposure: 2.7, about 108,000 people. Controlling for built-up share and vegetation, low ground is 0.33 °C warmer at night (95% CI 0.25–0.41), and 0.3–0.5 °C warmer within every built-up quintile (Figure 6). Dense construction and still air in the enclosed valley floors outweigh any cooling from cold-air pooling. Night-time surface temperature rose about 0.8 °C between 2013–16 and 2022–25, on low ground and hills alike. The double exposure follows the central valleys of Nakivubo, Lubigi–Bwaise–Kalerwe, Nalukolongo and Kinawataka (Figure 7).
+
+![**Figure 6.** Heat and flood: (a) night surface temperature by built-up quintile, low vs higher ground; (b) residents facing heat, flood or both.](../figures/kampala_drainage/kd35_heat_flood.png){width=100%}
+
+![**Figure 7.** Night-time surface temperature with channels and double-exposure cells.](../figures/kampala_drainage/kd36_heat_map.png){width=100%}
 
 # 5. Discussion: the land system behind the exposure
 
@@ -147,8 +161,13 @@ Code: `src/kd_paperD.py`, `kd_heat.py`, `kd_network.py`. Results: `results/kd_pa
 
 # Figures
 
-Main: cm3 study area · bg3 building grain · kd27 exposure by system 1975–2030 · kd28 settlement age · kd29 building size · kd35 heat by built-up quintile and residents facing both · kd36 night temperature map with double-exposure cells.
-Supplement: kd25 exposure decomposition · kd15 people on low ground (maps).
+Figures are embedded in the text.
+
+# Supplementary figures
+
+![**Figure S1.** Exposure growth decomposed into city growth and a shift toward low ground.](../figures/kampala_drainage/kd25_exposure_decomposition.png){width=100%}
+
+![**Figure S2.** People on low ground beside channels, 1975 and 2020.](../figures/kampala_drainage/kd15_people_on_low_ground.png){width=100%}
 
 # References
 

@@ -52,7 +52,9 @@ The model reproduces all eight road floods reported in the news, 2007–2026. We
 
 # 2. Study area
 
-Kampala's road network grew outward along the ridges from the colonial centre and the hilltop institutions (Mengo, Namirembe, Rubaga, Makerere, Kololo), with radial trunk roads to Jinja, Gayaza, Bombo, Hoima, Masaka and Entebbe. Each radial must cross at least one valley floor, and the Northern Bypass runs along the Lubigi valley for much of its length. In the study box, 6,725 km of drivable road crosses the drainage channels 794 times; 636 of these crossings carry the road over a culvert, not a bridge (Fig. cm4). The 220 hospitals in OpenStreetMap range from the national referral hospital at Mulago to small private clinics, and the city centre, within 1 km of the Clock Tower, holds most jobs, markets and the main taxi parks. KCCA maintains the city's roads and primary drains; the Uganda National Roads Authority maintains the national trunk roads that cross them.
+Kampala's road network grew outward along the ridges from the colonial centre and the hilltop institutions (Mengo, Namirembe, Rubaga, Makerere, Kololo), with radial trunk roads to Jinja, Gayaza, Bombo, Hoima, Masaka and Entebbe. Each radial must cross at least one valley floor, and the Northern Bypass runs along the Lubigi valley for much of its length. In the study box, 6,725 km of drivable road crosses the drainage channels 794 times; 636 of these crossings carry the road over a culvert, not a bridge (Figure 1). The 220 hospitals in OpenStreetMap range from the national referral hospital at Mulago to small private clinics, and the city centre, within 1 km of the Clock Tower, holds most jobs, markets and the main taxi parks. KCCA maintains the city's roads and primary drains; the Uganda National Roads Authority maintains the national trunk roads that cross them.
+
+![**Figure 1.** Study area: Kampala's road network, the 636 road–channel crossings without a bridge, hospitals, the city centre and the reported flood-prone roads used for validation.](../figures/kampala_drainage/cm4_case_silt_not_storms.png){width=100%}
 
 # 3. Data and methods
 
@@ -85,7 +87,9 @@ Depth on a road piece = stage above bank − lowest HAND of the piece. A road is
 
 ## 3.3 Four drivers, 16 scenarios
 
-The design is summarised in Fig. fw4.
+The design is summarised in Figure 2.
+
+![**Figure 2.** Attribution design: four drivers switched on and off (16 scenarios), the model chain, Shapley attribution and the uncertainty analysis.](../figures/kampala_drainage/fw4_attribution_design.png){width=100%}
 
 | Driver | Off (1990 baseline) | On |
 |---|---|---|
@@ -170,7 +174,9 @@ Annual value of lost access = people cut off (expected annual) × hours a crossi
 | 2050s, clean | 18 | 170 | 57 | 38,900 |
 | 2050s, silted | 223 | 269 | 179 | 125,100 |
 
-Flooding concentrates on the Lubigi system (Bwaise, Kalerwe, the Northern Bypass), on the Nalukolongo (Kibuye–Natete), on the Nakivubo below the city centre, on the Kinawataka along Jinja Road, and on the southern streams crossed by Entebbe Road (Figs. kd46, kd48). In a 10-year storm with silted channels, the trip to the centre is on average 14 minutes longer, averaged over all residents. The figures for hospital access are almost identical.
+Flooding concentrates on the Lubigi system (Bwaise, Kalerwe, the Northern Bypass), on the Nalukolongo (Kibuye–Natete), on the Nakivubo below the city centre, on the Kinawataka along Jinja Road, and on the southern streams crossed by Entebbe Road (Figure 3, Figure S1). In a 10-year storm with silted channels, the trip to the centre is on average 14 minutes longer, averaged over all residents. The figures for hospital access are almost identical.
+
+![**Figure 3.** Roads impassable in a 10-year storm with clean and with silted channels, and the road floods reported in the news.](../figures/kampala_drainage/kd46_roads_flood_10yr.png){width=100%}
 
 ## 4.2 Validation
 
@@ -187,7 +193,9 @@ Flooding concentrates on the Lubigi system (Bwaise, Kalerwe, the Northern Bypass
 
 All eight reported roads are impassable in the silted state even in a 2-year storm, and six of eight in a 10-year storm with clean channels. This is consistent with the flood catalogue's finding that Kampala floods on ordinary rain.
 
-**The independent list** (Fig. kd54):
+**The independent list** (Figure 4):
+
+![**Figure 4.** Validation: distance from reported flood-prone roads to modelled impassable main road, against random road locations.](../figures/kampala_drainage/kd54_roads_validation.png){width=100%}
 
 | 10-year storm | Median distance, reported spots → modelled impassable main road | Random road points | Reported within 500 m | Random within 500 m | Proximity AUC |
 |---|---|---|---|---|---|
@@ -220,7 +228,9 @@ Where the silt sits changes the answer very little.
 | Impassable road-km, 2050s | 15% | **74%** | 2% | 9% |
 | People cut off from centre, 2050s | 12% | **78%** | 2% | 8% |
 
-(Fig. kd50.) Siltation dominates every measure. Paving is the second driver: Kampala's flows have risen as its catchments were paved, and channels sized for 1990 now overflow in the 10-year storm even when clean. Climate change adds the least by the 2050s.
+(Figure 5.) Siltation dominates every measure. Paving is the second driver: Kampala's flows have risen as its catchments were paved, and channels sized for 1990 now overflow in the 10-year storm even when clean. Climate change adds the least by the 2050s.
+
+![**Figure 5.** Attribution: Shapley shares of paving, siltation, encroachment and climate in road flooding and in people cut off; and the 2-year storm, clean vs silted.](../figures/kampala_drainage/kd50_roads_attribution.png){width=100%}
 
 **The interaction matters.** With clean channels, climate change nearly doubles expected road disruption (30 → 57 km a year; 19,800 → 38,900 people cut off). With silted channels it adds only about 10%, because the system already fails in frequent storms. In other words, maintaining the drains is also what makes climate adaptation visible.
 
@@ -233,7 +243,9 @@ Where the silt sits changes the answer very little.
 | 30% (main) | 83% / 86% | 15% / 12% |
 | 50% | 87% / 89% | 12% / 9% |
 
-(Fig. kd52.) Even a light silting, a tenth of the channel depth plus a vegetated bed, accounts for most of the change. The conclusion does not depend on the assumed silt level.
+(Figure 6.) Even a light silting, a tenth of the channel depth plus a vegetated bed, accounts for most of the change. The conclusion does not depend on the assumed silt level.
+
+![**Figure 6.** How much silt does it take: attribution across siltation levels.](../figures/kampala_drainage/kd52_roads_silt_sensitivity.png){width=100%}
 
 ## 4.6 Uncertainty: 400 versions of the model
 
@@ -248,16 +260,20 @@ Where the silt sits changes the answer very little.
 | Impassable road, channels clean | 30 km | 16 km | 2–55 km |
 | People cut off from centre, silted | 117,500 | 100,000 | 51,000–139,000 |
 
-(Fig. kd53.) Siltation is the largest driver in 399 of 400 draws. The emulator predicts the siltation share well (cross-validated R² = 0.90). Its influence ranking:
+(Figure 7.) Siltation is the largest driver in 399 of 400 draws. The emulator predicts the siltation share well (cross-validated R² = 0.90). Its influence ranking:
 - **the siltation share** depends mainly on silt depth, then the roughness of clean and of silted channels;
 - **paving's calibration and the climate signal** barely matter for the share;
 - **the absolute kilometres** depend most on how far roads sit above the DEM ground and on floodplain roughness. Absolute road lengths are therefore the least certain result, and the shares the most robust.
+
+![**Figure 7.** Uncertainty across 400 model versions, and the emulator's ranking of assumptions.](../figures/kampala_drainage/kd53_roads_uncertainty.png){width=100%}
 
 Encroachment rises from 2% to a median 7% once buildings are allowed to block more than their footprint. This supports the view that the main run understates it.
 
 ## 4.7 The crossings to clear first
 
-Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm when silted and 13 when clean. The crossings where desilting avoids the most disruption (Fig. kd51) are:
+Of 636 road–channel crossings without a bridge, 387 close in a 2-year storm when silted and 13 when clean. The crossings where desilting avoids the most disruption (Figure 8) are:
+
+![**Figure 8.** The crossings to clear first, ranked by the closures desilting would avoid.](../figures/kampala_drainage/kd51_roads_crossings_priority.png){width=100%}
 
 | # | Crossing | System | Closes every … years (silted → clean) | People routed through |
 |---|---|---|---|---|
@@ -282,7 +298,9 @@ Several of these, such as Bwaise Roundabout and Bombo Road, close every 5 years 
 | **150 (central)** | **3.0 m** | **20.3 m** | **17.3 m** |
 | 300 | 6.0 m | 40.5 m | 34.5 m |
 
-Event damage ranges from US$0.2 m (2-year) to US$30 m (100-year) with clean channels, and from US$21 m to US$69 m with silted ones (Fig. kd39). As with roads, siltation turns frequent storms from nuisances into damaging floods. In a clean-channel 10-year storm, 7,852 buildings are flooded.
+Event damage ranges from US$0.2 m (2-year) to US$30 m (100-year) with clean channels, and from US$21 m to US$69 m with silted ones (Figure 9). As with roads, siltation turns frequent storms from nuisances into damaging floods. In a clean-channel 10-year storm, 7,852 buildings are flooded.
+
+![**Figure 9.** Building damage: damage per storm, clean vs silted, and avoided damage per km by system.](../figures/kampala_drainage/kd39_flood_damage.png){width=100%}
 
 | System | Channel km | EAD clean (US$ m/yr) | EAD silted | Avoided per km per year |
 |---|---|---|---|---|
@@ -311,7 +329,11 @@ Travel losses are modest on their own because floods are short and the network o
 
 ## 4.11 How the exposure was built
 
-Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The share on low ground beside channels stayed near 6%, but its length more than doubled, from 141 to 315 km (Fig. kd47). 526 km of today's road sits on valley floor that was wetland or bush in 1986. Of the road impassable in a 10-year storm with clean channels, 68% lies on such former wetland. At Lubigi, the Northern Bypass and its feeder roads were built across what was open wetland in 1986 (Fig. kd49).
+Kampala's urban road network grew from 2,127 km (1975) to 5,262 km (2020). The share on low ground beside channels stayed near 6%, but its length more than doubled, from 141 to 315 km (Figure 10). 526 km of today's road sits on valley floor that was wetland or bush in 1986. Of the road impassable in a 10-year storm with clean channels, 68% lies on such former wetland. At Lubigi, the Northern Bypass and its feeder roads were built across what was open wetland in 1986 (Figure 11).
+
+![**Figure 10.** Roads on the valley floors by urbanisation period; urban road on low ground 1975–2020; expected impassable road-km by state.](../figures/kampala_drainage/kd47_roads_over_time.png){width=100%}
+
+![**Figure 11.** Lubigi: today's roads drawn on the 1986 landscape, beside today's imagery.](../figures/kampala_drainage/kd49_roads_lubigi_then_now.png){width=100%}
 
 # 5. Discussion
 
@@ -346,20 +368,17 @@ Code: `src/kd_roads.py` (road pieces, depths, history, validation), `src/kd_road
 
 # Figures
 
-- cm4: study area: road network, bridge-less crossings, hospitals, validation spots.
-- fw4: attribution design.
-- kd45: every road in Kampala over shaded relief.
-- kd46: roads impassable in a 10-year storm, clean vs silted, with reported road floods.
-- kd47: roads on the valley floors by urbanisation epoch; low-ground road km 1975–2020; expected impassable road-km by state.
-- kd48: satellite close-ups at Lubigi, Bwaise, Kyambogo–Banda and Entebbe Road.
-- kd49: today's roads drawn on the 1986 landscape at Lubigi.
-- kd50: Shapley attribution, today and 2050s; the 2-year storm, clean vs silted.
-- kd51: the crossings to desilt first.
-- kd52: sensitivity of the attribution to the silt level.
-- kd53: Monte Carlo uncertainty (400 draws) and the emulator's ranking of assumptions.
-- kd54: validation against flood-prone roads from KCCA, the press and the flood catalogue.
-- kd39: building damage per storm, clean vs silted; avoided damage per km by system.
-- kd32–kd33 (supplement): access to hospitals under water-level scenarios.
+Figures are embedded in the text.
+
+# Supplementary figures
+
+![**Figure S1.** Satellite close-ups of four reported road floods, 10-year storm, silted channels.](../figures/kampala_drainage/kd48_roads_satellite_closeups.png){width=100%}
+
+![**Figure S2.** Every drivable road in Kampala over shaded relief.](../figures/kampala_drainage/kd45_roads_all.png){width=100%}
+
+![**Figure S3.** Access to hospitals under water-level scenarios.](../figures/kampala_drainage/kd32_access_scenarios.png){width=100%}
+
+![**Figure S4.** Extra travel time to hospital at the 1 m water-level scenario.](../figures/kampala_drainage/kd33_access_map.png){width=100%}
 
 # References
 

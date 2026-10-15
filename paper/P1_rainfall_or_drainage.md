@@ -36,7 +36,9 @@ Kampala's flood problem is made on the ground: encroachment, constrictions, lost
 
 ## 2.1 The case: Kampala's hills, valleys and channels
 
-Kampala is built on a cluster of flat-topped hills (about 1,190–1,300 m) separated by broad valley floors that fall towards Lake Victoria (1,134 m). Rain is bimodal, with long rains in March–May and short rains in September–November, and most floods follow convective storms lasting under two hours. The study box (32.45–32.72° E, 0.20–0.42° N; 3.6 million residents in 2020) covers the whole of Kampala Capital City (195 km² under KCCA) and the most built-up parts of Wakiso district around it (Fig. cm1).
+Kampala is built on a cluster of flat-topped hills (about 1,190–1,300 m) separated by broad valley floors that fall towards Lake Victoria (1,134 m). Rain is bimodal, with long rains in March–May and short rains in September–November, and most floods follow convective storms lasting under two hours. The study box (32.45–32.72° E, 0.20–0.42° N; 3.6 million residents in 2020) covers the whole of Kampala Capital City (195 km² under KCCA) and the most built-up parts of Wakiso district around it (Figure 1).
+
+![**Figure 1.** Study area: Greater Kampala's six channel systems, channels draining at least 2 km², 45 reported flood hotspots, the KCCA boundary and the Makerere rain gauge.](../figures/kampala_drainage/cm1_case_rainfall_or_drainage.png){width=100%}
 
 Six channel systems drain the city:
 - **Lubigi** (46 km², north-west) runs from Bwaise and Kalerwe through the Lubigi wetland to the Mayanja river, not the lake;
@@ -63,7 +65,9 @@ Most channels were dug or lined in phases across the valley floors that were pap
 
 # 3. Methods
 
-The study tests two explanations side by side, applying three tests to each (Fig. fw1).
+The study tests two explanations side by side, applying three tests to each (Figure 2).
+
+![**Figure 2.** Study design: the two explanations tested, the three tests applied to each, and where their results are reported.](../figures/kampala_drainage/fw1_study_design_rainfall_or_drainage.png){width=100%}
 
 **3.1 Channel inventory.** Waterways were cut into segments of 200 m or less, and the 6,914 draining at least 0.25 km² were analysed. For each: upstream area (D8), upstream built-up share in 1990 and 2020, a runoff load (area × C, C = 0.25 + 0.65 × impervious share), valley-floor built share (HAND < 3 m within 250 m), wetland within 500 m, buildings within 15 m (the channel reserve), buildings on low ground (HAND < 2 m within 150 m), dump sites within 100 m, markets within 300 m, and culverts and bridges.
 
@@ -90,7 +94,11 @@ Nights warmed by 0.40 °C per decade (p < 0.001), but the rainfall extremes that
 
 ## 4.2 Floods come on ordinary rain and short bursts
 
-Across 18 dated floods in the catalogue (2007–2026), the median flood day ranked at the 74th percentile of wet days, and 7 had less than 5 mm of satellite rain (Fig. kd41). Satellite rain smooths local storms (29–31 October 2025: 63 mm at the Makerere gauge, 21 mm in CHIRPS), so some events are under-measured. Even so, Kampala floods on rain a working drainage system should carry.
+Across 18 dated floods in the catalogue (2007–2026), the median flood day ranked at the 74th percentile of wet days, and 7 had less than 5 mm of satellite rain (Figure 3, Figure 4). Satellite rain smooths local storms (29–31 October 2025: 63 mm at the Makerere gauge, 21 mm in CHIRPS), so some events are under-measured. Even so, Kampala floods on rain a working drainage system should carry.
+
+![**Figure 3.** Rain on reported flood days as a percentile of all wet days (CHIRPS, Greater Kampala mean).](../figures/kampala_drainage/kd02_flood_days_rain.png){width=100%}
+
+![**Figure 4.** Dated flood events 2007–2026 from the flood catalogue (Gava 2026) and the places they affected.](../figures/kampala_drainage/kd41_flood_catalogue.png){width=100%}
 
 | Model (wet days, n = 1,947; 20 flood days) | Odds of a flood per year, same rain (95% CI) | p |
 |---|---|---|
@@ -114,7 +122,11 @@ The equal-weight index separates hotspot channels from others (AUC 0.73, 95% CI 
 | Runoff load (area × paving) | 39 | 50 | 0.50 |
 | Runoff growth since 1990 | 21 | 55 | 0.23 |
 
-Of 469 km of flowing channel, 138 km rank high now and are still worsening, 44 km rank high but are stable, and 100 km show rising risk that is not yet high (Figs. kd04, kd06, kd12).
+Of 469 km of flowing channel, 138 km rank high now and are still worsening, 44 km rank high but are stable, and 100 km show rising risk that is not yet high (Figure 5, Figure 6, Figure S1).
+
+![**Figure 5.** Maintenance-priority index for every channel stretch, with reported hotspots.](../figures/kampala_drainage/kd04_priority_overview.png){width=100%}
+
+![**Figure 6.** What sets hotspot channels apart: drainage pressures at hotspots versus other channels.](../figures/kampala_drainage/kd06_hotspot_drivers.png){width=100%}
 
 ## 4.4 The channels have fallen behind their catchments
 
@@ -126,13 +138,21 @@ Of 469 km of flowing channel, 138 km rank high now and are still worsening, 44 k
 | + 2041–70 SSP5-8.5 | 1.36 | 424 km (91%) | 120 km |
 | 2020 land, 30% silted | 2.73 | 468 km (100%) | 468 km |
 
-Today 84 km of channel (18%) can no longer carry a 2-year storm, and only 6 km still carries the 10-year storm it was sized for (Fig. kd37). Two findings shape the interpretation:
+Today 84 km of channel (18%) can no longer carry a 2-year storm, and only 6 km still carries the 10-year storm it was sized for (Figure 7). Two findings shape the interpretation:
 - **Siltation dwarfs drift.** A 30% silted channel carries less than half of a clean one, a larger loss than three decades of paving. Paper 4 shows that this makes silt the dominant cause of road flooding.
-- **Drift is not where today's hotspots are.** The overload ratio is strongly negatively associated with reported hotspots (AUC 0.16), because those lie in the old city, paved before 1990. There, channels fail through encroachment, constrictions, siltation and sizing that predates 1990. Drift is greatest on the fringe: Walufumbe and Kinawataka (median 1.21; 64–81% of length overloaded), the Lubigi headwaters and the Nasere and Mayanja–Waswa channels (1.5–1.7) (Fig. kd38).
+- **Drift is not where today's hotspots are.** The overload ratio is strongly negatively associated with reported hotspots (AUC 0.16), because those lie in the old city, paved before 1990. There, channels fail through encroachment, constrictions, siltation and sizing that predates 1990. Drift is greatest on the fringe: Walufumbe and Kinawataka (median 1.21; 64–81% of length overloaded), the Lubigi headwaters and the Nasere and Mayanja–Waswa channels (1.5–1.7) (Figure 8).
+
+![**Figure 7.** Design-basis drift: (a) overload ratio of the 10-year flow against 1990 design capacity under each scenario; (b) overloaded channel length by system.](../figures/kampala_drainage/kd37_design_drift.png){width=100%}
+
+![**Figure 8.** Map of the 2020 overload ratio.](../figures/kampala_drainage/kd38_overload_map.png){width=100%}
 
 ## 4.5 The next hotspots can be seen coming
 
-The early-change score predicts later valley-floor building (AUC 0.79, 95% CI 0.71–0.87; naive "built areas grow" rule 0.58). Channels in its top quintile gained 6.5 percentage points of built valley floor in 2000–2020, against 1.6 in the bottom quintile (Fig. kd23). Run today, it points to the northern and eastern fringe (Kira, Nansana, Namugongo) and the Kinawataka and Kansanga headwaters (Fig. kd05), the same areas where design-basis drift is greatest. Two independent signals, building on the valley floors and channels outgrown by their catchments, converge on where Kampala's next hotspots are forming.
+The early-change score predicts later valley-floor building (AUC 0.79, 95% CI 0.71–0.87; naive "built areas grow" rule 0.58). Channels in its top quintile gained 6.5 percentage points of built valley floor in 2000–2020, against 1.6 in the bottom quintile (Figure 9). Run today, it points to the northern and eastern fringe (Kira, Nansana, Namugongo) and the Kinawataka and Kansanga headwaters (Figure 10), the same areas where design-basis drift is greatest. Two independent signals, building on the valley floors and channels outgrown by their catchments, converge on where Kampala's next hotspots are forming.
+
+![**Figure 9.** Temporal hold-out: valley-floor building added in 2000–2020 by quintile of the 1975–2000 emerging-risk score.](../figures/kampala_drainage/kd23_holdout_encroachment.png){width=100%}
+
+![**Figure 10.** Emerging-risk map: where the next hotspots are forming.](../figures/kampala_drainage/kd05_emerging_risk.png){width=100%}
 
 ## 4.6 Pathways open data cannot settle
 
@@ -167,8 +187,15 @@ Code: `src/kd_network.py`, `kd_rain.py`, `kd_threshold.py`, `kd_hydraulics.py`, 
 
 # Figures
 
-Main: cm1 study area · fw1 study design · kd02 flood-day rain · kd41 flood catalogue · kd04 priority map · kd06 hotspot drivers · kd37 design drift · kd38 overload map · kd23 hold-out · kd05 emerging risk.
-Supplement: kd12 priority vs emerging · kd26 threshold test · kd10 radar after the storm · kd13 area pages.
+Figures are embedded in the text.
+
+# Supplementary figures
+
+![**Figure S1.** Current priority against emerging risk for every channel stretch.](../figures/kampala_drainage/kd12_priority_vs_emerging.png){width=100%}
+
+![**Figure S2.** Falling-threshold test: rain on flood days 2017–2026 and the trend odds ratios.](../figures/kampala_drainage/kd26_flood_threshold_trend.png){width=100%}
+
+![**Figure S3.** Sentinel-1 radar about 13 hours after the 11 October 2026 storm: almost no standing water remained.](../figures/kampala_drainage/kd10_sentinel1_after_storm.png){width=100%}
 
 # References
 

@@ -39,14 +39,16 @@ Roads follow the same path. Using the same rules for every OpenStreetMap road in
 
 # 2. Study area: six cities
 
-The five regional cities were among those given city status in 2020 and are promoted as regional growth centres in national planning (Fig. cm5):
+The five regional cities were among those given city status in 2020 and are promoted as regional growth centres in national planning (Figure 1):
 - **Jinja** (about 450,000 people in its 18 km box, 2020) sits on the shore of Lake Victoria at the source of the Nile; an old industrial town with broad lake-shore flats.
 - **Mbale** (470,000) sits at the foot of Mount Elgon, crossed by streams falling from the mountain; the most dissected terrain of the five.
 - **Mbarara** (300,000), in the south-west, spreads along the Rwizi river valley among rolling hills.
 - **Gulu** (250,000), in the north, sits on a gently undulating plateau with shallow valleys.
 - **Arua** (350,000), in the north-west near the borders with DR Congo and South Sudan, also sits on a plateau; its box is smaller because the terrain tile is clipped.
 
-Kampala (3.6 million in its core box) is the reference. The six panels of Fig. cm5 show each city's valley floors and roads at the same scale and under the same rules.
+![**Figure 1.** Study area: Kampala and the five regional cities, each shown at the same scale with its valley floors and roads on low ground.](../figures/kampala_drainage/cm5_case_next_kampalas.png){width=100%}
+
+Kampala (3.6 million in its core box) is the reference. The six panels of Figure 1 show each city's valley floors and roads at the same scale and under the same rules.
 
 # 3. Data and methods
 
@@ -78,7 +80,9 @@ Channels come from the terrain rather than OpenStreetMap, so that coverage is eq
 | Mbarara | 0.2% | 0.6% | 0.7% | 1.4% | 1.9% | 1.0% |
 | Jinja | 0.2% | 0.6% | 0.8% | 1.1% | 1.3% | 0.4% |
 
-(GHSL built-up share, uncalibrated, for comparability across cities; Fig. kd40a.)
+(GHSL built-up share, uncalibrated, for comparability across cities; Figure 2a.)
+
+![**Figure 2.** (a) Valley floor built over 1975–2030; (b) people on low ground relative to 2000; (c) 2020–30 growth, low ground vs whole area.](../figures/kampala_drainage/kd40_cities_compare.png){width=100%}
 
 **4.2 People in the water's path.**
 
@@ -91,7 +95,7 @@ Channels come from the terrain rather than OpenStreetMap, so that coverage is eq
 | Arua | 1,500 | 9,200 | 12,900 | 2.6% | 3.5 vs 2.1 |
 | Gulu | 600 | 7,900 | 15,100 | 3.2% | 6.7 vs 3.4 |
 
-Relative to 2000, low-ground population is projected to have grown 6.3-fold in Mbarara, 4.1-fold in Gulu and 3.6-fold in Mbale by 2030, against 3.1-fold in Kampala (Fig. kd40b). In 2000–2020 low ground already grew faster than the city in all six (Fig. kd40c).
+Relative to 2000, low-ground population is projected to have grown 6.3-fold in Mbarara, 4.1-fold in Gulu and 3.6-fold in Mbale by 2030, against 3.1-fold in Kampala (Figure 2b). In 2000–2020 low ground already grew faster than the city in all six (Figure 2c).
 
 **4.3 Building form.** In Kampala, buildings on low ground are smaller than on the hills (median 64 vs 83 m²), matching the rental-room pattern described in Paper 3. In the regional cities this pattern has not (yet) appeared: low-ground buildings are similar in size to, or larger than, those on higher ground (Jinja 59 vs 54 m², Mbale 58 vs 49 m², Mbarara 69 vs 65 m²). Low-ground development there is earlier-stage and mixed rather than dense rental housing.
 
@@ -106,7 +110,9 @@ Relative to 2000, low-ground population is projected to have grown 6.3-fold in M
 | Arua | 982 | 5.4% | 41 | 1.8% → 2.4% |
 | Gulu | 1,016 | 3.9% | 23 | 0.3% → 2.3% |
 
-(Fig. kd56. Same terrain-channel rules as Section 2; a crossing is a road passing over a channel cell and not tagged as a bridge. OSM road completeness varies between cities.) Mbale and Mbarara already have Kampala's share of road on low ground; Jinja and Mbarara are moving their new road into the valleys fastest. Gulu and Arua still have most of their roads on higher ground, the clearest opportunity to keep it that way.
+(Figure 3. Same terrain-channel rules as Section 2; a crossing is a road passing over a channel cell and not tagged as a bridge. OSM road completeness varies between cities.) Mbale and Mbarara already have Kampala's share of road on low ground; Jinja and Mbarara are moving their new road into the valleys fastest. Gulu and Arua still have most of their roads on higher ground, the clearest opportunity to keep it that way.
+
+![**Figure 3.** (a) Share of road on low ground by when its ground urbanised; (b) road on low ground and channel crossings per 100 km, by city.](../figures/kampala_drainage/kd56_cities_roads.png){width=100%}
 
 # 5. Discussion
 
@@ -133,9 +139,7 @@ Kampala shows where unmanaged valley-floor development leads. Uganda's regional 
 
 # Figures
 
-- cm5: study area, six cities at the same scale
-- kd40: a, valley floor built over 1975–2030; b, people on low ground relative to 2000; c, 2020–30 growth, low ground vs whole area
-- kd56: a, share of road on low ground by when its ground urbanised; b, road on low ground and channel crossings per 100 km, by city
+Figures are embedded in the text.
 
 # References
 
