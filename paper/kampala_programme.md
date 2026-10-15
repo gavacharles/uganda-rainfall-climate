@@ -23,6 +23,19 @@ The Kampala study was consolidated from thirteen drafts into **five papers and o
 
 **Parked:** radar monitoring of encroachment (folded into Paper 1 as a note); the Drain Watch software paper.
 
+# Case-study maps and supporting figures
+
+Each paper opens its study-area section with a case-study map in a common style (shaded relief, inset locator, north arrow, scale bar, credits), built by `src/kd_casemaps.py`:
+
+| Paper | Case-study map | Supporting figure |
+|---|---|---|
+| 0 | cm0: where reported floods happened, by grade, with the hotspot list | – |
+| 1 | cm1: six channel systems, channels, 45 hotspots, KCCA boundary, Makerere gauge | fw1: study design (two explanations, six tests) |
+| 2 | cm2: valley-floor land cover today, bay-draining catchments, bay zones, Ggaba intake | lc2: Nakivubo–Kinawataka from Landsat, 1986 vs 2025 |
+| 3 | cm3: people on low ground in 2020, inside vs outside KCCA | bg3: building grain, Bwaise vs Kawempe hill |
+| 4 | cm4: road network, 636 bridge-less crossings, hospitals, validation spots | fw4: attribution design |
+| 5 | cm5: six cities at the same scale, valley floors and low-ground roads | – |
+
 # Shared data and code
 
 OpenStreetMap drains, culverts, roads, waste points; Microsoft building footprints; JRC GHSL built-up and population 1975–2030; Copernicus GLO-30; CHIRPS and NASA POWER; Landsat, Sentinel-1 and Sentinel-2 via the Microsoft Planetary Computer; CMIP6 design-storm uplift. Code in `src/kd_*.py`; results in `results/`; figures in `figures/kampala_drainage/`.

@@ -30,7 +30,17 @@ Exposure is now being created at the fringe, where development control is weakes
   - RQ3: Do the people exposed to floods also face the most heat?
   - RQ4: How do these patterns relate to Kampala's land system, and what follows for policy?
 
-# 2. Data and methods
+# 2. Study area: inner valleys and the fringe
+
+The study box covers Kampala Capital City (195 km², governed by KCCA) and the most built-up parts of Wakiso district around it, including Nansana, Kira, Namugongo and Kyaliwajjala, which are separate municipalities with their own planning authorities. In 2020 about 204,000 people lived on low ground beside the channels: 149,000 inside the KCCA boundary and 55,000 outside it (Fig. cm3).
+
+Two kinds of low-ground settlement emerge:
+- **Inner valleys**, settled before 1990: Bwaise and Kalerwe on the Lubigi–Nsooba, Kisenyi and Katwe on the Nakivubo, Ndeeba and Kibuye on the Nalukolongo. Dense, mixed rental and owner-occupied housing, markets and small industry line the channels.
+- **Fringe valleys** in Wakiso, settled since 2000 and still filling: the upper Lubigi around Nansana, the Kinawataka headwaters around Kira and Namugongo, and the southern streams around Kajjansi.
+
+Figure bg3 shows the grain of building in a low-ground neighbourhood (Bwaise) beside a nearby hillside (Kawempe hill). Single windows vary, so the evidence for the difference is the city-wide comparison in Section 4.3. The window illustrates what it looks like on the ground: lanes of small rooms close against the channel.
+
+# 3. Data and methods
 
 | Layer | Source | Use |
 |---|---|---|
@@ -47,9 +57,9 @@ Exposure is now being created at the fringe, where development control is weakes
 - **Heat:** night-time surface temperature (about 22:30 local) as the primary measure; "hot" = warmest 20% of populated cells; open water and 1 km of lake shore excluded. People-weighted odds ratio of heat given flood exposure; weighted least squares of night temperature on low ground, built-up share and NDVI, with 2 km block-clustered errors; comparisons within built-up quintiles.
 - **Tenure:** no open parcel-level tenure data exists, so links to the land system are interpretive hypotheses for cadastral testing.
 
-# 3. Results
+# 4. Results
 
-## 3.1 Exposure grew fivefold, first faster than the city, then with it
+## 4.1 Exposure grew fivefold, first faster than the city, then with it
 
 | | 1975 | 1990 | 2000 | 2010 | 2020 | 2030 (proj.) |
 |---|---|---|---|---|---|---|
@@ -63,7 +73,7 @@ Exposure is now being created at the fringe, where development control is weakes
 
 In 1975–2000, 13,400 more people moved onto low ground than city growth alone explains (Fig. kd25). Since 2000, exposure has grown at the city's pace.
 
-## 3.2 The centre of exposure has moved to the fringe
+## 4.2 The centre of exposure has moved to the fringe
 
 | Residents on low ground | 1975 | 2000 | 2020 | 2030 (proj.) |
 |---|---|---|---|---|
@@ -77,7 +87,7 @@ In 1975–2000, 13,400 more people moved onto low ground than city growth alone 
 
 By 2030 the fringe catchments are projected to hold over 40% of the total (Fig. kd27), matching Paper 1's emerging-risk and design-drift maps. Low ground and hills were settled at the same pace until now (median first-built year 1990 for both), but in the projected 2025–30 period new built cells are almost all on low ground (4.8% vs 0.4%; Fig. kd28): as higher land fills, building is pushed onto the remaining valley floors.
 
-## 3.3 A finer grain of building on low ground
+## 4.3 A finer grain of building on low ground
 
 | Building form (2023) | Low ground beside channels | Hills and ridges |
 |---|---|---|
@@ -89,7 +99,7 @@ By 2030 the fringe catchments are projected to hold over 40% of the total (Fig. 
 
 The finest grain is on the Kinawataka and Walufumbe low ground (median 58 and 51 m²; a third under 40 m²); the coarsest is along Nakivubo (87 m²), lined by commercial and industrial buildings (Fig. kd29).
 
-## 3.4 The same people face the most heat
+## 4.4 The same people face the most heat
 
 | | All residents | Flood-prone low ground | Hills |
 |---|---|---|---|
@@ -99,20 +109,20 @@ The finest grain is on the Kinawataka and Walufumbe low ground (median 58 and 51
 
 People-weighted odds ratio of heat given flood exposure: 2.7, about 108,000 people. Controlling for built-up share and vegetation, low ground is 0.33 °C warmer at night (95% CI 0.25–0.41), and 0.3–0.5 °C warmer within every built-up quintile (Fig. kd35). Dense construction and still air in the enclosed valley floors outweigh any cooling from cold-air pooling. Night-time surface temperature rose about 0.8 °C between 2013–16 and 2022–25, on low ground and hills alike. The double exposure follows the central valleys of Nakivubo, Lubigi–Bwaise–Kalerwe, Nalukolongo and Kinawataka (Fig. kd36).
 
-# 4. Discussion: the land system behind the exposure
+# 5. Discussion: the land system behind the exposure
 
-**4.1 Why low ground fills.**
+**5.1 Why low ground fills.**
 - **Cheap, accessible land.** Valley floors are the cheapest land within reach of jobs; flooding and poor drainage depress their price.
 - **Access without title.** Under mailo, land can be occupied and built on through kibanja purchase or room rental without registered title or planning approval, the only route open to most households.
 - **Rental supply.** The finer grain on low ground fits rows of single-room rentals ("muzigo") built by small landlords for tenants, consistent with Isunju et al.'s finding that tenants carry most flood exposure.
 
-**4.2 Public trust land in a private market.** Wetland titles were issued, informal sales took place, and industrial estates were sited in wetlands under earlier policies. The cancellation of post-1995 wetland titles has moved slowly, with court injunctions and only hundreds of cancellations against an estimated 20,000 titles nationally. Enforcement tends to fall on the most visible, least protected occupants while titled developments persist. The result keeps the valley floor in the land market without the drainage, services or security that formal development would bring.
+**5.2 Public trust land in a private market.** Wetland titles were issued, informal sales took place, and industrial estates were sited in wetlands under earlier policies. The cancellation of post-1995 wetland titles has moved slowly, with court injunctions and only hundreds of cancellations against an estimated 20,000 titles nationally. Enforcement tends to fall on the most visible, least protected occupants while titled developments persist. The result keeps the valley floor in the land market without the drainage, services or security that formal development would bring.
 
-**4.3 Compound risk in the rental stock.** Floods and heat strike the same neighbourhoods, which are low-income and densely built, with small single-room dwellings that are poorly ventilated and hard to cool. Heat-health and flood programmes should share one target map.
+**5.3 Compound risk in the rental stock.** Floods and heat strike the same neighbourhoods, which are low-income and densely built, with small single-room dwellings that are poorly ventilated and hard to cool. Heat-health and flood programmes should share one target map.
 
-**4.4 Exposure is now made at the fringe.** The fringe catchments of Wakiso (Kira, Nansana, Namugongo, Kyaliwajjala) are where the projection places almost all new low-ground building, where KCCA's mandate does not reach, and where mailo and kibanja transactions are common.
+**5.4 Exposure is now made at the fringe.** About 27% of today's low-ground residents already live outside the KCCA boundary, and that share is growing. The fringe catchments of Wakiso (Kira, Nansana, Namugongo, Kyaliwajjala) are where the projection places almost all new low-ground building, where KCCA's mandate does not reach, and where mailo and kibanja transactions are common.
 
-**4.5 Policy.**
+**5.5 Policy.**
 - **Map and gazette the remaining fringe valley floors now**, using the open low-ground layer as a first screen, before subdivision.
 - **Bring kibanja and rental housing within planning:** recognise local-council records in subdivision approval, paired with a no-build valley-floor zone.
 - **Protect tenants where removal is neither feasible nor just:** flood early warning, raised floors, minimum ventilation and rental-room standards, and heat-health warnings.
@@ -120,14 +130,14 @@ People-weighted odds ratio of heat given flood exposure: 2.7, about 108,000 peop
 - **Resolve wetland titles transparently**, starting with large titled parcels.
 - **Coordinate across KCCA, Wakiso and Mukono**, since exposure has moved beyond the city's boundary.
 
-**4.6 Limitations.**
+**5.6 Limitations.**
 - **Tenure links are interpretive.** The next step is to overlay the exposure layer with the national cadastre and KCCA building approvals.
 - **Modelled population.** GHS-POP cannot distinguish tenants from owners; 2025–30 values are projections.
 - **Footprints** miss some small structures and merge attached rows, so the grain difference is conservative.
 - **Surface temperature is not air temperature**, and 1 km MODIS blurs narrow valleys. Air-temperature loggers on a valley-to-ridge transect would test the night-air result directly.
 - **Thresholds.** Low ground is a screening threshold (HAND < 2 m, ≤ 150 m); direction is robust to 1–3 m.
 
-# 5. Conclusion
+# 6. Conclusion
 
 About 205,000 people now live on low ground beside Kampala's channels, five times as many as in 1975. The first phase moved people disproportionately onto the valley floors; the second followed the city's growth; the next is moving to the fringe, where almost all projected new low-ground building lies and development control is weakest. The people in the water's path live at a finer grain, consistent with rental rooms reached through the dual land system, and more than half of them also live in the city's hottest nights. Reducing future losses depends as much on land policy and green corridors as on drains.
 
@@ -137,7 +147,7 @@ Code: `src/kd_paperD.py`, `kd_heat.py`, `kd_network.py`. Results: `results/kd_pa
 
 # Figures
 
-Main: kd27 exposure by system 1975–2030 · kd28 settlement age · kd29 building size · kd35 heat by built-up quintile and residents facing both · kd36 night temperature map with double-exposure cells.
+Main: cm3 study area · bg3 building grain · kd27 exposure by system 1975–2030 · kd28 settlement age · kd29 building size · kd35 heat by built-up quintile and residents facing both · kd36 night temperature map with double-exposure cells.
 Supplement: kd25 exposure decomposition · kd15 people on low ground (maps).
 
 # References

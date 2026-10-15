@@ -30,9 +30,17 @@ The same land conversion removed two services at once. Valley-floor wetland shou
   3. the loss of treatment wetland and its nutrient and economic value;
   4. a 40-year satellite record of the channel outlets relative to the open lake.
 
-# 2. Data and methods
+# 2. Study area: the valley floors and the bay
 
-## 2.1 Valley floors and their cover
+Kampala's valley floors, the land less than 3 m above the nearest drain, cover about 104 km² of the study box, a quarter of its land (Fig. cm2). In 1986 most was green: papyrus in the wet centres, *Miscanthidium* grass, gardens and trees at the edges. Two kinds of valley matter here:
+- **Valleys that drain away from the lake**, chiefly the Lubigi, which flows north-west to the Mayanja river. Their wetlands matter for flood storage only.
+- **Valleys that drain to Inner Murchison Bay**: Nakivubo (the city centre and Industrial Area), Kinawataka (Ntinda, Kyambogo, Banda, joining the Namanve wetland), Kansanga (Kabalagala, Ggaba) and a strip of Munyonyo shore. Their wetlands did both jobs, storing storm water and treating it before it reached the lake.
+
+Inner Murchison Bay is a shallow, sheltered arm of Lake Victoria about 4 km across, opening south through a narrows near Ggaba into the outer bay and the open lake. The Ggaba waterworks, which supply most of Kampala's piped water, draw from the bay's western shore. The bay therefore receives the city's drainage and supplies its drinking water, with the valley wetlands between the two. Figure lc2 shows that landscape from Landsat in 1986 and 2025: the dark papyrus of the Nakivubo and Kinawataka valleys in 1986, and roofs, industry and gardens across most of it by 2025.
+
+# 3. Data and methods
+
+## 3.1 Valley floors and their cover
 
 | Item | Source and rule |
 |---|---|
@@ -45,19 +53,19 @@ The same land conversion removed two services at once. Valley-floor wetland shou
 
 The classifier was validated by spatial block cross-validation (3 km blocks) and, more relevantly for history, by training on 2025 and testing on 2015 imagery against 2017 labels.
 
-## 2.2 Flood storage
+## 3.2 Flood storage
 
 For a water level *h* above the nearest drain, each 30 m cell holds max(0, h − HAND) × area. Effective storage multiplies by (1 − impervious share). Runoff demand = design rainfall × C × area, C = 0.25 + 0.65 × impervious share, with gauge-corrected 6-hour design depths of 72.3, 88.6 and 95.5 mm (10-, 50-, 100-year). The storm-to-storage ratio is 1 m storage divided by 10-year runoff. The "living sponge" is storage on valley floor still green in Landsat.
 
-## 2.3 Treatment and the bay
+## 3.3 Treatment and the bay
 
 - **Treatment wetland:** green valley floor in the four catchments draining to the bay (Nakivubo, Kinawataka, Kansanga, Munyonyo shore). Value: US$1,500–2,900 per ha per year (Emerton et al. 1999). Nutrients: 800 kg N and 150 kg P a day through Nakivubo, swamp-wide removal 56% N and 40% P, retention scaled by the share of Nakivubo wetland remaining relative to 1995.
 - **Bay water:** a static water mask (water in ≥ 60% of clear dry-season Sentinel-2 views). Zones: outlets (within 1.2 km of the Nakivubo, Kansanga and Kinawataka mouths), inner bay, outer bay, open lake (south of 0.17° N). Per scene: zone medians of turbidity (Dogliotti et al. 2015, 645 nm) and NDCI (Mishra and Mishra 2012) over clear, glint-free water. Sentinel-2 2017–2026 (426 scene-days) and Landsat 1984–2026 (499 scene-days; Sentinel-2 processing-baseline offset removed scene by scene).
 - **Analysis:** the same-day outlet-to-open-lake turbidity ratio, which cancels most sensor, haze and season effects. Kendall trend; OLS of log(ratio) on wetland area with sensor, month and 3-day rain controls (HC1 errors).
 
-# 3. Results
+# 4. Results
 
-## 3.1 Three methods, one picture of the valley floors
+## 4.1 Three methods, one picture of the valley floors
 
 | Validation of the classifier | Overall accuracy | Wetland F1 |
 |---|---|---|
@@ -76,7 +84,7 @@ For a water level *h* above the nearest drain, each 30 m cell holds max(0, h −
 
 Cultivation took part of the valley floor first, in the 1990s and 2000s, and was then itself built over. Today's green share from 10 m Sentinel-2 agrees with 30 m Landsat within 1–7 points (Lubigi 34% vs 36%, Kinawataka 24% vs 23%, Nalukolongo 9% vs 7%; Fig. kd55). The classifier's share is lower because it counts only wetland and trees (Fig. kd44).
 
-## 3.2 Flood storage: from surplus to deficit
+## 4.2 Flood storage: from surplus to deficit
 
 | Greater Kampala core | 1975 | 2020 | 2030 (proj.) |
 |---|---|---|---|
@@ -95,7 +103,7 @@ The city lost 8.5 million m³ of 1 m storage and gained 8.5 million m³ of 10-ye
 | Walufumbe | 1.19 | 0.41 | 0.13 million m³ |
 | Nalukolongo | 0.71 | 0.32 | 0.41 million m³ |
 
-## 3.3 Treatment: the wetland draining to the bay halved
+## 4.3 Treatment: the wetland draining to the bay halved
 
 | Green valley floor draining to the bay (ha) | 1986 | 1995 | 2005 | 2015 | 2025 | Change |
 |---|---|---|---|---|---|---|
@@ -107,7 +115,7 @@ The city lost 8.5 million m³ of 1 m storage and gained 8.5 million m³ of 10-ye
 
 The classifier gives the same picture (natural vegetation 863 → 384 ha, −56%), and Sentinel-2 finds 570 ha today. The lost 613 ha were worth US$0.9–1.8 million a year in treatment, matching Emerton's whole-wetland estimate for Nakivubo. At 1999 loads, about 64 t of nitrogen and 9 t of phosphorus a year are no longer retained; loads have since risen, so these are lower bounds.
 
-## 3.4 The bay carries the city's signature, and it has grown
+## 4.4 The bay carries the city's signature, and it has grown
 
 | Zone (Sentinel-2, 2017–2026) | Turbidity (FNU) | NDCI |
 |---|---|---|
@@ -125,7 +133,10 @@ The classifier gives the same picture (natural vegetation 863 → 384 ha, −56%
 
 The outlets' NDCI exceeds the open lake's by a median 0.22 on the same day (n = 124, p < 0.001). The ratio rose over time (Kendall τ = 0.18, p < 0.001) and with wetland loss: +5.3% per 100 ha lost (95% CI 0.9–10%, p = 0.019), controlling for sensor, month and rain (Fig. kd43). After rain, plumes spread across the inner bay (ratio 1.31 after ≥ 25 mm in three days, 1.15 after dry spells, p = 0.07), but the outlets are degraded even in dry weather (Fig. kd42).
 
-# 4. Discussion
+# 5. Discussion
+
+- **How the valleys were lost.** The land-cover history shows a sequence, not a single event. Papyrus was first drained and cultivated (crops and grass peaked on many valley floors in the 1990s and 2000s), then filled and built on. Industrial estates were sited on the Nakivubo and Kinawataka floors under earlier planning, and informal and rental housing followed on the Lubigi and Nalukolongo floors (Paper 3). Each stage removed some function: cultivation shortened the path water took through the papyrus, and building removed storage and treatment altogether.
+- **Why the bay records it.** A papyrus swamp slows water, settles sediment and lets plants and microbes take up nutrients. When channels cut straight through a shrunken wetland, the city's runoff and wastewater reach the bay faster and less treated. The satellite record cannot isolate this from population growth, but the outlet-to-lake contrast rising step by step with wetland loss is what that mechanism predicts.
 
 - **One loss, two bills.** Each hectare of papyrus valley floor lost removed both storage and treatment. Valuing either alone understates the case for protection. Flood storage is the volume the drainage system must now carry (Papers 1 and 4); treatment is a cost passed to the Ggaba waterworks and the lake.
 - **Storage is infrastructure.** Restoring each system's storm-to-storage ratio to 1 needs about 1.2 million m³ in total, mostly in Kinawataka and Nalukolongo. It could come from protected wetland, detention basins in parks and sports grounds, and on-plot storage required in building approval.
@@ -142,7 +153,7 @@ The outlets' NDCI exceeds the open lake's by a median 0.22 on the same day (n = 
   - the bay–wetland link is an association: population and sewage loads also grew. Utility raw-water records would allow attribution;
   - treatment values and nutrient loads are transferred from 1999 studies.
 
-# 5. Conclusion
+# 6. Conclusion
 
 Half of Kampala's living valley floor has been built over since 1986. Three independent satellite methods agree. The loss shows up twice: as 17 million m³ of flood water with nowhere to go in a single 10-year storm, and as murkier, greener water where the city's channels enter Lake Victoria, the source of its drinking water. Protecting what remains is cheaper than replacing either service.
 
@@ -152,7 +163,7 @@ Code: `src/kd_sponge.py`, `kd_landcover.py`, `kd_bay.py`, `kd_channel_condition.
 
 # Figures
 
-Main: kd44 machine-learning land cover 1986 vs 2025 · kd30 storage vs runoff · kd31 map of storage lost · kd42 bay plumes · kd43 wetland and outlet turbidity.
+Main: cm2 study area · lc2 Nakivubo–Kinawataka 1986 vs 2025 · kd44 machine-learning land cover 1986 vs 2025 · kd30 storage vs runoff · kd31 map of storage lost · kd42 bay plumes · kd43 wetland and outlet turbidity.
 Supplement: kd55 valley floors at 10 m and method agreement · kd16 wetland time-lapse panels.
 
 # References

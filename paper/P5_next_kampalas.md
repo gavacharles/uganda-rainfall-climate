@@ -37,7 +37,18 @@ Roads follow the same path. Using the same rules for every OpenStreetMap road in
   - RQ2: Is population on low ground growing faster than the cities themselves?
   - RQ3: Can a uniform, open, reproducible method support national screening?
 
-# 2. Data and methods
+# 2. Study area: six cities
+
+The five regional cities were among those given city status in 2020 and are promoted as regional growth centres in national planning (Fig. cm5):
+- **Jinja** (about 450,000 people in its 18 km box, 2020) sits on the shore of Lake Victoria at the source of the Nile; an old industrial town with broad lake-shore flats.
+- **Mbale** (470,000) sits at the foot of Mount Elgon, crossed by streams falling from the mountain; the most dissected terrain of the five.
+- **Mbarara** (300,000), in the south-west, spreads along the Rwizi river valley among rolling hills.
+- **Gulu** (250,000), in the north, sits on a gently undulating plateau with shallow valleys.
+- **Arua** (350,000), in the north-west near the borders with DR Congo and South Sudan, also sits on a plateau; its box is smaller because the terrain tile is clipped.
+
+Kampala (3.6 million in its core box) is the reference. The six panels of Fig. cm5 show each city's valley floors and roads at the same scale and under the same rules.
+
+# 3. Data and methods
 
 | Layer | Source |
 |---|---|
@@ -54,9 +65,9 @@ Roads follow the same path. Using the same rules for every OpenStreetMap road in
 
 Channels come from the terrain rather than OpenStreetMap, so that coverage is equal in every city. The Kampala figures here therefore differ slightly from Papers 1 and 3, which used OSM channels.
 
-# 3. Results
+# 4. Results
 
-**3.1 Valley floors built over.**
+**4.1 Valley floors built over.**
 
 | City | 1975 | 1995 | 2005 | 2020 | 2030 (proj.) | Storage lost 1975–2020 |
 |---|---|---|---|---|---|---|
@@ -69,7 +80,7 @@ Channels come from the terrain rather than OpenStreetMap, so that coverage is eq
 
 (GHSL built-up share, uncalibrated, for comparability across cities; Fig. kd40a.)
 
-**3.2 People in the water's path.**
+**4.2 People in the water's path.**
 
 | City | On low ground, 1975 | 2020 | 2030 (proj.) | Share of area, 2020 | Growth 2020–30, low ground vs whole area (% a year) |
 |---|---|---|---|---|---|
@@ -82,9 +93,9 @@ Channels come from the terrain rather than OpenStreetMap, so that coverage is eq
 
 Relative to 2000, low-ground population is projected to have grown 6.3-fold in Mbarara, 4.1-fold in Gulu and 3.6-fold in Mbale by 2030, against 3.1-fold in Kampala (Fig. kd40b). In 2000–2020 low ground already grew faster than the city in all six (Fig. kd40c).
 
-**3.3 Building form.** In Kampala, buildings on low ground are smaller than on the hills (median 64 vs 83 m²), matching the rental-room pattern described in Paper 3. In the regional cities this pattern has not (yet) appeared: low-ground buildings are similar in size to, or larger than, those on higher ground (Jinja 59 vs 54 m², Mbale 58 vs 49 m², Mbarara 69 vs 65 m²). Low-ground development there is earlier-stage and mixed rather than dense rental housing.
+**4.3 Building form.** In Kampala, buildings on low ground are smaller than on the hills (median 64 vs 83 m²), matching the rental-room pattern described in Paper 3. In the regional cities this pattern has not (yet) appeared: low-ground buildings are similar in size to, or larger than, those on higher ground (Jinja 59 vs 54 m², Mbale 58 vs 49 m², Mbarara 69 vs 65 m²). Low-ground development there is earlier-stage and mixed rather than dense rental housing.
 
-**3.4 Roads in the valleys.**
+**4.4 Roads in the valleys.**
 
 | City | Road km (OSM) | On low ground | Channel crossings per 100 km | Low-ground share of road on ground urbanised: by 1990 → 2010–20 |
 |---|---|---|---|---|
@@ -97,7 +108,9 @@ Relative to 2000, low-ground population is projected to have grown 6.3-fold in M
 
 (Fig. kd56. Same terrain-channel rules as Section 2; a crossing is a road passing over a channel cell and not tagged as a bridge. OSM road completeness varies between cities.) Mbale and Mbarara already have Kampala's share of road on low ground; Jinja and Mbarara are moving their new road into the valleys fastest. Gulu and Arua still have most of their roads on higher ground, the clearest opportunity to keep it that way.
 
-# 4. Discussion
+# 5. Discussion
+
+- **Terrain sets the starting point; growth decides the outcome.** Mbale's steep, stream-cut terrain and Mbarara's river valley put more of their road and housing on low ground from the start, while Gulu and Arua sit on plateaus with shallow valleys. But in every city the newest urban land is more likely to be low than the oldest, because the ridges and higher ground are taken first.
 
 - **The window is open now.** Regional valley floors are 1–3% built, compared with Kampala's 8%. Kampala reached today's regional levels in the 1980s, and the same trajectory is visible, only faster.
 - **Policy:**
@@ -114,12 +127,13 @@ Relative to 2000, low-ground population is projected to have grown 6.3-fold in M
 
   Local verification with municipal engineers and the Uganda National Meteorological Authority is the next step.
 
-# 5. Conclusion
+# 6. Conclusion
 
 Kampala shows where unmanaged valley-floor development leads. Uganda's regional cities are on the same path, starting later but moving faster: their low-ground populations are projected to grow up to twice as fast as the cities themselves this decade. Open data can identify these valleys today, while protecting them is still cheap.
 
 # Figures
 
+- cm5: study area, six cities at the same scale
 - kd40: a, valley floor built over 1975–2030; b, people on low ground relative to 2000; c, 2020–30 growth, low ground vs whole area
 - kd56: a, share of road on low ground by when its ground urbanised; b, road on low ground and channel crossings per 100 km, by city
 

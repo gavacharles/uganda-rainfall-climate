@@ -34,7 +34,21 @@ Kampala's flood problem is made on the ground: encroachment, constrictions, lost
 
 # 2. Study area and data
 
-Greater Kampala core (32.45–32.72° E, 0.20–0.42° N): six main channel systems (Lubigi, Nakivubo, Kinawataka, Nalukolongo, Kansanga, Walufumbe) draining to Lake Victoria through former papyrus wetlands.
+## 2.1 The case: Kampala's hills, valleys and channels
+
+Kampala is built on a cluster of flat-topped hills (about 1,190–1,300 m) separated by broad valley floors that fall towards Lake Victoria (1,134 m). Rain is bimodal, with long rains in March–May and short rains in September–November, and most floods follow convective storms lasting under two hours. The study box (32.45–32.72° E, 0.20–0.42° N; 3.6 million residents in 2020) covers the whole of Kampala Capital City (195 km² under KCCA) and the most built-up parts of Wakiso district around it (Fig. cm1).
+
+Six channel systems drain the city:
+- **Lubigi** (46 km², north-west) runs from Bwaise and Kalerwe through the Lubigi wetland to the Mayanja river, not the lake;
+- **Nakivubo** (38 km²) drains the city centre, Kisenyi, Katwe and Industrial Area to Murchison Bay at Luzira;
+- **Kinawataka** (17 km², east) drains Ntinda, Kyambogo and Banda to the bay through the Kinawataka–Namanve wetland;
+- **Kansanga** (17 km², south-east) drains Kabalagala, Kansanga and Ggaba;
+- **Nalukolongo** (11 km², south-west) drains Ndeeba, Kibuye and Natete;
+- **Walufumbe** (4 km², north) drains Kyebando and Kisaasi.
+
+Most channels were dug or lined in phases across the valley floors that were papyrus swamp until the 1970s–80s. KCCA maintains the primary channels; tertiary drains are largely the responsibility of residents, and much of the fringe lies outside KCCA's mandate in Wakiso. Of the 45 reported hotspots (KCCA/NEMA lists and news), 39 lie inside the KCCA boundary, concentrated on the Lubigi, Nakivubo and Kinawataka systems. The city's only long-running rain gauge in the public record is at Makerere University.
+
+## 2.2 Data
 
 | Layer | Source | Use |
 |---|---|---|
@@ -48,6 +62,8 @@ Greater Kampala core (32.45–32.72° E, 0.20–0.42° N): six main channel syst
 | Flood record | 45 hotspots (KCCA/NEMA lists, news); flood catalogue 2007–2026 (Gava 2026) | Validation; threshold test |
 
 # 3. Methods
+
+The study tests two explanations side by side, applying three tests to each (Fig. fw1).
 
 **3.1 Channel inventory.** Waterways were cut into segments of 200 m or less, and the 6,914 draining at least 0.25 km² were analysed. For each: upstream area (D8), upstream built-up share in 1990 and 2020, a runoff load (area × C, C = 0.25 + 0.65 × impervious share), valley-floor built share (HAND < 3 m within 250 m), wetland within 500 m, buildings within 15 m (the channel reserve), buildings on low ground (HAND < 2 m within 150 m), dump sites within 100 m, markets within 300 m, and culverts and bridges.
 
@@ -125,6 +141,9 @@ The early-change score predicts later valley-floor building (AUC 0.79, 95% CI 0.
 
 # 5. Discussion
 
+- **Why the two explanations are so often confused.** Floods are reported when it rains, so rain is always present at the scene. But the comparison that matters is between days with similar rain and different outcomes, and between places with the same rain and different outcomes. On both comparisons, the drainage explanation wins: similar storms produce floods only where the drains have been squeezed, silted or built over, and floods follow ordinary rain more often than extreme rain.
+- **What heavier rain would have looked like.** If climate were the driver, we would expect rising annual maxima, flood days drifting towards more extreme rain, and hotspots spread evenly across systems with similar paving. None of these appears. The one robust rainfall signal, that short bursts matter more than daily totals, points to a drainage system with little spare capacity, not to a changing climate.
+
 - **The levers are on the ground.** The pressures that separate hotspots (building in the reserve and on the floodplain, constrictions, lost wetland) and the capacity losses (siltation, channels sized for 1990) are planning, enforcement and maintenance variables, not climate variables.
 - **Two problems, two responses.**
   - *Old city:* capacity lost to siltation and encroachment. Desilting, culvert clearing and reserve enforcement give the fastest gains (Paper 4 prices them).
@@ -148,7 +167,7 @@ Code: `src/kd_network.py`, `kd_rain.py`, `kd_threshold.py`, `kd_hydraulics.py`, 
 
 # Figures
 
-Main: kd02 flood-day rain · kd41 flood catalogue · kd04 priority map · kd06 hotspot drivers · kd37 design drift · kd38 overload map · kd23 hold-out · kd05 emerging risk.
+Main: cm1 study area · fw1 study design · kd02 flood-day rain · kd41 flood catalogue · kd04 priority map · kd06 hotspot drivers · kd37 design drift · kd38 overload map · kd23 hold-out · kd05 emerging risk.
 Supplement: kd12 priority vs emerging · kd26 threshold test · kd10 radar after the storm · kd13 area pages.
 
 # References

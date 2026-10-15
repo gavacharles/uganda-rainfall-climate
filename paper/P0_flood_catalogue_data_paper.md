@@ -35,6 +35,10 @@ The catalogue, its code and its grading rules are open. It is designed to be ext
 - **Related efforts.** De Bruijn et al. (2019) built a global flood database from Twitter, and Barnolas and Llasat (2007) built a regional geodatabase from historical press for Catalonia. To our knowledge there is no event-level, open flood record for Kampala or for any other Ugandan city.
 - **This dataset** is the event backbone for a programme of Kampala drainage studies. It provides the flood days for the threshold test (Paper 1) and the reported road floods used to validate the road model (Paper 4).
 
+# Study area
+
+Greater Kampala (32.45–32.72° E, 0.20–0.42° N): the 195 km² of Kampala Capital City and the most built-up parts of Wakiso district around it, drained by six main channel systems to Lake Victoria and the Mayanja river (Paper 1). The catalogue's 31 distinct places lie on the Lubigi, Nakivubo and Kinawataka systems above all; 23 are inside the KCCA boundary (Fig. cm0).
+
 # Methods
 
 ## Sources
@@ -127,6 +131,7 @@ Kampala floods on days that are, by daily satellite rainfall, ordinary. Two expl
 - **Every event read.** Each event's sources were read to confirm a flood in Kampala (not elsewhere in Uganda) on or near the stated date.
 - **Geocoding.** Place matches were inspected on a map. Ambiguous names (for example "Kampala", "city centre") were not geocoded.
 - **Independent check against terrain.** 17 of the 31 distinct geocoded places lie within 500 m of a channel draining at least 2 km² (median distance 480 m). Place points are neighbourhood centres, not flood locations, so this is a loose check. The curated hotspot positions, which are located on the flooded spot, score AUC 0.73 on an independent drainage-pressure index (Paper 1).
+- **Agreement with an independent list.** 27 of the 31 places lie within 500 m of a location on the KCCA/NEMA and press hotspot list used in Paper 1. The two lists share some press sources, so this shows consistency rather than independent confirmation, but no catalogued place falls far from a known trouble spot.
 - **Coverage control.** The volume of all English-language GDELT articles mentioning Kampala was retrieved by month. It fell from about 55,000 a year in 2017 to 28,000 in 2021, 9,500 in 2023 and 7,900 in 2024, so part of the 2021–2024 gap is the index itself shrinking. It is not the whole story: in 2025 and 2026, at similar or lower volume (about 6,900 a year), the index again picked up multi-outlet floods. The gap reflects both thinner indexing and floods reported locally rather than in national, indexed media. Either way, a news-based record is not a stable measuring instrument.
 
 # Usage notes
@@ -153,6 +158,7 @@ The 2021–2024 hole is itself a finding. Kampala's flood record depends on whet
 
 # Figures
 
+- cm0: where Kampala's reported floods happened (places by best grade, with the hotspot list).
 - kd41: a, timeline of events by grade, reported deaths and number of outlets, with the 2021–2024 gap shaded; b, places named in flood reports, sized by number of events, over the channel network.
 
 # References
