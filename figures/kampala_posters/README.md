@@ -11,5 +11,6 @@ Map styles vary by purpose. Every image carries its data sources and "Credit: Ga
 | `animations/ka01_kampala_spreads` | Landsat time-lapse | Kampala spreading across its hills, 1986–2025, on one colour scale, with built-up area (GHSL); the 2005 Landsat 7 scan-line gaps are filled |
 | `animations/ka02_kampala_roads_storm` | glowing network | Roads going under as the storm grows from 2- to 100-year |
 | `animations/ka03_kampala_flood_rising` | emergency-map style | The flood rising with the storm, 2- to 100-year |
+| `animations/ka04_murchison_bay_scenes` | satellite poster | Inner Murchison Bay in 13 Sentinel-2 views, 2018–2026, turbidity on one fixed colour scale |
 
 Code: `src/kp_posters.py` (and `src/kp_s2.py` for the Sentinel-2 composite). Flood depths come from the Kampala drainage screening model; they are indicative, not for design.
