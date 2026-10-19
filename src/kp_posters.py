@@ -476,6 +476,55 @@ def kp04(date=None):
     save(fig, OUT / "kp04_murchison_bay_plume.png")
 
 
+def ka04():
+    """Murchison Bay through the years: every usable Sentinel-2 turbidity scene (at least a quarter of the bay seen), on
+    one fixed colour scale so the frames compare, over the dry-season true-colour base."""
+    import glob
+    from matplotlib.colors import LogNorm
+    d = xr.open_dataset(KD / "sat_bay_s2_dry.nc")
+    t0 = xr.open_dataset(KD / "bay_turb_2020-12-10.nc")
+    ext = [max(float(d.x.min()), float(t0.x.min())), min(float(d.x.max()), float(t0.x.max())),
+           max(float(d.y.min()), float(t0.y.min())), min(float(d.y.max()), float(t0.y.max()))]
+    from pyproj import Transformer
+    tr = Transformer.from_crs(32636, 4326, always_xy=True)
+    lo0, la0 = tr.transform(ext[0], ext[2]); lo1, la1 = tr.transform(ext[1], ext[3])
+    B = (lo0, la0, lo1, la1)
+    rgb, gext = to_grid(d, ("B04", "B03", "B02"), B, 0.00009)
+    rgb = np.dstack([stretch(rgb[..., i], 1, 99.5, 0.85) for i in range(3)])
+    norm = LogNorm(4, 20)
+    frames, dur = [], []
+    for f in sorted(glob.glob(str(KD / "bay_turb_*.nc"))):
+        t = xr.open_dataset(f)
+        var = list(t.data_vars)[0]
+        if np.isfinite(t[var].values).mean() < 0.25:  # mostly cloud
+            continue
+        tg, text_ = to_grid(t, (var,), B, 0.00009)
+        day = pd.Timestamp(f.split("bay_turb_")[1][:10])
+        med = float(np.nanmedian(tg[..., 0]))
+        fig, ax = frame(B, width=13)
+        ax.imshow(rgb, extent=gext, interpolation="bilinear")
+        im = ax.imshow(tg[..., 0], extent=text_, cmap="inferno", norm=norm, interpolation="bilinear", alpha=0.9)
+        for n, (la, lo) in {"Ggaba": (0.2650, 32.6300), "Munyonyo": (0.2440, 32.6230), "Port Bell": (0.2880, 32.6530)}.items():
+            if B[0] < lo < B[2] and B[1] < la < B[3]:
+                place(ax, lo, la, n, size=13)
+        ax.set_xlim(B[0], B[2]); ax.set_ylim(B[1], B[3]); ax.set_aspect("equal")
+        banner(fig, "Murchison Bay, scene by scene", f"{day:%d %B %Y}  ·  median turbidity {med:.0f} FNU", 0.86)
+        locator(fig, 32.62, 0.28)
+        fig.patches.append(FancyBboxPatch((0.025, 0.06), 0.39, 0.1, boxstyle="round,pad=0,rounding_size=0.004",
+                                          transform=fig.transFigure, fc="#e9e9e9", ec="none", alpha=0.9, zorder=50))
+        ca = fig.add_axes([0.04, 0.085, 0.29, 0.02], zorder=52)
+        cb = fig.colorbar(im, cax=ca, orientation="horizontal")
+        cb.set_ticks([4, 6, 10, 15, 20]); cb.set_ticklabels(["4", "6", "10", "15", "20+"]); cb.ax.minorticks_off()
+        cb.ax.tick_params(colors="#111", labelsize=11)
+        fig.text(0.04, 0.128, "Satellite turbidity (FNU), one scale for every frame", fontsize=12, family=BF, color="#111", zorder=53)
+        scale_north(ax, B, 1)
+        credit(fig, "Contains modified Copernicus Sentinel-2 data · turbidity: Dogliotti et al. (2015) · base: dry-season "
+                    "composite · cloud and land masked")
+        frames.append(grab(fig)); dur.append(1400)
+    dur[-1] = 3000
+    write_anim(frames, "ka04_murchison_bay_scenes", dur)
+
+
 if __name__ == "__main__":
     for fn in sys.argv[1:]:
         globals()[fn]()
