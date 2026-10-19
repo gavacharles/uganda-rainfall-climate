@@ -247,10 +247,45 @@ def kp01():
     save(fig, OUT / "kp01_kampala_false_colour.png")
 
 
+ROY = dict(red=(0.0061, 0.9047), nir08=(0.0412, 0.8462), swir16=(0.0254, 0.8937))  # TM/ETM+ -> OLI (Roy et al. 2016)
+
+
 def landsat_fc(yr, B):
-    d = xr.open_dataset(KD / f"sat_landsat_{yr}.nc")
+    """Landsat false colour (SWIR, NIR, red) on a common scale for all years: TM/ETM+ harmonised to OLI, Landsat 7
+    scan-line gaps (near-zero stripes) filled from the nearest valid pixel, one fixed stretch."""
+    from scipy.ndimage import distance_transform_edt
+    d = xr.open_dataset(KD / f"sat_landsat_{yr}.nc").load()
+    if yr == 2005:  # Landsat 7 SLC-off: thin dark near-horizontal stripes; fill them on the native grid
+        from scipy.ndimage import grey_closing
+        br = sum(np.nan_to_num(d[b].values) for b in ("swir16", "nir08", "red"))
+        cl = grey_closing(br, size=(9, 1))
+        stripe = (cl - br) > 0.1 * np.maximum(cl, 1e-3)
+        for b in ("swir16", "nir08", "red"):
+            v = np.nan_to_num(d[b].values)
+            d[b].values[:] = np.where(stripe, grey_closing(v, size=(9, 1)), v)
     img, ext = to_grid(d, ("swir16", "nir08", "red"), B, 0.00027)
-    return np.dstack([stretch(img[..., i], 1.5, 99, 0.9) for i in range(3)]), ext
+    from scipy.ndimage import median_filter
+    br = np.nan_to_num(img.sum(-1), nan=0.0)
+    gap = ~np.isfinite(img).all(-1) | (img.max(-1) < 0.02) | ((br < 0.6 * median_filter(br, 9)) & (img[..., 1] < 0.12) & (yr == 2005))
+    if yr < 2013:
+        for i, b in enumerate(("swir16", "nir08", "red")):
+            img[..., i] = ROY[b][0] + ROY[b][1] * img[..., i]
+    if gap.any():
+        idx = distance_transform_edt(gap, return_distances=False, return_indices=True)
+        img = img[idx[0], idx[1]]
+    lo, hi = np.array([0.04, 0.05, 0.02]), np.array([0.34, 0.42, 0.20])
+    return np.clip((img - lo) / (hi - lo), 0, 1) ** 0.9, ext
+
+
+def built_km2(yr, B):
+    g = xr.open_dataset(PROC / "kampala_ghsl_built.nc").built_m2
+    e = int(min(g.epoch.values, key=lambda x: abs(x - yr)))
+    k = gpd.read_file(KD / "kcca_boundary.geojson").to_crs(4326).union_all()
+    v = g.sel(epoch=e)
+    LO, LA = np.meshgrid(v.lon.values, v.lat.values)
+    import shapely
+    m = shapely.contains_xy(k, LO, LA)
+    return float(np.nansum(v.values[m]) / 1e6), e
 
 
 def ka01():
@@ -260,19 +295,29 @@ def ka01():
         fig, ax = frame(B, width=13)
         img, ext = landsat_fc(yr, B)
         ax.imshow(img, extent=ext, interpolation="bilinear")
+        k = gpd.read_file(KD / "kcca_boundary.geojson").to_crs(4326)
+        k.boundary.plot(ax=ax, color="white", lw=1.2, linestyle="--", alpha=0.8)
         ax.set_xlim(B[0], B[2]); ax.set_ylim(B[1], B[3]); ax.set_aspect("equal")
         for n in ("Kampala centre", "Bwaise", "Nakawa", "Ntinda", "Kireka", "Natete", "Ggaba"):
             la, lo = PLACES[n]
             place(ax, lo, la, n, size=11)
+        km2, e = built_km2(yr, B)
         fig.patches.append(FancyBboxPatch((-0.02, 0.9), 0.82, 0.07, boxstyle="round,pad=0,rounding_size=0.02",
                                           transform=fig.transFigure, fc=BANNER, ec="none", zorder=50))
-        fig.text(0.035, 0.935, "KAMPALA SPREADS OVER ITS VALLEYS", fontsize=22, fontweight="bold", color="white", va="center",
+        fig.text(0.035, 0.935, "KAMPALA SPREADS ACROSS ITS HILLS", fontsize=22, fontweight="bold", color="white", va="center",
                  family=TF, zorder=51)
-        fig.patches.append(Rectangle((0, 0.855), 0.2, 0.04, transform=fig.transFigure, fc=RIBBON, ec="none", zorder=50))
-        fig.text(0.035, 0.875, str(yr), fontsize=24, fontweight="bold", color=INK, va="center", family=TF, zorder=51)
-        fig.text(0.02, 0.015, "Landsat 5/7/8/9 false colour (SWIR, NIR, red), dry-season composites: built-up purple, vegetation "
-                 "green, water dark", fontsize=8.5, color="white", family=BF)
-        fig.text(0.98, 0.015, CREDIT, fontsize=10.5, color="white", ha="right", family=BF, fontweight="bold")
+        fig.patches.append(Rectangle((0, 0.852), 0.46, 0.045, transform=fig.transFigure, fc=RIBBON, ec="none", zorder=50))
+        fig.text(0.035, 0.875, f"{yr}   ·   {km2:.0f} km² built up in KCCA", fontsize=20, fontweight="bold", color=INK,
+                 va="center", family=TF, zorder=51)
+        fig.patches.append(FancyBboxPatch((0.015, 0.035), 0.3, 0.13, boxstyle="round,pad=0,rounding_size=0.004",
+                                          transform=fig.transFigure, fc="#e9e9e9", ec="none", alpha=0.88, zorder=50))
+        for i_, (c_, l_) in enumerate((("#c77ee0", "built-up"), ("#5fe05a", "vegetation, wetland"), ("#101826", "water"))):
+            yy = 0.14 - i_ * 0.035
+            fig.patches.append(Rectangle((0.028, yy - 0.011), 0.025, 0.022, transform=fig.transFigure, fc=c_, ec="#777", lw=0.4, zorder=51))
+            fig.text(0.062, yy, l_, fontsize=12, family=BF, color="#111", va="center", zorder=51)
+        fig.text(0.02, 0.012, f"Landsat 5/7/8/9 dry-season composites, false colour (SWIR, NIR, red), one colour scale · built-up: "
+                 f"JRC GHSL {e} · dashed: KCCA boundary", fontsize=8.5, color="white", family=BF)
+        fig.text(0.98, 0.012, CREDIT, fontsize=10.5, color="white", ha="right", family=BF, fontweight="bold")
         frames.append(grab(fig)); dur.append(1500 if yr < 2025 else 3500)
     write_anim(frames, "ka01_kampala_spreads", dur)
 

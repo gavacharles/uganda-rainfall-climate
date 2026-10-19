@@ -8,7 +8,7 @@ Map styles vary by purpose. Every image carries its data sources and "Credit: Ga
 | `kp02_kampala_flood_depth_10yr.png` | emergency-map poster | Where Kampala floods in a 10-year storm: water depth on a greyscale satellite base |
 | `kp03_kampala_roads_glow.png` | glowing network | Roads under water in an ordinary 2-year storm: 198 km with silted channels, 5 km with clean ones |
 | `kp04_murchison_bay_plume.png` | satellite poster | Inner Murchison Bay: true colour with satellite turbidity on the water |
-| `animations/ka01_kampala_spreads` | Landsat time-lapse | Kampala spreading over its valleys, 1986–2025 |
+| `animations/ka01_kampala_spreads` | Landsat time-lapse | Kampala spreading across its hills, 1986–2025, on one colour scale, with built-up area (GHSL); the 2005 Landsat 7 scan-line gaps are filled |
 | `animations/ka02_kampala_roads_storm` | glowing network | Roads going under as the storm grows from 2- to 100-year |
 | `animations/ka03_kampala_flood_rising` | emergency-map style | The flood rising with the storm, 2- to 100-year |
 
