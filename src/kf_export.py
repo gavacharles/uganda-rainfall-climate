@@ -12,7 +12,7 @@ kd_roads.stage_states), with the same equations the browser runs, so settings ca
   depth      stage of the nearest stretch minus the cell's HAND (30 m cells within 200 m of a stretch)
 Settings in the page: rain multiplier, silt in the channels, paving (2020 or 1990).
 
-Outputs in tool_replay/data/ (public): seg.bin, rating.bin, rain_seg.bin, cells.png, buildings.pmtiles, floodable.bin, roads.json (GeoJSON),
+Outputs in tool_replay/data/ (public): seg.bin, rating.bin, rain_seg.bin (16-bit), cells.png, buildings.pmtiles, floodable.bin, roads.pmtiles, roads.bin,
 meta.json, rain_grid.json, places.json. Validation: results/kf_validation.csv (reported places, default settings).
 """
 import json
@@ -123,8 +123,9 @@ def main():
     ARF = np.clip(1 - 0.04 * np.sqrt(A), 0.7, 1)
     np.stack([0.278 * A * ARF, h.C.values, C1990, h.Qcap_clean.values, h.Qcap_silted.values], 1).astype("<f4") \
         .tofile(OUT / "seg.bin")
-    FP.astype("<f4").tofile(OUT / "rating.bin")
-    I.astype("<f4").tofile(OUT / "rain_seg.bin")
+    # 16-bit encodings keep the download small: rating = log1p(Q) x 5000, rain = mm/h x 1000
+    np.round(np.log1p(FP) * 5000).astype("<u2").tofile(OUT / "rating.bin")
+    np.round(I * 1000).astype("<u2").tofile(OUT / "rain_seg.bin")
 
     # cells: R,G = stretch index (65535: none), B = HAND x 20 (0.05 m steps)
     cl = np.load(KD / "depth_cells.npz")
@@ -178,16 +179,28 @@ def main():
     p["h"] = np.round(p.hand_min * 100).astype(int)
     p["n"] = p["name"].fillna("")
     p = p.to_crs(4326) if p.crs and p.crs.to_epsg() != 4326 else p
-    p[["s", "h", "n", "len_m", "geometry"]].to_file(OUT / "roads.json", driver="GeoJSON", COORDINATE_PRECISION=6)
+    # roads that can flood: vector tiles for the map (rid), and roads.bin for the counters: uint16 stretch, uint16 HAND (cm),
+    # float32 length (m), per road piece in rid order
+    p = p.reset_index(drop=True)
+    p["rid"] = np.arange(len(p), dtype="int32")
+    np.concatenate([np.stack([p.s.values, p.h.values], 1).astype("<u2"),
+                    p.len_m.values.astype("<f4").view("<u2").reshape(-1, 2)], 1).tofile(OUT / "roads.bin")
+    f = OUT / "roads.pmtiles"
+    f.unlink(missing_ok=True)
+    import pyogrio
+    pyogrio.write_dataframe(p[["rid", "geometry"]], f, driver="PMTiles", layer="r",
+                            dataset_options=dict(MINZOOM=10, MAXZOOM=15, NAME="Kampala roads that can flood"))
     print("road pieces", len(p), flush=True)
+    import gzip
+    for f in ("seg.bin", "rating.bin", "rain_seg.bin", "floodable.bin", "roads.bin"):  # Pages does not compress binary
+        (OUT / (f + ".gz")).write_bytes(gzip.compress((OUT / f).read_bytes(), 9, mtime=0))
 
     # stretch names, rain grid, places
     nm = s["name"].fillna("").values
     meta = dict(n_seg=n, hours=[t.strftime("%Y-%m-%dT%H:%M") for t in times], hg=HG.tolist(), cells_bounds=bounds,
-                cells_size=[W, Hh], seg_name=[x for x in nm], seg_system=s["system"].fillna("").tolist(),
-                seg_xy=[[round(x, 5), round(y, 5)] for x, y in zip(*[getattr(s.to_crs(32636).geometry.centroid
-                                                                          .to_crs(4326), k).values for k in ("x", "y")])],
+                cells_size=[W, Hh], seg_name=[x for x in nm], systems=sorted(s["system"].fillna("").unique().tolist()),
                 defaults=DEFAULTS)
+    meta["seg_system"] = [meta["systems"].index(x) for x in s["system"].fillna("")]
     (OUT / "meta.json").write_text(json.dumps(meta, separators=(",", ":")))
     r = xr.open_dataset(PROC / "kf_rain_persiann.nc").rain
     (OUT / "rain_grid.json").write_text(json.dumps(dict(
