@@ -1,0 +1,13 @@
+mult,place,cells_500m,flooded_cells,max_depth_m,peak_hour
+1.0,Kimbejja,113,0,0.0,10 Oct 09:00
+1.0,Lubigi,389,94,0.7,11 Oct 06:00
+1.0,Kinawataka,221,11,0.2,11 Oct 03:00
+1.0,Banda,32,0,-1.15,10 Oct 09:00
+1.5,Kimbejja,113,30,0.1,11 Oct 03:00
+1.5,Lubigi,389,208,1.6,11 Oct 05:00
+1.5,Kinawataka,221,63,0.7,11 Oct 05:00
+1.5,Banda,32,0,-0.95,11 Oct 03:00
+2.0,Kimbejja,113,31,0.3,11 Oct 03:00
+2.0,Lubigi,389,245,2.3,11 Oct 06:00
+2.0,Kinawataka,221,75,0.9,11 Oct 04:00
+2.0,Banda,32,0,-0.75,11 Oct 03:00
