@@ -7,6 +7,7 @@
 <meta name="description" content="The 10–11 October 2026 Kampala storm, replayed hour by hour on a map: modelled floodwater, buildings with water at the door, roads under water. Change the settings and run it again.">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
 <style>
 :root{--ink:#14202b;--mute:#5b6670;--line:#d9dee3;--panel:#ffffffee;--bg:#eef1f3;--accent:#0b5cad;--warn:#c62828;--road:#ff3d7f;--chip:#f1f4f6}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e8edf2;--mute:#9aa7b2;--line:#33404b;--panel:#121a21ee;--bg:#0b1116;--accent:#6fb3ff;--chip:#1c262f}}
@@ -95,7 +96,7 @@ a{color:var(--accent)}
   <div class="tab" id="t-layers">
     <div class="lay">
       <label><input type="checkbox" data-l="flood" checked> Floodwater</label>
-      <label><input type="checkbox" data-l="bld" checked> Buildings (red: water at the door)</label>
+      <label><input type="checkbox" data-l="bld" checked> Buildings (red: water at the door); zoom in to see them, in 3D when close</label>
       <label><input type="checkbox" data-l="roads" checked> Roads under water</label>
       <label><input type="checkbox" data-l="rain"> Rain (satellite, 4 km)</label>
       <label><input type="checkbox" data-l="reports" checked> Reported flooding, this storm</label>
@@ -154,7 +155,7 @@ const DEPTH_COLS = [[63,243,242],[51,197,245],[75,142,240],[79,95,227],[106,31,2
 const DEPTH_LABS = ["10–20 cm","20–50 cm","0.5–1 m","1–1.5 m","1.5–2 m","> 2 m"];
 const BBOX = [32.45, 0.20, 32.72, 0.42];
 let M = {}, H = null, T = 0, NS = 0, NH = 0, NG = 0, t = 0, speed = 1, timer = null;
-let cellIdx, cellSeg, cellHand, W = 0, Hh = 0, bSeg, bHand, rSeg, rHand, rLen, stats = [], prevB = new Set(), prevR = new Map();
+let cellIdx, cellSeg, cellHand, W = 0, Hh = 0, bGid, bSeg, bHand, rSeg, rHand, rLen, stats = [], prevB = new Set(), prevR = new Map();
 const S = {mult: 1.5, silt: 0.3, paving: "2020"};
 const $ = id => document.getElementById(id);
 
@@ -210,8 +211,8 @@ function drawFlood() {
 function drawFeatures() {
   const nowB = new Set();
   for (let i = 0; i < bSeg.length; i++) if (H[bSeg[i] * NH + t] - bHand[i] >= 0.0999) nowB.add(i);
-  for (const i of prevB) if (!nowB.has(i)) map.setFeatureState({source: "bld", id: i}, {wet: false});
-  for (const i of nowB) if (!prevB.has(i)) map.setFeatureState({source: "bld", id: i}, {wet: true});
+  for (const i of prevB) if (!nowB.has(i)) map.setFeatureState({source: "bld", sourceLayer: "b", id: bGid[i]}, {wet: false});
+  for (const i of nowB) if (!prevB.has(i)) map.setFeatureState({source: "bld", sourceLayer: "b", id: bGid[i]}, {wet: true});
   prevB = nowB;
   const nowR = new Map();
   for (let i = 0; i < rSeg.length; i++) { const d = H[rSeg[i] * NH + t] - rHand[i]; if (d >= 0.0999) nowR.set(i, d >= 0.2999 ? 2 : 1); }
@@ -288,9 +289,10 @@ let pinMarker = null;
 $("cardx").onclick = () => { $("card").style.display = "none"; CARD = null; if (pinMarker) { pinMarker.remove(); pinMarker = null; } };
 
 // ------------------------------------------------------------ map
+const pmp = new pmtiles.Protocol(); maplibregl.addProtocol("pmtiles", pmp.tile);
 const map = new maplibregl.Map({
   container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
-  center: [32.585, 0.33], zoom: 12.2, pitch: 50, bearing: -15, maxBounds: [[32.30, 0.08], [32.90, 0.55]],
+  center: [32.585, 0.335], zoom: 12.6, pitch: 50, bearing: -15, maxBounds: [[32.30, 0.08], [32.90, 0.55]],
   attributionControl: {compact: true, customAttribution: "Kampala Flood Replay · Credit: Gava Charles · rain PERSIANN-CCS (CHRS) · terrain Copernicus GLO-30, AWS Terrain Tiles · buildings Microsoft"}
 });
 map.addControl(new maplibregl.NavigationControl({visualizePitch: true}), "top-right");
@@ -316,17 +318,20 @@ async function load() {
   cellIdx = Int32Array.from(idx); cellSeg = Uint16Array.from(sg); cellHand = Float32Array.from(hd);
   const [w0, s0, e0, n0] = M.cells_bounds; COORDS = [[w0, n0], [e0, n0], [e0, s0], [w0, s0]];
   const dl = 0.02; RCOORDS = [[RG.lon[0] - dl, RG.lat[0] + dl], [RG.lon.at(-1) + dl, RG.lat[0] + dl], [RG.lon.at(-1) + dl, RG.lat.at(-1) - dl], [RG.lon[0] - dl, RG.lat.at(-1) - dl]];
-  const [bj, rj, pl] = await Promise.all([fetch(DATA + "buildings.json").then(r => r.json()), fetch(DATA + "roads.json").then(r => r.json()), fetch(DATA + "places.json").then(r => r.json())]);
-  bj.features.forEach((f, i) => f.id = i); rj.features.forEach((f, i) => f.id = i);
-  bSeg = Uint16Array.from(bj.features.map(f => f.properties.s)); bHand = Float32Array.from(bj.features.map(f => f.properties.h / 100));
+  const [fb, rj, pl] = await Promise.all([fetch(DATA + "floodable.bin").then(r => r.arrayBuffer()), fetch(DATA + "roads.json").then(r => r.json()), fetch(DATA + "places.json").then(r => r.json())]);
+  rj.features.forEach((f, i) => f.id = i);
+  // buildings that can flood: int32 building id, uint16 stretch, uint16 height above the drain (cm), little-endian
+  const dv = new DataView(fb), nb = fb.byteLength / 8;
+  bGid = new Int32Array(nb); bSeg = new Uint16Array(nb); bHand = new Float32Array(nb);
+  for (let i = 0; i < nb; i++) { bGid[i] = dv.getInt32(i * 8, true); bSeg[i] = dv.getUint16(i * 8 + 4, true); bHand[i] = dv.getUint16(i * 8 + 6, true) / 100; }
   rSeg = Uint16Array.from(rj.features.map(f => f.properties.s)); rHand = Float32Array.from(rj.features.map(f => f.properties.h / 100));
   rLen = Float32Array.from(rj.features.map(f => f.properties.len_m));
-  return {bj, rj, pl};
+  return {rj, pl};
 }
 
 map.on("load", async () => {
   $("loading").textContent = "Loading the storm…";
-  const {bj, rj, pl} = await load();
+  const {rj, pl} = await load();
   map.addSource("dem", {type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14});
   map.setTerrain({source: "dem", exaggeration: 3});
   map.addSource("sat", {type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, attribution: "Imagery © Esri, Maxar, Earthstar Geographics"});
@@ -338,8 +343,14 @@ map.on("load", async () => {
   map.addLayer({id: "rain", type: "raster", source: "rain", layout: {visibility: "none"}, paint: {"raster-resampling": "linear", "raster-fade-duration": 0, "raster-opacity": 0.75}});
   map.addSource("roads", {type: "geojson", data: rj});
   map.addLayer({id: "roads", type: "line", source: "roads", paint: {"line-color": ["case", ["==", ["feature-state", "d"], 2], "#ff3d7f", ["==", ["feature-state", "d"], 1], "#ffb000", "rgba(0,0,0,0)"], "line-width": ["interpolate", ["linear"], ["zoom"], 11, 2, 16, 6]}});
-  map.addSource("bld", {type: "geojson", data: bj});
-  map.addLayer({id: "bld", type: "fill-extrusion", source: "bld", minzoom: 13, paint: {"fill-extrusion-color": ["case", ["boolean", ["feature-state", "wet"], false], "#d7301f", "#cfc8bd"], "fill-extrusion-height": ["get", "ht"], "fill-extrusion-opacity": 0.85}});
+  // every building in Kampala (Microsoft footprints with heights), as PMTiles vector tiles
+  map.addSource("bld", {type: "vector", url: "pmtiles://" + new URL(DATA + "buildings.pmtiles", location.href).href, promoteId: "gid",
+                        attribution: "Buildings: Microsoft Global ML Building Footprints"});
+  map.addLayer({id: "bld2d", type: "fill", source: "bld", "source-layer": "b", minzoom: 13, maxzoom: 14.5,
+    paint: {"fill-color": ["case", ["boolean", ["feature-state", "wet"], false], "#d7301f", "#b9b1a5"], "fill-opacity": 0.8}});
+  map.addLayer({id: "bld", type: "fill-extrusion", source: "bld", "source-layer": "b", minzoom: 14.5,
+    paint: {"fill-extrusion-color": ["case", ["boolean", ["feature-state", "wet"], false], "#d7301f", "#cfc8bd"],
+            "fill-extrusion-height": ["get", "ht"], "fill-extrusion-opacity": 0.85}});
   map.addSource("reports", {type: "geojson", data: {type: "FeatureCollection", features: pl.event.map(p => ({type: "Feature", properties: {name: p.name}, geometry: {type: "Point", coordinates: [p.lon, p.lat]}}))}});
   map.addLayer({id: "reports", type: "circle", source: "reports", paint: {"circle-radius": 9, "circle-color": "#ff8c00", "circle-stroke-color": "#fff", "circle-stroke-width": 2}});
   map.addLayer({id: "reports-l", type: "symbol", source: "reports", layout: {"text-field": ["get", "name"], "text-offset": [0, 1.3], "text-size": 13, "text-font": ["Noto Sans Bold"]}, paint: {"text-color": "#7a3d00", "text-halo-color": "#fff", "text-halo-width": 1.5}});
@@ -385,7 +396,7 @@ function stop() { clearInterval(timer); timer = null; $("play").textContent = "�
 $("play").onclick = () => { if (timer) return stop(); $("play").textContent = "❚❚"; timer = setInterval(() => { t = (t + 1) % NH; render(); }, 900 / speed); };
 document.querySelectorAll("[data-sp]").forEach(b => b.onclick = () => { speed = +b.dataset.sp; if (timer) { stop(); $("play").click(); } });
 // layers
-const LAY = {flood: ["flood"], bld: ["bld"], roads: ["roads"], rain: ["rain"], reports: ["reports", "reports-l"], hotspots: ["hotspots"], sat: ["sat"]};
+const LAY = {flood: ["flood"], bld: ["bld", "bld2d"], roads: ["roads"], rain: ["rain"], reports: ["reports", "reports-l"], hotspots: ["hotspots"], sat: ["sat"]};
 document.querySelectorAll("[data-l]").forEach(c => { if (c.dataset.l === "rain") c.id = "lrain"; c.onchange = () => {
   const l = c.dataset.l;
   if (l === "terrain") return map.setTerrain(c.checked ? {source: "dem", exaggeration: 3} : null);
