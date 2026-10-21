@@ -50,7 +50,7 @@ table.chk{width:100%;border-collapse:collapse;font-size:12px}table.chk td,table.
 #chart{width:100%;height:54px;display:block;cursor:pointer}
 .legend{display:flex;align-items:center;gap:4px;font-size:11.5px;color:var(--mute);flex-wrap:wrap}
 .legend i{display:inline-block;width:18px;height:10px;border-radius:2px}
-#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16px;background:var(--bg);z-index:10}
+#loading{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;font-size:15px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 18px;box-shadow:0 4px 18px #0003;z-index:10;max-width:80%}
 a{color:var(--accent)}
 @media (max-width:760px){#side{width:auto;right:52px;max-height:40%;top:8px;left:8px}#bottom .top{flex-wrap:wrap}#slider{flex-basis:100%;order:9}#chart{height:40px}#card{left:8px;right:8px;width:auto;top:auto;bottom:150px}#bottom{left:8px;right:8px;bottom:8px}#time{min-width:120px;font-size:12.5px}}
 </style>
@@ -216,8 +216,8 @@ function drawFeatures() {
   prevB = nowB;
   const nowR = new Map();
   for (let i = 0; i < rSeg.length; i++) { const d = H[rSeg[i] * NH + t] - rHand[i]; if (d >= 0.0999) nowR.set(i, d >= 0.2999 ? 2 : 1); }
-  for (const [i] of prevR) if (!nowR.has(i)) map.setFeatureState({source: "roads", id: i}, {d: 0});
-  for (const [i, v] of nowR) if (prevR.get(i) !== v) map.setFeatureState({source: "roads", id: i}, {d: v});
+  for (const [i] of prevR) if (!nowR.has(i)) map.setFeatureState({source: "roads", sourceLayer: "r", id: i}, {d: 0});
+  for (const [i, v] of nowR) if (prevR.get(i) !== v) map.setFeatureState({source: "roads", sourceLayer: "r", id: i}, {d: v});
   prevR = nowR;
 }
 const rcv = document.createElement("canvas"), rcx = rcv.getContext("2d");
@@ -273,7 +273,7 @@ function showCard(p) {
   } else {
     const seg = cellSeg[c], ser = []; let pk = 0, pkj = 0, hrs = 0;
     for (let j = 0; j < NH; j++) { const d = Math.max(0, H[seg * NH + j] - cellHand[c]); ser.push(d); if (d > pk) { pk = d; pkj = j; } if (d >= 0.1) hrs++; }
-    const now = ser[t], nm = M.seg_name[seg] || "an unnamed channel", sys = M.seg_system[seg];
+    const now = ser[t], nm = M.seg_name[seg] || "an unnamed channel", sys = M.systems[M.seg_system[seg]];
     html += `<p><b>${now >= 0.1 ? (now < 1 ? Math.round(now * 100) + " cm" : now.toFixed(1) + " m") : "Dry"}</b> at ${fmtTime(t)}</p>`;
     html += `<p class="note">Peak: ${pk >= 0.1 ? (pk < 1 ? Math.round(pk * 100) + " cm" : pk.toFixed(1) + " m") + " at " + fmtTime(pkj) : "stays below 10 cm"} · ${hrs} hour${hrs === 1 ? "" : "s"} at 10 cm or more<br>Ground ${cellHand[c].toFixed(1)} m above ${nm}${sys ? " (" + sys + " system)" : ""}</p>`;
     const w = 268, h = 60, mx = Math.max(0.3, ...ser);
@@ -298,16 +298,33 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl({visualizePitch: true}), "top-right");
 let SEG, RATING, RAIN, RG, RAINMEAN, PIX, COORDS, RCOORDS;
 
-async function bin(f) { return new Float32Array(await (await fetch(DATA + f)).arrayBuffer()); }
+// binary files are fetched gzipped and unpacked in the browser (GitHub Pages does not compress them); plain copy otherwise
+async function buf(f) {
+  if (typeof DecompressionStream === "function") {
+    try { const r = await fetch(DATA + f + ".gz"); if (r.ok) return await new Response(r.body.pipeThrough(new DecompressionStream("gzip"))).arrayBuffer(); } catch (e) {}
+  }
+  return await (await fetch(DATA + f)).arrayBuffer();
+}
+async function bin(f) { return new Float32Array(await buf(f)); }
+async function u16(f) { return new Uint16Array(await buf(f)); }
+const step = m => { const l = document.getElementById("loading"); if (l.style.display !== "none") l.textContent = "Loading the storm… " + m; };
 async function load() {
-  M = await (await fetch(DATA + "meta.json")).json();
+  step("(downloading)");
+  // every file is requested at once; each step below waits only for what it needs
+  const P = {meta: fetch(DATA + "meta.json").then(r => r.json()), seg: bin("seg.bin"), rating: u16("rating.bin"), rain: u16("rain_seg.bin"),
+             grid: fetch(DATA + "rain_grid.json").then(r => r.json()), cells: fetch(DATA + "cells.png").then(r => r.blob()),
+             fb: buf("floodable.bin"), rb: buf("roads.bin"), pl: fetch(DATA + "places.json").then(r => r.json())};
+  M = await P.meta;
   NS = M.n_seg; NH = M.hours.length; NG = M.hg.length;
-  [SEG, RATING, RAIN] = await Promise.all([bin("seg.bin"), bin("rating.bin"), bin("rain_seg.bin")]);
-  RG = await (await fetch(DATA + "rain_grid.json")).json();
+  const [sg_, rt_, rn_] = await Promise.all([P.seg, P.rating, P.rain]);
+  SEG = sg_; RATING = Float32Array.from(rt_, q => Math.expm1(q / 5000)); RAIN = Float32Array.from(rn_, q => q / 1000);
+  step("(2/5 rain)");
+  RG = await P.grid;
   // city-average rain per hour, over the drainage box
   RAINMEAN = RG.rain.map(fr => { let s = 0, n = 0; RG.lat.forEach((la, i) => RG.lon.forEach((lo, j) => { if (la >= BBOX[1] && la <= BBOX[3] && lo >= BBOX[0] && lo <= BBOX[2]) { s += fr[i][j]; n++; } })); return s / n; });
+  step("(3/5 valley floors)");
   // cells: decode stretch index and HAND from the PNG
-  const blob = await (await fetch(DATA + "cells.png")).blob();
+  const blob = await P.cells;
   const bmp = await createImageBitmap(blob, {colorSpaceConversion: "none", premultiplyAlpha: "none"});
   W = bmp.width; Hh = bmp.height; cv.width = W; cv.height = Hh;
   const tmp = document.createElement("canvas"); tmp.width = W; tmp.height = Hh;
@@ -318,20 +335,24 @@ async function load() {
   cellIdx = Int32Array.from(idx); cellSeg = Uint16Array.from(sg); cellHand = Float32Array.from(hd);
   const [w0, s0, e0, n0] = M.cells_bounds; COORDS = [[w0, n0], [e0, n0], [e0, s0], [w0, s0]];
   const dl = 0.02; RCOORDS = [[RG.lon[0] - dl, RG.lat[0] + dl], [RG.lon.at(-1) + dl, RG.lat[0] + dl], [RG.lon.at(-1) + dl, RG.lat.at(-1) - dl], [RG.lon[0] - dl, RG.lat.at(-1) - dl]];
-  const [fb, rj, pl] = await Promise.all([fetch(DATA + "floodable.bin").then(r => r.arrayBuffer()), fetch(DATA + "roads.json").then(r => r.json()), fetch(DATA + "places.json").then(r => r.json())]);
-  rj.features.forEach((f, i) => f.id = i);
+  step("(4/5 buildings and roads)");
+  const [fb, rb, pl] = await Promise.all([P.fb, P.rb, P.pl]);
   // buildings that can flood: int32 building id, uint16 stretch, uint16 height above the drain (cm), little-endian
   const dv = new DataView(fb), nb = fb.byteLength / 8;
   bGid = new Int32Array(nb); bSeg = new Uint16Array(nb); bHand = new Float32Array(nb);
   for (let i = 0; i < nb; i++) { bGid[i] = dv.getInt32(i * 8, true); bSeg[i] = dv.getUint16(i * 8 + 4, true); bHand[i] = dv.getUint16(i * 8 + 6, true) / 100; }
-  rSeg = Uint16Array.from(rj.features.map(f => f.properties.s)); rHand = Float32Array.from(rj.features.map(f => f.properties.h / 100));
-  rLen = Float32Array.from(rj.features.map(f => f.properties.len_m));
-  return {rj, pl};
+  // roads that can flood: uint16 stretch, uint16 height above the drain (cm), float32 length (m)
+  const rv = new DataView(rb), nr = rb.byteLength / 8;
+  rSeg = new Uint16Array(nr); rHand = new Float32Array(nr); rLen = new Float32Array(nr);
+  for (let i = 0; i < nr; i++) { rSeg[i] = rv.getUint16(i * 8, true); rHand[i] = rv.getUint16(i * 8 + 2, true) / 100; rLen[i] = rv.getFloat32(i * 8 + 4, true); }
+  return {pl};
 }
 
+const DATAP = load();   // start downloading at once, alongside the base map
+setTimeout(() => { const l = $("loading"); if (l.style.display !== "none" && !l.textContent.startsWith("Could not")) l.textContent += " · still loading: a slow connection can take up to a minute"; }, 25000);
 map.on("load", async () => {
-  $("loading").textContent = "Loading the storm…";
-  const {rj, pl} = await load();
+  const {pl} = await DATAP;
+  step("(5/5 drawing)");
   map.addSource("dem", {type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14});
   map.setTerrain({source: "dem", exaggeration: 3});
   map.addSource("sat", {type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, attribution: "Imagery © Esri, Maxar, Earthstar Geographics"});
@@ -341,8 +362,8 @@ map.on("load", async () => {
   map.addLayer({id: "flood", type: "raster", source: "flood", paint: {"raster-resampling": "nearest", "raster-fade-duration": 0}});
   map.addSource("rain", {type: "image", url: rcv.toDataURL(), coordinates: RCOORDS});
   map.addLayer({id: "rain", type: "raster", source: "rain", layout: {visibility: "none"}, paint: {"raster-resampling": "linear", "raster-fade-duration": 0, "raster-opacity": 0.75}});
-  map.addSource("roads", {type: "geojson", data: rj});
-  map.addLayer({id: "roads", type: "line", source: "roads", paint: {"line-color": ["case", ["==", ["feature-state", "d"], 2], "#ff3d7f", ["==", ["feature-state", "d"], 1], "#ffb000", "rgba(0,0,0,0)"], "line-width": ["interpolate", ["linear"], ["zoom"], 11, 2, 16, 6]}});
+  map.addSource("roads", {type: "vector", url: "pmtiles://" + new URL(DATA + "roads.pmtiles", location.href).href, promoteId: "rid"});
+  map.addLayer({id: "roads", type: "line", source: "roads", "source-layer": "r", paint: {"line-color": ["case", ["==", ["feature-state", "d"], 2], "#ff3d7f", ["==", ["feature-state", "d"], 1], "#ffb000", "rgba(0,0,0,0)"], "line-width": ["interpolate", ["linear"], ["zoom"], 11, 2, 16, 6]}});
   // every building in Kampala (Microsoft footprints with heights), as PMTiles vector tiles
   map.addSource("bld", {type: "vector", url: "pmtiles://" + new URL(DATA + "buildings.pmtiles", location.href).href, promoteId: "gid",
                         attribution: "Buildings: Microsoft Global ML Building Footprints"});
