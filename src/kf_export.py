@@ -12,7 +12,7 @@ kd_roads.stage_states), with the same equations the browser runs, so settings ca
   depth      stage of the nearest stretch minus the cell's HAND (30 m cells within 200 m of a stretch)
 Settings in the page: rain multiplier, silt in the channels, paving (2020 or 1990).
 
-Outputs in tool_replay/data/ (public): seg.bin, rating.bin, rain_seg.bin, cells.png, buildings.json, roads.json (GeoJSON),
+Outputs in tool_replay/data/ (public): seg.bin, rating.bin, rain_seg.bin, cells.png, buildings.pmtiles, floodable.bin, roads.json (GeoJSON),
 meta.json, rain_grid.json, places.json. Validation: results/kf_validation.csv (reported places, default settings).
 """
 import json
@@ -31,6 +31,7 @@ from common import PROC, RES, ROOT
 KD = ROOT / "data" / "kd"
 OUT = ROOT / "tool_replay" / "data"
 BOX = (32.45, 0.20, 32.72, 0.42)
+VIEW = (32.38, 0.12, 32.80, 0.50)                    # buildings shown on the map
 HG = np.round(np.arange(0.1, 5.01, 0.1), 2)          # rating-curve levels (m)
 DEFAULTS = dict(mult=1.5, silt=0.3, paving="2020")  # x1.5: see the page's "How good is it" tab
 
@@ -151,18 +152,22 @@ def main():
         hv[inside] = px[:, 2] / 20
         return sgv, hv
 
-    # buildings that can flood: centroid on a floodable cell
-    b = gpd.read_parquet(KD / "ms_buildings.parquet").cx[BOX[0]:BOX[2], BOX[1]:BOX[3]]
+    # all buildings as vector tiles (grey, 3D, with height), and the ones that can flood as a compact list:
+    # floodable.bin = int32 building id, then uint16 stretch index, uint16 HAND (cm), per building that can flood
+    b = gpd.read_parquet(KD / "ms_buildings.parquet").cx[VIEW[0]:VIEW[2], VIEW[1]:VIEW[3]].reset_index(drop=True)
+    b["gid"] = np.arange(len(b), dtype="int32")
+    b["ht"] = b.meanHeight.fillna(4).clip(3, 40).round(1)
     cen = b.geometry.centroid
     sgv, hv = lookup(cen.x.values, cen.y.values)
     m = (sgv != 65535) & (hv <= 5)
-    bb = b[m].copy()
-    bb["s"], bb["h"] = sgv[m], np.round(hv[m] * 100).astype(int)
-    bb["ht"] = bb.meanHeight.fillna(4).clip(3, 40).round(1)
-    bb["geometry"] = bb.geometry.simplify(0.000015)
-    bb[["s", "h", "ht", "geometry"]].reset_index(drop=True).to_file(OUT / "buildings.json", driver="GeoJSON",
-                                                                     COORDINATE_PRECISION=6)
-    print("buildings", len(bb), flush=True)
+    np.concatenate([b.gid.values[m].astype("<i4").view("<u2").reshape(-1, 2),
+                    np.stack([sgv[m], np.round(hv[m] * 100)], 1).astype("<u2")], 1).tofile(OUT / "floodable.bin")
+    f = OUT / "buildings.pmtiles"
+    f.unlink(missing_ok=True)
+    import pyogrio
+    pyogrio.write_dataframe(b[["gid", "ht", "geometry"]], f, driver="PMTiles", layer="b",
+                            dataset_options=dict(MINZOOM=13, MAXZOOM=15, NAME="Kampala buildings"))
+    print("buildings", len(b), "can flood", int(m.sum()), "pmtiles MB", round(f.stat().st_size / 1e6, 1), flush=True)
 
     # roads that can flood: pieces near a stretch, with the stretch index and lowest HAND
     p = gpd.read_parquet(KD / "road_pieces.parquet")
