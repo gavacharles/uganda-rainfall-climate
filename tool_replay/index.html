@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kampala Flood Replay</title>
+<meta name="description" content="The 10–11 October 2026 Kampala storm, replayed hour by hour on a map: modelled floodwater, buildings with water at the door, roads under water. Change the settings and run it again.">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+:root{--ink:#14202b;--mute:#5b6670;--line:#d9dee3;--panel:#ffffffee;--bg:#eef1f3;--accent:#0b5cad;--warn:#c62828;--road:#ff3d7f;--chip:#f1f4f6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e8edf2;--mute:#9aa7b2;--line:#33404b;--panel:#121a21ee;--bg:#0b1116;--accent:#6fb3ff;--chip:#1c262f}}
+:root[data-theme="dark"]{--ink:#e8edf2;--mute:#9aa7b2;--line:#33404b;--panel:#121a21ee;--bg:#0b1116;--accent:#6fb3ff;--chip:#1c262f}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#map{position:absolute;inset:0}
+.panel{position:absolute;background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:10px;box-shadow:0 4px 18px #0002}
+#side{top:12px;left:12px;width:340px;max-height:calc(100% - 140px);overflow:auto;padding:14px 16px}
+#side h1{font-size:19px;margin:0 0 2px}
+#side .sub{color:var(--mute);font-size:12.5px;margin-bottom:10px}
+.tabs{display:flex;gap:4px;margin:8px 0 10px}
+.tabs button{flex:1;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:6px;padding:5px 0;font-size:12.5px;cursor:pointer}
+.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab{display:none}.tab.on{display:block}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 10px}
+.stat{background:var(--chip);border-radius:8px;padding:7px 9px}
+.stat b{display:block;font-size:19px;font-variant-numeric:tabular-nums}
+.stat span{font-size:11.5px;color:var(--mute)}
+#search{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--chip);color:var(--ink)}
+#results{list-style:none;margin:2px 0 6px;padding:0;font-size:12.5px}
+#results li{padding:4px 6px;cursor:pointer;border-radius:5px}#results li:hover{background:var(--chip)}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.btn{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:6px;padding:5px 9px;font-size:12.5px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+label.set{display:block;margin:10px 0 2px;font-weight:600;font-size:13px}
+label.set small{font-weight:400;color:var(--mute)}
+input[type=range]{width:100%}
+.lay label{display:flex;align-items:center;gap:7px;margin:3px 0;font-size:13px}
+.note{font-size:12px;color:var(--mute)}
+h3{font-size:14px;margin:12px 0 4px}
+table.chk{width:100%;border-collapse:collapse;font-size:12px}table.chk td,table.chk th{border-bottom:1px solid var(--line);padding:3px 4px;text-align:left}
+#card{right:56px;top:12px;width:300px;padding:12px 14px;display:none}
+#card h2{font-size:15px;margin:0 0 4px}
+#card .x{position:absolute;right:8px;top:6px;border:0;background:none;color:var(--mute);font-size:18px;cursor:pointer}
+#bottom{left:12px;right:12px;bottom:12px;padding:8px 12px}
+#bottom .top{display:flex;align-items:center;gap:10px}
+#time{font-weight:700;font-variant-numeric:tabular-nums;min-width:170px}
+#slider{flex:1}
+#chart{width:100%;height:54px;display:block;cursor:pointer}
+.legend{display:flex;align-items:center;gap:4px;font-size:11.5px;color:var(--mute);flex-wrap:wrap}
+.legend i{display:inline-block;width:18px;height:10px;border-radius:2px}
+#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16px;background:var(--bg);z-index:10}
+a{color:var(--accent)}
+@media (max-width:760px){#side{width:auto;right:52px;max-height:40%;top:8px;left:8px}#bottom .top{flex-wrap:wrap}#slider{flex-basis:100%;order:9}#chart{height:40px}#card{left:8px;right:8px;width:auto;top:auto;bottom:150px}#bottom{left:8px;right:8px;bottom:8px}#time{min-width:120px;font-size:12.5px}}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="loading">Loading Kampala…</div>
+
+<div id="side" class="panel">
+  <h1>Kampala Flood Replay</h1>
+  <div class="sub">The storm of 10–11 October 2026, hour by hour. Depths are model estimates on 30 m squares, not measurements.</div>
+  <input id="search" placeholder="Find a street, estate or landmark" autocomplete="off">
+  <ul id="results"></ul>
+  <div class="row"><button class="btn" id="gohigh">Go to the deepest water</button><button class="btn" id="copy">Copy link</button></div>
+  <div class="stats">
+    <div class="stat"><b id="sArea">–</b><span>land under ≥ 10 cm</span></div>
+    <div class="stat"><b id="sBld">–</b><span>buildings with water at the door</span></div>
+    <div class="stat"><b id="sRoad">–</b><span>road under ≥ 30 cm</span></div>
+    <div class="stat"><b id="sRain">–</b><span>rain this hour, city average</span></div>
+  </div>
+  <div class="tabs"><button data-t="story" class="on">The storm</button><button data-t="settings">Settings</button><button data-t="layers">Layers</button><button data-t="model">How good is it</button></div>
+
+  <div class="tab on" id="t-story">
+    <p><b>What happened.</b> Rain fell on Kampala late on the morning of Saturday 10 October and again from about 2 a.m. on Sunday 11 October. News reports placed flooding at <b>Lubigi</b>, where the Kampala–Hoima road went under water, at <b>Kinawataka</b>, <b>Banda</b> and <b>Kimbejja</b>. Two people died when a wall collapsed onto a rented room.</p>
+    <p><b>What the replay shows.</b> Water rises along the valley channels in the small hours of Sunday, peaks around 3–5 a.m., and drains within hours. Radar satellite passes 13 and 25 hours later found almost no standing water.</p>
+    <h3>Key moments</h3>
+    <div id="moments" class="row"></div>
+    <p class="note">Orange markers: places named in news reports of this storm. Click anywhere on the map for that spot's water, hour by hour.</p>
+  </div>
+
+  <div class="tab" id="t-settings">
+    <p class="note">The model runs in your browser. Change a setting and press <b>Run again</b>.</p>
+    <label class="set">Rain multiplier: <span id="vMult"></span><br><small>Satellites smooth out thunderstorm peaks; ×1 is the satellite rain as measured. Default ×1.5 (see “How good is it”).</small></label>
+    <input type="range" id="mult" min="0.5" max="3" step="0.1">
+    <label class="set">Silt in the channels: <span id="vSilt"></span><br><small>Share of channel depth lost to silt and waste. 0% is a clean channel; 30% is the study's estimate for today.</small></label>
+    <input type="range" id="silt" min="0" max="0.5" step="0.05">
+    <label class="set">Paving on the hills</label>
+    <div class="row"><button class="btn" data-pave="2020">Today (2020)</button><button class="btn" data-pave="1990">As in 1990</button></div>
+    <div class="row"><button class="btn primary" id="run">Run again</button><button class="btn" id="reset">Reset</button></div>
+    <p class="note">Try: silt 0% (clean channels) against 30%; or 1990 paving with today's rain.</p>
+  </div>
+
+  <div class="tab" id="t-layers">
+    <div class="lay">
+      <label><input type="checkbox" data-l="flood" checked> Floodwater</label>
+      <label><input type="checkbox" data-l="bld" checked> Buildings (red: water at the door)</label>
+      <label><input type="checkbox" data-l="roads" checked> Roads under water</label>
+      <label><input type="checkbox" data-l="rain"> Rain (satellite, 4 km)</label>
+      <label><input type="checkbox" data-l="reports" checked> Reported flooding, this storm</label>
+      <label><input type="checkbox" data-l="hotspots"> Known flood hotspots</label>
+      <label><input type="checkbox" data-l="sat"> Satellite image base</label>
+      <label><input type="checkbox" data-l="terrain" checked> 3D terrain (heights × 3)</label>
+    </div>
+    <h3>Water depth</h3>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="tab" id="t-model">
+    <p><b>How it works.</b> Hourly satellite rain (PERSIANN-CCS, about 4 km) falls on each of Kampala's 6,914 channel stretches. The flow each stretch receives comes from the rational method (rain intensity over the time the catchment takes to respond, its paved share and area). Flow beyond what the channel can carry spills onto the valley floor; the water level comes from the shape of the ground beside each stretch, and depth is that level minus the height of each 30 m square above its drain. This is the Kampala drainage screening model, run hour by hour.</p>
+    <p><b>Checks against this storm</b> (peak modelled depth within 500 m of each reported place):</p>
+    <table class="chk"><tr><th>Place</th><th>×1</th><th>×1.5</th><th>×2</th></tr>
+      <tr><td>Lubigi (Hoima Road)</td><td>0.7 m</td><td>1.6 m</td><td>2.3 m</td></tr>
+      <tr><td>Kinawataka</td><td>0.2 m</td><td>0.7 m</td><td>0.9 m</td></tr>
+      <tr><td>Kimbejja</td><td>dry</td><td>0.1 m</td><td>0.3 m</td></tr>
+      <tr><td>Banda</td><td>dry</td><td>dry</td><td>dry</td></tr></table>
+    <p class="note">The model peaks at Lubigi and Kinawataka between 3 and 5 a.m. on 11 October, when the Hoima road was reported under water. It misses Banda, which has little valley floor near a mapped channel: flooding there is probably surface water on streets, which this model does not include.</p>
+    <p><b>Why ×1.5 by default.</b> Satellite rain at 4 km spreads a thunderstorm's core over a large area. Against Kampala's rain gauge, satellite rain underestimated the heaviest days about 1.9-fold. ×1.5 sits between the satellite as measured and that gauge correction; use the slider to see both ends.</p>
+    <p><b>Limits.</b> Ground heights are 30 m satellite terrain (Copernicus GLO-30), accurate to a few metres; the depths show the pattern of the flood, not the depth at any one door. Street drains, culvert blockages at single crossings, walls and surface water away from channels are not modelled. Lake Victoria's level is not modelled. No satellite flood map exists for this storm: the floodwater drained before the radar passed.</p>
+    <h3>Sources</h3>
+    <ul class="note">
+      <li>Rain: PERSIANN-CCS hourly, CHRS, University of California, Irvine</li>
+      <li>Ground heights and channels: Copernicus DEM GLO-30 (© DLR/Airbus, ESA); channel network and drainage model: Kampala Flood Watch (this study)</li>
+      <li>Buildings and heights: Microsoft Global ML Building Footprints (ODbL)</li>
+      <li>Roads, names and base map: © OpenStreetMap contributors, via OpenFreeMap; search: Photon by Komoot</li>
+      <li>3D terrain tiles: Mapzen/AWS Terrain Tiles; satellite base: Esri World Imagery</li>
+      <li>Reports of this storm: NTV, Daily Monitor, KFM, allAfrica (Kampala flood catalogue)</li>
+    </ul>
+    <p class="note">Credit: Gava Charles · Kampala Flood Watch. A screening tool: indicative, not for design or insurance.</p>
+  </div>
+</div>
+
+<div id="card" class="panel"><button class="x" id="cardx">×</button><div id="cardbody"></div></div>
+
+<div id="bottom" class="panel">
+  <div class="top">
+    <button class="btn" id="play">▶</button>
+    <button class="btn" data-sp="1">1×</button><button class="btn" data-sp="2">2×</button><button class="btn" data-sp="4">4×</button>
+    <div id="time"></div>
+    <input type="range" id="slider" min="0" max="45" step="1">
+  </div>
+  <svg id="chart" viewBox="0 0 460 54" preserveAspectRatio="none"></svg>
+  <div class="legend"><i style="background:#6fa8dc"></i>rain (bars) <i style="background:#c62828;height:3px"></i>land under water (line) · click the chart to jump</div>
+</div>
+
+<script>
+const DATA = "data/";
+const fail = m => { const l = document.getElementById("loading"); l.style.display = "flex"; l.textContent = "Could not load the replay: " + m; };
+window.addEventListener("error", e => fail(e.message));
+window.addEventListener("unhandledrejection", e => { if (e.reason && e.reason.name === "AbortError") return; fail(e.reason && e.reason.message || e.reason); });
+const DEPTH_EDGES = [0.1, 0.2, 0.5, 1.0, 1.5, 2.0, 99];
+const DEPTH_COLS = [[63,243,242],[51,197,245],[75,142,240],[79,95,227],[106,31,208],[255,47,213]];
+const DEPTH_LABS = ["10–20 cm","20–50 cm","0.5–1 m","1–1.5 m","1.5–2 m","> 2 m"];
+const BBOX = [32.45, 0.20, 32.72, 0.42];
+let M = {}, H = null, T = 0, NS = 0, NH = 0, NG = 0, t = 0, speed = 1, timer = null;
+let cellIdx, cellSeg, cellHand, W = 0, Hh = 0, bSeg, bHand, rSeg, rHand, rLen, stats = [], prevB = new Set(), prevR = new Map();
+const S = {mult: 1.5, silt: 0.3, paving: "2020"};
+const $ = id => document.getElementById(id);
+
+// ------------------------------------------------------------ settings from the URL
+const q = new URLSearchParams(location.search);
+if (q.has("m")) S.mult = +q.get("m"); if (q.has("s")) S.silt = +q.get("s"); if (q.has("p")) S.paving = q.get("p");
+if (q.has("t")) t = +q.get("t");
+
+// ------------------------------------------------------------ the model (same equations as src/kf_export.py)
+function runModel() {
+  const n = NS, T_ = NH, G = NG, hg = M.hg;
+  H = new Float32Array(n * T_);
+  for (let k = 0; k < n; k++) {
+    const K = SEG[k * 5], C = S.paving === "2020" ? SEG[k * 5 + 1] : SEG[k * 5 + 2];
+    const capC = SEG[k * 5 + 3], capS = SEG[k * 5 + 4];
+    const cap = capC * Math.pow(capS / capC, S.silt / 0.3);
+    for (let j = 0; j < T_; j++) {
+      const over = K * C * RAIN[k * T_ + j] * S.mult - cap;
+      if (over <= 0) continue;
+      let i = 0; const o = k * G;
+      while (i < G - 1 && RATING[o + i] < over) i++;
+      H[k * T_ + j] = hg[i];
+    }
+  }
+  // per-hour statistics
+  stats = [];
+  for (let j = 0; j < T_; j++) {
+    let a = 0, b = 0, r = 0, deep = 0, deepAt = -1;
+    for (let c = 0; c < cellSeg.length; c++) {
+      const d = H[cellSeg[c] * T_ + j] - cellHand[c];
+      if (d >= 0.0999) { a++; if (d > deep) { deep = d; deepAt = c; } }
+    }
+    for (let i = 0; i < bSeg.length; i++) if (H[bSeg[i] * T_ + j] - bHand[i] >= 0.0999) b++;
+    for (let i = 0; i < rSeg.length; i++) if (H[rSeg[i] * T_ + j] - rHand[i] >= 0.2999) r += rLen[i];
+    stats.push({area: a * 900 / 1e6, bld: b, road: r / 1000, deep, deepAt, rain: RAINMEAN[j]});
+  }
+}
+
+// ------------------------------------------------------------ drawing
+const cv = document.createElement("canvas"), cx = cv.getContext("2d");
+function depthColour(d) { for (let i = 0; i < DEPTH_COLS.length; i++) if (d < DEPTH_EDGES[i + 1]) return DEPTH_COLS[i]; return DEPTH_COLS.at(-1); }
+function drawFlood() {
+  const img = cx.createImageData(W, Hh), px = img.data;
+  for (let c = 0; c < cellSeg.length; c++) {
+    const d = H[cellSeg[c] * NH + t] - cellHand[c];
+    if (d < 0.0999) continue;
+    const col = depthColour(d), p = cellIdx[c] * 4;
+    px[p] = col[0]; px[p + 1] = col[1]; px[p + 2] = col[2]; px[p + 3] = 215;
+  }
+  cx.putImageData(img, 0, 0);
+  map.getSource("flood").updateImage({url: cv.toDataURL(), coordinates: COORDS});
+}
+function drawFeatures() {
+  const nowB = new Set();
+  for (let i = 0; i < bSeg.length; i++) if (H[bSeg[i] * NH + t] - bHand[i] >= 0.0999) nowB.add(i);
+  for (const i of prevB) if (!nowB.has(i)) map.setFeatureState({source: "bld", id: i}, {wet: false});
+  for (const i of nowB) if (!prevB.has(i)) map.setFeatureState({source: "bld", id: i}, {wet: true});
+  prevB = nowB;
+  const nowR = new Map();
+  for (let i = 0; i < rSeg.length; i++) { const d = H[rSeg[i] * NH + t] - rHand[i]; if (d >= 0.0999) nowR.set(i, d >= 0.2999 ? 2 : 1); }
+  for (const [i] of prevR) if (!nowR.has(i)) map.setFeatureState({source: "roads", id: i}, {d: 0});
+  for (const [i, v] of nowR) if (prevR.get(i) !== v) map.setFeatureState({source: "roads", id: i}, {d: v});
+  prevR = nowR;
+}
+const rcv = document.createElement("canvas"), rcx = rcv.getContext("2d");
+function drawRain() {
+  const g = RG, h = g.lat.length, w = g.lon.length; rcv.width = w; rcv.height = h;
+  const img = rcx.createImageData(w, h);
+  for (let i = 0; i < h; i++) for (let j = 0; j < w; j++) {
+    const v = g.rain[t][i][j], p = (i * w + j) * 4;
+    if (v < 0.3) continue;
+    const a = Math.min(1, Math.log1p(v) / Math.log1p(25));
+    img.data[p] = 40; img.data[p + 1] = 90 + 60 * (1 - a); img.data[p + 2] = 220; img.data[p + 3] = 60 + 170 * a;
+  }
+  rcx.putImageData(img, 0, 0);
+  map.getSource("rain").updateImage({url: rcv.toDataURL(), coordinates: RCOORDS});
+}
+function fmtTime(j) {
+  const d = new Date(M.hours[j] + ":00+03:00");
+  return d.toLocaleString("en-GB", {weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Africa/Kampala"});
+}
+function render() {
+  $("slider").value = t; $("time").textContent = fmtTime(t) + " (Kampala)";
+  const s = stats[t];
+  $("sArea").textContent = s.area.toFixed(1) + " km²"; $("sBld").textContent = s.bld.toLocaleString();
+  $("sRoad").textContent = s.road.toFixed(1) + " km"; $("sRain").textContent = s.rain.toFixed(1) + " mm";
+  drawFlood(); drawFeatures(); if ($("lrain").checked) drawRain(); drawChart(); if (CARD) showCard(CARD);
+}
+function drawChart() {
+  const svg = $("chart"), n = NH, w = 460, h = 54, bw = w / n;
+  const rmax = Math.max(...stats.map(s => s.rain), 1), amax = Math.max(...stats.map(s => s.area), 0.1);
+  let out = "";
+  stats.forEach((s, j) => { const bh = (s.rain / rmax) * (h - 6); out += `<rect x="${j * bw + 1}" y="${h - bh}" width="${bw - 2}" height="${bh}" fill="#6fa8dc"/>`; });
+  out += `<polyline fill="none" stroke="#c62828" stroke-width="2" points="${stats.map((s, j) => `${(j + 0.5) * bw},${h - 2 - (s.area / amax) * (h - 8)}`).join(" ")}"/>`;
+  out += `<rect x="${t * bw}" y="0" width="${bw}" height="${h}" fill="none" stroke="currentColor" stroke-width="1.5"/>`;
+  svg.innerHTML = out;
+}
+
+// ------------------------------------------------------------ street card
+let CARD = null;
+function nearestCell(lng, lat) {
+  const col = Math.floor((lng - M.cells_bounds[0]) / ((M.cells_bounds[2] - M.cells_bounds[0]) / W));
+  const row = Math.floor((M.cells_bounds[3] - lat) / ((M.cells_bounds[3] - M.cells_bounds[1]) / Hh));
+  let best = -1, bd = 1e9;
+  for (let dr = -2; dr <= 2; dr++) for (let dc = -2; dc <= 2; dc++) {
+    const k = PIX.get((row + dr) * W + (col + dc)); if (k === undefined) continue;
+    const dd = dr * dr + dc * dc; if (dd < bd) { bd = dd; best = k; }
+  }
+  return best;
+}
+function showCard(p) {
+  CARD = p; const c = nearestCell(p.lng, p.lat); let html = `<h2>${p.name || "Pinned place"}</h2>`;
+  if (c < 0) {
+    html += `<p class="note">This spot is not on a valley floor next to a mapped channel, so the model gives it no river water. Surface water on streets is not modelled.</p>`;
+  } else {
+    const seg = cellSeg[c], ser = []; let pk = 0, pkj = 0, hrs = 0;
+    for (let j = 0; j < NH; j++) { const d = Math.max(0, H[seg * NH + j] - cellHand[c]); ser.push(d); if (d > pk) { pk = d; pkj = j; } if (d >= 0.1) hrs++; }
+    const now = ser[t], nm = M.seg_name[seg] || "an unnamed channel", sys = M.seg_system[seg];
+    html += `<p><b>${now >= 0.1 ? (now < 1 ? Math.round(now * 100) + " cm" : now.toFixed(1) + " m") : "Dry"}</b> at ${fmtTime(t)}</p>`;
+    html += `<p class="note">Peak: ${pk >= 0.1 ? (pk < 1 ? Math.round(pk * 100) + " cm" : pk.toFixed(1) + " m") + " at " + fmtTime(pkj) : "stays below 10 cm"} · ${hrs} hour${hrs === 1 ? "" : "s"} at 10 cm or more<br>Ground ${cellHand[c].toFixed(1)} m above ${nm}${sys ? " (" + sys + " system)" : ""}</p>`;
+    const w = 268, h = 60, mx = Math.max(0.3, ...ser);
+    html += `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><line x1="0" x2="${w}" y1="${h - 2 - 0.1 / mx * (h - 6)}" y2="${h - 2 - 0.1 / mx * (h - 6)}" stroke="#999" stroke-dasharray="3 3"/>
+      <polyline fill="none" stroke="#0b5cad" stroke-width="2" points="${ser.map((d, j) => `${j / (NH - 1) * w},${h - 2 - d / mx * (h - 6)}`).join(" ")}"/>
+      <line x1="${t / (NH - 1) * w}" x2="${t / (NH - 1) * w}" y1="0" y2="${h}" stroke="#c62828"/></svg>
+      <div class="note">Water depth, Sat 09:00 → Mon 06:00 (dashed: 10 cm)</div>`;
+  }
+  $("cardbody").innerHTML = html; $("card").style.display = "block";
+  if (pinMarker) pinMarker.setLngLat([p.lng, p.lat]); else pinMarker = new maplibregl.Marker({color: "#0b5cad"}).setLngLat([p.lng, p.lat]).addTo(map);
+}
+let pinMarker = null;
+$("cardx").onclick = () => { $("card").style.display = "none"; CARD = null; if (pinMarker) { pinMarker.remove(); pinMarker = null; } };
+
+// ------------------------------------------------------------ map
+const map = new maplibregl.Map({
+  container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
+  center: [32.585, 0.33], zoom: 12.2, pitch: 50, bearing: -15, maxBounds: [[32.30, 0.08], [32.90, 0.55]],
+  attributionControl: {compact: true, customAttribution: "Kampala Flood Replay · Credit: Gava Charles · rain PERSIANN-CCS (CHRS) · terrain Copernicus GLO-30, AWS Terrain Tiles · buildings Microsoft"}
+});
+map.addControl(new maplibregl.NavigationControl({visualizePitch: true}), "top-right");
+let SEG, RATING, RAIN, RG, RAINMEAN, PIX, COORDS, RCOORDS;
+
+async function bin(f) { return new Float32Array(await (await fetch(DATA + f)).arrayBuffer()); }
+async function load() {
+  M = await (await fetch(DATA + "meta.json")).json();
+  NS = M.n_seg; NH = M.hours.length; NG = M.hg.length;
+  [SEG, RATING, RAIN] = await Promise.all([bin("seg.bin"), bin("rating.bin"), bin("rain_seg.bin")]);
+  RG = await (await fetch(DATA + "rain_grid.json")).json();
+  // city-average rain per hour, over the drainage box
+  RAINMEAN = RG.rain.map(fr => { let s = 0, n = 0; RG.lat.forEach((la, i) => RG.lon.forEach((lo, j) => { if (la >= BBOX[1] && la <= BBOX[3] && lo >= BBOX[0] && lo <= BBOX[2]) { s += fr[i][j]; n++; } })); return s / n; });
+  // cells: decode stretch index and HAND from the PNG
+  const blob = await (await fetch(DATA + "cells.png")).blob();
+  const bmp = await createImageBitmap(blob, {colorSpaceConversion: "none", premultiplyAlpha: "none"});
+  W = bmp.width; Hh = bmp.height; cv.width = W; cv.height = Hh;
+  const tmp = document.createElement("canvas"); tmp.width = W; tmp.height = Hh;
+  const tc = tmp.getContext("2d", {willReadFrequently: true}); tc.drawImage(bmp, 0, 0);
+  const px = tc.getImageData(0, 0, W, Hh).data, idx = [], sg = [], hd = [];
+  PIX = new Map();
+  for (let i = 0; i < W * Hh; i++) { const s = px[i * 4] * 256 + px[i * 4 + 1]; if (s === 65535) continue; PIX.set(i, idx.length); idx.push(i); sg.push(s); hd.push(px[i * 4 + 2] / 20); }
+  cellIdx = Int32Array.from(idx); cellSeg = Uint16Array.from(sg); cellHand = Float32Array.from(hd);
+  const [w0, s0, e0, n0] = M.cells_bounds; COORDS = [[w0, n0], [e0, n0], [e0, s0], [w0, s0]];
+  const dl = 0.02; RCOORDS = [[RG.lon[0] - dl, RG.lat[0] + dl], [RG.lon.at(-1) + dl, RG.lat[0] + dl], [RG.lon.at(-1) + dl, RG.lat.at(-1) - dl], [RG.lon[0] - dl, RG.lat.at(-1) - dl]];
+  const [bj, rj, pl] = await Promise.all([fetch(DATA + "buildings.json").then(r => r.json()), fetch(DATA + "roads.json").then(r => r.json()), fetch(DATA + "places.json").then(r => r.json())]);
+  bj.features.forEach((f, i) => f.id = i); rj.features.forEach((f, i) => f.id = i);
+  bSeg = Uint16Array.from(bj.features.map(f => f.properties.s)); bHand = Float32Array.from(bj.features.map(f => f.properties.h / 100));
+  rSeg = Uint16Array.from(rj.features.map(f => f.properties.s)); rHand = Float32Array.from(rj.features.map(f => f.properties.h / 100));
+  rLen = Float32Array.from(rj.features.map(f => f.properties.len_m));
+  return {bj, rj, pl};
+}
+
+map.on("load", async () => {
+  $("loading").textContent = "Loading the storm…";
+  const {bj, rj, pl} = await load();
+  map.addSource("dem", {type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14});
+  map.setTerrain({source: "dem", exaggeration: 3});
+  map.addSource("sat", {type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, attribution: "Imagery © Esri, Maxar, Earthstar Geographics"});
+  map.addLayer({id: "sat", type: "raster", source: "sat", layout: {visibility: "none"}}, map.getStyle().layers.find(l => l.type === "symbol")?.id);
+  ["building", "building-3d"].forEach(id => map.getLayer(id) && map.setLayoutProperty(id, "visibility", "none"));
+  map.addSource("flood", {type: "image", url: cv.toDataURL(), coordinates: COORDS});
+  map.addLayer({id: "flood", type: "raster", source: "flood", paint: {"raster-resampling": "nearest", "raster-fade-duration": 0}});
+  map.addSource("rain", {type: "image", url: rcv.toDataURL(), coordinates: RCOORDS});
+  map.addLayer({id: "rain", type: "raster", source: "rain", layout: {visibility: "none"}, paint: {"raster-resampling": "linear", "raster-fade-duration": 0, "raster-opacity": 0.75}});
+  map.addSource("roads", {type: "geojson", data: rj});
+  map.addLayer({id: "roads", type: "line", source: "roads", paint: {"line-color": ["case", ["==", ["feature-state", "d"], 2], "#ff3d7f", ["==", ["feature-state", "d"], 1], "#ffb000", "rgba(0,0,0,0)"], "line-width": ["interpolate", ["linear"], ["zoom"], 11, 2, 16, 6]}});
+  map.addSource("bld", {type: "geojson", data: bj});
+  map.addLayer({id: "bld", type: "fill-extrusion", source: "bld", minzoom: 13, paint: {"fill-extrusion-color": ["case", ["boolean", ["feature-state", "wet"], false], "#d7301f", "#cfc8bd"], "fill-extrusion-height": ["get", "ht"], "fill-extrusion-opacity": 0.85}});
+  map.addSource("reports", {type: "geojson", data: {type: "FeatureCollection", features: pl.event.map(p => ({type: "Feature", properties: {name: p.name}, geometry: {type: "Point", coordinates: [p.lon, p.lat]}}))}});
+  map.addLayer({id: "reports", type: "circle", source: "reports", paint: {"circle-radius": 9, "circle-color": "#ff8c00", "circle-stroke-color": "#fff", "circle-stroke-width": 2}});
+  map.addLayer({id: "reports-l", type: "symbol", source: "reports", layout: {"text-field": ["get", "name"], "text-offset": [0, 1.3], "text-size": 13, "text-font": ["Noto Sans Bold"]}, paint: {"text-color": "#7a3d00", "text-halo-color": "#fff", "text-halo-width": 1.5}});
+  map.addSource("hotspots", {type: "geojson", data: {type: "FeatureCollection", features: pl.hotspots.map(p => ({type: "Feature", properties: {name: p.name}, geometry: {type: "Point", coordinates: [p.lon, p.lat]}}))}});
+  map.addLayer({id: "hotspots", type: "circle", source: "hotspots", layout: {visibility: "none"}, paint: {"circle-radius": 5, "circle-color": "#fff", "circle-stroke-color": "#c62828", "circle-stroke-width": 2}});
+
+  setControls(); runModel();
+  $("loading").style.display = "none";
+  render();
+  document.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
+  // key moments
+  const peak = stats.reduce((b, s, j) => s.area > stats[b].area ? j : b, 0);
+  const rainPeak = stats.reduce((b, s, j) => s.rain > stats[b].rain ? j : b, 0);
+  [["Saturday's first rain", 2], ["Sunday's heaviest rain", rainPeak], ["Most land under water", peak], ["Mostly drained", Math.min(NH - 1, peak + 6)]]
+    .forEach(([lab, j]) => { const b = document.createElement("button"); b.className = "btn"; b.textContent = lab; b.onclick = () => { stop(); t = j; render(); }; $("moments").appendChild(b); });
+});
+
+map.on("click", e => {
+  const f = map.queryRenderedFeatures(e.point, {layers: ["reports"]})[0];
+  showCard({lng: e.lngLat.lng, lat: e.lngLat.lat, name: f ? f.properties.name + " (reported flooding)" : null});
+});
+
+// ------------------------------------------------------------ controls
+function setControls() {
+  $("mult").value = S.mult; $("silt").value = S.silt;
+  $("vMult").textContent = "×" + S.mult.toFixed(1); $("vSilt").textContent = Math.round(S.silt * 100) + "%";
+  document.querySelectorAll("[data-pave]").forEach(b => b.classList.toggle("primary", b.dataset.pave === S.paving));
+  const lg = $("legend"); lg.innerHTML = DEPTH_COLS.map((c, i) => `<i style="background:rgb(${c})"></i>${DEPTH_LABS[i]}`).join(" ") +
+    ` <i style="background:#ff3d7f"></i>road ≥ 30 cm <i style="background:#ffb000"></i>road 10–30 cm`;
+}
+$("mult").oninput = e => { S.mult = +e.target.value; setControls(); };
+$("silt").oninput = e => { S.silt = +e.target.value; setControls(); };
+document.querySelectorAll("[data-pave]").forEach(b => b.onclick = () => { S.paving = b.dataset.pave; setControls(); });
+$("run").onclick = () => { runModel(); render(); };
+$("reset").onclick = () => { Object.assign(S, {mult: 1.5, silt: 0.3, paving: "2020"}); setControls(); runModel(); render(); };
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x.id === "t-" + b.dataset.t));
+});
+$("slider").oninput = e => { stop(); t = +e.target.value; render(); };
+$("chart").onclick = e => { const r = $("chart").getBoundingClientRect(); stop(); t = Math.min(NH - 1, Math.floor((e.clientX - r.left) / r.width * NH)); render(); };
+function stop() { clearInterval(timer); timer = null; $("play").textContent = "▶"; }
+$("play").onclick = () => { if (timer) return stop(); $("play").textContent = "❚❚"; timer = setInterval(() => { t = (t + 1) % NH; render(); }, 900 / speed); };
+document.querySelectorAll("[data-sp]").forEach(b => b.onclick = () => { speed = +b.dataset.sp; if (timer) { stop(); $("play").click(); } });
+// layers
+const LAY = {flood: ["flood"], bld: ["bld"], roads: ["roads"], rain: ["rain"], reports: ["reports", "reports-l"], hotspots: ["hotspots"], sat: ["sat"]};
+document.querySelectorAll("[data-l]").forEach(c => { if (c.dataset.l === "rain") c.id = "lrain"; c.onchange = () => {
+  const l = c.dataset.l;
+  if (l === "terrain") return map.setTerrain(c.checked ? {source: "dem", exaggeration: 3} : null);
+  LAY[l].forEach(id => map.setLayoutProperty(id, "visibility", c.checked ? "visible" : "none"));
+  if (l === "rain" && c.checked) drawRain();
+}; });
+$("gohigh").onclick = () => {
+  const j = stats.reduce((b, s, i) => s.deep > stats[b].deep ? i : b, 0), c = stats[j].deepAt; if (c < 0) return;
+  const i = cellIdx[c], col = i % W, row = Math.floor(i / W), [w0, s0, e0, n0] = M.cells_bounds;
+  const lng = w0 + (col + 0.5) * (e0 - w0) / W, lat = n0 - (row + 0.5) * (n0 - s0) / Hh;
+  stop(); t = j; render(); map.flyTo({center: [lng, lat], zoom: 15.5, pitch: 55}); showCard({lng, lat, name: "Deepest modelled water"});
+};
+$("copy").onclick = () => {
+  const u = new URL(location.href); u.search = new URLSearchParams({t, m: S.mult, s: S.silt, p: S.paving});
+  navigator.clipboard.writeText(u.toString()).then(() => { $("copy").textContent = "Copied"; setTimeout(() => $("copy").textContent = "Copy link", 1500); });
+};
+// search (Photon by Komoot, limited to Kampala)
+let st = null;
+$("search").oninput = e => { clearTimeout(st); const v = e.target.value.trim(); if (v.length < 3) { $("results").innerHTML = ""; return; }
+  st = setTimeout(async () => {
+    const r = await fetch(`https://photon.komoot.io/api/?q=${encodeURIComponent(v)}&limit=6&lat=0.33&lon=32.58&bbox=${BBOX.join(",")}`).then(r => r.json()).catch(() => ({features: []}));
+    $("results").innerHTML = ""; r.features.forEach(f => {
+      const li = document.createElement("li"), p = f.properties; li.textContent = [p.name, p.street, p.district || p.city].filter(Boolean).join(", ");
+      li.onclick = () => { const [lng, lat] = f.geometry.coordinates; map.flyTo({center: [lng, lat], zoom: 15.5}); showCard({lng, lat, name: p.name}); $("results").innerHTML = ""; };
+      $("results").appendChild(li);
+    });
+  }, 300);
+};
+</script>
+</body>
+</html>
