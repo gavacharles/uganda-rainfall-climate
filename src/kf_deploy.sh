@@ -12,7 +12,7 @@ git clone -q "https://github.com/$REPO.git" "$TMP/site" 2>/dev/null || mkdir -p 
 cd "$TMP/site"
 [ -d .git ] || git init -q -b main
 find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-cp "$HERE/tool_replay/index.html" .
+cp "$HERE/tool_replay/index.html" "$HERE/tool_replay/developers.html" .
 mkdir data && cp "$HERE"/tool_replay/data/* data/
 touch .nojekyll
 cat > README.md <<'R'
@@ -25,7 +25,11 @@ The Kampala storm of 10–11 October 2026, replayed hour by hour on a 3D map:
 - **Floodwater:** modelled depth on 30 m squares along the city's valley channels.
 - **Buildings with water at the door,** and **roads under water.**
 - **Settings you can change and run again:** rain multiplier, silt in the channels, and paving on the hills (today or as in 1990).
-- **Search** any street or landmark, or click the map, for that spot's water hour by hour.
+- **Search** any street or landmark, paste a Google Maps or Apple Maps link, or click the map: a card gives that spot's water hour by hour, how deep in body terms, how long it stayed, the nearest road under water and the nearest channel with its maintenance priority.
+- **Day and night:** the light follows the time of the replay, or stays day or night.
+- **Compare with clean channels:** shows in green the land, buildings and roads that desilted channels would have kept dry in the same storm.
+- **Reports:** each news report of the storm is on the map, with a live check of whether the model agrees.
+- **Embed and data:** see [developers.html](https://gavacharles.github.io/kampala-flood-replay/developers.html).
 
 The model is the Kampala drainage screening model, run with hourly satellite rain. It reproduces the flooding reported at Lubigi and Kinawataka in the early hours of 11 October, and misses Banda. The depths are model estimates, not measurements: they show the pattern of the flood, not the depth at any one door.
 
