@@ -17,6 +17,7 @@ We inventoried potential sources from open data: 220 hospitals, 926 clinics, two
 2. **It is concentrated.** The top 10% of exposed stretches (373) hold 89% of the index. The Lubigi system alone holds half, and the Mayanja downstream of it a further 28%.
 3. **The ranking is robust.** 349 of the 373 top stretches stay in the top 10% in at least 80% of 1,000 random weightings. The top 10% is unchanged without the treatment works, and 85–89% the same when only health facilities or only sanitation are counted.
 4. **Maintenance cuts exposure by more than half.** Clean channels reduce expected annual exposure from 73,000 to 29,000 people and the index by 58%.
+5. **A satellite check partly supports the load.** At 42 channel outlets on Inner Murchison Bay, in 36 Sentinel-2 scenes, outlets carrying more routed load were murkier than other outlets on the same day after heavy rain (permutation p = 0.03), but not in dry spells (p = 0.22) or across all scenes (p = 0.11).
 
 The result is a map of where resistance in floodwater is most likely to reach people, and a stratified frame of 30 sampling sites for the field study that will test it.
 
@@ -85,7 +86,13 @@ where E_k is the expected annual number of people in floodwater on stretch k. Th
 - **Weights.** 1,000 draws of all weights, each log-uniform within its range (treatment works 20–100, hospitals 5–20, abattoir 2–10, clinics 1–4, markets 0.5–2, waste 0.2–1, sanitation 0.5–2). For each stretch we record the share of draws in which it is in the top 10%.
 - **Structure.** Overlap of the top 10% with five variants: without treatment works; health facilities only; sanitation only; exposure counted as buildings; clean channels.
 
-## 3.6 Sampling frame
+## 3.6 Satellite check at the bay
+
+Routed load is a model quantity. As an independent check, we asked whether lake water off the channel outlets that carry more load is murkier. Outlets were land cells within 60 m of the open water of Inner Murchison Bay (the water mask of paper 2) where flow accumulation is at least 0.25 km²; cells within 400 m form one outlet, giving 42 outlets. In each of 36 cached Sentinel-2 L2A scenes (2018–2026), we took the median turbidity (Dogliotti et al., 2015) of open-water pixels within 400 m of each outlet, divided by the median of the open-lake reference zone in the same scene; outlets with fewer than 20 valid pixels in a scene were skipped. Rain is CHIRPS over Kampala in the three days before each scene; scenes with 25 mm or more are wet.
+
+Two tests: (1) across outlets, Spearman correlation of the mean log ratio with log routed load; (2) within scenes, the slope of log ratio on log(1 + load) after removing each scene's mean, for all, dry and wet scenes. Because outlet-days are not independent, p-values come from permuting routed load among the 40 outlets with at least five usable scenes, 2,000 times. Turbidity measures sediment and runoff, not resistance: the test asks whether routed load marks where catchment discharge reaches the lake, not whether resistance does.
+
+## 3.7 Sampling frame
 
 Stretches with flood exposure were split at the median into high or low routed load and high or low exposure. In each of the four strata, and among upland stretches without flood exposure (controls), we selected the six highest-ranked stretches at least 1 km from every other selected site, giving 30 sites for paper 7.
 
@@ -127,6 +134,10 @@ In the 1990 city (1990 paving and population, channels at design capacity), expe
 
 The 30 sites (Figure 5) span the four strata and six upland controls. High-load, high-exposure sites lie on the Lubigi and its Nsooba and Kalerwe tributaries; low-load, high-exposure sites on the southern and eastern channels; controls on upland tributaries without flood exposure.
 
+## 4.7 Satellite check
+
+Across outlets, average turbidity relative to the open lake was unrelated to routed load (Spearman ρ = 0.07, p = 0.67): standing differences between outlets reflect shoreline shape, papyrus fringes and depth more than catchment load. Within scenes, outlets with more routed load were slightly murkier than other outlets on the same day, and the gradient appears after rain: the within-scene slope was positive after 25 mm or more in three days (permutation p = 0.033), flat in dry spells (p = 0.22), and not significant across all scenes (p = 0.11) (Figure 7). The pattern is what routed load should produce if it marks where catchment discharge reaches the lake during runoff; the effect is small and rests on 371 wet outlet-days.
+
 # 5. Discussion
 
 **Where the risk is.** Exposure to floodwater carrying resistance sources is not spread across Kampala. It is concentrated on a few hundred stretches of the Lubigi, the Mayanja downstream of it, and the Nakivubo, where dense unsewered settlements and many health facilities drain into channels that flood the homes beside them. These are also the channels that earlier papers ranked highest for maintenance and for people on low ground: the same places carry the flood, the people and the load.
@@ -136,6 +147,8 @@ The 30 sites (Figure 5) span the four strata and six upland controls. High-load,
 **Maintenance as a public-health measure.** Desilting is usually justified by roads and property. This analysis adds a health argument: clean channels would remove more than half of the expected exposure to floodwater from these sources. The cheapest flood measure in Kampala is also an AMR measure.
 
 **Water supply.** Most flooded water points are protected springs and shallow wells on valley floors, used by households without piped water. They are few in the WPdx inventory, which is far from complete in Kampala, but each one flooded is a direct route from floodwater to drinking water. Downstream, the channels that rank highest to the south discharge to Inner Murchison Bay above the Ggaba intake, where paper 2 found the water at channel outlets growing murkier relative to the open lake as the wetlands shrank.
+
+**An independent signal.** The satellite check is weak but points the right way: after heavy rain, outlets carrying more routed load are murkier than other outlets the same day. Turbidity is not resistance, but it shows that the routing marks where catchment runoff reaches the lake when it rains, which is when floodwater is carrying the load.
 
 **What the map cannot say.** It does not measure resistance. It ranks where resistance in floodwater is most likely to reach people, given where sources and floods are. Whether floods raise resistant bacteria and resistance genes in water, on surfaces and in people's guts, by how much and for how long, needs measurement. The sampling frame is designed for that: if the index is right, concentrations after floods will rise with routed load, and carriage will rise with exposure hours.
 
@@ -154,7 +167,7 @@ Floodwater in Kampala passes through dense unsewered settlements, past more than
 
 # Data and code
 
-Open data only. Code: `src/am_sources.py` (inventory), `src/am_index.py` (routing, exposure, index, robustness, sampling frame), `src/am_figs.py` (figures and variants). Results: `results/am_stretches.csv`, `results/am_summary.csv`, `results/am_variants.csv`, `results/am_sampling_frame.csv`.
+Open data only. Code: `src/am_sources.py` (inventory), `src/am_index.py` (routing, exposure, index, robustness, sampling frame), `src/am_figs.py` (figures and variants), `src/am_satcheck.py` (satellite check). Results: `results/am_stretches.csv`, `results/am_summary.csv`, `results/am_variants.csv`, `results/am_sampling_frame.csv`, `results/am_satcheck_outlets.csv`, `results/am_satcheck_tests.csv`.
 
 # References
 
@@ -163,6 +176,8 @@ Open data only. Code: `src/am_sources.py` (inventory), `src/am_index.py` (routin
 Berendonk, T. U., Manaia, C. M., Merlin, C., et al. (2015). Tackling antibiotic resistance: the environmental framework. *Nature Reviews Microbiology*, 13, 310–317.
 
 de Man, H., van den Berg, H. H. J. L., Leenen, E. J. T. M., et al. (2014). Quantitative assessment of infection risk from exposure to waterborne pathogens in urban floodwater. *Water Research*, 48, 90–99.
+
+Dogliotti, A. I., Ruddick, K. G., Nechad, B., Doxaran, D., and Knaeps, E. (2015). A single algorithm to retrieve turbidity from remotely-sensed data in all coastal and estuarine waters. *Remote Sensing of Environment*, 156, 157–168.
 
 Gillings, M. R., Gaze, W. H., Pruden, A., et al. (2015). Using the class 1 integron-integrase gene as a proxy for anthropogenic pollution. *The ISME Journal*, 9, 1269–1279.
 
@@ -197,3 +212,5 @@ World Health Organization (2021). *WHO integrated global surveillance on ESBL-pr
 ![**Figure 5.** Sampling frame for paper 7: 30 sites in four strata and six upland controls.](../figures/kampala_amr/am05_sampling_frame.png){width=100%}
 
 ![**Figure 6.** (a) Expected annual people in floodwater, today and with clean channels; (b) share of the hotspot index by drainage system.](../figures/kampala_amr/am06_scenarios_systems.png){width=100%}
+
+![**Figure 7.** Satellite check: (a) channel outlets on Inner Murchison Bay coloured by routed load; (b) nearshore turbidity relative to other outlets the same day, against routed load, in dry spells and after heavy rain.](../figures/kampala_amr/am07_satellite_check.png){width=100%}
