@@ -1,0 +1,31 @@
+stratum,seg,name,system,load,eae_people,p_top10,lon,lat
+"high load, high exposure",5688,Lubigi,Lubigi,2087.754,164.55,1.0,32.53713,0.34423
+"high load, high exposure",3887,,Lubigi,1060.7485,210.93,1.0,32.56466,0.35098
+"high load, high exposure",2334,Mayanja,other / outside city catchments,2577.4583,84.53,1.0,32.49817,0.30678
+"high load, high exposure",2144,,Lubigi,2267.099,69.96,1.0,32.52486,0.32939
+"high load, high exposure",2142,Lubigi,other / outside city catchments,2562.8967,51.35,1.0,32.51545,0.31549
+"high load, high exposure",105,,Lubigi,388.09467,282.79,1.0,32.58029,0.34959
+"high load, low exposure",6630,,other / outside city catchments,3402.2153,4.54,1.0,32.46508,0.31036
+"high load, low exposure",6129,,Lubigi,1808.6848,3.66,0.998,32.55156,0.34876
+"high load, low exposure",163,Nakivubo Channel,Nakivubo,1375.4473,4.15,0.755,32.6122,0.31218
+"high load, low exposure",6623,,other / outside city catchments,3389.6582,1.68,1.0,32.47508,0.31293
+"high load, low exposure",2172,,Nakivubo,1129.0828,4.59,0.566,32.59982,0.31772
+"high load, low exposure",6765,,other / outside city catchments,697.44165,5.98,0.0,32.62413,0.41936
+"low load, high exposure",6186,,other / outside city catchments,1.6533645,246.83,0.0,32.53443,0.3676
+"low load, high exposure",6747,Kalidubi,other / outside city catchments,1.4407554,215.06,0.0,32.57464,0.25806
+"low load, high exposure",2821,Kalidubi,other / outside city catchments,1.608969,189.68,0.0,32.58712,0.25516
+"low load, high exposure",301,,other / outside city catchments,1.6531082,164.46,0.0,32.59728,0.26124
+"low load, high exposure",268,Kinawataka main Drainage Channel,Kinawataka,1.709853,156.98,0.0,32.63722,0.33286
+"low load, high exposure",1991,,Nalukolongo,1.2520384,138.67,0.0,32.55123,0.28929
+"low load, low exposure",5432,,Lubigi,1.2372134,5.43,0.0,32.55787,0.36386
+"low load, low exposure",3198,,other / outside city catchments,1.495261,4.41,0.0,32.5632,0.26948
+"low load, low exposure",3701,,other / outside city catchments,1.2948093,4.23,0.0,32.52633,0.20219
+"low load, low exposure",3848,,Lubigi,1.0427828,5.21,0.0,32.55562,0.37325
+"low load, low exposure",3011,,Nalukolongo,0.909947,5.96,0.0,32.54117,0.29307
+"low load, low exposure",1867,,Nalukolongo,0.8439392,6.21,0.0,32.54135,0.30248
+"control, no flooding",6637,,other / outside city catchments,3476.2544,0.0,0.0,32.44005,0.31084
+"control, no flooding",6645,,other / outside city catchments,3437.038,0.0,0.0,32.45028,0.31161
+"control, no flooding",2344,,other / outside city catchments,2565.9443,0.0,0.0,32.50773,0.30915
+"control, no flooding",5986,Mayanya Waswa,other / outside city catchments,545.82935,0.0,0.0,32.52077,0.41123
+"control, no flooding",488,,other / outside city catchments,343.07928,0.0,0.0,32.52783,0.2992
+"control, no flooding",5875,,Lubigi,278.1683,0.0,0.0,32.57254,0.35944

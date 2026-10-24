@@ -1,0 +1,15 @@
+,value
+stretches,6914.0
+stretches with flood exposure,3727.0
+"expected annual people exposed, 2020 silted",73105.0
+"same, clean channels",28528.0
+"same, 1990 city",2284.0
+expected annual buildings exposed,5424.0
+expected annual water points exposed,17.1
+"people exposed, 10-year storm",153303.0
+"water points exposed, 10-year storm",35.0
+top-10% stretches,373.0
+share of index in top 10%,0.889
+top-10% stretches robust (p_top10 >= 0.8),349.0
+"index total, clean channels / silted",0.416
+"index total, 1990 / 2020",0.022

@@ -1,0 +1,6 @@
+variant,overlap_with_main_top10
+without treatment works,1.0
+health facilities only,0.893
+sanitation only,0.845
+exposure as buildings,0.641
+clean channels,0.847
