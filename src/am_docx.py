@@ -13,6 +13,7 @@ D = ROOT / "figures" / "kampala_amr" / "_docx"
 def jpg(stem):
     D.mkdir(parents=True, exist_ok=True)
     src, dst = ROOT / "figures" / "kampala_amr" / f"{stem}.png", D / f"{stem}.jpg"
+    dst.parent.mkdir(parents=True, exist_ok=True)
     if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
         im = Image.open(src).convert("RGB")
         if im.width > 2000:

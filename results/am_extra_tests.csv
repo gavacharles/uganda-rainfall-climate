@@ -1,0 +1,16 @@
+test,n,estimate,p
+concentration index of AMR exposure over wealth (negative = poorer),3727,0.112,
+"median RWI, top-10% stretches vs other exposed",373,1.311 vs 1.252,0.0001
+"median flooded-building footprint m2, top-10% vs other exposed",373,72 vs 76,0.8564
+"intake turbidity / open lake, median (scenes)",35,1.164,
+"intake ratio vs 3-day rain, Spearman",35,-0.017,0.9238
+"intake ratio vs high-load outlets ratio same day, Spearman",35,0.563,0.0004
+"intake ratio, wet vs dry scenes (median)",35,1.119 vs 1.169,0.8408
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (all)",6914,9.31 -> 8.23,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (Kansanga)",59,3.84 -> 2.76,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (Kinawataka)",180,9.63 -> 6.20,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (Lubigi)",1104,14.66 -> 13.34,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (Nakivubo)",328,5.91 -> 4.21,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (Nalukolongo)",659,12.79 -> 9.32,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (Walufumbe)",13,6.83 -> 5.50,
+"load-weighted wetland on the downstream path, km, 1986 -> 2025 (other / outside city catchments)",4571,5.59 -> 5.04,

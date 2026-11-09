@@ -1,0 +1,45 @@
+event,place,modelled_water_within_500m,max_hours
+KLA-20071116,Namasuba,True,3
+KLA-20130903,Bwaise,False,0
+KLA-20130903,Kalerwe,False,0
+KLA-20130903,Kireka,False,0
+KLA-20130903,Katwe,False,0
+KLA-20130903,Ndeeba,False,0
+KLA-20160413,Kyebando,False,0
+KLA-20160413,Bwaise,True,4
+KLA-20160413,Kamwokya,True,3
+KLA-20160413,Mulago roundabout,True,1
+KLA-20160413,Kalerwe,True,3
+KLA-20180308,Bwaise,False,0
+KLA-20180426,Bwaise road cut off after Friday morning downpour,False,0
+KLA-20190526,Kikajjo,False,0
+KLA-20190526,Lubowa,True,2
+KLA-20190526,Lufuka,True,1
+KLA-20190526,Masajja,False,0
+KLA-20190526,Bunamwaya,False,0
+KLA-20200908,Clock Tower,False,0
+KLA-20230314,Kyambogo,False,0
+KLA-20230314,Banda,False,0
+KLA-20250326,Kinawataka,True,6
+KLA-20250326,Kyambogo,True,4
+KLA-20250326,Banda,True,2
+KLA-20250326,Bwaise,True,6
+KLA-20250326,Kalerwe,True,5
+KLA-20250326,Kanyanya,False,0
+KLA-20250326,Kyebando,False,0
+KLA-20250326,Bukoto,False,0
+KLA-20250326,Mukwano Road,True,4
+KLA-20250326,Namasuba,True,3
+KLA-20251031,Nakivubo Channel,True,3
+KLA-20251031,Kisenyi,True,2
+KLA-20251031,Old Taxi Park,True,3
+KLA-20251031,Kyambogo,True,3
+KLA-20260306,Centenary Park,False,0
+KLA-20260318,Kyambogo section of Jinja Highway cut off,True,3
+KLA-20260917,Banda,False,0
+KLA-20260917,Kinawataka road,False,0
+KLA-20261010,Kimbejja,True,1
+KLA-20261010,Lubigi,True,5
+KLA-20261010,Lubigi at Hoima Road,True,5
+KLA-20261010,Kinawataka,True,4
+KLA-20261010,Banda,True,1
