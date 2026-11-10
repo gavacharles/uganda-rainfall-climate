@@ -1,111 +1,73 @@
-# Uganda rainfall, climate and urban flooding: a research programme
+# uganda-rainfall-climate
 
-**Author:** Gavamukulya (Gava) Charles · started October 2026
+Code, results, figures and manuscripts for research on Uganda's rainfall and climate (1981 onwards), urban flooding in five African cities, growing-season reliability, and Kampala's drainage network. Raw data is not stored here; the download scripts rebuild it.
 
-This repository is the single home for all of this work: data pipelines, analysis code, results, papers, the report, the open maintenance map, and every graphic, animation and post made for Substack, LinkedIn and X. Raw data is not stored here; the scripts in `src/` download and rebuild it.
-
-## What's here at a glance
-
-| Strand | Status | Where |
-| --- | --- | --- |
-| **1. Uganda climate report**: the failed 2026 El Niño forecast, shifting seasons, heat, water scarcity, food security, irrigation and design advice for drainage and bulk water | Complete; published as a private web report | [`report/`](report/) · code in [`src/`](src/) · figures `fig01`–`fig37` in [`figures/`](figures/) |
-| **2. Paper: urban flooding in five cities**: *Quantifying land-cover change and climate change as drivers of urban flood peaks in Kampala, Nairobi, Dar es Salaam, Lagos and Johannesburg* | Full draft (16-model CMIP6 ensemble) | [`paper/urban_flooding_five_cities.md`](paper/urban_flooding_five_cities.md) (+ `.docx`) |
-| **3. Paper: food security**: *Divergent satellite rainfall and vegetation signals of growing-season change in Uganda, 1981–2025* | Full draft | [`paper/uganda_growing_seasons_food_security.md`](paper/uganda_growing_seasons_food_security.md) (+ `.docx`) |
-| **4. Kampala drainage and wetlands: five papers + data paper** ([programme](paper/kampala_programme.md)): 1 *Rainfall or drainage?* · 2 *The double loss* (flood storage and water treatment) · 3 *Building in the water's path* (land, housing, flood and heat) · 4 *Silt, not storms* (roads, damage, hospitals; Shapley attribution, 400-run Monte Carlo) · 5 *The next Kampalas* (regional cities and roads) · 0 flood catalogue | All drafted; earlier drafts in `paper/archive/` | [`P1`](paper/P1_rainfall_or_drainage.md) · [`P2`](paper/P2_double_loss_wetlands.md) · [`P3`](paper/P3_building_in_the_waters_path.md) · [`P4`](paper/P4_silt_not_storms.md) · [`P5`](paper/P5_next_kampalas.md) · [`P0`](paper/P0_flood_catalogue_data_paper.md) |
-| **5. Kampala Drain Watch**: open maintenance map of all 6,914 channel stretches | Live and public | Source in [`tool/`](tool/) · live site **https://gavacharles.github.io/kampala-drain-watch/** |
-| **6. Outreach: El Niño and changing seasons**: Substack article, X posts, NDP IV pieces, city cards, animations | Ready to post | [`outreach/`](outreach/) |
-| **7. Outreach: Kampala drains**: Substack ("Kampala isn't drowning in rain. It's drowning in its drains."), LinkedIn, 30+ X posts, covers, GIFs, fly-through videos, 3D films | Ready to post | [`outreach/kampala_drainage/`](outreach/kampala_drainage/) |
-
-## Related public repositories (published outputs of this one)
-
-These are public copies made for sharing; their content comes from this repository.
-
-| Repository | What it is |
-| --- | --- |
-| [gavacharles/kampala-drain-watch](https://github.com/gavacharles/kampala-drain-watch) | Hosts the public map on GitHub Pages (copy of [`tool/`](tool/)) |
-| [gavacharles/where-is-the-el-nino-rain](https://github.com/gavacharles/where-is-the-el-nino-rain) | Public companion to the El Niño Substack article (copy of the [`outreach/`](outreach/) graphics) |
+Author: Gava Charles.
 
 ## Folder guide
 
 | Folder | Contents |
 | --- | --- |
-| `src/` | All Python code: downloads, analysis, models, figures, animations, 3D films (see script tables below) |
-| `figures/` | Report and paper figures (PNG); `figures/kampala_drainage/` holds the drainage study: maps, `areas/` (one page per hotspot), `areas/flythrough/` (walk-through videos), `animations/`, `3d/` |
+| `src/` | All Python code: downloads, analysis, models, figures, animations, 3D films (script tables below) |
+| `figures/` | Report and paper figures (PNG); `figures/kampala_drainage/` holds the drainage study maps, per-hotspot pages (`areas/`), fly-through videos, animations and 3D renders |
 | `results/` | Result tables (CSV) and run logs; Kampala drainage tables start with `kd_` |
-| `paper/` | Manuscripts (Markdown and Word) and the drainage research programme |
+| `paper/` | Manuscripts (Markdown and Word) |
 | `report/` | The climate report (HTML) and its web images |
-| `tool/` | Kampala Drain Watch source: `index.src.html` (page), segment data and basemaps |
-| `outreach/` | Substack articles, X/LinkedIn posts, social graphics and animations; `outreach/kampala_drainage/` for the drainage study (`gifs/` holds every GIF) |
-| `models/`, `docs/` | Model outputs and notes |
-| `data/` | Not in git. Rebuilt by the download scripts (`data/raw/`, `data/processed/`, `data/kd/`) |
+| `tool/` | Source of the Kampala Drain Watch map: `index.src.html`, segment data, labels and basemaps |
+| `tool_replay/` | Replay page and developer notes |
+| `outreach/` | Social graphics, animations and post drafts |
+| `data/` | Not in git (except `data/kd/flood_events.csv`); rebuilt by the download scripts into `data/raw/`, `data/processed/` and `data/kd/` |
 
-## Data sources
+Related public repositories, made from this one: [kampala-drain-watch](https://github.com/gavacharles/kampala-drain-watch) (copy of `tool/`, served on GitHub Pages) and [where-is-the-el-nino-rain](https://github.com/gavacharles/where-is-the-el-nino-rain) (copy of outreach graphics).
 
-- **Rainfall**: CHIRPS v2.0 daily, 0.25° (UCSB Climate Hazards Center), 1981–present; ARC2 (NOAA CPC); GHCN-Daily gauges to calibrate extremes; NASA POWER hourly (MERRA-2)
-- **Temperature**: NOAA CPC Global Daily Tmax/Tmin, 0.5°; NASA POWER daily; GHCN-CAMS monthly land temperature
-- **Wind, humidity, radiation, pressure**: NASA POWER daily (MERRA-2 / CERES), regridded to 0.5°
-- **Soil moisture**: CPC leaky-bucket model, 0.5° · **Global rainfall**: GPCP v2.3
-- **Ocean drivers**: NOAA ERSST v5 (Niño-3.4, Indian Ocean Dipole), NOAA CPC ONI
-- **Projections**: CMIP6 (Pangeo Google Cloud zarr), 16 models, SSP2-4.5 and SSP5-8.5
-- **Vegetation and food security**: NOAA STAR Vegetation Health (VCI), FEWS NET IPC, FAOSTAT
-- **Cities and buildings**: JRC Global Human Settlement Layer R2023A (built-up and population, 1975–2030), Microsoft Global ML Building Footprints, ESA WorldCover 2021, Impact Observatory 10 m land cover 2017–2023
-- **Drains, culverts, waste points, places**: © OpenStreetMap contributors (ODbL)
-- **Terrain and satellites**: Copernicus GLO-30 DEM; Sentinel-1 RTC and Sentinel-2 (via Microsoft Planetary Computer); NASA/USGS Landsat 1986–2025; Esri World Imagery
-- **Flood records**: KCCA and NEMA hotspot lists; Daily Monitor, New Vision, NTV, The Observer, KFM, ReliefWeb, FloodList; GDELT news index
-- **Boundaries**: Natural Earth, geoBoundaries
-
-## Running
+## Setup and running
 
 ```
-sh src/run_all.sh                        # climate report pipeline (downloads ≈ 1 GB)
-.venv/bin/python src/report_images.py    # web-sized figures for report/index.html
+pip install -r requirements.txt
+sh src/run_all.sh                        # climate report pipeline (downloads about 1 GB)
+python src/report_images.py              # web-sized figures for report/index.html
 ```
 
 ### Climate report scripts
 
-| Script | Figures | What it answers |
+| Script | Figures | Topic |
 | --- | --- | --- |
-| `zones.py` | fig01 | Six rainfall-regime regions |
+| `zones.py` | fig01 | Rainfall-regime regions |
 | `rain_trends.py` | fig02–06 | Seasonal and extreme rainfall trends, annual cycle by epoch |
 | `seasons.py` | fig07–09 | Onset, cessation and length of each rainy season |
 | `climate_params.py` | fig10–13 | Temperature, wind, humidity, radiation, ET0, soil moisture |
-| `forecast.py` | fig14–19 | 2026 so far, ENSO/IOD links, hindcast skill, OND 2026 outlook |
-| `regional_global.py` | fig20–22 | Uganda vs East Africa, Africa, world |
-| `water.py` | fig23–26 | Water balance and scarcity by county, CMIP6 future |
+| `forecast.py` | fig14–19 | ENSO/IOD links, hindcast skill, seasonal outlook |
+| `regional_global.py` | fig20–22 | Uganda against East Africa, Africa and the world |
+| `water.py` | fig23–26 | Water balance and scarcity, CMIP6 projections |
 | `food_irrigation.py` | fig27–28 | Growing period, failed seasons, irrigation requirement |
-| `drainage.py` | fig29–30 | Gauge-calibrated design storms, IDF, climate uplift |
+| `drainage.py` | fig29–30 | Gauge-calibrated design storms, IDF curves, climate uplift |
 | `bulk_water.py` | fig31–32 | Design droughts, SPI, treatment drivers |
 | `maps.py` | fig33–37 | Satellite overview and close-ups |
 
-### Five-city flooding paper and food paper
+### Five-city flooding and food-security scripts
 
 `kampala_catchments.py <city>`, `kampala_flood.py <city>`, `cities_compare.py`, `fetch_city.py` (flooding); `food_paper.py`, `food_divergence.py`, `food_vci_figure.py` (food security).
 
-### Kampala drainage study (`src/kd_*.py`)
+### Kampala drainage scripts (`src/kd_*.py`)
 
-| Script | Output | What it does |
+| Script | Output | Purpose |
 | --- | --- | --- |
-| `kd_fetch.py` | `data/kd/osm_*`, POWER hourly | OpenStreetMap drains, culverts, wetlands, waste points, markets, bridges; hourly weather |
-| `kd_rain.py` | kd01–kd03 | Kampala rainfall trends, rain on flood days, intensity vs humidity |
-| `kd_network.py` | `results/kd_segments.csv`, `data/kd/segments.gpkg` | 6,914 channel stretches: pressures, priority and emerging-risk scores, validation |
-| `kd_satellite.py` | Landsat, Sentinel-1/2, land-cover layers | Satellite downloads and composites; single radar passes |
-| `kd_maps.py` | kd04–kd12, kd10b | Priority and emerging-risk maps, drivers, overlay, wetland loss, radar after the storm |
-| `kd_areas.py` | kd13 (`figures/kampala_drainage/areas/`) | One in-depth page per flood-hotspot area |
-| `kd_flythrough.py` | `areas/flythrough/*_social.mp4` | Smooth vertical walk-throughs along the channels |
-| `kd_anim.py`, `kd_anim2.py` | kd14–kd21 + `animations/` | Valley floors, people on low ground, wetland time-lapse, paving, drivers, land cover, work classes |
-| `kd_radar.py`, `kd_radar_storm_anim.py` | kd17, kd18, kd22, radar GIFs | Radar new-construction leads; storm-weekend animation |
-| `kd_3d.py`, `kd_sculpt3d.py` | `figures/kampala_drainage/3d/` | 3D films: water rising, people on low ground, the three-act "sculpt" film |
-| `kd_tests.py` | kd23–kd25 | Hold-out test, waste–culvert test, exposure decomposition |
-| `kd_catalogue.py`, `kd_threshold.py` | flood catalogue, kd26 | News-based flood catalogue (GDELT); falling-threshold test (pending) |
-| `kd_sponge.py` | kd30-kd31 | Paper 2: valley-floor storage 1975-2030, Landsat living sponge |
-| `kd_fetch2.py`, `kd_access.py` | kd32-kd33 | Paper 4 (supplement): road network, hospitals and schools under flood scenarios |
-| `kd_hydraulics.py`, `kd_damage.py` | kd39 | Papers 1 and 4: screening hydraulics, depth-damage, expected annual damage |
-| `kd_heat.py` | kd35-kd36 | Paper 3: MODIS/Landsat surface heat vs flood exposure |
-| `kd_capacity.py` | kd37-kd38 | Paper 1: design-basis drift of channel capacity |
-| `kd_cities.py`, `kd_cities_roads.py` | kd40, kd56 | Paper 5: Kampala vs Jinja, Mbale, Gulu, Mbarara, Arua |
-| `kd_paperD.py` | kd27-kd29 | Paper 3: exposure by system, settlement age, building form |
-| `kd_tool_promo.py`, `kd_programme_map.py` | demo, kd00 | Tool demo render; research-programme diagram |
+| `kd_fetch.py`, `kd_fetch2.py` | `data/kd/` | OpenStreetMap drains, culverts, wetlands, waste points, roads, facilities; hourly weather |
+| `kd_rain.py` | kd01–kd03 | Kampala rainfall trends and flood-day rainfall |
+| `kd_network.py` | `results/kd_segments.csv`, `data/kd/segments.gpkg` | Channel stretches with pressure, priority and risk scores |
+| `kd_satellite.py` | satellite layers | Landsat, Sentinel-1/2 and land-cover downloads and composites |
+| `kd_maps.py` | kd04–kd12 | Priority and risk maps, drivers, wetland loss, radar |
+| `kd_areas.py`, `kd_flythrough.py` | `figures/kampala_drainage/areas/` | Per-hotspot pages and walk-through videos |
+| `kd_anim.py`, `kd_anim2.py`, `kd_radar.py`, `kd_radar_storm_anim.py` | kd14–kd22, animations | Animations and radar products |
+| `kd_3d.py`, `kd_sculpt3d.py` | `figures/kampala_drainage/3d/` | 3D films |
+| `kd_tests.py`, `kd_catalogue.py`, `kd_threshold.py` | kd23–kd26 | Hold-out and other tests; news-based flood catalogue |
+| `kd_sponge.py`, `kd_access.py`, `kd_hydraulics.py`, `kd_damage.py`, `kd_heat.py`, `kd_capacity.py`, `kd_cities.py`, `kd_cities_roads.py`, `kd_paperD.py` | kd27–kd56 | Analyses for the drainage manuscripts |
+| `kd_tool_promo.py`, `kd_programme_map.py` | demo, kd00 | Tool demo render; programme diagram |
+
+## Data sources
+
+Rainfall: CHIRPS v2.0, ARC2, GHCN-Daily, NASA POWER. Temperature: NOAA CPC, NASA POWER, GHCN-CAMS. Other climate variables: NASA POWER, CPC soil moisture, GPCP v2.3, NOAA ERSST v5 and ONI, CMIP6 (Pangeo). Vegetation and food: NOAA STAR VHI, FEWS NET IPC, FAOSTAT. Settlements and land cover: JRC GHSL R2023A, Microsoft building footprints, ESA WorldCover, Impact Observatory. Infrastructure: OpenStreetMap (ODbL). Terrain and imagery: Copernicus GLO-30, Sentinel-1/2 (Microsoft Planetary Computer), Landsat, Esri World Imagery. Flood records: KCCA and NEMA hotspot lists, news sources, GDELT. Boundaries: Natural Earth, geoBoundaries.
 
 ## Credit and licence
 
-Analysis, graphics and text by **Gava Charles**. Every graphic carries "Credit: Gava Charles" and its data sources. Third-party data remain under their own licences (OpenStreetMap and Microsoft buildings under ODbL; Copernicus, JRC, NASA, NOAA and ESA data under their open terms).
+Analysis, graphics and text by Gava Charles. Third-party data remain under their own licences (OpenStreetMap and Microsoft buildings under ODbL; Copernicus, JRC, NASA, NOAA and ESA data under their open terms).
