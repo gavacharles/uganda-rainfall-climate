@@ -11,7 +11,6 @@ Author: Gava Charles.
 | `src/` | All Python code: downloads, analysis, models, figures, animations, 3D films (script tables below) |
 | `figures/` | Report and paper figures (PNG); `figures/kampala_drainage/` holds the drainage study maps, per-hotspot pages (`areas/`), fly-through videos, animations and 3D renders |
 | `results/` | Result tables (CSV) and run logs; Kampala drainage tables start with `kd_` |
-| `paper/` | Manuscripts (Markdown and Word) |
 | `report/` | The climate report (HTML) and its web images |
 | `tool/` | Source of the Kampala Drain Watch map: `index.src.html`, segment data, labels and basemaps |
 | `tool_replay/` | Replay page and developer notes |
