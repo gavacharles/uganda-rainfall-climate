@@ -11,3 +11,13 @@ figures/kampala_drainage/3d/kd3d_story*
 figures/kampala_drainage/areas/flythrough/kd_fly_0?_*[!l].mp4
 figures/kampala_drainage/areas/flythrough/kd_fly_0?_*.gif
 figures/kampala_drainage/3d/preview_*
+
+# Paper drafts and write-ups are kept private (moved 2026-11-20)
+/paper/
+/outreach/**/*.md
+/outreach/**/*.txt
+/outreach/**/*.docx
+/outreach/**/*.doc
+/outreach/**/*.pdf
+/outreach/**/*.pptx
+/outreach/**/*.tex
